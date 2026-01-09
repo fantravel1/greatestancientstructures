@@ -1,0 +1,862 @@
+[
+  {
+    "id": "gobekli-tepe",
+    "name": "Göbekli Tepe",
+    "slug": "gobekli-tepe",
+    "tagline": "The Temple That Rewrote History",
+    "summary": "The world's oldest known temple complex, built 12,000 years ago by hunter-gatherers—6,000 years before Stonehenge.",
+    "category": "megalithic",
+    "region": "middle-east",
+    "country": "Turkey",
+    "countryCode": "TR",
+    "coordinates": [37.223, 38.922],
+    "dates": {
+      "constructed": "-9500 to -8000 BCE",
+      "age": "12,000+ years",
+      "discovered": 1994,
+      "period": "Pre-Pottery Neolithic A/B"
+    },
+    "stats": {
+      "largestStone": "50 tons",
+      "siteArea": "8 hectares",
+      "excavated": "10%",
+      "pillars": "200+"
+    },
+    "unesco": {
+      "status": "inscribed",
+      "year": 2018
+    },
+    "mysteries": [
+      "Built by hunter-gatherers before agriculture",
+      "Deliberately buried around 8000 BCE",
+      "Purpose of T-shaped pillars unknown",
+      "No evidence of permanent habitation"
+    ],
+    "heroImage": "https://images.unsplash.com/photo-1599423300746-b62533397364?w=1600&q=80",
+    "gallery": [],
+    "travel": {
+      "nearestCity": "Şanlıurfa (15km)",
+      "entryFee": "$20-25",
+      "bestSeason": ["April", "May", "September", "October"]
+    },
+    "featured": true,
+    "trending": true
+  },
+  {
+    "id": "karahan-tepe",
+    "name": "Karahan Tepe",
+    "slug": "karahan-tepe",
+    "tagline": "Göbekli Tepe's Mysterious Sister Site",
+    "summary": "Potentially older than Göbekli Tepe, featuring haunting human head carvings and phallic pillars carved directly from bedrock.",
+    "category": "megalithic",
+    "region": "middle-east",
+    "country": "Turkey",
+    "countryCode": "TR",
+    "coordinates": [37.052, 39.193],
+    "dates": {
+      "constructed": "-10000 to -9500 BCE",
+      "age": "12,000+ years",
+      "discovered": 1997,
+      "period": "Pre-Pottery Neolithic"
+    },
+    "stats": {
+      "largestStone": "Unknown",
+      "siteArea": "10 hectares",
+      "excavated": "5%",
+      "pillars": "266+"
+    },
+    "unesco": {
+      "status": "tentative",
+      "year": null
+    },
+    "mysteries": [
+      "Shift from animal to human iconography",
+      "Pillars carved directly from bedrock",
+      "Prominent phallic/fertility imagery",
+      "Part of 12-site Taş Tepeler network"
+    ],
+    "heroImage": "https://images.unsplash.com/photo-1682687982501-1e58ab814714?w=1600&q=80",
+    "gallery": [],
+    "travel": {
+      "nearestCity": "Şanlıurfa",
+      "entryFee": "Free",
+      "bestSeason": ["April", "May", "September", "October"]
+    },
+    "featured": true,
+    "trending": true
+  },
+  {
+    "id": "great-pyramid-giza",
+    "name": "Great Pyramid of Giza",
+    "slug": "great-pyramid-giza",
+    "tagline": "The Last Surviving Ancient Wonder",
+    "summary": "Standing at 146m tall with 2.3 million blocks, the Great Pyramid was the world's tallest structure for 3,800 years.",
+    "category": "impossible",
+    "region": "africa",
+    "country": "Egypt",
+    "countryCode": "EG",
+    "coordinates": [29.9792, 31.1342],
+    "dates": {
+      "constructed": "2580-2560 BCE",
+      "age": "4,580+ years",
+      "discovered": "Always known",
+      "period": "4th Dynasty"
+    },
+    "stats": {
+      "largestStone": "80 tons",
+      "height": "146.6m original",
+      "blocks": "2.3 million",
+      "baseLeveling": "15mm accuracy"
+    },
+    "unesco": {
+      "status": "inscribed",
+      "year": 1979
+    },
+    "mysteries": [
+      "Precise alignment to true north",
+      "Big Void discovered by muon tomography",
+      "Construction ramp system unknown",
+      "No original capstone found"
+    ],
+    "heroImage": "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?w=1600&q=80",
+    "gallery": [],
+    "travel": {
+      "nearestCity": "Cairo (13km)",
+      "entryFee": "$15-30",
+      "bestSeason": ["October", "November", "March", "April"]
+    },
+    "featured": true,
+    "trending": false
+  },
+  {
+    "id": "petra",
+    "name": "Petra",
+    "slug": "petra",
+    "tagline": "The Rose-Red City Half as Old as Time",
+    "summary": "Carved into rose-red cliffs by the Nabataeans, Petra's Treasury and 600+ facades represent the pinnacle of rock-cut architecture.",
+    "category": "rock-cut",
+    "region": "middle-east",
+    "country": "Jordan",
+    "countryCode": "JO",
+    "coordinates": [30.3285, 35.4444],
+    "dates": {
+      "constructed": "4th century BCE - 106 CE",
+      "age": "2,300+ years",
+      "discovered": 1812,
+      "period": "Nabataean"
+    },
+    "stats": {
+      "treasuryHeight": "39.1m",
+      "facades": "600+",
+      "siteArea": "264 km²",
+      "tombs": "800+"
+    },
+    "unesco": {
+      "status": "inscribed",
+      "year": 1985
+    },
+    "mysteries": [
+      "Advanced water engineering in desert",
+      "Only 15% excavated",
+      "Purpose of carved channels",
+      "Original paint colors lost"
+    ],
+    "heroImage": "https://images.unsplash.com/photo-1579606032821-4e6161c81571?w=1600&q=80",
+    "gallery": [],
+    "travel": {
+      "nearestCity": "Amman (230km)",
+      "entryFee": "$70-85",
+      "bestSeason": ["March", "April", "May", "October", "November"]
+    },
+    "featured": true,
+    "trending": false
+  },
+  {
+    "id": "puma-punku",
+    "name": "Puma Punku",
+    "slug": "puma-punku",
+    "tagline": "Precision That Defies Explanation",
+    "summary": "H-blocks with millimeter precision at 12,800 feet elevation. The interlocking stones have sparked endless debate about ancient technology.",
+    "category": "impossible",
+    "region": "south-america",
+    "country": "Bolivia",
+    "countryCode": "BO",
+    "coordinates": [-16.5617, -68.6792],
+    "dates": {
+      "constructed": "500-720 CE",
+      "age": "1,500+ years",
+      "discovered": "16th century",
+      "period": "Tiwanaku"
+    },
+    "stats": {
+      "largestStone": "131 tons",
+      "elevation": "3,850m",
+      "precision": "~1mm",
+      "hBlockWeight": "600 kg"
+    },
+    "unesco": {
+      "status": "inscribed",
+      "year": 2000
+    },
+    "mysteries": [
+      "How precision was achieved",
+      "H-block interlocking system",
+      "Metal clamps of unknown alloy",
+      "Original configuration unknown"
+    ],
+    "heroImage": "https://images.unsplash.com/photo-1591489378430-ef2f4c626b0e?w=1600&q=80",
+    "gallery": [],
+    "travel": {
+      "nearestCity": "La Paz (72km)",
+      "entryFee": "$14",
+      "bestSeason": ["May", "June", "July", "August", "September"]
+    },
+    "featured": true,
+    "trending": true
+  },
+  {
+    "id": "sacsayhuaman",
+    "name": "Sacsayhuamán",
+    "slug": "sacsayhuaman",
+    "tagline": "Stones That Fit Like Puzzle Pieces",
+    "summary": "Massive zigzag walls with stones up to 200 tons fitted so precisely that a paper cannot fit between them.",
+    "category": "impossible",
+    "region": "south-america",
+    "country": "Peru",
+    "countryCode": "PE",
+    "coordinates": [-13.5094, -71.9828],
+    "dates": {
+      "constructed": "15th century CE",
+      "age": "600+ years",
+      "discovered": "Always known",
+      "period": "Inca Empire"
+    },
+    "stats": {
+      "largestStone": "200 tons",
+      "wallLength": "400m",
+      "wallHeight": "18m",
+      "workers": "20,000+"
+    },
+    "unesco": {
+      "status": "inscribed",
+      "year": 1983
+    },
+    "mysteries": [
+      "Precision without mortar",
+      "Transportation of massive blocks",
+      "Original hilltop complex destroyed",
+      "Acoustic properties"
+    ],
+    "heroImage": "https://images.unsplash.com/photo-1526392060635-9d6019884377?w=1600&q=80",
+    "gallery": [],
+    "travel": {
+      "nearestCity": "Cusco (2km)",
+      "entryFee": "$35 (Boleto Turístico)",
+      "bestSeason": ["May", "June", "July", "August", "September"]
+    },
+    "featured": false,
+    "trending": false
+  },
+  {
+    "id": "machu-picchu",
+    "name": "Machu Picchu",
+    "slug": "machu-picchu",
+    "tagline": "The Lost City in the Clouds",
+    "summary": "The iconic Inca citadel at 2,430m with 200 structures and engineering that's 60% underground.",
+    "category": "impossible",
+    "region": "south-america",
+    "country": "Peru",
+    "countryCode": "PE",
+    "coordinates": [-13.1631, -72.5450],
+    "dates": {
+      "constructed": "c. 1420 CE",
+      "age": "600+ years",
+      "discovered": 1911,
+      "period": "Inca Empire"
+    },
+    "stats": {
+      "elevation": "2,430m",
+      "structures": "200+",
+      "terraces": "700+",
+      "visitors": "1.5M/year"
+    },
+    "unesco": {
+      "status": "inscribed",
+      "year": 1983
+    },
+    "mysteries": [
+      "True purpose debated",
+      "Advanced earthquake engineering",
+      "Precise astronomical alignments",
+      "Why abandoned"
+    ],
+    "heroImage": "https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=1600&q=80",
+    "gallery": [],
+    "travel": {
+      "nearestCity": "Cusco",
+      "entryFee": "$50-65",
+      "bestSeason": ["May", "June", "July", "August", "September"]
+    },
+    "featured": true,
+    "trending": false
+  },
+  {
+    "id": "stonehenge",
+    "name": "Stonehenge",
+    "slug": "stonehenge",
+    "tagline": "Britain's Eternal Enigma",
+    "summary": "Bluestones transported 240km from Wales, sarsens weighing 25 tons—built over 1,500 years by Neolithic peoples.",
+    "category": "megalithic",
+    "region": "europe",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "coordinates": [51.1789, -1.8262],
+    "dates": {
+      "constructed": "3100-1600 BCE",
+      "age": "5,000+ years",
+      "discovered": "Always known",
+      "period": "Neolithic-Bronze Age"
+    },
+    "stats": {
+      "sarsens": "25 tons each",
+      "bluestones": "2-4 tons",
+      "bluestoneDistance": "240km",
+      "visitors": "1.3M/year"
+    },
+    "unesco": {
+      "status": "inscribed",
+      "year": 1986
+    },
+    "mysteries": [
+      "Bluestone transport method",
+      "Altar Stone from Scotland (700km)",
+      "Original purpose",
+      "Acoustic properties"
+    ],
+    "heroImage": "https://images.unsplash.com/photo-1599833975787-5c143f373c30?w=1600&q=80",
+    "gallery": [],
+    "travel": {
+      "nearestCity": "London (130km)",
+      "entryFee": "$26-60",
+      "bestSeason": ["March", "April", "May", "September", "October"]
+    },
+    "featured": true,
+    "trending": false
+  },
+  {
+    "id": "baalbek",
+    "name": "Baalbek",
+    "slug": "baalbek",
+    "tagline": "The Largest Stones Ever Quarried",
+    "summary": "The Trilithon's 800-ton stones and a 1,650-ton quarry block—the largest ancient worked stones on Earth.",
+    "category": "impossible",
+    "region": "middle-east",
+    "country": "Lebanon",
+    "countryCode": "LB",
+    "coordinates": [34.0067, 36.2039],
+    "dates": {
+      "constructed": "1st century BCE - 3rd century CE",
+      "age": "2,000+ years",
+      "discovered": "Always known",
+      "period": "Roman"
+    },
+    "stats": {
+      "trilithonWeight": "800 tons each",
+      "largestQuarryStone": "1,650 tons",
+      "templeColumns": "54 original",
+      "columnHeight": "20m"
+    },
+    "unesco": {
+      "status": "inscribed",
+      "year": 1984
+    },
+    "mysteries": [
+      "Moving 800-ton stones",
+      "Why such massive stones needed",
+      "Original pre-Roman temple",
+      "Unfinished megalith purpose"
+    ],
+    "heroImage": "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?w=1600&q=80",
+    "gallery": [],
+    "travel": {
+      "nearestCity": "Beirut (67km)",
+      "entryFee": "$15",
+      "bestSeason": ["April", "May", "September", "October"]
+    },
+    "featured": true,
+    "trending": false
+  },
+  {
+    "id": "nan-madol",
+    "name": "Nan Madol",
+    "slug": "nan-madol",
+    "tagline": "The Venice of the Pacific",
+    "summary": "92 artificial islands built on a coral reef with 750,000 tons of basalt columns—and UNESCO says it's in danger.",
+    "category": "impossible",
+    "region": "pacific",
+    "country": "Micronesia",
+    "countryCode": "FM",
+    "coordinates": [6.8414, 158.3342],
+    "dates": {
+      "constructed": "1180-1500 CE",
+      "age": "800+ years",
+      "discovered": "Always known locally",
+      "period": "Saudeleur Dynasty"
+    },
+    "stats": {
+      "artificialIslands": "92",
+      "totalTonnage": "750,000+ tons",
+      "siteArea": "18 km²",
+      "largestStone": "50 tons"
+    },
+    "unesco": {
+      "status": "inscribed",
+      "year": 2016
+    },
+    "mysteries": [
+      "Transporting basalt columns by sea",
+      "Purpose of canal system",
+      "Why built on coral reef",
+      "Saudeleur dynasty origins"
+    ],
+    "heroImage": "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=1600&q=80",
+    "gallery": [],
+    "travel": {
+      "nearestCity": "Kolonia, Pohnpei",
+      "entryFee": "$3-9",
+      "bestSeason": ["January", "February", "March"]
+    },
+    "featured": true,
+    "trending": false
+  },
+  {
+    "id": "korean-dolmens",
+    "name": "Korean Dolmens",
+    "slug": "korean-dolmens",
+    "tagline": "40% of the World's Megalithic Tombs",
+    "summary": "Korea has 35,000+ dolmens—more than anywhere else on Earth. The largest capstone weighs 280 tons.",
+    "category": "megalithic",
+    "region": "asia",
+    "country": "South Korea",
+    "countryCode": "KR",
+    "coordinates": [35.4418, 126.6523],
+    "dates": {
+      "constructed": "1000-300 BCE",
+      "age": "3,000+ years",
+      "discovered": "Always known",
+      "period": "Bronze Age"
+    },
+    "stats": {
+      "totalDolmens": "35,000+",
+      "worldPercentage": "40%",
+      "largestCapstone": "280 tons",
+      "unescoSites": "3"
+    },
+    "unesco": {
+      "status": "inscribed",
+      "year": 2000
+    },
+    "mysteries": [
+      "Why concentration in Korea",
+      "Migration vs indigenous origin",
+      "Capstone transport methods",
+      "Burial vs ceremonial use"
+    ],
+    "heroImage": "https://images.unsplash.com/photo-1548115184-bc6544d06a58?w=1600&q=80",
+    "gallery": [],
+    "travel": {
+      "nearestCity": "Gwangju",
+      "entryFee": "$2.50",
+      "bestSeason": ["September", "October", "November"]
+    },
+    "featured": false,
+    "trending": false
+  },
+  {
+    "id": "gunung-padang",
+    "name": "Gunung Padang",
+    "slug": "gunung-padang",
+    "tagline": "Southeast Asia's Controversial Megalith",
+    "summary": "Indonesia's largest megalithic site sparked global debate when claims of a 25,000-year-old pyramid were retracted in 2024.",
+    "category": "disputed",
+    "region": "asia",
+    "country": "Indonesia",
+    "countryCode": "ID",
+    "coordinates": [-6.9938, 107.0561],
+    "dates": {
+      "constructed": "2nd-8th century CE (verified)",
+      "age": "2,000+ years (verified)",
+      "discovered": "1914",
+      "period": "Megalithic"
+    },
+    "stats": {
+      "elevation": "885m",
+      "siteArea": "25 hectares",
+      "stoneBlocks": "50,000+",
+      "terraces": "5"
+    },
+    "unesco": {
+      "status": null,
+      "year": null
+    },
+    "mysteries": [
+      "True age controversial",
+      "Natural vs constructed debate",
+      "Underground chambers claimed",
+      "2024 paper retraction"
+    ],
+    "heroImage": "https://images.unsplash.com/photo-1555899434-94d1368aa7af?w=1600&q=80",
+    "gallery": [],
+    "travel": {
+      "nearestCity": "Jakarta (3-4 hours)",
+      "entryFee": "$0.30",
+      "bestSeason": ["May", "June", "July", "August", "September"]
+    },
+    "featured": false,
+    "trending": true
+  },
+  {
+    "id": "lalibela",
+    "name": "Lalibela Churches",
+    "slug": "lalibela",
+    "tagline": "Africa's New Jerusalem",
+    "summary": "11 rock-hewn churches carved from single blocks of stone, including the cruciform Bete Giyorgis—still used for worship today.",
+    "category": "rock-cut",
+    "region": "africa",
+    "country": "Ethiopia",
+    "countryCode": "ET",
+    "coordinates": [12.0317, 39.0411],
+    "dates": {
+      "constructed": "12th-13th century CE",
+      "age": "800+ years",
+      "discovered": "16th century (to West)",
+      "period": "Zagwe Dynasty"
+    },
+    "stats": {
+      "churches": "11",
+      "beteGiyorgisDepth": "12m",
+      "largestChurch": "33.5m × 23.5m",
+      "carvedFrom": "Single rock"
+    },
+    "unesco": {
+      "status": "inscribed",
+      "year": 1978
+    },
+    "mysteries": [
+      "How carved from top down",
+      "Timeline of construction",
+      "Tunnels between churches",
+      "Living religious tradition"
+    ],
+    "heroImage": "https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=1600&q=80",
+    "gallery": [],
+    "travel": {
+      "nearestCity": "Addis Ababa (1-hour flight)",
+      "entryFee": "$50",
+      "bestSeason": ["October", "November", "December", "January", "February", "March"]
+    },
+    "featured": true,
+    "trending": false
+  },
+  {
+    "id": "ellora-kailasa",
+    "name": "Kailasa Temple, Ellora",
+    "slug": "ellora-kailasa",
+    "tagline": "Carved from a Mountain",
+    "summary": "The world's largest monolithic rock excavation—400,000 tons of basalt removed to create a temple carved from the top down.",
+    "category": "rock-cut",
+    "region": "asia",
+    "country": "India",
+    "countryCode": "IN",
+    "coordinates": [20.0261, 75.1791],
+    "dates": {
+      "constructed": "756-773 CE",
+      "age": "1,250+ years",
+      "discovered": "Always known",
+      "period": "Rashtrakuta Dynasty"
+    },
+    "stats": {
+      "dimensions": "84m × 47m × 32m",
+      "stoneRemoved": "400,000 tons",
+      "caves": "34 open",
+      "religions": "3 (Buddhist, Hindu, Jain)"
+    },
+    "unesco": {
+      "status": "inscribed",
+      "year": 1983
+    },
+    "mysteries": [
+      "Top-down excavation technique",
+      "Single-generation construction",
+      "Waste stone disposal",
+      "Original paint colors"
+    ],
+    "heroImage": "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?w=1600&q=80",
+    "gallery": [],
+    "travel": {
+      "nearestCity": "Aurangabad (30km)",
+      "entryFee": "$15",
+      "bestSeason": ["October", "November", "February", "March"]
+    },
+    "featured": true,
+    "trending": false
+  },
+  {
+    "id": "abu-simbel",
+    "name": "Abu Simbel",
+    "slug": "abu-simbel",
+    "tagline": "The Temple That Moved",
+    "summary": "Four 20m colossi of Ramesses II—and the engineering marvel of relocating the entire temple in 1968 to save it from flooding.",
+    "category": "rock-cut",
+    "region": "africa",
+    "country": "Egypt",
+    "countryCode": "EG",
+    "coordinates": [22.3372, 31.6258],
+    "dates": {
+      "constructed": "1264-1244 BCE",
+      "age": "3,250+ years",
+      "discovered": 1813,
+      "period": "19th Dynasty"
+    },
+    "stats": {
+      "colossiHeight": "20m",
+      "templeDepth": "56m",
+      "relocationCost": "$40M (1968)",
+      "blocksRelocated": "1,042"
+    },
+    "unesco": {
+      "status": "inscribed",
+      "year": 1979
+    },
+    "mysteries": [
+      "Solar alignment precision",
+      "Original construction methods",
+      "Ptah deliberately in shadow",
+      "Lost paint colors"
+    ],
+    "heroImage": "https://images.unsplash.com/photo-1568322445389-f64ac2515020?w=1600&q=80",
+    "gallery": [],
+    "travel": {
+      "nearestCity": "Aswan (280km)",
+      "entryFee": "$25",
+      "bestSeason": ["February 22", "October 22", "October-April"]
+    },
+    "featured": false,
+    "trending": false
+  },
+  {
+    "id": "newgrange",
+    "name": "Newgrange",
+    "slug": "newgrange",
+    "tagline": "Older Than the Pyramids",
+    "summary": "A 5,200-year-old passage tomb where winter solstice sunlight penetrates 19m to illuminate the inner chamber.",
+    "category": "megalithic",
+    "region": "europe",
+    "country": "Ireland",
+    "countryCode": "IE",
+    "coordinates": [53.6947, -6.4756],
+    "dates": {
+      "constructed": "c. 3200 BCE",
+      "age": "5,200+ years",
+      "discovered": 1699,
+      "period": "Neolithic"
+    },
+    "stats": {
+      "moundDiameter": "85m",
+      "passageLength": "19m",
+      "kerbstones": "97",
+      "solsticeLotteryOdds": "1 in 500"
+    },
+    "unesco": {
+      "status": "inscribed",
+      "year": 1993
+    },
+    "mysteries": [
+      "Roof box solar alignment",
+      "Spiral carving meanings",
+      "Construction logistics",
+      "Original purpose"
+    ],
+    "heroImage": "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=1600&q=80",
+    "gallery": [],
+    "travel": {
+      "nearestCity": "Dublin (45km)",
+      "entryFee": "$18",
+      "bestSeason": ["March", "April", "May", "September", "October"]
+    },
+    "featured": false,
+    "trending": false
+  },
+  {
+    "id": "easter-island-moai",
+    "name": "Easter Island Moai",
+    "slug": "easter-island-moai",
+    "tagline": "The Statues That Walked",
+    "summary": "887 monolithic statues, the largest 82 tons—and modern experiments proved they could 'walk' using rope-based rocking.",
+    "category": "impossible",
+    "region": "pacific",
+    "country": "Chile",
+    "countryCode": "CL",
+    "coordinates": [-27.1127, -109.3497],
+    "dates": {
+      "constructed": "1250-1500 CE",
+      "age": "750+ years",
+      "discovered": 1722,
+      "period": "Rapa Nui"
+    },
+    "stats": {
+      "totalMoai": "887",
+      "largestErected": "82 tons",
+      "largestUnfinished": "270 tons",
+      "quarry": "Rano Raraku"
+    },
+    "unesco": {
+      "status": "inscribed",
+      "year": 1995
+    },
+    "mysteries": [
+      "Transport method confirmed (walking)",
+      "Why production stopped",
+      "Coral eye significance",
+      "Population collapse debunked (2024)"
+    ],
+    "heroImage": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=1600&q=80",
+    "gallery": [],
+    "travel": {
+      "nearestCity": "Santiago (5-6 hour flight)",
+      "entryFee": "$80",
+      "bestSeason": ["January", "February", "March"]
+    },
+    "featured": true,
+    "trending": false
+  },
+  {
+    "id": "carnac-stones",
+    "name": "Carnac Stones",
+    "slug": "carnac-stones",
+    "tagline": "3,000 Stones in Perfect Rows",
+    "summary": "The world's largest collection of standing stones—including the Grand Menhir Brisé that originally stood 20m tall.",
+    "category": "megalithic",
+    "region": "europe",
+    "country": "France",
+    "countryCode": "FR",
+    "coordinates": [47.5953, -3.0761],
+    "dates": {
+      "constructed": "4500-3300 BCE",
+      "age": "6,500+ years",
+      "discovered": "Always known",
+      "period": "Neolithic"
+    },
+    "stats": {
+      "stones": "3,000+",
+      "alignmentLength": "4km",
+      "grandMenhir": "280 tons",
+      "grandMenhirHeight": "20.6m original"
+    },
+    "unesco": {
+      "status": "inscribed",
+      "year": 2025
+    },
+    "mysteries": [
+      "Alignment purpose",
+      "Original stone count",
+      "Astronomical significance",
+      "Cultural continuity"
+    ],
+    "heroImage": "https://images.unsplash.com/photo-1591489378430-ef2f4c626b0e?w=1600&q=80",
+    "gallery": [],
+    "travel": {
+      "nearestCity": "Paris (3 hours by TGV)",
+      "entryFee": "Free-$8",
+      "bestSeason": ["April", "May", "June", "September", "October"]
+    },
+    "featured": false,
+    "trending": false
+  },
+  {
+    "id": "yonaguni-monument",
+    "name": "Yonaguni Monument",
+    "slug": "yonaguni-monument",
+    "tagline": "Natural or Man-Made?",
+    "summary": "A mysterious underwater structure off Japan—scientists debate whether it's a 10,000-year-old monument or natural sandstone.",
+    "category": "disputed",
+    "region": "asia",
+    "country": "Japan",
+    "countryCode": "JP",
+    "coordinates": [24.4320, 123.0110],
+    "dates": {
+      "constructed": "Disputed (natural vs 10,000 BCE)",
+      "age": "Unknown",
+      "discovered": 1986,
+      "period": "Unknown"
+    },
+    "stats": {
+      "length": "100-165m",
+      "width": "60m",
+      "depth": "5-25m",
+      "height": "25m"
+    },
+    "unesco": {
+      "status": null,
+      "year": null
+    },
+    "mysteries": [
+      "Man-made vs natural formation",
+      "Tool marks vs natural erosion",
+      "'Staircase' features",
+      "Not recognized by Japan"
+    ],
+    "heroImage": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1600&q=80",
+    "gallery": [],
+    "travel": {
+      "nearestCity": "Naha/Ishigaki",
+      "entryFee": "Dive costs only",
+      "bestSeason": ["February", "March", "April"]
+    },
+    "featured": false,
+    "trending": false
+  },
+  {
+    "id": "ggantija-temples",
+    "name": "Ġgantija Temples",
+    "slug": "ggantija-temples",
+    "tagline": "Predating Stonehenge by 1,000 Years",
+    "summary": "The world's second-oldest freestanding religious structures—named 'Place of Giants' by locals who believed only giants could build them.",
+    "category": "megalithic",
+    "region": "europe",
+    "country": "Malta",
+    "countryCode": "MT",
+    "coordinates": [36.0478, 14.2694],
+    "dates": {
+      "constructed": "3600-3200 BCE",
+      "age": "5,600+ years",
+      "discovered": 1827,
+      "period": "Neolithic"
+    },
+    "stats": {
+      "temples": "2",
+      "wallHeight": "6m",
+      "largestStone": "50+ tons",
+      "maltaTemples": "7 UNESCO sites"
+    },
+    "unesco": {
+      "status": "inscribed",
+      "year": 1980
+    },
+    "mysteries": [
+      "Stone sphere transport system",
+      "Fat Lady figurine meaning",
+      "Why tradition ended ~2500 BCE",
+      "Corbelled roof design"
+    ],
+    "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80",
+    "gallery": [],
+    "travel": {
+      "nearestCity": "Valletta (ferry to Gozo)",
+      "entryFee": "$10",
+      "bestSeason": ["March", "April", "May", "October", "November"]
+    },
+    "featured": false,
+    "trending": false
+  }
+]

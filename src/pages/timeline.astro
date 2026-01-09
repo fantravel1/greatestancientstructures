@@ -1,0 +1,160 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/global/Header.astro';
+import Footer from '../components/global/Footer.astro';
+import MobileNav from '../components/global/MobileNav.astro';
+import structures from '../data/structures.json';
+
+// Parse dates and sort by age
+const timelineData = structures
+  .map(s => {
+    const ageMatch = s.dates.age.match(/(\d+)/);
+    const age = ageMatch ? parseInt(ageMatch[1]) : 0;
+    return { ...s, numericAge: age };
+  })
+  .sort((a, b) => b.numericAge - a.numericAge);
+---
+
+<BaseLayout
+  title="Timeline of Ancient Structures"
+  description="Journey through 12,000 years of human achievement. Explore ancient structures chronologically from Göbekli Tepe to Machu Picchu."
+>
+  <Header slot="header" />
+
+  <section class="min-h-screen pt-20 pb-24">
+    <div
+      x-data="{
+        currentEra: 'all',
+        structures: [],
+        eras: [
+          { id: 'all', name: 'All Time', range: 'All' },
+          { id: 'prehistoric', name: 'Prehistoric', range: '12,000+ years' },
+          { id: 'ancient', name: 'Ancient', range: '5,000-3,000 years' },
+          { id: 'classical', name: 'Classical', range: '3,000-1,500 years' },
+          { id: 'medieval', name: 'Medieval', range: '1,500-500 years' }
+        ],
+        get filteredStructures() {
+          if (this.currentEra === 'all') return this.structures;
+          return this.structures.filter(s => {
+            const age = s.numericAge;
+            switch(this.currentEra) {
+              case 'prehistoric': return age >= 10000;
+              case 'ancient': return age >= 3000 && age < 10000;
+              case 'classical': return age >= 1500 && age < 3000;
+              case 'medieval': return age < 1500;
+              default: return true;
+            }
+          });
+        }
+      }"
+      x-init="structures = JSON.parse(document.getElementById('timeline-data').textContent)"
+    >
+      <!-- Header -->
+      <div class="container-custom py-6">
+        <div class="max-w-3xl">
+          <h1 class="text-display-sm font-display font-bold text-stone-100 mb-4">
+            <span class="text-gradient">12,000 Years</span> of Human Achievement
+          </h1>
+          <p class="text-lg text-stone-400">
+            Journey through time and explore humanity's greatest constructions in chronological order.
+          </p>
+        </div>
+      </div>
+
+      <!-- Era Filters -->
+      <div class="container-custom mb-8">
+        <div class="flex flex-wrap gap-3">
+          <template x-for="era in eras" :key="era.id">
+            <button
+              @click="currentEra = era.id"
+              :class="currentEra === era.id ? 'bg-gold-400 text-obsidian-950' : 'bg-obsidian-800 text-stone-300 hover:bg-obsidian-700'"
+              class="px-4 py-2 rounded-lg text-sm font-medium transition-all"
+            >
+              <span x-text="era.name"></span>
+              <span class="text-xs opacity-70 ml-1" x-text="'(' + era.range + ')'"></span>
+            </button>
+          </template>
+        </div>
+      </div>
+
+      <!-- Timeline -->
+      <div class="container-custom">
+        <div class="relative">
+          <!-- Vertical Line -->
+          <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-gold-400 via-obsidian-600 to-obsidian-800"></div>
+
+          <!-- Timeline Items -->
+          <div class="space-y-8 md:space-y-12">
+            <template x-for="(structure, index) in filteredStructures" :key="structure.id">
+              <div
+                :class="index % 2 === 0 ? 'md:pr-[52%]' : 'md:pl-[52%] md:text-left'"
+                class="relative pl-12 md:pl-0"
+              >
+                <!-- Dot -->
+                <div
+                  :class="index % 2 === 0 ? 'md:right-0 md:translate-x-1/2' : 'md:left-1/2 md:-translate-x-1/2'"
+                  class="absolute left-4 md:left-auto top-6 w-3 h-3 rounded-full bg-gold-400 border-4 border-obsidian-950 z-10"
+                ></div>
+
+                <!-- Card -->
+                <div class="card card-hover overflow-hidden group">
+                  <div class="md:flex" :class="index % 2 === 0 ? '' : 'md:flex-row-reverse'">
+                    <!-- Image -->
+                    <div class="relative w-full md:w-48 h-40 md:h-auto flex-shrink-0 overflow-hidden">
+                      <img
+                        :src="structure.heroImage"
+                        :alt="structure.name"
+                        loading="lazy"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950/80 to-transparent md:bg-gradient-to-r"></div>
+                      <!-- Age Badge -->
+                      <div class="absolute top-3 left-3">
+                        <span class="px-3 py-1 rounded-full bg-gold-400 text-obsidian-950 text-xs font-bold" x-text="structure.dates.age"></span>
+                      </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="p-5 flex-1">
+                      <div class="flex items-center gap-2 text-sm text-stone-500 mb-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        </svg>
+                        <span x-text="structure.country"></span>
+                      </div>
+                      <h3 class="text-xl font-bold text-stone-100 group-hover:text-gold-400 transition-colors mb-1" x-text="structure.name"></h3>
+                      <p class="text-gold-400/80 text-sm mb-2" x-text="structure.tagline"></p>
+                      <p class="text-stone-400 text-sm line-clamp-2 mb-4" x-text="structure.summary"></p>
+                      <a
+                        :href="`/structures/${structure.slug}`"
+                        class="inline-flex items-center gap-2 text-sm font-medium text-gold-400 hover:text-gold-300 transition-colors"
+                      >
+                        Explore
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </div>
+
+          <!-- Empty State -->
+          <div x-show="filteredStructures.length === 0" class="py-16 text-center">
+            <div class="text-6xl mb-4">📅</div>
+            <h3 class="text-xl font-semibold text-stone-300 mb-2">No structures in this era</h3>
+            <p class="text-stone-500">Try selecting a different time period</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data -->
+      <script type="application/json" id="timeline-data" set:html={JSON.stringify(timelineData)}></script>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+  <MobileNav />
+</BaseLayout>
