@@ -1,0 +1,215 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/global/Header.astro';
+import Footer from '../components/global/Footer.astro';
+import MobileNav from '../components/global/MobileNav.astro';
+import Newsletter from '../components/global/Newsletter.astro';
+import structures from '../data/structures.json';
+
+// Collect all mysteries with their source structures
+const allMysteries = structures.flatMap(structure =>
+  structure.mysteries.map((mystery, index) => ({
+    mystery,
+    structure: {
+      name: structure.name,
+      slug: structure.slug,
+      country: structure.country,
+      category: structure.category,
+      age: structure.dates.age
+    },
+    id: `${structure.id}-${index}`
+  }))
+);
+
+// Group by category
+const mysteryCategories = {
+  construction: {
+    name: 'Construction Methods',
+    icon: '🏗️',
+    description: 'How were these monuments built with ancient tools?',
+    keywords: ['move', 'transport', 'lift', 'cut', 'carve', 'build', 'construct', 'quarr']
+  },
+  precision: {
+    name: 'Impossible Precision',
+    icon: '📐',
+    description: 'Tolerances that challenge modern engineering',
+    keywords: ['precision', 'accurate', 'align', 'fit', 'joint', 'tolerance', 'exact']
+  },
+  purpose: {
+    name: 'Unknown Purpose',
+    icon: '❓',
+    description: 'What were these structures really for?',
+    keywords: ['purpose', 'function', 'why', 'use', 'intent', 'meaning', 'ritual']
+  },
+  knowledge: {
+    name: 'Lost Knowledge',
+    icon: '📜',
+    description: 'Technologies and techniques we can\'t replicate',
+    keywords: ['knowledge', 'technique', 'technology', 'secret', 'lost', 'forgot', 'unknown']
+  },
+  origin: {
+    name: 'Disputed Origins',
+    icon: '🕰️',
+    description: 'Dating controversies and builder identity',
+    keywords: ['date', 'age', 'origin', 'who', 'civilization', 'builder', 'when', 'older']
+  }
+};
+
+// Categorize mysteries
+function categorizeMystery(mystery: string): string {
+  const lowerMystery = mystery.toLowerCase();
+  for (const [key, cat] of Object.entries(mysteryCategories)) {
+    if (cat.keywords.some(kw => lowerMystery.includes(kw))) {
+      return key;
+    }
+  }
+  return 'other';
+}
+
+const categorizedMysteries = Object.entries(mysteryCategories).map(([key, cat]) => ({
+  key,
+  ...cat,
+  mysteries: allMysteries.filter(m => categorizeMystery(m.mystery) === key)
+})).filter(c => c.mysteries.length > 0);
+---
+
+<BaseLayout
+  title="Unsolved Mysteries of Ancient Structures | Greatest Ancient Structures"
+  description="Explore the unsolved mysteries that make ancient structures so fascinating—from impossible construction methods to lost technologies and disputed origins."
+>
+  <Header slot="header" />
+
+  <!-- Hero -->
+  <section class="relative py-24 md:py-32 overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-gradient-radial from-mystic-500/15 to-transparent rounded-full blur-3xl animate-pulse-slow"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-gradient-radial from-gold-400/10 to-transparent rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 2s;"></div>
+    </div>
+
+    <div class="container-custom relative z-10 text-center">
+      <span class="inline-block px-4 py-2 rounded-full bg-mystic-500/10 text-mystic-400 text-sm font-medium mb-6">
+        {allMysteries.length} Unanswered Questions
+      </span>
+      <h1 class="text-display-lg font-display font-bold tracking-tight mb-6">
+        <span class="text-stone-100">Unsolved</span>
+        <br />
+        <span class="text-gradient">Mysteries</span>
+      </h1>
+      <p class="text-xl text-stone-400 max-w-2xl mx-auto">
+        Every ancient structure holds secrets. These are the questions that archaeologists, engineers, and researchers still can't answer.
+      </p>
+    </div>
+  </section>
+
+  <!-- Mystery Categories -->
+  <section class="py-12 md:py-16">
+    <div class="container-custom">
+      <div class="space-y-16">
+        {categorizedMysteries.map((category, catIndex) => (
+          <div>
+            <!-- Category Header -->
+            <div class="flex items-center gap-4 mb-8">
+              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-mystic-500/20 to-mystic-500/5 flex items-center justify-center text-2xl">
+                {category.icon}
+              </div>
+              <div>
+                <h2 class="text-2xl font-display font-bold text-stone-100">
+                  {category.name}
+                </h2>
+                <p class="text-stone-500">{category.description}</p>
+              </div>
+              <div class="ml-auto">
+                <span class="badge-mystic">{category.mysteries.length} mysteries</span>
+              </div>
+            </div>
+
+            <!-- Mysteries Grid -->
+            <div class="grid md:grid-cols-2 gap-4">
+              {category.mysteries.slice(0, 8).map((item, index) => (
+                <div class="card p-6 group hover:border-mystic-400/30 transition-all">
+                  <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-mystic-500/10 text-mystic-400 flex items-center justify-center font-bold text-sm">
+                      ?
+                    </div>
+                    <div class="flex-1">
+                      <p class="text-stone-300 leading-relaxed mb-3">
+                        {item.mystery}
+                      </p>
+                      <a
+                        href={`/structures/${item.structure.slug}`}
+                        class="inline-flex items-center gap-2 text-sm text-stone-500 hover:text-gold-400 transition-colors"
+                      >
+                        <span class="w-1.5 h-1.5 rounded-full bg-gold-400"></span>
+                        {item.structure.name}, {item.structure.country}
+                        <svg class="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {category.mysteries.length > 8 && (
+              <p class="text-center text-stone-600 text-sm mt-4">
+                + {category.mysteries.length - 8} more mysteries in this category
+              </p>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Most Mysterious Sites -->
+  <section class="py-12 md:py-16 bg-obsidian-900/30">
+    <div class="container-custom">
+      <div class="text-center mb-12">
+        <h2 class="section-title mb-4">Sites with Most Mysteries</h2>
+        <p class="section-subtitle mx-auto">The structures that generate the most unanswered questions</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        {structures
+          .sort((a, b) => b.mysteries.length - a.mysteries.length)
+          .slice(0, 8)
+          .map(structure => (
+            <a href={`/structures/${structure.slug}`} class="card p-6 text-center group hover:border-gold-400/30 transition-all">
+              <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-gold-400/20 to-mystic-500/20 flex items-center justify-center">
+                <span class="text-3xl font-display font-bold text-gold-400">{structure.mysteries.length}</span>
+              </div>
+              <h3 class="font-bold text-stone-100 group-hover:text-gold-400 transition-colors mb-1">
+                {structure.name}
+              </h3>
+              <p class="text-sm text-stone-500">{structure.country}</p>
+            </a>
+          ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16">
+    <div class="container-custom text-center">
+      <h2 class="text-2xl font-bold text-stone-100 mb-4">Think you know the answers?</h2>
+      <p class="text-stone-400 mb-6 max-w-md mx-auto">
+        Test your knowledge of ancient structures and their mysteries with our interactive quiz.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/quiz" class="btn-primary">
+          Take the Quiz
+        </a>
+        <a href="/top-10" class="btn-secondary">
+          Top 10 Most Mysterious
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <Newsletter variant="hero" />
+
+  <Footer slot="footer" />
+  <MobileNav />
+</BaseLayout>
