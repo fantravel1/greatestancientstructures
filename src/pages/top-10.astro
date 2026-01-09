@@ -1,0 +1,206 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/global/Header.astro';
+import Footer from '../components/global/Footer.astro';
+import MobileNav from '../components/global/MobileNav.astro';
+import Newsletter from '../components/global/Newsletter.astro';
+import structures from '../data/structures.json';
+
+// Curated top 10 based on mystery factor, engineering impossibility, and significance
+const top10Ids = [
+  'gobekli-tepe',      // Oldest, rewrites history
+  'great-pyramid',     // Most iconic, precision engineering
+  'puma-punku',        // Impossible precision
+  'baalbek',           // Largest stones ever moved
+  'sacsayhuaman',      // Polygonal masonry perfection
+  'kailasa-temple',    // Largest monolithic structure
+  'nan-madol',         // Venice of the Pacific mystery
+  'yonaguni',          // Controversial underwater
+  'stonehenge',        // Astronomical computer
+  'easter-island',     // Remote island enigma
+];
+
+const top10Structures = top10Ids
+  .map((id, index) => ({
+    rank: index + 1,
+    ...structures.find(s => s.id === id)
+  }))
+  .filter(s => s.name); // Filter out any not found
+
+const mysteryReasons = {
+  'gobekli-tepe': 'Built 6,000 years before Stonehenge by hunter-gatherers who supposedly lacked the social organization for such construction.',
+  'great-pyramid': '2.3 million blocks placed with millimeter precision. Internal chambers use 80-ton granite beams lifted 60+ meters.',
+  'puma-punku': 'H-blocks cut from diorite (harder than granite) with tolerances under 1mm. No evidence of the tools used.',
+  'baalbek': 'The 1,650-ton Stone of the South—largest cut stone in history. Modern cranes max out at ~1,200 tons.',
+  'sacsayhuaman': 'Stones weighing 200 tons fitted so precisely that a razor blade won\'t fit between them. No mortar used.',
+  'kailasa-temple': '400,000 tons of rock removed top-down with hand tools. No room for error in this subtractive process.',
+  'nan-madol': '92 artificial islands built with 750,000 tons of basalt. No native stone—all transported by unknown means.',
+  'yonaguni': 'Geometric underwater formations at 25m depth. Natural or 10,000-year-old human construction? Science is divided.',
+  'stonehenge': '25-ton sarsens transported 25km, 4-ton bluestones from 240km away. Precise astronomical alignments.',
+  'easter-island': '887 moai carved and moved across the island. The civilization collapsed—taking their secrets with them.',
+};
+---
+
+<BaseLayout
+  title="Top 10 Most Mysterious Ancient Structures | Greatest Ancient Structures"
+  description="Discover the 10 most enigmatic ancient structures on Earth—monuments that challenge everything we think we know about ancient civilizations."
+>
+  <Header slot="header" />
+
+  <!-- Hero -->
+  <section class="relative py-24 md:py-32 overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-gradient-radial from-gold-400/10 to-transparent rounded-full blur-3xl animate-pulse-slow"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-gradient-radial from-mystic-500/10 to-transparent rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 1s;"></div>
+    </div>
+
+    <div class="container-custom relative z-10 text-center">
+      <span class="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-gold-400/20 to-mystic-500/20 text-gold-400 text-sm font-medium mb-6 animate-float">
+        Definitive Ranking
+      </span>
+      <h1 class="text-display-lg font-display font-bold tracking-tight mb-6">
+        <span class="text-stone-100">The </span>
+        <span class="text-gradient">Top 10</span>
+        <br />
+        <span class="text-stone-100">Most Mysterious</span>
+      </h1>
+      <p class="text-xl text-stone-400 max-w-2xl mx-auto">
+        These structures don't just impress—they <span class="text-gold-400">defy explanation</span>. Each one challenges our understanding of what ancient humans could achieve.
+      </p>
+    </div>
+  </section>
+
+  <!-- Countdown List -->
+  <section class="py-12 md:py-16">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto space-y-8">
+        {top10Structures.map((structure, index) => (
+          <article
+            class="group relative"
+            style={`animation-delay: ${index * 100}ms`}
+          >
+            <a href={`/structures/${structure.slug}`} class="block">
+              <div class="card overflow-hidden hover:border-gold-400/30 transition-all duration-500">
+                <div class="md:flex">
+                  <!-- Rank Badge -->
+                  <div class="absolute top-4 left-4 z-20 md:relative md:top-auto md:left-auto md:flex-shrink-0 md:w-24 md:flex md:items-center md:justify-center md:bg-obsidian-900/50 md:border-r md:border-obsidian-800/50">
+                    <div class="w-14 h-14 md:w-20 md:h-20 rounded-xl md:rounded-none bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center shadow-glow-gold">
+                      <span class="text-2xl md:text-4xl font-display font-bold text-obsidian-950">
+                        {structure.rank}
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- Image -->
+                  <div class="relative h-48 md:h-auto md:w-72 flex-shrink-0">
+                    <img
+                      src={structure.heroImage}
+                      alt={structure.name}
+                      class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      loading={index < 3 ? 'eager' : 'lazy'}
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-obsidian-900/90 hidden md:block"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian-900 via-obsidian-900/50 to-transparent md:hidden"></div>
+                  </div>
+
+                  <!-- Content -->
+                  <div class="p-6 md:p-8 flex-1">
+                    <div class="flex flex-wrap items-center gap-3 mb-3">
+                      <span class="badge-gold text-xs">{structure.category}</span>
+                      <span class="text-stone-600">•</span>
+                      <span class="text-stone-500 text-sm">{structure.country}</span>
+                      <span class="text-stone-600">•</span>
+                      <span class="text-stone-500 text-sm">{structure.dates.age}</span>
+                    </div>
+
+                    <h2 class="text-2xl md:text-3xl font-display font-bold text-stone-100 group-hover:text-gold-400 transition-colors mb-3">
+                      {structure.name}
+                    </h2>
+
+                    <p class="text-gold-400/80 font-medium mb-4">
+                      {structure.tagline}
+                    </p>
+
+                    <div class="p-4 rounded-xl bg-obsidian-800/30 border border-obsidian-700/30">
+                      <p class="text-sm text-stone-400 leading-relaxed">
+                        <span class="text-mystic-400 font-semibold">Why it's mysterious:</span> {mysteryReasons[structure.id]}
+                      </p>
+                    </div>
+
+                    <div class="mt-4 flex items-center text-gold-400 text-sm font-medium group-hover:translate-x-2 transition-transform">
+                      Explore the mystery
+                      <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Honorable Mentions -->
+  <section class="py-12 md:py-16 bg-obsidian-900/30">
+    <div class="container-custom">
+      <h2 class="section-title text-center mb-8">Honorable Mentions</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
+        {structures
+          .filter(s => !top10Ids.includes(s.id))
+          .slice(0, 10)
+          .map(structure => (
+            <a
+              href={`/structures/${structure.slug}`}
+              class="card p-4 text-center group hover:border-gold-400/30 transition-colors"
+            >
+              <p class="text-sm text-stone-500 mb-1">{structure.country}</p>
+              <h3 class="font-bold text-stone-200 group-hover:text-gold-400 transition-colors text-sm">
+                {structure.name}
+              </h3>
+            </a>
+          ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Share CTA -->
+  <section class="py-12 md:py-16">
+    <div class="container-custom text-center">
+      <h2 class="text-2xl font-bold text-stone-100 mb-4">Agree with our ranking?</h2>
+      <p class="text-stone-400 mb-6">Share this list and let the debate begin.</p>
+      <div class="flex justify-center gap-4">
+        <a
+          href={`https://twitter.com/intent/tweet?text=The%20Top%2010%20Most%20Mysterious%20Ancient%20Structures%20%F0%9F%8F%9B%EF%B8%8F&url=https://greatestancientstructures.com/top-10`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-secondary"
+        >
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+          Share on X
+        </a>
+        <a
+          href={`https://www.facebook.com/sharer/sharer.php?u=https://greatestancientstructures.com/top-10`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-secondary"
+        >
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+          Share on Facebook
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <Newsletter variant="hero" />
+
+  <Footer slot="footer" />
+  <MobileNav />
+</BaseLayout>

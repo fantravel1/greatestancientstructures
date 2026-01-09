@@ -1,0 +1,299 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/global/Header.astro';
+import Footer from '../components/global/Footer.astro';
+import MobileNav from '../components/global/MobileNav.astro';
+import structures from '../data/structures.json';
+---
+
+<BaseLayout
+  title="Compare Ancient Structures | Side-by-Side Analysis"
+  description="Compare the world's greatest ancient structures side-by-side. Analyze dates, dimensions, mysteries, and engineering feats."
+>
+  <Header slot="header" />
+
+  <main class="py-20 md:py-28 min-h-screen">
+    <div class="container-custom">
+      <!-- Header -->
+      <div class="text-center mb-12">
+        <span class="inline-block px-4 py-2 rounded-full bg-mystic-500/10 text-mystic-400 text-sm font-medium mb-4">
+          Analysis Tool
+        </span>
+        <h1 class="text-display-md font-display font-bold text-stone-100 mb-4">
+          Compare Structures
+        </h1>
+        <p class="text-stone-400 max-w-xl mx-auto">
+          Select two ancient structures to compare their age, scale, mysteries, and engineering achievements.
+        </p>
+      </div>
+
+      <!-- Comparison Tool -->
+      <div x-data="compareTool()" class="max-w-6xl mx-auto">
+
+        <!-- Selection Row -->
+        <div class="grid md:grid-cols-2 gap-6 mb-12">
+          <!-- Structure 1 Selector -->
+          <div>
+            <label class="block text-sm text-stone-500 mb-2">Structure 1</label>
+            <div class="relative">
+              <select
+                x-model="selected1"
+                class="w-full p-4 pr-12 rounded-xl bg-obsidian-900 border border-obsidian-700 text-stone-200 appearance-none cursor-pointer focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-colors"
+              >
+                <option value="">Select a structure...</option>
+                <template x-for="structure in structures" :key="structure.id">
+                  <option :value="structure.id" x-text="structure.name" :disabled="structure.id === selected2"></option>
+                </template>
+              </select>
+              <svg class="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-stone-500 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Structure 2 Selector -->
+          <div>
+            <label class="block text-sm text-stone-500 mb-2">Structure 2</label>
+            <div class="relative">
+              <select
+                x-model="selected2"
+                class="w-full p-4 pr-12 rounded-xl bg-obsidian-900 border border-obsidian-700 text-stone-200 appearance-none cursor-pointer focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-colors"
+              >
+                <option value="">Select a structure...</option>
+                <template x-for="structure in structures" :key="structure.id">
+                  <option :value="structure.id" x-text="structure.name" :disabled="structure.id === selected1"></option>
+                </template>
+              </select>
+              <svg class="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-stone-500 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Empty State -->
+        <div x-show="!structure1 || !structure2" class="text-center py-16">
+          <div class="w-20 h-20 mx-auto mb-6 rounded-2xl bg-obsidian-800/50 flex items-center justify-center">
+            <svg class="w-10 h-10 text-stone-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+            </svg>
+          </div>
+          <p class="text-stone-500">Select two structures above to begin comparison</p>
+        </div>
+
+        <!-- Comparison Table -->
+        <div x-show="structure1 && structure2" x-transition class="space-y-8">
+
+          <!-- Header Cards -->
+          <div class="grid md:grid-cols-2 gap-6">
+            <template x-for="(structure, index) in [structure1, structure2]" :key="index">
+              <div class="card overflow-hidden">
+                <div class="relative h-48">
+                  <img :src="structure?.heroImage" :alt="structure?.name" class="w-full h-full object-cover" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/50 to-transparent"></div>
+                  <div class="absolute bottom-0 left-0 right-0 p-6">
+                    <p class="text-sm text-gold-400 mb-1" x-text="structure?.country"></p>
+                    <h2 class="text-2xl font-bold text-stone-100" x-text="structure?.name"></h2>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </div>
+
+          <!-- Comparison Sections -->
+          <div class="card overflow-hidden">
+            <!-- Dates -->
+            <div class="border-b border-obsidian-800/50">
+              <div class="px-6 py-4 bg-obsidian-800/30">
+                <h3 class="font-bold text-stone-100 flex items-center gap-2">
+                  <svg class="w-5 h-5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                  Timeline
+                </h3>
+              </div>
+              <div class="grid md:grid-cols-2">
+                <template x-for="(structure, index) in [structure1, structure2]" :key="'dates-' + index">
+                  <div :class="index === 1 ? 'md:border-l border-t md:border-t-0 border-obsidian-800/50' : ''" class="p-6 space-y-4">
+                    <div>
+                      <dt class="text-xs text-stone-500 uppercase tracking-wider">Constructed</dt>
+                      <dd class="text-lg text-stone-200 font-medium" x-text="structure?.dates.constructed"></dd>
+                    </div>
+                    <div>
+                      <dt class="text-xs text-stone-500 uppercase tracking-wider">Age</dt>
+                      <dd class="text-lg text-stone-200 font-medium" x-text="structure?.dates.age"></dd>
+                    </div>
+                    <div>
+                      <dt class="text-xs text-stone-500 uppercase tracking-wider">Period</dt>
+                      <dd class="text-lg text-stone-200 font-medium" x-text="structure?.dates.period"></dd>
+                    </div>
+                  </div>
+                </template>
+              </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="border-b border-obsidian-800/50">
+              <div class="px-6 py-4 bg-obsidian-800/30">
+                <h3 class="font-bold text-stone-100 flex items-center gap-2">
+                  <svg class="w-5 h-5 text-mystic-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                  </svg>
+                  Key Statistics
+                </h3>
+              </div>
+              <div class="grid md:grid-cols-2">
+                <template x-for="(structure, index) in [structure1, structure2]" :key="'stats-' + index">
+                  <div :class="index === 1 ? 'md:border-l border-t md:border-t-0 border-obsidian-800/50' : ''" class="p-6">
+                    <div class="space-y-4">
+                      <template x-for="(value, key) in structure?.stats" :key="key">
+                        <div>
+                          <dt class="text-xs text-stone-500 uppercase tracking-wider" x-text="formatStatKey(key)"></dt>
+                          <dd class="text-lg text-stone-200 font-medium" x-text="value"></dd>
+                        </div>
+                      </template>
+                    </div>
+                  </div>
+                </template>
+              </div>
+            </div>
+
+            <!-- Category & Region -->
+            <div class="border-b border-obsidian-800/50">
+              <div class="px-6 py-4 bg-obsidian-800/30">
+                <h3 class="font-bold text-stone-100 flex items-center gap-2">
+                  <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
+                  </svg>
+                  Classification
+                </h3>
+              </div>
+              <div class="grid md:grid-cols-2">
+                <template x-for="(structure, index) in [structure1, structure2]" :key="'class-' + index">
+                  <div :class="index === 1 ? 'md:border-l border-t md:border-t-0 border-obsidian-800/50' : ''" class="p-6 space-y-4">
+                    <div>
+                      <dt class="text-xs text-stone-500 uppercase tracking-wider">Category</dt>
+                      <dd class="mt-1">
+                        <span class="badge-gold" x-text="structure?.category"></span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt class="text-xs text-stone-500 uppercase tracking-wider">Region</dt>
+                      <dd class="text-lg text-stone-200 font-medium" x-text="structure?.region"></dd>
+                    </div>
+                    <div>
+                      <dt class="text-xs text-stone-500 uppercase tracking-wider">UNESCO Status</dt>
+                      <dd class="text-lg text-stone-200 font-medium" x-text="structure?.unesco?.status === 'inscribed' ? 'World Heritage Site (' + structure?.unesco?.year + ')' : 'Not Listed'"></dd>
+                    </div>
+                  </div>
+                </template>
+              </div>
+            </div>
+
+            <!-- Mysteries -->
+            <div>
+              <div class="px-6 py-4 bg-obsidian-800/30">
+                <h3 class="font-bold text-stone-100 flex items-center gap-2">
+                  <span class="text-gold-400">?</span>
+                  Unsolved Mysteries
+                </h3>
+              </div>
+              <div class="grid md:grid-cols-2">
+                <template x-for="(structure, index) in [structure1, structure2]" :key="'mysteries-' + index">
+                  <div :class="index === 1 ? 'md:border-l border-t md:border-t-0 border-obsidian-800/50' : ''" class="p-6">
+                    <ul class="space-y-3">
+                      <template x-for="(mystery, i) in structure?.mysteries" :key="i">
+                        <li class="flex gap-3 text-stone-300">
+                          <span class="flex-shrink-0 w-6 h-6 rounded-full bg-gold-400/10 text-gold-400 flex items-center justify-center text-xs font-bold" x-text="i + 1"></span>
+                          <span x-text="mystery"></span>
+                        </li>
+                      </template>
+                    </ul>
+                  </div>
+                </template>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Compare Cards -->
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="card p-6 text-center">
+              <p class="text-sm text-stone-500 mb-2">Age Difference</p>
+              <p class="text-3xl font-display font-bold text-gold-400" x-text="getAgeDifference()"></p>
+            </div>
+            <div class="card p-6 text-center">
+              <p class="text-sm text-stone-500 mb-2">Distance Apart</p>
+              <p class="text-3xl font-display font-bold text-mystic-400" x-text="getDistance()"></p>
+            </div>
+            <div class="card p-6 text-center">
+              <p class="text-sm text-stone-500 mb-2">Same Region?</p>
+              <p class="text-3xl font-display font-bold" :class="structure1?.region === structure2?.region ? 'text-green-400' : 'text-stone-500'" x-text="structure1?.region === structure2?.region ? 'Yes' : 'No'"></p>
+            </div>
+          </div>
+
+          <!-- View Details Links -->
+          <div class="grid md:grid-cols-2 gap-6">
+            <a :href="`/structures/${structure1?.slug}`" class="btn-secondary justify-center">
+              View <span x-text="structure1?.name"></span> Details
+            </a>
+            <a :href="`/structures/${structure2?.slug}`" class="btn-secondary justify-center">
+              View <span x-text="structure2?.name"></span> Details
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <Footer slot="footer" />
+  <MobileNav />
+
+  <script define:vars={{ structures }}>
+    document.addEventListener('alpine:init', () => {
+      Alpine.data('compareTool', () => ({
+        structures: structures,
+        selected1: '',
+        selected2: '',
+
+        get structure1() {
+          return this.structures.find(s => s.id === this.selected1);
+        },
+
+        get structure2() {
+          return this.structures.find(s => s.id === this.selected2);
+        },
+
+        formatStatKey(key) {
+          return key.replace(/([A-Z])/g, ' $1').trim();
+        },
+
+        getAgeDifference() {
+          if (!this.structure1 || !this.structure2) return '—';
+          const age1 = parseInt(this.structure1.dates.age.replace(/[^0-9]/g, ''));
+          const age2 = parseInt(this.structure2.dates.age.replace(/[^0-9]/g, ''));
+          const diff = Math.abs(age1 - age2);
+          return diff.toLocaleString() + ' years';
+        },
+
+        getDistance() {
+          if (!this.structure1 || !this.structure2) return '—';
+          const lat1 = this.structure1.coordinates[0];
+          const lon1 = this.structure1.coordinates[1];
+          const lat2 = this.structure2.coordinates[0];
+          const lon2 = this.structure2.coordinates[1];
+
+          const R = 6371;
+          const dLat = (lat2 - lat1) * Math.PI / 180;
+          const dLon = (lon2 - lon1) * Math.PI / 180;
+          const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+                    Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+                    Math.sin(dLon/2) * Math.sin(dLon/2);
+          const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+          const d = R * c;
+
+          return Math.round(d).toLocaleString() + ' km';
+        }
+      }));
+    });
+  </script>
+</BaseLayout>

@@ -4,29 +4,33 @@ const currentYear = new Date().getFullYear();
 const footerLinks = {
   explore: [
     { href: "/structures", label: "All Structures" },
-    { href: "/categories/megalithic", label: "Megalithic Sites" },
-    { href: "/categories/rock-cut", label: "Rock-Cut Architecture" },
-    { href: "/categories/impossible", label: '"Impossible" Construction' },
-    { href: "/categories/disputed", label: "Disputed Origins" },
+    { href: "/category/megalithic", label: "Megalithic Sites" },
+    { href: "/category/rock-cut", label: "Rock-Cut Architecture" },
+    { href: "/category/impossible", label: '"Impossible" Construction' },
+    { href: "/category/disputed", label: "Disputed Origins" },
   ],
   regions: [
-    { href: "/regions/middle-east", label: "Middle East" },
-    { href: "/regions/south-america", label: "South America" },
-    { href: "/regions/europe", label: "Europe" },
-    { href: "/regions/asia", label: "Asia" },
-    { href: "/regions/africa", label: "Africa" },
+    { href: "/region/middle-east", label: "Middle East" },
+    { href: "/region/south-america", label: "South America" },
+    { href: "/region/europe", label: "Europe" },
+    { href: "/region/asia", label: "Asia" },
+    { href: "/region/africa", label: "Africa" },
+    { href: "/region/oceania", label: "Oceania" },
   ],
   tools: [
     { href: "/map", label: "Interactive Map" },
     { href: "/timeline", label: "Timeline" },
     { href: "/compare", label: "Compare Sites" },
     { href: "/quiz", label: "Knowledge Quiz" },
+    { href: "/top-10", label: "Top 10 Mysteries" },
+    { href: "/travel-guide", label: "Travel Guide" },
   ],
-  about: [
+  resources: [
     { href: "/about", label: "About Us" },
-    { href: "/methodology", label: "Our Methodology" },
-    { href: "/contact", label: "Contact" },
-    { href: "/privacy", label: "Privacy Policy" },
+    { href: "/faq", label: "FAQ" },
+    { href: "/glossary", label: "Glossary" },
+    { href: "/discover", label: "Random Discovery" },
+    { href: "/rss.xml", label: "RSS Feed" },
   ],
 };
 ---
@@ -113,9 +117,9 @@ const footerLinks = {
       </div>
 
       <div>
-        <h3 class="text-sm font-semibold text-gold-400 uppercase tracking-wider mb-4">About</h3>
+        <h3 class="text-sm font-semibold text-gold-400 uppercase tracking-wider mb-4">Resources</h3>
         <ul class="space-y-3">
-          {footerLinks.about.map((link) => (
+          {footerLinks.resources.map((link) => (
             <li>
               <a href={link.href} class="text-sm text-stone-400 hover:text-stone-100 transition-colors">
                 {link.label}

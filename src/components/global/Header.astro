@@ -1,10 +1,11 @@
 ---
 const navLinks = [
-  { href: "/", label: "Home" },
   { href: "/structures", label: "Explore" },
-  { href: "/categories", label: "Categories" },
-  { href: "/map", label: "World Map" },
+  { href: "/map", label: "Map" },
   { href: "/timeline", label: "Timeline" },
+  { href: "/compare", label: "Compare" },
+  { href: "/quiz", label: "Quiz" },
+  { href: "/about", label: "About" },
 ];
 ---
 
@@ -47,13 +48,13 @@ const navLinks = [
 
       <!-- Desktop CTA -->
       <div class="hidden md:flex items-center gap-4">
-        <button class="btn-ghost text-sm">
+        <a href="/search" class="btn-ghost text-sm">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
           </svg>
           <span class="sr-only">Search</span>
-        </button>
-        <a href="/explore" class="btn-primary text-sm py-2">
+        </a>
+        <a href="/structures" class="btn-primary text-sm py-2">
           Start Exploring
         </a>
       </div>
@@ -96,7 +97,7 @@ const navLinks = [
           </a>
         ))}
         <div class="mt-4 px-4">
-          <a href="/explore" class="btn-primary w-full text-center">
+          <a href="/structures" class="btn-primary w-full text-center">
             Start Exploring
           </a>
         </div>

@@ -1,0 +1,292 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/global/Header.astro';
+import Footer from '../components/global/Footer.astro';
+import MobileNav from '../components/global/MobileNav.astro';
+import structures from '../data/structures.json';
+
+// Group structures by region
+const byRegion = structures.reduce((acc, s) => {
+  if (!acc[s.region]) acc[s.region] = [];
+  acc[s.region].push(s);
+  return acc;
+}, {} as Record<string, typeof structures>);
+
+const regions = Object.keys(byRegion).sort();
+
+// Budget categories
+const budgetInfo = {
+  'Turkey': { flight: '$400-800', daily: '$50-100', visa: 'E-visa $50' },
+  'Egypt': { flight: '$600-1000', daily: '$40-80', visa: 'On arrival $25' },
+  'Peru': { flight: '$500-900', daily: '$50-120', visa: 'Free 90 days' },
+  'Bolivia': { flight: '$600-1000', daily: '$30-60', visa: 'Free 90 days' },
+  'Jordan': { flight: '$700-1100', daily: '$60-120', visa: 'Jordan Pass $99' },
+  'Lebanon': { flight: '$700-1200', daily: '$60-100', visa: 'Free on arrival' },
+  'UK': { flight: '$400-800', daily: '$100-200', visa: 'Free 6 months' },
+  'Ireland': { flight: '$400-800', daily: '$80-150', visa: 'Free 90 days' },
+  'France': { flight: '$400-700', daily: '$100-180', visa: 'Schengen' },
+  'Malta': { flight: '$500-900', daily: '$80-140', visa: 'Schengen' },
+  'Ethiopia': { flight: '$800-1300', daily: '$40-80', visa: 'E-visa $52' },
+  'India': { flight: '$700-1200', daily: '$30-80', visa: 'E-visa $25-80' },
+  'South Korea': { flight: '$800-1400', daily: '$80-150', visa: 'Free 90 days' },
+  'Indonesia': { flight: '$900-1500', daily: '$30-70', visa: 'Free 30 days' },
+  'Japan': { flight: '$800-1400', daily: '$100-180', visa: 'Free 90 days' },
+  'Micronesia': { flight: '$1500-2500', daily: '$100-180', visa: 'Free 30 days' },
+  'Chile': { flight: '$800-1400', daily: '$80-150', visa: 'Free 90 days' },
+};
+---
+
+<BaseLayout
+  title="Ancient Structures Travel Guide | Plan Your Journey"
+  description="Plan your trip to the world's greatest ancient structures. Practical travel info, costs, best seasons, and tips for visiting megalithic sites worldwide."
+>
+  <Header slot="header" />
+
+  <!-- Hero -->
+  <section class="relative py-24 md:py-32 overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-radial from-blue-500/10 to-transparent rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="container-custom relative z-10">
+      <div class="max-w-3xl">
+        <span class="inline-block px-4 py-2 rounded-full bg-blue-500/10 text-blue-400 text-sm font-medium mb-6">
+          Travel Planning
+        </span>
+        <h1 class="text-display-lg font-display font-bold tracking-tight text-stone-100 mb-4">
+          Travel Guide
+        </h1>
+        <p class="text-xl text-stone-400 leading-relaxed mb-8">
+          Everything you need to plan your pilgrimage to humanity's greatest ancient structures. Practical info, costs, and insider tips.
+        </p>
+        <button
+          onclick="window.print()"
+          class="btn-secondary"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+          </svg>
+          Print This Guide
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Stats -->
+  <section class="py-8 border-y border-obsidian-800/50 print:border-black">
+    <div class="container-custom">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <p class="text-3xl font-display font-bold text-gold-400 print:text-black">{structures.length}</p>
+          <p class="text-stone-500 text-sm">Sites Covered</p>
+        </div>
+        <div>
+          <p class="text-3xl font-display font-bold text-mystic-400 print:text-black">{regions.length}</p>
+          <p class="text-stone-500 text-sm">Regions</p>
+        </div>
+        <div>
+          <p class="text-3xl font-display font-bold text-blue-400 print:text-black">{Object.keys(budgetInfo).length}</p>
+          <p class="text-stone-500 text-sm">Countries</p>
+        </div>
+        <div>
+          <p class="text-3xl font-display font-bold text-stone-300 print:text-black">12,000+</p>
+          <p class="text-stone-500 text-sm">Years of History</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Region Sections -->
+  <section class="py-12 md:py-16">
+    <div class="container-custom">
+      <div class="space-y-16">
+        {regions.map(region => (
+          <div class="print:break-inside-avoid">
+            <div class="flex items-center gap-4 mb-8">
+              <h2 class="text-2xl md:text-3xl font-display font-bold text-gold-400 print:text-black">
+                {region}
+              </h2>
+              <div class="flex-1 h-px bg-obsidian-800/50 print:bg-gray-300"></div>
+              <span class="text-stone-500 text-sm">{byRegion[region].length} sites</span>
+            </div>
+
+            <div class="grid gap-6">
+              {byRegion[region].map(structure => (
+                <div class="card p-6 print:border print:border-gray-300 print:shadow-none">
+                  <div class="md:flex md:gap-8">
+                    <!-- Site Info -->
+                    <div class="flex-1 mb-6 md:mb-0">
+                      <div class="flex items-start justify-between mb-4">
+                        <div>
+                          <h3 class="text-xl font-bold text-stone-100 print:text-black mb-1">
+                            {structure.name}
+                          </h3>
+                          <p class="text-gold-400 print:text-gray-600">{structure.tagline}</p>
+                        </div>
+                        {structure.unesco?.status === 'inscribed' && (
+                          <span class="badge bg-blue-500/10 text-blue-400 border-blue-500/30 print:bg-blue-100 print:text-blue-800 text-xs">
+                            UNESCO
+                          </span>
+                        )}
+                      </div>
+
+                      <div class="grid grid-cols-2 gap-4 text-sm">
+                        <div>
+                          <p class="text-stone-500 print:text-gray-500">Country</p>
+                          <p class="text-stone-200 print:text-black font-medium">{structure.country}</p>
+                        </div>
+                        <div>
+                          <p class="text-stone-500 print:text-gray-500">Nearest City</p>
+                          <p class="text-stone-200 print:text-black font-medium">{structure.travel.nearestCity}</p>
+                        </div>
+                        <div>
+                          <p class="text-stone-500 print:text-gray-500">Entry Fee</p>
+                          <p class="text-stone-200 print:text-black font-medium">{structure.travel.entryFee}</p>
+                        </div>
+                        <div>
+                          <p class="text-stone-500 print:text-gray-500">Best Season</p>
+                          <p class="text-stone-200 print:text-black font-medium">{structure.travel.bestSeason.join(', ')}</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Budget Info -->
+                    {budgetInfo[structure.country] && (
+                      <div class="md:w-64 p-4 rounded-xl bg-obsidian-800/30 print:bg-gray-100">
+                        <p class="text-xs text-stone-500 print:text-gray-500 uppercase tracking-wider mb-3">
+                          Est. Budget ({structure.country})
+                        </p>
+                        <div class="space-y-2 text-sm">
+                          <div class="flex justify-between">
+                            <span class="text-stone-400 print:text-gray-600">Flight (from US)</span>
+                            <span class="text-stone-200 print:text-black font-medium">{budgetInfo[structure.country].flight}</span>
+                          </div>
+                          <div class="flex justify-between">
+                            <span class="text-stone-400 print:text-gray-600">Daily Budget</span>
+                            <span class="text-stone-200 print:text-black font-medium">{budgetInfo[structure.country].daily}</span>
+                          </div>
+                          <div class="flex justify-between">
+                            <span class="text-stone-400 print:text-gray-600">Visa</span>
+                            <span class="text-stone-200 print:text-black font-medium">{budgetInfo[structure.country].visa}</span>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  <!-- Coordinates -->
+                  <div class="mt-4 pt-4 border-t border-obsidian-700/50 print:border-gray-200 flex items-center justify-between">
+                    <p class="text-xs text-stone-500 print:text-gray-500 font-mono">
+                      GPS: {structure.coordinates[0].toFixed(4)}°, {structure.coordinates[1].toFixed(4)}°
+                    </p>
+                    <a
+                      href={`/structures/${structure.slug}`}
+                      class="text-gold-400 print:text-blue-600 text-sm font-medium hover:underline print:hidden"
+                    >
+                      Full Details →
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Travel Tips -->
+  <section class="py-12 md:py-16 bg-obsidian-900/30 print:bg-gray-50">
+    <div class="container-custom">
+      <h2 class="section-title text-center mb-12">Essential Travel Tips</h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div class="card p-6 print:border print:border-gray-300">
+          <div class="w-12 h-12 rounded-xl bg-gold-400/10 print:bg-yellow-100 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-gold-400 print:text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-stone-100 print:text-black mb-2">Go Early</h3>
+          <p class="text-sm text-stone-400 print:text-gray-600">
+            Arrive at opening time to avoid crowds and experience the sites in relative solitude. The light is often best for photography too.
+          </p>
+        </div>
+
+        <div class="card p-6 print:border print:border-gray-300">
+          <div class="w-12 h-12 rounded-xl bg-mystic-400/10 print:bg-purple-100 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-mystic-400 print:text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-stone-100 print:text-black mb-2">Hire Local Guides</h3>
+          <p class="text-sm text-stone-400 print:text-gray-600">
+            Local guides provide context, access, and stories you won't find in guidebooks. They also support the local economy.
+          </p>
+        </div>
+
+        <div class="card p-6 print:border print:border-gray-300">
+          <div class="w-12 h-12 rounded-xl bg-blue-400/10 print:bg-blue-100 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-400 print:text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-stone-100 print:text-black mb-2">Travel Insurance</h3>
+          <p class="text-sm text-stone-400 print:text-gray-600">
+            Many sites are remote. Ensure your insurance covers emergency evacuation and adventure activities.
+          </p>
+        </div>
+
+        <div class="card p-6 print:border print:border-gray-300">
+          <div class="w-12 h-12 rounded-xl bg-green-400/10 print:bg-green-100 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-green-400 print:text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-stone-100 print:text-black mb-2">Respect the Sites</h3>
+          <p class="text-sm text-stone-400 print:text-gray-600">
+            Don't climb on structures, touch carvings, or remove anything. These sites have survived millennia—help them survive us.
+          </p>
+        </div>
+
+        <div class="card p-6 print:border print:border-gray-300">
+          <div class="w-12 h-12 rounded-xl bg-orange-400/10 print:bg-orange-100 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-orange-400 print:text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-stone-100 print:text-black mb-2">Check Seasons</h3>
+          <p class="text-sm text-stone-400 print:text-gray-600">
+            Many sites have optimal visiting windows. Desert heat, monsoons, and crowds all affect your experience.
+          </p>
+        </div>
+
+        <div class="card p-6 print:border print:border-gray-300">
+          <div class="w-12 h-12 rounded-xl bg-red-400/10 print:bg-red-100 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-red-400 print:text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-stone-100 print:text-black mb-2">Altitude Prep</h3>
+          <p class="text-sm text-stone-400 print:text-gray-600">
+            Sites like Machu Picchu and Puma Punku are at high altitude. Acclimatize for 1-2 days before visiting.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Print Styles -->
+  <style>
+    @media print {
+      .print\\:hidden { display: none !important; }
+      .print\\:break-inside-avoid { break-inside: avoid; }
+      body { background: white !important; }
+      .card { background: white !important; }
+    }
+  </style>
+
+  <Footer slot="footer" />
+  <MobileNav />
+</BaseLayout>

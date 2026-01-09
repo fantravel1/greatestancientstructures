@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/global/Header.astro';
+import Footer from '../../components/global/Footer.astro';
+import MobileNav from '../../components/global/MobileNav.astro';
+import StructureCard from '../../components/structure/StructureCard.astro';
+import structures from '../../data/structures.json';
+
+const categories = [
+  {
+    slug: 'megalithic',
+    name: 'Megalithic Sites',
+    description: 'Massive stone monuments built with blocks weighing hundreds of tons, challenging our understanding of ancient engineering.',
+    icon: '🗿',
+    color: 'gold'
+  },
+  {
+    slug: 'rock-cut',
+    name: 'Rock-Cut Architecture',
+    description: 'Temples, tombs, and cities carved directly from living rock—subtractive engineering at its finest.',
+    icon: '⛏️',
+    color: 'mystic'
+  },
+  {
+    slug: 'impossible',
+    name: 'Impossible Precision',
+    description: 'Structures featuring precision cuts and alignments that defy explanation with primitive tools.',
+    icon: '📐',
+    color: 'blue'
+  },
+  {
+    slug: 'disputed',
+    name: 'Disputed Origins',
+    description: 'Sites where official dating or construction methods remain hotly debated among researchers.',
+    icon: '❓',
+    color: 'stone'
+  }
+];
+
+export function getStaticPaths() {
+  return categories.map(cat => ({
+    params: { category: cat.slug },
+    props: { category: cat }
+  }));
+}
+
+const { category } = Astro.props;
+
+const categoryStructures = structures.filter(s => s.category === category.slug);
+
+const colorMap: Record<string, { badge: string; gradient: string; text: string }> = {
+  gold: { badge: 'badge-gold', gradient: 'from-gold-400/20 to-gold-400/5', text: 'text-gold-400' },
+  mystic: { badge: 'badge-mystic', gradient: 'from-mystic-400/20 to-mystic-400/5', text: 'text-mystic-400' },
+  blue: { badge: 'bg-blue-500/10 text-blue-400 border-blue-500/30', gradient: 'from-blue-400/20 to-blue-400/5', text: 'text-blue-400' },
+  stone: { badge: 'badge-stone', gradient: 'from-stone-400/20 to-stone-400/5', text: 'text-stone-400' }
+};
+
+const colors = colorMap[category.color] || colorMap.stone;
+---
+
+<BaseLayout
+  title={`${category.name} | Greatest Ancient Structures`}
+  description={category.description}
+>
+  <Header slot="header" />
+
+  <!-- Hero -->
+  <section class="relative py-24 md:py-32 overflow-hidden">
+    <div class="absolute inset-0">
+      <div class={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-radial ${colors.gradient} rounded-full blur-3xl opacity-50`}></div>
+    </div>
+
+    <div class="container-custom relative z-10">
+      <div class="max-w-3xl">
+        <div class="flex items-center gap-4 mb-6">
+          <span class="text-5xl">{category.icon}</span>
+          <span class={colors.badge}>{categoryStructures.length} structures</span>
+        </div>
+        <h1 class="text-display-lg font-display font-bold tracking-tight text-stone-100 mb-4">
+          {category.name}
+        </h1>
+        <p class="text-xl text-stone-400 leading-relaxed">
+          {category.description}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Structures Grid -->
+  <section class="py-12 md:py-16">
+    <div class="container-custom">
+      {categoryStructures.length > 0 ? (
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {categoryStructures.map((structure, i) => (
+            <StructureCard
+              structure={structure}
+              variant={i === 0 ? 'featured' : 'default'}
+              loading={i < 6 ? 'eager' : 'lazy'}
+            />
+          ))}
+        </div>
+      ) : (
+        <div class="text-center py-16">
+          <p class="text-stone-500">No structures found in this category.</p>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- Other Categories -->
+  <section class="py-12 md:py-16 bg-obsidian-900/30">
+    <div class="container-custom">
+      <h2 class="section-title mb-8">Explore Other Categories</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {categories.filter(c => c.slug !== category.slug).map(cat => {
+          const catColors = colorMap[cat.color] || colorMap.stone;
+          const count = structures.filter(s => s.category === cat.slug).length;
+          return (
+            <a href={`/category/${cat.slug}`} class="card p-6 group hover:border-gold-400/30 transition-all">
+              <div class="flex items-center gap-4 mb-4">
+                <span class="text-3xl">{cat.icon}</span>
+                <span class={catColors.badge}>{count}</span>
+              </div>
+              <h3 class="text-lg font-bold text-stone-100 group-hover:text-gold-400 transition-colors mb-2">
+                {cat.name}
+              </h3>
+              <p class="text-sm text-stone-500 line-clamp-2">{cat.description}</p>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+  <MobileNav />
+</BaseLayout>

@@ -1,0 +1,333 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/global/Header.astro';
+import Footer from '../components/global/Footer.astro';
+import MobileNav from '../components/global/MobileNav.astro';
+
+const questions = [
+  {
+    id: 1,
+    question: "Which ancient site predates Stonehenge by over 6,000 years?",
+    options: ["Great Pyramid of Giza", "Göbekli Tepe", "Machu Picchu", "Petra"],
+    correct: 1,
+    fact: "Göbekli Tepe in Turkey dates to ~9600 BCE, making it the world's oldest known megalithic site."
+  },
+  {
+    id: 2,
+    question: "The largest stones at Baalbek weigh approximately:",
+    options: ["100 tons", "500 tons", "1,000 tons", "2,000 tons"],
+    correct: 2,
+    fact: "The Stone of the Pregnant Woman weighs ~1,000 tons. A nearby stone weighs 1,650 tons—the largest cut stone in history."
+  },
+  {
+    id: 3,
+    question: "Which civilization built Puma Punku with H-shaped interlocking blocks?",
+    options: ["Inca", "Maya", "Tiwanaku", "Olmec"],
+    correct: 2,
+    fact: "The Tiwanaku civilization built Puma Punku around 536 CE with precision-cut andesite and diorite blocks."
+  },
+  {
+    id: 4,
+    question: "The Great Pyramid was the tallest structure on Earth for how long?",
+    options: ["500 years", "1,500 years", "3,800 years", "5,000 years"],
+    correct: 2,
+    fact: "At 146.6m, the Great Pyramid remained the tallest structure for 3,800 years until Lincoln Cathedral in 1311 CE."
+  },
+  {
+    id: 5,
+    question: "Nan Madol, the 'Venice of the Pacific,' is built on how many artificial islands?",
+    options: ["12", "42", "92", "192"],
+    correct: 2,
+    fact: "Nan Madol consists of 92 artificial islands built with massive basalt columns, some weighing 50+ tons."
+  },
+  {
+    id: 6,
+    question: "Which site contains over 35,000 dolmens—more than any other region?",
+    options: ["British Isles", "France", "Korean Peninsula", "India"],
+    correct: 2,
+    fact: "Korea has 35,000+ dolmens, representing 40% of the world's total. Some cap stones weigh over 300 tons."
+  },
+  {
+    id: 7,
+    question: "The Kailasa Temple at Ellora was carved from a single rock removing how much material?",
+    options: ["50,000 tons", "200,000 tons", "400,000 tons", "1 million tons"],
+    correct: 2,
+    fact: "Builders removed an estimated 400,000 tons of rock, carving top-down from the cliff face over ~18 years."
+  },
+  {
+    id: 8,
+    question: "Easter Island's largest moai statue weighs approximately:",
+    options: ["20 tons", "50 tons", "82 tons", "150 tons"],
+    correct: 2,
+    fact: "Paro, the largest erected moai, weighs 82 tons. An unfinished moai in the quarry would have been 270 tons."
+  }
+];
+---
+
+<BaseLayout
+  title="Ancient Structures Quiz | Test Your Knowledge"
+  description="How much do you know about the world's greatest ancient structures? Take our quiz and discover surprising facts."
+>
+  <Header slot="header" />
+
+  <main class="py-20 md:py-28 min-h-screen">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+
+        <!-- Quiz Container -->
+        <div x-data="quizApp()" x-cloak>
+
+          <!-- Start Screen -->
+          <div x-show="!started && !finished" class="text-center py-12">
+            <div class="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-gold-400/20 to-mystic-500/20 flex items-center justify-center">
+              <svg class="w-10 h-10 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+              </svg>
+            </div>
+            <h1 class="text-display-md font-display font-bold text-stone-100 mb-4">
+              Ancient Structures Quiz
+            </h1>
+            <p class="text-lg text-stone-400 mb-8 max-w-md mx-auto">
+              Test your knowledge of humanity's most enigmatic architectural achievements.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+              <div class="flex items-center gap-2 text-stone-500 text-sm">
+                <svg class="w-5 h-5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                8 Questions
+              </div>
+              <div class="flex items-center gap-2 text-stone-500 text-sm">
+                <svg class="w-5 h-5 text-mystic-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                ~3 minutes
+              </div>
+              <div class="flex items-center gap-2 text-stone-500 text-sm">
+                <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                Fun facts included
+              </div>
+            </div>
+            <button @click="startQuiz()" class="btn-primary text-lg px-8 py-4">
+              Start Quiz
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Question Screen -->
+          <div x-show="started && !finished" x-transition>
+            <!-- Progress Bar -->
+            <div class="mb-8">
+              <div class="flex justify-between text-sm text-stone-500 mb-2">
+                <span>Question <span x-text="currentQuestion + 1"></span> of <span x-text="questions.length"></span></span>
+                <span x-text="score + ' correct'"></span>
+              </div>
+              <div class="h-2 bg-obsidian-800 rounded-full overflow-hidden">
+                <div
+                  class="h-full bg-gradient-to-r from-gold-400 to-mystic-500 transition-all duration-500"
+                  :style="`width: ${((currentQuestion + 1) / questions.length) * 100}%`"
+                ></div>
+              </div>
+            </div>
+
+            <!-- Question Card -->
+            <div class="card p-8 md:p-10">
+              <h2 class="text-2xl md:text-3xl font-bold text-stone-100 mb-8" x-text="questions[currentQuestion].question"></h2>
+
+              <div class="space-y-4">
+                <template x-for="(option, index) in questions[currentQuestion].options" :key="index">
+                  <button
+                    @click="selectAnswer(index)"
+                    :disabled="answered"
+                    :class="{
+                      'border-gold-400 bg-gold-400/10': selectedAnswer === index && !answered,
+                      'border-green-400 bg-green-400/10': answered && index === questions[currentQuestion].correct,
+                      'border-red-400 bg-red-400/10': answered && selectedAnswer === index && index !== questions[currentQuestion].correct,
+                      'opacity-50': answered && selectedAnswer !== index && index !== questions[currentQuestion].correct,
+                      'hover:border-stone-600 hover:bg-obsidian-800/50': !answered
+                    }"
+                    class="w-full p-5 rounded-xl border-2 border-obsidian-700 bg-obsidian-900/50 text-left transition-all duration-200 flex items-center gap-4"
+                  >
+                    <span
+                      class="flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center font-bold text-sm"
+                      :class="{
+                        'bg-gold-400/20 text-gold-400': selectedAnswer === index && !answered,
+                        'bg-green-400/20 text-green-400': answered && index === questions[currentQuestion].correct,
+                        'bg-red-400/20 text-red-400': answered && selectedAnswer === index && index !== questions[currentQuestion].correct,
+                        'bg-obsidian-800 text-stone-500': selectedAnswer !== index || answered
+                      }"
+                      x-text="['A', 'B', 'C', 'D'][index]"
+                    ></span>
+                    <span class="text-stone-200 font-medium" x-text="option"></span>
+                    <template x-if="answered && index === questions[currentQuestion].correct">
+                      <svg class="w-6 h-6 text-green-400 ml-auto flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                      </svg>
+                    </template>
+                    <template x-if="answered && selectedAnswer === index && index !== questions[currentQuestion].correct">
+                      <svg class="w-6 h-6 text-red-400 ml-auto flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                      </svg>
+                    </template>
+                  </button>
+                </template>
+              </div>
+
+              <!-- Fact Reveal -->
+              <div
+                x-show="answered"
+                x-transition
+                class="mt-8 p-6 rounded-xl bg-gradient-to-r from-gold-400/10 to-mystic-500/10 border border-gold-400/20"
+              >
+                <div class="flex gap-4">
+                  <div class="flex-shrink-0 w-10 h-10 rounded-full bg-gold-400/20 flex items-center justify-center">
+                    <svg class="w-5 h-5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-sm text-gold-400 font-semibold mb-1">Did you know?</p>
+                    <p class="text-stone-300" x-text="questions[currentQuestion].fact"></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Next Button -->
+              <div x-show="answered" x-transition class="mt-8 flex justify-end">
+                <button @click="nextQuestion()" class="btn-primary">
+                  <span x-text="currentQuestion < questions.length - 1 ? 'Next Question' : 'See Results'"></span>
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Results Screen -->
+          <div x-show="finished" x-transition class="text-center py-12">
+            <div class="relative inline-block mb-8">
+              <div class="w-32 h-32 rounded-full bg-gradient-to-br from-gold-400/20 to-mystic-500/20 flex items-center justify-center">
+                <span class="text-5xl font-display font-bold text-gold-400" x-text="score"></span>
+              </div>
+              <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-obsidian-800 border border-obsidian-700 text-stone-400 text-sm">
+                out of <span x-text="questions.length"></span>
+              </div>
+            </div>
+
+            <h2 class="text-3xl font-display font-bold text-stone-100 mb-4" x-text="getResultTitle()"></h2>
+            <p class="text-stone-400 mb-8 max-w-md mx-auto" x-text="getResultMessage()"></p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <button @click="restartQuiz()" class="btn-secondary">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                </svg>
+                Try Again
+              </button>
+              <a href="/structures" class="btn-primary">
+                Explore All Structures
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Share -->
+            <div class="mt-12 pt-8 border-t border-obsidian-800/50">
+              <p class="text-stone-500 text-sm mb-4">Share your score</p>
+              <div class="flex justify-center gap-4">
+                <button class="w-12 h-12 rounded-xl bg-obsidian-800 hover:bg-obsidian-700 flex items-center justify-center text-stone-400 hover:text-stone-200 transition-colors">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                </button>
+                <button class="w-12 h-12 rounded-xl bg-obsidian-800 hover:bg-obsidian-700 flex items-center justify-center text-stone-400 hover:text-stone-200 transition-colors">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                </button>
+                <button class="w-12 h-12 rounded-xl bg-obsidian-800 hover:bg-obsidian-700 flex items-center justify-center text-stone-400 hover:text-stone-200 transition-colors">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <Footer slot="footer" />
+  <MobileNav />
+
+  <script define:vars={{ questions }}>
+    document.addEventListener('alpine:init', () => {
+      Alpine.data('quizApp', () => ({
+        questions: questions,
+        started: false,
+        finished: false,
+        currentQuestion: 0,
+        selectedAnswer: null,
+        answered: false,
+        score: 0,
+
+        startQuiz() {
+          this.started = true;
+          this.finished = false;
+          this.currentQuestion = 0;
+          this.score = 0;
+          this.selectedAnswer = null;
+          this.answered = false;
+        },
+
+        selectAnswer(index) {
+          if (this.answered) return;
+          this.selectedAnswer = index;
+          this.answered = true;
+          if (index === this.questions[this.currentQuestion].correct) {
+            this.score++;
+          }
+        },
+
+        nextQuestion() {
+          if (this.currentQuestion < this.questions.length - 1) {
+            this.currentQuestion++;
+            this.selectedAnswer = null;
+            this.answered = false;
+          } else {
+            this.finished = true;
+            this.started = false;
+          }
+        },
+
+        restartQuiz() {
+          this.startQuiz();
+        },
+
+        getResultTitle() {
+          const percentage = (this.score / this.questions.length) * 100;
+          if (percentage >= 80) return "Ancient Master!";
+          if (percentage >= 60) return "History Buff!";
+          if (percentage >= 40) return "Curious Explorer";
+          return "Novice Adventurer";
+        },
+
+        getResultMessage() {
+          const percentage = (this.score / this.questions.length) * 100;
+          if (percentage >= 80) return "Incredible! You know your ancient structures. You'd impress even the most seasoned archaeologists.";
+          if (percentage >= 60) return "Great job! You have solid knowledge of ancient wonders. Keep exploring to learn more!";
+          if (percentage >= 40) return "Not bad! There's a fascinating world of ancient mysteries waiting for you to discover.";
+          return "Every expert was once a beginner. Explore our site to uncover the secrets of ancient civilizations!";
+        }
+      }));
+    });
+  </script>
+</BaseLayout>
