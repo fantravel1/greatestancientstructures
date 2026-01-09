@@ -1,0 +1,462 @@
+{
+  "structures": {
+    "gobekli-tepe": [
+      {
+        "id": "schmidt-2000",
+        "authors": "Schmidt, K.",
+        "year": 2000,
+        "title": "Göbekli Tepe, Southeastern Turkey: A Preliminary Report on the 1995-1999 Excavations",
+        "publication": "Paléorient",
+        "volume": "26(1)",
+        "pages": "45-54",
+        "doi": "10.3406/paleo.2000.4697",
+        "type": "journal"
+      },
+      {
+        "id": "dietrich-2012",
+        "authors": "Dietrich, O., Heun, M., Notroff, J., Schmidt, K., & Zarnkow, M.",
+        "year": 2012,
+        "title": "The role of cult and feasting in the emergence of Neolithic communities",
+        "publication": "Antiquity",
+        "volume": "86(333)",
+        "pages": "674-695",
+        "doi": "10.1017/S0003598X00047840",
+        "type": "journal"
+      },
+      {
+        "id": "schmidt-2006",
+        "authors": "Schmidt, K.",
+        "year": 2006,
+        "title": "Sie bauten die ersten Tempel: Das rätselhafte Heiligtum der Steinzeitjäger",
+        "publication": "C.H. Beck",
+        "type": "book"
+      }
+    ],
+    "great-pyramid-giza": [
+      {
+        "id": "lehner-1997",
+        "authors": "Lehner, M.",
+        "year": 1997,
+        "title": "The Complete Pyramids",
+        "publication": "Thames & Hudson",
+        "type": "book"
+      },
+      {
+        "id": "hawass-2006",
+        "authors": "Hawass, Z.",
+        "year": 2006,
+        "title": "Mountains of the Pharaohs: The Untold Story of the Pyramid Builders",
+        "publication": "Doubleday",
+        "type": "book"
+      },
+      {
+        "id": "tallet-2017",
+        "authors": "Tallet, P.",
+        "year": 2017,
+        "title": "Les papyrus de la Mer Rouge I: Le journal de Merer",
+        "publication": "Institut Français d'Archéologie Orientale",
+        "type": "book"
+      },
+      {
+        "id": "arnold-1991",
+        "authors": "Arnold, D.",
+        "year": 1991,
+        "title": "Building in Egypt: Pharaonic Stone Masonry",
+        "publication": "Oxford University Press",
+        "type": "book"
+      }
+    ],
+    "puma-punku": [
+      {
+        "id": "protzen-1993",
+        "authors": "Protzen, J.P.",
+        "year": 1993,
+        "title": "Inca Architecture and Construction at Ollantaytambo",
+        "publication": "Oxford University Press",
+        "type": "book"
+      },
+      {
+        "id": "vranich-2006",
+        "authors": "Vranich, A.",
+        "year": 2006,
+        "title": "The Construction and Reconstruction of Ritual Space at Tiwanaku, Bolivia",
+        "publication": "Journal of Field Archaeology",
+        "volume": "31(2)",
+        "pages": "121-136",
+        "doi": "10.1179/009346906791071972",
+        "type": "journal"
+      },
+      {
+        "id": "kolata-1993",
+        "authors": "Kolata, A.L.",
+        "year": 1993,
+        "title": "The Tiwanaku: Portrait of an Andean Civilization",
+        "publication": "Blackwell",
+        "type": "book"
+      }
+    ],
+    "baalbek": [
+      {
+        "id": "adam-1977",
+        "authors": "Adam, J.P.",
+        "year": 1977,
+        "title": "A propos du trilithon de Baalbek: Le transport et la mise en oeuvre des mégalithes",
+        "publication": "Syria",
+        "volume": "54(1/2)",
+        "pages": "31-63",
+        "type": "journal"
+      },
+      {
+        "id": "ruprechtsberger-1999",
+        "authors": "Ruprechtsberger, E.M.",
+        "year": 1999,
+        "title": "Vom Steinbruch zum Jupitertempel von Heliopolis/Baalbek (Libanon)",
+        "publication": "Linzer Archäologische Forschungen",
+        "volume": "30",
+        "type": "journal"
+      }
+    ],
+    "sacsayhuaman": [
+      {
+        "id": "protzen-1985",
+        "authors": "Protzen, J.P.",
+        "year": 1985,
+        "title": "Inca Quarrying and Stone Cutting",
+        "publication": "Journal of the Society of Architectural Historians",
+        "volume": "44(2)",
+        "pages": "161-182",
+        "doi": "10.2307/990027",
+        "type": "journal"
+      },
+      {
+        "id": "gasparini-1980",
+        "authors": "Gasparini, G. & Margolies, L.",
+        "year": 1980,
+        "title": "Inca Architecture",
+        "publication": "Indiana University Press",
+        "type": "book"
+      }
+    ],
+    "stonehenge": [
+      {
+        "id": "pearson-2012",
+        "authors": "Parker Pearson, M.",
+        "year": 2012,
+        "title": "Stonehenge: Exploring the Greatest Stone Age Mystery",
+        "publication": "Simon & Schuster",
+        "type": "book"
+      },
+      {
+        "id": "darvill-2006",
+        "authors": "Darvill, T.",
+        "year": 2006,
+        "title": "Stonehenge: The Biography of a Landscape",
+        "publication": "Tempus",
+        "type": "book"
+      },
+      {
+        "id": "bevins-2014",
+        "authors": "Bevins, R.E., Ixer, R.A., & Pearce, N.J.G.",
+        "year": 2014,
+        "title": "Carn Goedog is the likely major source of Stonehenge doleritic bluestones",
+        "publication": "Journal of Archaeological Science",
+        "volume": "42",
+        "pages": "227-236",
+        "doi": "10.1016/j.jas.2013.11.006",
+        "type": "journal"
+      }
+    ],
+    "petra": [
+      {
+        "id": "taylor-2001",
+        "authors": "Taylor, J.",
+        "year": 2001,
+        "title": "Petra and the Lost Kingdom of the Nabataeans",
+        "publication": "I.B. Tauris",
+        "type": "book"
+      },
+      {
+        "id": "hammond-1973",
+        "authors": "Hammond, P.C.",
+        "year": 1973,
+        "title": "The Nabataeans: Their History, Culture and Archaeology",
+        "publication": "Studies in Mediterranean Archaeology",
+        "volume": "37",
+        "type": "book"
+      }
+    ],
+    "machu-picchu": [
+      {
+        "id": "bingham-1930",
+        "authors": "Bingham, H.",
+        "year": 1930,
+        "title": "Machu Picchu: A Citadel of the Incas",
+        "publication": "Yale University Press",
+        "type": "book"
+      },
+      {
+        "id": "burger-2004",
+        "authors": "Burger, R.L. & Salazar, L.C.",
+        "year": 2004,
+        "title": "Machu Picchu: Unveiling the Mystery of the Incas",
+        "publication": "Yale University Press",
+        "type": "book"
+      }
+    ],
+    "nan-madol": [
+      {
+        "id": "ayres-1990",
+        "authors": "Ayres, W.S.",
+        "year": 1990,
+        "title": "Pohnpei's Position in Eastern Micronesian Prehistory",
+        "publication": "Micronesica Supplement",
+        "volume": "2",
+        "pages": "187-212",
+        "type": "journal"
+      },
+      {
+        "id": "mccoy-2016",
+        "authors": "McCoy, M.D., Alderson, H.A., Hemi, R., Irani, H., & Landauer, C.A.",
+        "year": 2016,
+        "title": "Monumentality and Landscape Engineering at Nan Madol, Pohnpei, Micronesia",
+        "publication": "Antiquity",
+        "volume": "90(352)",
+        "pages": "867-883",
+        "doi": "10.15184/aqy.2016.137",
+        "type": "journal"
+      }
+    ],
+    "easter-island": [
+      {
+        "id": "vanTilburg-1994",
+        "authors": "Van Tilburg, J.A.",
+        "year": 1994,
+        "title": "Easter Island: Archaeology, Ecology and Culture",
+        "publication": "Smithsonian Institution Press",
+        "type": "book"
+      },
+      {
+        "id": "hunt-2011",
+        "authors": "Hunt, T. & Lipo, C.",
+        "year": 2011,
+        "title": "The Statues That Walked: Unraveling the Mystery of Easter Island",
+        "publication": "Free Press",
+        "type": "book"
+      }
+    ],
+    "kailasa-temple": [
+      {
+        "id": "dhavalikar-2003",
+        "authors": "Dhavalikar, M.K.",
+        "year": 2003,
+        "title": "Ellora",
+        "publication": "Oxford University Press",
+        "type": "book"
+      },
+      {
+        "id": "berkson-1992",
+        "authors": "Berkson, C.",
+        "year": 1992,
+        "title": "Ellora: Concept and Style",
+        "publication": "Abhinav Publications",
+        "type": "book"
+      }
+    ],
+    "lalibela": [
+      {
+        "id": "phillipson-2009",
+        "authors": "Phillipson, D.W.",
+        "year": 2009,
+        "title": "Ancient Churches of Ethiopia",
+        "publication": "Yale University Press",
+        "type": "book"
+      },
+      {
+        "id": "finneran-2007",
+        "authors": "Finneran, N.",
+        "year": 2007,
+        "title": "The Archaeology of Ethiopia",
+        "publication": "Routledge",
+        "type": "book"
+      }
+    ],
+    "newgrange": [
+      {
+        "id": "oKelly-1982",
+        "authors": "O'Kelly, M.J.",
+        "year": 1982,
+        "title": "Newgrange: Archaeology, Art and Legend",
+        "publication": "Thames & Hudson",
+        "type": "book"
+      },
+      {
+        "id": "cooney-2000",
+        "authors": "Cooney, G.",
+        "year": 2000,
+        "title": "Landscapes of Neolithic Ireland",
+        "publication": "Routledge",
+        "type": "book"
+      }
+    ],
+    "abu-simbel": [
+      {
+        "id": "desroches-1971",
+        "authors": "Desroches-Noblecourt, C.",
+        "year": 1971,
+        "title": "The World Saves Abu Simbel",
+        "publication": "UNESCO",
+        "type": "report"
+      },
+      {
+        "id": "hein-1991",
+        "authors": "Hein, I.",
+        "year": 1991,
+        "title": "Die ramessidische Bautätigkeit in Nubien",
+        "publication": "Otto Harrassowitz",
+        "type": "book"
+      }
+    ],
+    "carnac-stones": [
+      {
+        "id": "burl-1993",
+        "authors": "Burl, A.",
+        "year": 1993,
+        "title": "From Carnac to Callanish: The Prehistoric Stone Rows and Avenues of Britain, Ireland and Brittany",
+        "publication": "Yale University Press",
+        "type": "book"
+      },
+      {
+        "id": "scarre-2007",
+        "authors": "Scarre, C.",
+        "year": 2007,
+        "title": "The Megalithic Monuments of Britain and Ireland",
+        "publication": "Thames & Hudson",
+        "type": "book"
+      }
+    ],
+    "korean-dolmens": [
+      {
+        "id": "nelson-1993",
+        "authors": "Nelson, S.M.",
+        "year": 1993,
+        "title": "The Archaeology of Korea",
+        "publication": "Cambridge University Press",
+        "type": "book"
+      },
+      {
+        "id": "rhee-2007",
+        "authors": "Rhee, S.N. & Choi, M.L.",
+        "year": 2007,
+        "title": "Korean Archaeology for the 21st Century",
+        "publication": "Hollym",
+        "type": "book"
+      }
+    ],
+    "gunung-padang": [
+      {
+        "id": "natawidjaja-2018",
+        "authors": "Natawidjaja, D.H. et al.",
+        "year": 2018,
+        "title": "Geo-archaeological prospecting of Gunung Padang buried prehistoric pyramid",
+        "publication": "Quaternary Science Reviews",
+        "doi": "10.1016/j.quaint.2018.05.034",
+        "type": "journal"
+      }
+    ],
+    "yonaguni": [
+      {
+        "id": "kimura-2004",
+        "authors": "Kimura, M.",
+        "year": 2004,
+        "title": "Ancient underwater structures off Yonaguni Island",
+        "publication": "Journal of the Japanese Society for Marine Surveys and Technology",
+        "volume": "16(2)",
+        "type": "journal"
+      },
+      {
+        "id": "schoch-1999",
+        "authors": "Schoch, R.M.",
+        "year": 1999,
+        "title": "Voices of the Rocks",
+        "publication": "Harmony Books",
+        "type": "book"
+      }
+    ],
+    "ggantija": [
+      {
+        "id": "trump-2002",
+        "authors": "Trump, D.H.",
+        "year": 2002,
+        "title": "Malta: Prehistory and Temples",
+        "publication": "Midsea Books",
+        "type": "book"
+      },
+      {
+        "id": "pace-2004",
+        "authors": "Pace, A.",
+        "year": 2004,
+        "title": "The Maltese Neolithic",
+        "publication": "Cambridge Archaeological Journal",
+        "volume": "14(1)",
+        "pages": "123-125",
+        "type": "journal"
+      }
+    ]
+  },
+  "general": {
+    "dating-methods": [
+      {
+        "id": "aitken-1990",
+        "authors": "Aitken, M.J.",
+        "year": 1990,
+        "title": "Science-based Dating in Archaeology",
+        "publication": "Routledge",
+        "type": "book"
+      },
+      {
+        "id": "taylor-1987",
+        "authors": "Taylor, R.E.",
+        "year": 1987,
+        "title": "Radiocarbon Dating: An Archaeological Perspective",
+        "publication": "Academic Press",
+        "type": "book"
+      }
+    ],
+    "ancient-engineering": [
+      {
+        "id": "hodges-1992",
+        "authors": "Hodges, H.",
+        "year": 1992,
+        "title": "Technology in the Ancient World",
+        "publication": "Barnes & Noble",
+        "type": "book"
+      },
+      {
+        "id": "oleson-2008",
+        "authors": "Oleson, J.P. (ed.)",
+        "year": 2008,
+        "title": "The Oxford Handbook of Engineering and Technology in the Classical World",
+        "publication": "Oxford University Press",
+        "type": "book"
+      }
+    ],
+    "megalithic-culture": [
+      {
+        "id": "joussaume-1988",
+        "authors": "Joussaume, R.",
+        "year": 1988,
+        "title": "Dolmens for the Dead: Megalith Building Throughout the World",
+        "publication": "Cornell University Press",
+        "type": "book"
+      },
+      {
+        "id": "renfrew-1973",
+        "authors": "Renfrew, C.",
+        "year": 1973,
+        "title": "Before Civilization: The Radiocarbon Revolution and Prehistoric Europe",
+        "publication": "Jonathan Cape",
+        "type": "book"
+      }
+    ]
+  }
+}

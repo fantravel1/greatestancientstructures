@@ -3,7 +3,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/global/Header.astro';
 import Footer from '../../components/global/Footer.astro';
 import MobileNav from '../../components/global/MobileNav.astro';
+import References from '../../components/global/References.astro';
 import structures from '../../data/structures.json';
+import referencesData from '../../data/references.json';
 
 export function getStaticPaths() {
   return structures.map(structure => ({
@@ -13,6 +15,11 @@ export function getStaticPaths() {
 }
 
 const { structure } = Astro.props;
+
+// Get references for this structure
+const structureRefs = referencesData.structures[structure.id] || [];
+const generalRefs = referencesData.general['ancient-engineering'] || [];
+const pageReferences = [...structureRefs, ...generalRefs.slice(0, 2)];
 
 const categoryColors: Record<string, string> = {
   megalithic: 'badge-gold',
@@ -254,6 +261,11 @@ const relatedStructures = structures
       </div>
     </div>
   </section>
+
+  <!-- References -->
+  {pageReferences.length > 0 && (
+    <References references={pageReferences} title={`References for ${structure.name}`} />
+  )}
 
   <!-- Related Structures -->
   {relatedStructures.length > 0 && (

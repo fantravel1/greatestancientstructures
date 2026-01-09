@@ -3,6 +3,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/global/Header.astro';
 import Footer from '../components/global/Footer.astro';
 import MobileNav from '../components/global/MobileNav.astro';
+import References from '../components/global/References.astro';
+import referencesData from '../data/references.json';
+
+// Collect references for FAQ topics
+const faqReferences = [
+  ...referencesData.general['dating-methods'],
+  ...referencesData.general['ancient-engineering'],
+  ...referencesData.general['megalithic-culture'],
+];
 
 const faqs = [
   {
@@ -183,6 +192,9 @@ const faqSchema = {
       </div>
     </div>
   </section>
+
+  <!-- References -->
+  <References references={faqReferences} title="Sources & Further Reading" />
 
   <!-- CTA -->
   <section class="py-16 md:py-24 bg-obsidian-900/30">
