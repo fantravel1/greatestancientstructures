@@ -1,0 +1,278 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/global/Header.astro';
+import Footer from '../components/global/Footer.astro';
+import MobileNav from '../components/global/MobileNav.astro';
+import StructureCard from '../components/structure/StructureCard.astro';
+import structures from '../data/structures.json';
+
+const featuredStructures = structures.filter(s => s.featured);
+const trendingStructures = structures.filter(s => s.trending);
+const categories = [
+  { id: 'megalithic', name: 'Megalithic', icon: '◈', count: structures.filter(s => s.category === 'megalithic').length },
+  { id: 'rock-cut', name: 'Rock-Cut', icon: '▣', count: structures.filter(s => s.category === 'rock-cut').length },
+  { id: 'impossible', name: '"Impossible"', icon: '◎', count: structures.filter(s => s.category === 'impossible').length },
+  { id: 'disputed', name: 'Disputed', icon: '◇', count: structures.filter(s => s.category === 'disputed').length },
+];
+---
+
+<BaseLayout title="Greatest Ancient Structures">
+  <Header slot="header" />
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Background -->
+    <div class="absolute inset-0">
+      <div class="absolute inset-0 bg-gradient-to-br from-obsidian-950 via-obsidian-900 to-obsidian-950"></div>
+      <div class="absolute inset-0 bg-hero-pattern opacity-30"></div>
+      <!-- Animated gradient orbs -->
+      <div class="absolute top-1/4 -left-32 w-96 h-96 bg-gold-400/10 rounded-full blur-3xl animate-pulse-slow"></div>
+      <div class="absolute bottom-1/4 -right-32 w-96 h-96 bg-mystic-500/10 rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 2s"></div>
+    </div>
+
+    <div class="container-custom relative z-10 pt-24 pb-20 md:pt-32 md:pb-32">
+      <div class="max-w-4xl mx-auto text-center">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-obsidian-800/50 border border-obsidian-700/50 backdrop-blur-sm mb-8 animate-fade-in">
+          <span class="w-2 h-2 bg-gold-400 rounded-full animate-pulse"></span>
+          <span class="text-sm text-stone-300">Exploring humanity's greatest mysteries</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="text-display-lg font-display font-bold tracking-tight mb-6 animate-slide-up">
+          <span class="text-stone-100">Ancient Structures</span>
+          <br />
+          <span class="text-gradient">Beyond Explanation</span>
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="text-lg md:text-xl text-stone-400 max-w-2xl mx-auto mb-10 animate-slide-up" style="animation-delay: 100ms">
+          From 12,000-year-old temples built before agriculture to stones so precise a paper can't fit between them.
+          <span class="text-stone-200">Explore 20+ structures that challenge everything we know.</span>
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up" style="animation-delay: 200ms">
+          <a href="/structures" class="btn-primary text-lg px-8 py-4">
+            Start Exploring
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+            </svg>
+          </a>
+          <a href="/map" class="btn-secondary text-lg px-8 py-4">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+            </svg>
+            World Map
+          </a>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-16 border-t border-obsidian-800/50 animate-fade-in" style="animation-delay: 400ms">
+          <div class="text-center">
+            <div class="stat-number">20+</div>
+            <div class="stat-label mt-2">Structures</div>
+          </div>
+          <div class="text-center">
+            <div class="stat-number">12K</div>
+            <div class="stat-label mt-2">Years of History</div>
+          </div>
+          <div class="text-center">
+            <div class="stat-number">6</div>
+            <div class="stat-label mt-2">Continents</div>
+          </div>
+          <div class="text-center">
+            <div class="stat-number">∞</div>
+            <div class="stat-label mt-2">Mysteries</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <svg class="w-6 h-6 text-stone-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="py-20 md:py-28 bg-obsidian-900/30">
+    <div class="container-custom">
+      <div class="text-center mb-12">
+        <h2 class="section-title mb-4">Explore by Category</h2>
+        <p class="section-subtitle mx-auto">
+          From megalithic monuments to "impossible" engineering feats
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        {categories.map((category, i) => (
+          <a
+            href={`/categories/${category.id}`}
+            class="group card card-hover p-6 md:p-8 text-center"
+            style={`animation-delay: ${i * 100}ms`}
+          >
+            <div class="text-4xl md:text-5xl mb-4 text-gold-400 group-hover:scale-110 transition-transform">
+              {category.icon}
+            </div>
+            <h3 class="font-bold text-lg text-stone-100 group-hover:text-gold-400 transition-colors">
+              {category.name}
+            </h3>
+            <p class="text-sm text-stone-500 mt-2">
+              {category.count} sites
+            </p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Structures -->
+  <section class="py-20 md:py-28">
+    <div class="container-custom">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
+        <div>
+          <h2 class="section-title mb-4">Featured Structures</h2>
+          <p class="section-subtitle">
+            The most awe-inspiring ancient constructions on Earth
+          </p>
+        </div>
+        <a href="/structures" class="btn-ghost group">
+          View all
+          <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {featuredStructures.slice(0, 6).map((structure, i) => (
+          <StructureCard
+            structure={structure}
+            variant={i === 0 ? 'featured' : 'default'}
+            index={i}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Trending / Discovery Section -->
+  <section class="py-20 md:py-28 bg-gradient-to-b from-obsidian-900/50 to-obsidian-950">
+    <div class="container-custom">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
+        <div>
+          <div class="badge-gold mb-4 inline-flex items-center gap-2">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd"/>
+            </svg>
+            Trending Now
+          </div>
+          <h2 class="section-title mb-4">Recent Discoveries</h2>
+          <p class="section-subtitle">
+            Sites making headlines with new research and discoveries
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {trendingStructures.map((structure, i) => (
+          <StructureCard
+            structure={structure}
+            variant="compact"
+            index={i}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Tools CTA -->
+  <section class="py-20 md:py-28">
+    <div class="container-custom">
+      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-obsidian-800 to-obsidian-900 border border-obsidian-700/50">
+        <!-- Background pattern -->
+        <div class="absolute inset-0 bg-hero-pattern opacity-20"></div>
+        <div class="absolute top-0 right-0 w-96 h-96 bg-gold-400/5 rounded-full blur-3xl"></div>
+
+        <div class="relative grid md:grid-cols-2 gap-8 p-8 md:p-12 lg:p-16">
+          <div>
+            <h2 class="section-title mb-6">
+              Explore Our <span class="text-gradient">Interactive Tools</span>
+            </h2>
+            <p class="text-stone-400 mb-8 text-lg">
+              Dive deeper with our interactive world map, timeline slider, and comparison tools. Visualize 12,000 years of human achievement.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href="/map" class="btn-primary">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+                </svg>
+                World Map
+              </a>
+              <a href="/timeline" class="btn-secondary">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                Timeline
+              </a>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+            <div class="card p-6 text-center">
+              <div class="text-3xl mb-2">🗺️</div>
+              <h3 class="font-semibold text-stone-200">Interactive Map</h3>
+              <p class="text-sm text-stone-500 mt-1">Filter by category, region, and age</p>
+            </div>
+            <div class="card p-6 text-center">
+              <div class="text-3xl mb-2">📅</div>
+              <h3 class="font-semibold text-stone-200">Timeline</h3>
+              <p class="text-sm text-stone-500 mt-1">Slide through 12,000 years</p>
+            </div>
+            <div class="card p-6 text-center">
+              <div class="text-3xl mb-2">⚖️</div>
+              <h3 class="font-semibold text-stone-200">Compare Sites</h3>
+              <p class="text-sm text-stone-500 mt-1">Side-by-side analysis</p>
+            </div>
+            <div class="card p-6 text-center">
+              <div class="text-3xl mb-2">📏</div>
+              <h3 class="font-semibold text-stone-200">Size Calculator</h3>
+              <p class="text-sm text-stone-500 mt-1">"X Great Pyramids"</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter / CTA -->
+  <section class="py-20 md:py-28 bg-obsidian-900/50">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="section-title mb-4">Stay Curious</h2>
+        <p class="section-subtitle mx-auto mb-8">
+          Get the latest discoveries, research updates, and new site additions delivered to your inbox.
+        </p>
+        <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="flex-1 px-5 py-4 rounded-xl bg-obsidian-800 border border-obsidian-700 text-stone-100 placeholder:text-stone-500 focus:border-gold-400 focus:ring-2 focus:ring-gold-400/20 transition-all"
+          />
+          <button type="submit" class="btn-primary px-8">
+            Subscribe
+          </button>
+        </form>
+        <p class="text-xs text-stone-600 mt-4">
+          No spam. Unsubscribe anytime.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+  <MobileNav />
+</BaseLayout>

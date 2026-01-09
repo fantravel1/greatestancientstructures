@@ -1,0 +1,293 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/global/Header.astro';
+import Footer from '../../components/global/Footer.astro';
+import MobileNav from '../../components/global/MobileNav.astro';
+import structures from '../../data/structures.json';
+
+export function getStaticPaths() {
+  return structures.map(structure => ({
+    params: { slug: structure.slug },
+    props: { structure }
+  }));
+}
+
+const { structure } = Astro.props;
+
+const categoryColors: Record<string, string> = {
+  megalithic: 'badge-gold',
+  'rock-cut': 'badge-mystic',
+  impossible: 'badge-gold',
+  disputed: 'badge-stone',
+};
+
+// Find related structures
+const relatedStructures = structures
+  .filter(s => s.id !== structure.id && (s.category === structure.category || s.region === structure.region))
+  .slice(0, 3);
+---
+
+<BaseLayout
+  title={`${structure.name}: ${structure.tagline}`}
+  description={structure.summary}
+  image={structure.heroImage}
+  type="article"
+>
+  <Header slot="header" />
+
+  <!-- Hero -->
+  <section class="relative min-h-[60vh] md:min-h-[70vh] flex items-end">
+    <!-- Background Image -->
+    <div class="absolute inset-0">
+      <img
+        src={structure.heroImage}
+        alt={structure.name}
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/60 to-obsidian-950/20"></div>
+    </div>
+
+    <div class="container-custom relative z-10 pb-12 md:pb-16 pt-32">
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-sm text-stone-400 mb-6">
+        <a href="/" class="hover:text-gold-400 transition-colors">Home</a>
+        <span>/</span>
+        <a href="/structures" class="hover:text-gold-400 transition-colors">Structures</a>
+        <span>/</span>
+        <span class="text-stone-300">{structure.name}</span>
+      </nav>
+
+      <!-- Badges -->
+      <div class="flex flex-wrap items-center gap-3 mb-4">
+        <span class={categoryColors[structure.category] || 'badge-stone'}>
+          {structure.category}
+        </span>
+        {structure.unesco?.status === 'inscribed' && (
+          <span class="badge bg-blue-500/20 text-blue-400 border-blue-500/30">
+            UNESCO {structure.unesco.year}
+          </span>
+        )}
+        <span class="badge bg-stone-700/50 text-stone-300 border-stone-600/50">
+          {structure.country}
+        </span>
+      </div>
+
+      <!-- Title -->
+      <h1 class="text-display-md font-display font-bold tracking-tight text-stone-100 mb-4">
+        {structure.name}
+      </h1>
+
+      <!-- Tagline -->
+      <p class="text-xl md:text-2xl text-gold-400 font-medium mb-6">
+        {structure.tagline}
+      </p>
+
+      <!-- Quick Stats -->
+      <div class="flex flex-wrap gap-6 text-sm">
+        <div class="flex items-center gap-2 text-stone-300">
+          <svg class="w-5 h-5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <span>{structure.dates.age}</span>
+        </div>
+        {structure.stats.largestStone && (
+          <div class="flex items-center gap-2 text-stone-300">
+            <svg class="w-5 h-5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+            </svg>
+            <span>Largest stone: {structure.stats.largestStone}</span>
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="py-12 md:py-16">
+    <div class="container-custom">
+      <div class="grid lg:grid-cols-3 gap-8 lg:gap-12">
+        <!-- Main Content -->
+        <div class="lg:col-span-2 space-y-12">
+          <!-- Summary -->
+          <div>
+            <h2 class="text-2xl font-bold text-stone-100 mb-4">Overview</h2>
+            <p class="text-lg text-stone-300 leading-relaxed">
+              {structure.summary}
+            </p>
+          </div>
+
+          <!-- Key Facts -->
+          <div class="card p-6 md:p-8">
+            <h3 class="text-xl font-bold text-stone-100 mb-6">Key Facts</h3>
+            <div class="grid sm:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <div>
+                  <dt class="text-sm text-stone-500 uppercase tracking-wider">Constructed</dt>
+                  <dd class="text-lg text-stone-200 font-medium">{structure.dates.constructed}</dd>
+                </div>
+                <div>
+                  <dt class="text-sm text-stone-500 uppercase tracking-wider">Period</dt>
+                  <dd class="text-lg text-stone-200 font-medium">{structure.dates.period}</dd>
+                </div>
+                <div>
+                  <dt class="text-sm text-stone-500 uppercase tracking-wider">Discovered</dt>
+                  <dd class="text-lg text-stone-200 font-medium">{structure.dates.discovered}</dd>
+                </div>
+              </div>
+              <div class="space-y-4">
+                {Object.entries(structure.stats).map(([key, value]) => (
+                  <div>
+                    <dt class="text-sm text-stone-500 uppercase tracking-wider">{key.replace(/([A-Z])/g, ' $1').trim()}</dt>
+                    <dd class="text-lg text-stone-200 font-medium">{value}</dd>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <!-- Mysteries -->
+          <div>
+            <h2 class="text-2xl font-bold text-stone-100 mb-6 flex items-center gap-3">
+              <span class="text-gold-400">?</span>
+              Unsolved Mysteries
+            </h2>
+            <div class="space-y-4">
+              {structure.mysteries.map((mystery, i) => (
+                <div class="flex gap-4 p-4 rounded-xl bg-obsidian-900/50 border border-obsidian-800/50">
+                  <div class="flex-shrink-0 w-8 h-8 rounded-full bg-gold-400/10 text-gold-400 flex items-center justify-center font-bold text-sm">
+                    {i + 1}
+                  </div>
+                  <p class="text-stone-300">{mystery}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="space-y-8">
+          <!-- Visit Info -->
+          <div class="card p-6">
+            <h3 class="text-lg font-bold text-stone-100 mb-4 flex items-center gap-2">
+              <svg class="w-5 h-5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              </svg>
+              Visit Info
+            </h3>
+            <dl class="space-y-4 text-sm">
+              <div>
+                <dt class="text-stone-500">Nearest City</dt>
+                <dd class="text-stone-200 font-medium">{structure.travel.nearestCity}</dd>
+              </div>
+              <div>
+                <dt class="text-stone-500">Entry Fee</dt>
+                <dd class="text-stone-200 font-medium">{structure.travel.entryFee}</dd>
+              </div>
+              <div>
+                <dt class="text-stone-500">Best Season</dt>
+                <dd class="text-stone-200 font-medium">{structure.travel.bestSeason.join(', ')}</dd>
+              </div>
+              <div>
+                <dt class="text-stone-500">Coordinates</dt>
+                <dd class="text-stone-200 font-medium font-mono text-xs">
+                  {structure.coordinates[0].toFixed(4)}°, {structure.coordinates[1].toFixed(4)}°
+                </dd>
+              </div>
+            </dl>
+            <div class="mt-6 pt-6 border-t border-obsidian-700/50">
+              <a
+                href={`https://www.google.com/maps?q=${structure.coordinates[0]},${structure.coordinates[1]}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-secondary w-full justify-center text-sm"
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+                </svg>
+                View on Google Maps
+              </a>
+            </div>
+          </div>
+
+          <!-- UNESCO Status -->
+          {structure.unesco?.status && (
+            <div class="card p-6 bg-blue-950/30 border-blue-900/30">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                    <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-bold text-blue-300">UNESCO World Heritage</h3>
+                  <p class="text-sm text-blue-400/70">
+                    {structure.unesco.status === 'inscribed' ? `Inscribed ${structure.unesco.year}` : 'Tentative List'}
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
+
+          <!-- Share -->
+          <div class="card p-6">
+            <h3 class="text-lg font-bold text-stone-100 mb-4">Share</h3>
+            <div class="flex gap-3">
+              <button class="flex-1 btn-ghost justify-center py-3 text-sm" aria-label="Share on Twitter">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </button>
+              <button class="flex-1 btn-ghost justify-center py-3 text-sm" aria-label="Share on Facebook">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </button>
+              <button class="flex-1 btn-ghost justify-center py-3 text-sm" aria-label="Copy link">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Structures -->
+  {relatedStructures.length > 0 && (
+    <section class="py-12 md:py-16 bg-obsidian-900/30">
+      <div class="container-custom">
+        <h2 class="section-title mb-8">Related Structures</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {relatedStructures.map((related, i) => (
+            <article class="group relative card card-hover overflow-hidden">
+              <div class="relative aspect-card overflow-hidden">
+                <img
+                  src={related.heroImage}
+                  alt={related.name}
+                  loading="lazy"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/50 to-transparent"></div>
+              </div>
+              <div class="p-5">
+                <p class="text-sm text-stone-500 mb-1">{related.country}</p>
+                <h3 class="font-bold text-lg text-stone-100 group-hover:text-gold-400 transition-colors">
+                  {related.name}
+                </h3>
+              </div>
+              <a href={`/structures/${related.slug}`} class="absolute inset-0">
+                <span class="sr-only">Read more about {related.name}</span>
+              </a>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <Footer slot="footer" />
+  <MobileNav />
+</BaseLayout>

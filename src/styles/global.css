@@ -1,0 +1,243 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg-primary: theme('colors.obsidian.950');
+    --color-bg-secondary: theme('colors.obsidian.900');
+    --color-bg-elevated: theme('colors.obsidian.800');
+    --color-text-primary: theme('colors.stone.100');
+    --color-text-secondary: theme('colors.stone.400');
+    --color-accent: theme('colors.gold.400');
+    --color-accent-hover: theme('colors.gold.300');
+  }
+
+  html {
+    @apply scroll-smooth antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-obsidian-950 text-stone-100 font-body;
+    @apply selection:bg-gold-400/30 selection:text-gold-200;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-obsidian-900;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-obsidian-600 rounded-full hover:bg-obsidian-500;
+  }
+
+  /* Focus states */
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-gold-400;
+  }
+}
+
+@layer components {
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-300;
+    @apply focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-2 focus-visible:ring-offset-obsidian-950;
+    @apply disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-primary {
+    @apply btn bg-gradient-to-r from-gold-500 to-gold-400 text-obsidian-950;
+    @apply hover:from-gold-400 hover:to-gold-300 hover:shadow-glow-gold;
+    @apply active:scale-[0.98];
+  }
+
+  .btn-secondary {
+    @apply btn bg-obsidian-800 text-stone-100 border border-obsidian-600;
+    @apply hover:bg-obsidian-700 hover:border-gold-400/50;
+  }
+
+  .btn-ghost {
+    @apply btn text-stone-300 hover:text-gold-400 hover:bg-obsidian-800/50;
+  }
+
+  /* Cards */
+  .card {
+    @apply relative overflow-hidden rounded-2xl bg-obsidian-900/80 backdrop-blur-sm;
+    @apply border border-obsidian-700/50;
+    @apply transition-all duration-500;
+  }
+
+  .card-hover {
+    @apply hover:border-gold-400/30 hover:shadow-lg hover:shadow-gold-400/5;
+    @apply hover:-translate-y-1;
+  }
+
+  .card-glow {
+    @apply before:absolute before:inset-0 before:rounded-2xl;
+    @apply before:bg-gradient-to-br before:from-gold-400/10 before:to-transparent before:opacity-0;
+    @apply before:transition-opacity before:duration-500;
+    @apply hover:before:opacity-100;
+  }
+
+  /* Text gradients */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500;
+  }
+
+  .text-gradient-mystic {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-mystic-400 to-gold-400;
+  }
+
+  /* Section headings */
+  .section-title {
+    @apply text-display-md font-display font-bold tracking-tight text-stone-100;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-stone-400 max-w-2xl;
+  }
+
+  /* Badge */
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider;
+  }
+
+  .badge-gold {
+    @apply badge bg-gold-400/10 text-gold-400 border border-gold-400/20;
+  }
+
+  .badge-mystic {
+    @apply badge bg-mystic-500/10 text-mystic-400 border border-mystic-400/20;
+  }
+
+  .badge-stone {
+    @apply badge bg-stone-700/50 text-stone-300 border border-stone-600/50;
+  }
+
+  /* Stat display */
+  .stat-number {
+    @apply text-4xl md:text-5xl font-bold text-gradient tabular-nums;
+  }
+
+  .stat-label {
+    @apply text-sm uppercase tracking-widest text-stone-500;
+  }
+
+  /* Glass effect */
+  .glass {
+    @apply bg-obsidian-900/60 backdrop-blur-xl border border-obsidian-700/30;
+  }
+
+  /* Animated underline */
+  .link-underline {
+    @apply relative;
+  }
+  .link-underline::after {
+    @apply content-[''] absolute bottom-0 left-0 w-0 h-0.5 bg-gold-400;
+    @apply transition-all duration-300;
+  }
+  .link-underline:hover::after {
+    @apply w-full;
+  }
+
+  /* Container */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Divider */
+  .divider {
+    @apply h-px bg-gradient-to-r from-transparent via-obsidian-600 to-transparent;
+  }
+
+  /* Skeleton loading */
+  .skeleton {
+    @apply animate-pulse bg-obsidian-800 rounded;
+  }
+}
+
+@layer utilities {
+  /* Hide scrollbar but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Safe area insets for mobile */
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  /* Text balance */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Aspect ratios */
+  .aspect-card {
+    aspect-ratio: 4/3;
+  }
+  .aspect-hero {
+    aspect-ratio: 16/9;
+  }
+
+  /* Backdrop gradient */
+  .bg-gradient-dark {
+    background: linear-gradient(180deg,
+      rgba(9, 9, 11, 0) 0%,
+      rgba(9, 9, 11, 0.8) 50%,
+      rgba(9, 9, 11, 1) 100%
+    );
+  }
+
+  /* Noise texture overlay */
+  .noise {
+    position: relative;
+  }
+  .noise::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    pointer-events: none;
+  }
+
+  /* Animated gradient border */
+  .gradient-border {
+    position: relative;
+    background: linear-gradient(var(--color-bg-primary), var(--color-bg-primary)) padding-box,
+                linear-gradient(135deg, theme('colors.gold.400'), theme('colors.mystic.500'), theme('colors.gold.400')) border-box;
+    border: 2px solid transparent;
+  }
+}
+
+/* Alpine.js cloak */
+[x-cloak] {
+  display: none !important;
+}
+
+/* Page transitions */
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-enter {
+  animation: pageEnter 0.4s ease-out forwards;
+}

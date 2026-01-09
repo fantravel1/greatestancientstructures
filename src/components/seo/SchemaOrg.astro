@@ -1,0 +1,80 @@
+---
+interface Props {
+  type: 'website' | 'article' | 'place';
+  title: string;
+  description: string;
+  url: string;
+  image?: string;
+  datePublished?: string;
+  dateModified?: string;
+  structure?: {
+    name: string;
+    country: string;
+    coordinates: [number, number];
+    dates: { constructed: string; age: string };
+  };
+}
+
+const { type, title, description, url, image, datePublished, dateModified, structure } = Astro.props;
+
+const baseSchema = {
+  "@context": "https://schema.org",
+  "@type": type === 'place' ? "TouristAttraction" : type === 'article' ? "Article" : "WebSite",
+  name: title,
+  description,
+  url,
+  ...(image && { image }),
+};
+
+const websiteSchema = {
+  ...baseSchema,
+  "@type": "WebSite",
+  publisher: {
+    "@type": "Organization",
+    name: "Greatest Ancient Structures",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://greatestancientstructures.com/favicon.svg"
+    }
+  }
+};
+
+const articleSchema = {
+  ...baseSchema,
+  "@type": "Article",
+  headline: title,
+  datePublished: datePublished || new Date().toISOString(),
+  dateModified: dateModified || new Date().toISOString(),
+  author: {
+    "@type": "Organization",
+    name: "Greatest Ancient Structures"
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Greatest Ancient Structures",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://greatestancientstructures.com/favicon.svg"
+    }
+  }
+};
+
+const placeSchema = structure ? {
+  ...baseSchema,
+  "@type": "TouristAttraction",
+  touristType: ["Cultural tourism", "Archaeological tourism"],
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: structure.coordinates[0],
+    longitude: structure.coordinates[1]
+  },
+  address: {
+    "@type": "PostalAddress",
+    addressCountry: structure.country
+  }
+} : baseSchema;
+
+const schema = type === 'website' ? websiteSchema : type === 'article' ? articleSchema : placeSchema;
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

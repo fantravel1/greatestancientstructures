@@ -1,0 +1,177 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/global/Header.astro';
+import Footer from '../../components/global/Footer.astro';
+import MobileNav from '../../components/global/MobileNav.astro';
+import StructureCard from '../../components/structure/StructureCard.astro';
+import structures from '../../data/structures.json';
+
+const categories = ['all', 'megalithic', 'rock-cut', 'impossible', 'disputed'];
+const regions = [...new Set(structures.map(s => s.region))];
+---
+
+<BaseLayout
+  title="Explore All Ancient Structures"
+  description="Browse 20+ of humanity's most mysterious and awe-inspiring ancient constructions, from Göbekli Tepe to Machu Picchu."
+>
+  <Header slot="header" />
+
+  <!-- Hero -->
+  <section class="pt-24 pb-12 md:pt-32 md:pb-16 bg-gradient-to-b from-obsidian-900/50 to-obsidian-950">
+    <div class="container-custom">
+      <div class="max-w-3xl">
+        <h1 class="text-display-md font-display font-bold tracking-tight text-stone-100 mb-4">
+          Explore All <span class="text-gradient">Structures</span>
+        </h1>
+        <p class="text-lg text-stone-400">
+          Browse our comprehensive collection of ancient monuments, temples, and engineering marvels from around the world.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filters & Grid -->
+  <section
+    x-data="{
+      filter: 'all',
+      region: 'all',
+      sort: 'featured',
+      search: '',
+      structures: [],
+      get filteredStructures() {
+        let result = this.structures;
+        if (this.filter !== 'all') {
+          result = result.filter(s => s.category === this.filter);
+        }
+        if (this.region !== 'all') {
+          result = result.filter(s => s.region === this.region);
+        }
+        if (this.search) {
+          const term = this.search.toLowerCase();
+          result = result.filter(s =>
+            s.name.toLowerCase().includes(term) ||
+            s.country.toLowerCase().includes(term) ||
+            s.tagline.toLowerCase().includes(term)
+          );
+        }
+        if (this.sort === 'name') {
+          result = [...result].sort((a, b) => a.name.localeCompare(b.name));
+        } else if (this.sort === 'age') {
+          result = [...result].sort((a, b) => {
+            const ageA = parseInt(a.dates.age.replace(/[^0-9]/g, '')) || 0;
+            const ageB = parseInt(b.dates.age.replace(/[^0-9]/g, '')) || 0;
+            return ageB - ageA;
+          });
+        }
+        return result;
+      }
+    }"
+    x-init="structures = JSON.parse(document.getElementById('structures-data').textContent)"
+    class="py-12"
+  >
+    <div class="container-custom">
+      <!-- Filters Bar -->
+      <div class="flex flex-col lg:flex-row gap-4 mb-8 p-4 rounded-2xl bg-obsidian-900/50 border border-obsidian-800/50">
+        <!-- Search -->
+        <div class="relative flex-1">
+          <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-stone-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+          <input
+            type="text"
+            x-model="search"
+            placeholder="Search structures..."
+            class="w-full pl-12 pr-4 py-3 rounded-xl bg-obsidian-800 border border-obsidian-700 text-stone-100 placeholder:text-stone-500 focus:border-gold-400 focus:ring-2 focus:ring-gold-400/20 transition-all"
+          />
+        </div>
+
+        <!-- Category Filter -->
+        <div class="flex flex-wrap gap-2">
+          {categories.map(cat => (
+            <button
+              @click={`filter = '${cat}'`}
+              :class={`filter === '${cat}' ? 'bg-gold-400 text-obsidian-950' : 'bg-obsidian-800 text-stone-300 hover:bg-obsidian-700'`}
+              class="px-4 py-2 rounded-lg text-sm font-medium capitalize transition-all"
+            >
+              {cat === 'all' ? 'All' : cat}
+            </button>
+          ))}
+        </div>
+
+        <!-- Sort -->
+        <select
+          x-model="sort"
+          class="px-4 py-3 rounded-xl bg-obsidian-800 border border-obsidian-700 text-stone-300 focus:border-gold-400 focus:ring-2 focus:ring-gold-400/20"
+        >
+          <option value="featured">Featured First</option>
+          <option value="name">Name A-Z</option>
+          <option value="age">Oldest First</option>
+        </select>
+      </div>
+
+      <!-- Results Count -->
+      <div class="flex items-center justify-between mb-6">
+        <p class="text-sm text-stone-500">
+          Showing <span x-text="filteredStructures.length" class="text-gold-400 font-semibold"></span> structures
+        </p>
+      </div>
+
+      <!-- Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <template x-for="(structure, index) in filteredStructures" :key="structure.id">
+          <article class="group relative card card-hover card-glow overflow-hidden">
+            <div class="relative aspect-card overflow-hidden">
+              <img
+                :src="structure.heroImage"
+                :alt="structure.name"
+                loading="lazy"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/50 to-transparent"></div>
+              <div class="absolute top-4 left-4">
+                <span
+                  :class="{
+                    'badge-gold': structure.category === 'megalithic' || structure.category === 'impossible',
+                    'badge-mystic': structure.category === 'rock-cut',
+                    'badge-stone': structure.category === 'disputed'
+                  }"
+                  class="badge"
+                  x-text="structure.category"
+                ></span>
+              </div>
+              <div class="absolute top-4 right-4">
+                <span class="text-xs font-bold text-gold-400 bg-obsidian-950/80 px-2 py-1 rounded-full" x-text="structure.dates.age"></span>
+              </div>
+            </div>
+            <div class="p-5">
+              <div class="flex items-center gap-2 text-stone-400 text-sm mb-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                </svg>
+                <span x-text="structure.country"></span>
+              </div>
+              <h3 class="font-bold text-lg text-stone-100 group-hover:text-gold-400 transition-colors" x-text="structure.name"></h3>
+              <p class="text-sm text-stone-400 mt-1 line-clamp-1" x-text="structure.tagline"></p>
+            </div>
+            <a :href="`/structures/${structure.slug}`" class="absolute inset-0">
+              <span class="sr-only" x-text="`Read more about ${structure.name}`"></span>
+            </a>
+          </article>
+        </template>
+      </div>
+
+      <!-- Empty State -->
+      <div x-show="filteredStructures.length === 0" class="py-16 text-center">
+        <div class="text-6xl mb-4">🏛️</div>
+        <h3 class="text-xl font-semibold text-stone-300 mb-2">No structures found</h3>
+        <p class="text-stone-500">Try adjusting your filters or search term</p>
+      </div>
+    </div>
+
+    <!-- Data -->
+    <script type="application/json" id="structures-data" set:html={JSON.stringify(structures)}></script>
+  </section>
+
+  <Footer slot="footer" />
+  <MobileNav />
+</BaseLayout>
