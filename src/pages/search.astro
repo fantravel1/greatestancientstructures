@@ -1,0 +1,163 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/global/Header.astro';
+import Footer from '../components/global/Footer.astro';
+import MobileNav from '../components/global/MobileNav.astro';
+import structures from '../data/structures.json';
+---
+
+<BaseLayout
+  title="Search Ancient Structures | Greatest Ancient Structures"
+  description="Search through 20 of the world's most enigmatic ancient structures. Find sites by name, location, or mystery."
+>
+  <Header slot="header" />
+
+  <main class="py-20 md:py-28 min-h-screen">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+
+        <!-- Search Header -->
+        <div class="text-center mb-12">
+          <h1 class="text-display-md font-display font-bold text-stone-100 mb-4">
+            Search Structures
+          </h1>
+          <p class="text-stone-400">
+            Find ancient sites by name, country, region, or keyword.
+          </p>
+        </div>
+
+        <!-- Search Interface -->
+        <div x-data="searchApp()">
+          <!-- Search Input -->
+          <div class="relative mb-8">
+            <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
+              <svg class="w-6 h-6 text-stone-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+              </svg>
+            </div>
+            <input
+              type="text"
+              x-model="query"
+              @input="search()"
+              placeholder="Search for pyramids, temples, Peru, megalithic..."
+              class="w-full pl-14 pr-12 py-5 rounded-2xl bg-obsidian-900 border-2 border-obsidian-700 text-stone-100 text-lg placeholder-stone-600 focus:border-gold-400 focus:ring-2 focus:ring-gold-400/20 transition-all"
+              autofocus
+            />
+            <button
+              x-show="query.length > 0"
+              @click="query = ''; search()"
+              class="absolute inset-y-0 right-0 pr-5 flex items-center text-stone-500 hover:text-stone-300"
+            >
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Quick Filters -->
+          <div class="flex flex-wrap gap-2 mb-8">
+            <span class="text-sm text-stone-500 py-2">Quick filters:</span>
+            <button @click="query = 'pyramid'; search()" class="px-4 py-2 rounded-full bg-obsidian-800/50 border border-obsidian-700/50 text-stone-400 hover:text-gold-400 hover:border-gold-400/30 text-sm transition-colors">
+              Pyramids
+            </button>
+            <button @click="query = 'megalithic'; search()" class="px-4 py-2 rounded-full bg-obsidian-800/50 border border-obsidian-700/50 text-stone-400 hover:text-gold-400 hover:border-gold-400/30 text-sm transition-colors">
+              Megalithic
+            </button>
+            <button @click="query = 'temple'; search()" class="px-4 py-2 rounded-full bg-obsidian-800/50 border border-obsidian-700/50 text-stone-400 hover:text-gold-400 hover:border-gold-400/30 text-sm transition-colors">
+              Temples
+            </button>
+            <button @click="query = 'Peru'; search()" class="px-4 py-2 rounded-full bg-obsidian-800/50 border border-obsidian-700/50 text-stone-400 hover:text-gold-400 hover:border-gold-400/30 text-sm transition-colors">
+              Peru
+            </button>
+            <button @click="query = 'Egypt'; search()" class="px-4 py-2 rounded-full bg-obsidian-800/50 border border-obsidian-700/50 text-stone-400 hover:text-gold-400 hover:border-gold-400/30 text-sm transition-colors">
+              Egypt
+            </button>
+            <button @click="query = 'Turkey'; search()" class="px-4 py-2 rounded-full bg-obsidian-800/50 border border-obsidian-700/50 text-stone-400 hover:text-gold-400 hover:border-gold-400/30 text-sm transition-colors">
+              Turkey
+            </button>
+          </div>
+
+          <!-- Results Count -->
+          <div class="flex items-center justify-between mb-6">
+            <p class="text-stone-500 text-sm">
+              <span x-text="results.length"></span> <span x-text="results.length === 1 ? 'result' : 'results'"></span>
+              <span x-show="query.length > 0"> for "<span class="text-gold-400" x-text="query"></span>"</span>
+            </p>
+          </div>
+
+          <!-- Results Grid -->
+          <div class="grid sm:grid-cols-2 gap-6">
+            <template x-for="structure in results" :key="structure.id">
+              <a :href="`/structures/${structure.slug}`" class="card card-hover overflow-hidden group">
+                <div class="relative h-40">
+                  <img :src="structure.heroImage" :alt="structure.name" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/50 to-transparent"></div>
+                  <div class="absolute top-3 left-3">
+                    <span class="badge-gold text-xs" x-text="structure.category"></span>
+                  </div>
+                </div>
+                <div class="p-5">
+                  <p class="text-sm text-stone-500 mb-1" x-text="structure.country + ' • ' + structure.dates.age"></p>
+                  <h3 class="text-lg font-bold text-stone-100 group-hover:text-gold-400 transition-colors mb-2" x-text="structure.name"></h3>
+                  <p class="text-sm text-stone-400 line-clamp-2" x-text="structure.tagline"></p>
+                </div>
+              </a>
+            </template>
+          </div>
+
+          <!-- No Results -->
+          <div x-show="results.length === 0 && query.length > 0" class="text-center py-16">
+            <div class="w-20 h-20 mx-auto mb-6 rounded-2xl bg-obsidian-800/50 flex items-center justify-center">
+              <svg class="w-10 h-10 text-stone-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-stone-100 mb-2">No structures found</h3>
+            <p class="text-stone-500 mb-6">Try a different search term or explore our categories.</p>
+            <a href="/structures" class="btn-secondary">
+              Browse All Structures
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <Footer slot="footer" />
+  <MobileNav />
+
+  <script define:vars={{ structures }}>
+    document.addEventListener('alpine:init', () => {
+      Alpine.data('searchApp', () => ({
+        structures: structures,
+        query: '',
+        results: structures,
+
+        search() {
+          const q = this.query.toLowerCase().trim();
+
+          if (!q) {
+            this.results = this.structures;
+            return;
+          }
+
+          this.results = this.structures.filter(s => {
+            const searchable = [
+              s.name,
+              s.tagline,
+              s.summary,
+              s.country,
+              s.region,
+              s.category,
+              s.dates.period,
+              ...s.mysteries
+            ].join(' ').toLowerCase();
+
+            return searchable.includes(q);
+          });
+        }
+      }));
+    });
+  </script>
+</BaseLayout>

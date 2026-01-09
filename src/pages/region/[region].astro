@@ -1,0 +1,168 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/global/Header.astro';
+import Footer from '../../components/global/Footer.astro';
+import MobileNav from '../../components/global/MobileNav.astro';
+import StructureCard from '../../components/structure/StructureCard.astro';
+import structures from '../../data/structures.json';
+
+const regions = [
+  {
+    slug: 'middle-east',
+    name: 'Middle East',
+    description: 'The cradle of civilization—home to the oldest known megalithic sites and structures that predate written history.',
+    mapCoords: { lat: 37, lng: 40 },
+    highlights: ['Oldest known temples', 'T-shaped pillars', 'Pre-pottery Neolithic']
+  },
+  {
+    slug: 'south-america',
+    name: 'South America',
+    description: 'Impossible precision stonework and mysterious civilizations that built at extreme altitudes with technologies we still don\'t fully understand.',
+    mapCoords: { lat: -15, lng: -70 },
+    highlights: ['Precision polygonal masonry', 'High-altitude construction', 'Anti-seismic engineering']
+  },
+  {
+    slug: 'europe',
+    name: 'Europe',
+    description: 'Ancient astronomical observatories and megalithic monuments aligned with celestial events spanning millennia.',
+    mapCoords: { lat: 48, lng: 5 },
+    highlights: ['Astronomical alignments', 'Megalithic tombs', 'Solstice markers']
+  },
+  {
+    slug: 'africa',
+    name: 'Africa',
+    description: 'Monumental achievements from ancient Egypt to Ethiopia—precision engineering and rock-cut architecture at its finest.',
+    mapCoords: { lat: 25, lng: 30 },
+    highlights: ['Pyramid construction', 'Monolithic churches', 'Temple complexes']
+  },
+  {
+    slug: 'asia',
+    name: 'Asia',
+    description: 'From massive temple complexes to mysterious pyramidal mounds—Asia holds some of the most underexplored ancient sites.',
+    mapCoords: { lat: 20, lng: 100 },
+    highlights: ['Rock-cut temples', 'Megalithic dolmens', 'Subterranean structures']
+  },
+  {
+    slug: 'oceania',
+    name: 'Oceania',
+    description: 'Remote island civilizations that transported massive stones across oceans and built monuments that defy isolation.',
+    mapCoords: { lat: -10, lng: 160 },
+    highlights: ['Basalt architecture', 'Stone transportation', 'Moai statues']
+  }
+];
+
+export function getStaticPaths() {
+  return regions.map(region => ({
+    params: { region: region.slug },
+    props: { region }
+  }));
+}
+
+const { region } = Astro.props;
+
+const regionStructures = structures.filter(s =>
+  s.region.toLowerCase().replace(/\s+/g, '-') === region.slug
+);
+---
+
+<BaseLayout
+  title={`${region.name} Ancient Structures | Greatest Ancient Structures`}
+  description={region.description}
+>
+  <Header slot="header" />
+
+  <!-- Hero -->
+  <section class="relative py-24 md:py-32 overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-gold-400/10 to-transparent rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="container-custom relative z-10">
+      <div class="max-w-3xl">
+        <div class="flex items-center gap-4 mb-6">
+          <span class="badge-gold">{regionStructures.length} structures</span>
+          <span class="text-stone-500">•</span>
+          <span class="text-stone-500 text-sm">{region.mapCoords.lat > 0 ? 'Northern' : 'Southern'} Hemisphere</span>
+        </div>
+        <h1 class="text-display-lg font-display font-bold tracking-tight text-stone-100 mb-4">
+          {region.name}
+        </h1>
+        <p class="text-xl text-stone-400 leading-relaxed mb-8">
+          {region.description}
+        </p>
+
+        <!-- Highlights -->
+        <div class="flex flex-wrap gap-3">
+          {region.highlights.map(highlight => (
+            <span class="px-4 py-2 rounded-full bg-obsidian-800/50 border border-obsidian-700/50 text-stone-300 text-sm">
+              {highlight}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Structures Grid -->
+  <section class="py-12 md:py-16">
+    <div class="container-custom">
+      {regionStructures.length > 0 ? (
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {regionStructures.map((structure, i) => (
+            <StructureCard
+              structure={structure}
+              variant={i === 0 ? 'featured' : 'default'}
+              loading={i < 6 ? 'eager' : 'lazy'}
+            />
+          ))}
+        </div>
+      ) : (
+        <div class="text-center py-16">
+          <p class="text-stone-500">No structures found in this region yet.</p>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- Other Regions -->
+  <section class="py-12 md:py-16 bg-obsidian-900/30">
+    <div class="container-custom">
+      <h2 class="section-title mb-8">Explore Other Regions</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {regions.filter(r => r.slug !== region.slug).map(r => {
+          const count = structures.filter(s =>
+            s.region.toLowerCase().replace(/\s+/g, '-') === r.slug
+          ).length;
+          return (
+            <a href={`/region/${r.slug}`} class="card p-6 group hover:border-gold-400/30 transition-all">
+              <div class="flex items-center justify-between mb-4">
+                <span class="badge-stone">{count} sites</span>
+              </div>
+              <h3 class="text-lg font-bold text-stone-100 group-hover:text-gold-400 transition-colors mb-2">
+                {r.name}
+              </h3>
+              <p class="text-sm text-stone-500 line-clamp-2">{r.description}</p>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16">
+    <div class="container-custom text-center">
+      <h2 class="text-2xl font-bold text-stone-100 mb-4">Want to see them all?</h2>
+      <p class="text-stone-400 mb-6">Explore all 20 ancient structures on our interactive world map.</p>
+      <a href="/map" class="btn-primary">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+        </svg>
+        View World Map
+      </a>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+  <MobileNav />
+</BaseLayout>
