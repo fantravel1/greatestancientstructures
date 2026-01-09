@@ -1,0 +1,176 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/global/Header.astro';
+import Footer from '../components/global/Footer.astro';
+import MobileNav from '../components/global/MobileNav.astro';
+import structures from '../data/structures.json';
+---
+
+<BaseLayout
+  title="Discover a Random Ancient Structure | Greatest Ancient Structures"
+  description="Let fate guide your exploration. Discover a random ancient structure and uncover its mysteries."
+>
+  <Header slot="header" />
+
+  <main class="py-20 md:py-28 min-h-screen flex items-center">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto" x-data="discoveryApp()">
+
+        <!-- Discovery State -->
+        <div x-show="!revealed" class="text-center">
+          <div class="relative inline-block mb-8">
+            <div class="w-32 h-32 rounded-full bg-gradient-to-br from-gold-400/20 to-mystic-500/20 flex items-center justify-center animate-pulse-slow">
+              <svg class="w-16 h-16 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+              </svg>
+            </div>
+            <div class="absolute -inset-4 rounded-full border border-gold-400/20 animate-ping"></div>
+          </div>
+
+          <h1 class="text-display-md font-display font-bold text-stone-100 mb-4">
+            Discover the Unknown
+          </h1>
+          <p class="text-xl text-stone-400 mb-8 max-w-md mx-auto">
+            Let ancient fate guide your journey. Click to reveal a random structure from our collection.
+          </p>
+
+          <button
+            @click="reveal()"
+            class="btn-primary text-lg px-8 py-4 group"
+          >
+            <span class="group-hover:animate-bounce">✨</span>
+            Reveal My Destiny
+            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+            </svg>
+          </button>
+
+          <p class="mt-8 text-stone-600 text-sm">
+            20 ancient mysteries await...
+          </p>
+        </div>
+
+        <!-- Revealed Structure -->
+        <div x-show="revealed" x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100">
+          <div class="card overflow-hidden">
+            <!-- Hero Image -->
+            <div class="relative h-64 md:h-80">
+              <img
+                :src="structure?.heroImage"
+                :alt="structure?.name"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/60 to-transparent"></div>
+
+              <!-- Badge -->
+              <div class="absolute top-4 left-4">
+                <span class="badge-gold" x-text="structure?.category"></span>
+              </div>
+
+              <!-- Country Flag -->
+              <div class="absolute top-4 right-4">
+                <span class="px-3 py-1 rounded-full bg-obsidian-900/80 backdrop-blur-sm text-stone-300 text-sm" x-text="structure?.country"></span>
+              </div>
+
+              <!-- Title Overlay -->
+              <div class="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                <p class="text-gold-400 font-medium mb-2" x-text="structure?.dates.age + ' old'"></p>
+                <h2 class="text-3xl md:text-4xl font-display font-bold text-stone-100 mb-2" x-text="structure?.name"></h2>
+                <p class="text-xl text-stone-300" x-text="structure?.tagline"></p>
+              </div>
+            </div>
+
+            <!-- Content -->
+            <div class="p-6 md:p-8">
+              <p class="text-stone-400 leading-relaxed mb-6" x-text="structure?.summary"></p>
+
+              <!-- Quick Stats -->
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                <div class="text-center p-4 rounded-xl bg-obsidian-800/30">
+                  <p class="text-2xl font-bold text-gold-400" x-text="structure?.dates.constructed"></p>
+                  <p class="text-xs text-stone-500 uppercase tracking-wider">Built</p>
+                </div>
+                <div class="text-center p-4 rounded-xl bg-obsidian-800/30">
+                  <p class="text-2xl font-bold text-mystic-400" x-text="structure?.region"></p>
+                  <p class="text-xs text-stone-500 uppercase tracking-wider">Region</p>
+                </div>
+                <div class="text-center p-4 rounded-xl bg-obsidian-800/30">
+                  <p class="text-2xl font-bold text-blue-400" x-text="structure?.mysteries?.length || 0"></p>
+                  <p class="text-xs text-stone-500 uppercase tracking-wider">Mysteries</p>
+                </div>
+                <div class="text-center p-4 rounded-xl bg-obsidian-800/30">
+                  <p class="text-2xl font-bold text-stone-300" x-text="structure?.unesco?.status === 'inscribed' ? 'Yes' : 'No'"></p>
+                  <p class="text-xs text-stone-500 uppercase tracking-wider">UNESCO</p>
+                </div>
+              </div>
+
+              <!-- Actions -->
+              <div class="flex flex-col sm:flex-row gap-4">
+                <a
+                  :href="`/structures/${structure?.slug}`"
+                  class="btn-primary flex-1 justify-center"
+                >
+                  Explore This Site
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                  </svg>
+                </a>
+                <button
+                  @click="reveal()"
+                  class="btn-secondary flex-1 justify-center"
+                >
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                  </svg>
+                  Try Another
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- History -->
+          <div x-show="history.length > 1" class="mt-8">
+            <h3 class="text-sm text-stone-500 uppercase tracking-wider mb-4">Previously Discovered</h3>
+            <div class="flex flex-wrap gap-2">
+              <template x-for="(item, index) in history.slice(0, -1).reverse()" :key="index">
+                <a
+                  :href="`/structures/${item.slug}`"
+                  class="px-4 py-2 rounded-full bg-obsidian-800/50 border border-obsidian-700/50 text-stone-400 hover:text-gold-400 hover:border-gold-400/30 text-sm transition-colors"
+                  x-text="item.name"
+                ></a>
+              </template>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <Footer slot="footer" />
+  <MobileNav />
+
+  <script define:vars={{ structures }}>
+    document.addEventListener('alpine:init', () => {
+      Alpine.data('discoveryApp', () => ({
+        structures: structures,
+        structure: null,
+        revealed: false,
+        history: [],
+
+        reveal() {
+          // Get structures not in recent history (last 5)
+          const recentIds = this.history.slice(-5).map(s => s.id);
+          const available = this.structures.filter(s => !recentIds.includes(s.id));
+          const pool = available.length > 0 ? available : this.structures;
+
+          // Random selection
+          const randomIndex = Math.floor(Math.random() * pool.length);
+          this.structure = pool[randomIndex];
+          this.history.push(this.structure);
+          this.revealed = true;
+        }
+      }));
+    });
+  </script>
+</BaseLayout>

@@ -1,0 +1,209 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/global/Header.astro';
+import Footer from '../components/global/Footer.astro';
+import MobileNav from '../components/global/MobileNav.astro';
+
+const faqs = [
+  {
+    category: "Ancient Engineering",
+    questions: [
+      {
+        q: "How did ancient civilizations move stones weighing hundreds of tons?",
+        a: "Ancient builders used a combination of techniques including wooden sledges, log rollers, earth ramps, levers, and possibly water lubrication. At sites like Baalbek (1,000+ ton stones) and Easter Island (82-ton moai), the exact methods remain debated. Recent experiments suggest that relatively small teams could move massive stones using wooden sledges on wet sand, reducing friction by up to 50%."
+      },
+      {
+        q: "What is polygonal masonry and why is it significant?",
+        a: "Polygonal masonry is a construction technique where stones are cut into irregular, multi-sided shapes that fit together perfectly without mortar. Found at Sacsayhuamán (Peru), Delphi (Greece), and other sites, this technique creates earthquake-resistant walls. The precision of the joints—often paper-thin—suggests sophisticated measuring and cutting techniques that we still don't fully understand."
+      },
+      {
+        q: "Were ancient structures aligned with astronomical events?",
+        a: "Yes, many ancient structures show precise astronomical alignments. The Great Pyramid aligns to true north within 0.05 degrees. Newgrange's passage illuminates only on winter solstice sunrise. Göbekli Tepe's pillars may track star positions. These alignments suggest advanced astronomical knowledge predating modern instruments by thousands of years."
+      },
+      {
+        q: "How did ancient builders achieve such precision without modern tools?",
+        a: "Ancient builders used simple but effective tools: plumb bobs for vertical alignment, water levels for horizontal surfaces, string and stakes for straight lines, and standardized measuring rods. The key was time, skill, and rigorous quality control. Some precision, like the Great Pyramid's base being level within 2.1cm across 230 meters, still impresses modern engineers."
+      }
+    ]
+  },
+  {
+    category: "Specific Sites",
+    questions: [
+      {
+        q: "What is Göbekli Tepe and why is it important?",
+        a: "Göbekli Tepe in Turkey is the world's oldest known megalithic site, dating to ~9600 BCE—over 6,000 years before Stonehenge. It features massive T-shaped pillars weighing up to 20 tons, carved with animal reliefs. Its existence challenges the theory that agriculture preceded monumental construction; hunter-gatherers built this complex before settling into farming communities."
+      },
+      {
+        q: "How were the Egyptian pyramids built?",
+        a: "The prevailing theory involves internal and external ramps, copper tools, wooden sledges, and a workforce of skilled laborers (not slaves). The Great Pyramid required ~2.3 million blocks averaging 2.5 tons each, placed over roughly 20 years. Exactly how the heaviest blocks (60+ tons) reached the upper chambers remains debated among engineers and archaeologists."
+      },
+      {
+        q: "What makes Puma Punku's stonework unusual?",
+        a: "Puma Punku in Bolivia features H-shaped blocks with perfectly flat surfaces, precise 90-degree angles, and complex interlocking designs—all cut from andesite and diorite, two of the hardest stones. The precision and uniformity suggest standardized production techniques. How pre-Columbian builders achieved this without iron tools or the wheel continues to puzzle researchers."
+      },
+      {
+        q: "Is Yonaguni a man-made underwater structure?",
+        a: "The Yonaguni Monument off Japan's coast remains controversial. Discovered in 1987, it features terraces, steps, and geometric shapes that appear carved. Geologists argue these could be natural formations caused by tectonic activity and erosion. However, some features—like apparent tool marks and consistent angles—lead others to suggest human modification of natural rock around 10,000+ years ago."
+      }
+    ]
+  },
+  {
+    category: "Dating & Origins",
+    questions: [
+      {
+        q: "How do archaeologists date ancient structures?",
+        a: "Multiple methods are used: Carbon-14 dating of organic materials found at sites, thermoluminescence dating of heated materials, stratigraphy (analyzing soil layers), and stylistic analysis of artifacts. Stone itself cannot be carbon-dated, so dates rely on associated organic materials. This limitation creates controversies at sites like the Sphinx, where some argue it could be much older than officially dated."
+      },
+      {
+        q: "Could there have been advanced civilizations before recorded history?",
+        a: "This is debated. Mainstream archaeology holds that complex civilizations emerged around 3500-3000 BCE in Mesopotamia and Egypt. However, sites like Göbekli Tepe (9600 BCE) show sophisticated construction predating this timeline. Some researchers propose a 'lost' advanced civilization, while others argue our ancestors were simply more capable than previously assumed."
+      },
+      {
+        q: "Why are some ancient structure dates controversial?",
+        a: "Dating controversies arise from several factors: limited organic material for carbon dating, reliance on associated artifacts rather than the structures themselves, geological arguments about erosion patterns, and the challenge of dating stone directly. The Sphinx water erosion hypothesis and Gunung Padang's claimed 20,000+ year age exemplify ongoing debates."
+      }
+    ]
+  },
+  {
+    category: "Visiting Sites",
+    questions: [
+      {
+        q: "Which ancient sites are UNESCO World Heritage Sites?",
+        a: "Many featured structures hold UNESCO status: the Great Pyramid and Sphinx (1979), Petra (1985), Machu Picchu (1983), Stonehenge (1986), Abu Simbel (1979), Lalibela (1978), Ellora Caves (1983), and the Korean Dolmen Sites (2000). UNESCO recognition helps protect these sites while also increasing tourist access and research funding."
+      },
+      {
+        q: "What's the best time to visit ancient structure sites?",
+        a: "It varies by location. Desert sites (Egypt, Petra) are best in spring/fall to avoid extreme heat. High-altitude sites (Machu Picchu, Puma Punku) are best in dry season (May-October). European sites are most accessible in late spring or early fall. Many sites offer special access during solstices or equinoxes when astronomical alignments can be observed."
+      },
+      {
+        q: "Are these ancient sites accessible to visitors?",
+        a: "Most sites welcome visitors, though access levels vary. Some areas may be restricted for preservation. The Great Pyramid allows limited interior access. Göbekli Tepe has viewing platforms over excavation areas. Machu Picchu limits daily visitors. We recommend checking current restrictions and booking in advance for popular sites."
+      }
+    ]
+  }
+];
+
+// Generate schema for FAQ page
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.flatMap(cat => cat.questions.map(q => ({
+    "@type": "Question",
+    "name": q.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": q.a
+    }
+  })))
+};
+---
+
+<BaseLayout
+  title="Ancient Structures FAQ | Common Questions Answered"
+  description="Get answers to frequently asked questions about ancient structures, megalithic engineering, archaeological dating methods, and visiting historic sites."
+>
+  <Header slot="header" />
+
+  <!-- Schema.org FAQ markup -->
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Hero -->
+  <section class="relative py-24 md:py-32 overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-radial from-mystic-500/10 to-transparent rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="container-custom relative z-10 text-center">
+      <span class="inline-block px-4 py-2 rounded-full bg-mystic-500/10 text-mystic-400 text-sm font-medium mb-6">
+        Knowledge Base
+      </span>
+      <h1 class="text-display-lg font-display font-bold tracking-tight text-stone-100 mb-4">
+        Frequently Asked Questions
+      </h1>
+      <p class="text-xl text-stone-400 max-w-2xl mx-auto">
+        Everything you've wondered about ancient structures, engineering mysteries, and archaeological discoveries.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ Sections -->
+  <section class="py-12 md:py-16">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto space-y-16">
+        {faqs.map((category, catIndex) => (
+          <div>
+            <h2 class="text-2xl font-display font-bold text-gold-400 mb-8 flex items-center gap-3">
+              <span class="w-10 h-10 rounded-lg bg-gold-400/10 flex items-center justify-center text-lg">
+                {catIndex + 1}
+              </span>
+              {category.category}
+            </h2>
+
+            <div class="space-y-4" x-data="{ open: null }">
+              {category.questions.map((faq, qIndex) => {
+                const id = `faq-${catIndex}-${qIndex}`;
+                return (
+                  <div class="card overflow-hidden">
+                    <button
+                      @click={`open = open === '${id}' ? null : '${id}'`}
+                      class="w-full p-6 text-left flex items-start justify-between gap-4"
+                      :aria-expanded={`open === '${id}'`}
+                    >
+                      <h3 class="text-lg font-semibold text-stone-100 pr-4">
+                        {faq.q}
+                      </h3>
+                      <div
+                        class="flex-shrink-0 w-8 h-8 rounded-full bg-obsidian-800 flex items-center justify-center transition-transform duration-300"
+                        :class={`{ 'rotate-180': open === '${id}' }`}
+                      >
+                        <svg class="w-5 h-5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                      </div>
+                    </button>
+                    <div
+                      x-show={`open === '${id}'`}
+                      x-collapse
+                      x-cloak
+                    >
+                      <div class="px-6 pb-6 pt-0">
+                        <div class="pt-4 border-t border-obsidian-800/50">
+                          <p class="text-stone-400 leading-relaxed">
+                            {faq.a}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 md:py-24 bg-obsidian-900/30">
+    <div class="container-custom text-center">
+      <h2 class="text-2xl md:text-3xl font-display font-bold text-stone-100 mb-4">
+        Still have questions?
+      </h2>
+      <p class="text-stone-400 mb-8 max-w-md mx-auto">
+        Explore our detailed structure pages or test your knowledge with our interactive quiz.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/structures" class="btn-primary">
+          Explore Structures
+        </a>
+        <a href="/quiz" class="btn-secondary">
+          Take the Quiz
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+  <MobileNav />
+</BaseLayout>

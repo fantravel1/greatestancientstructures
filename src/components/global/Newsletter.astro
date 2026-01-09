@@ -1,0 +1,119 @@
+---
+interface Props {
+  variant?: 'default' | 'compact' | 'hero';
+  class?: string;
+}
+
+const { variant = 'default', class: className = '' } = Astro.props;
+---
+
+{variant === 'hero' ? (
+  <section class={`py-16 md:py-24 bg-gradient-to-b from-obsidian-900/50 to-obsidian-950 ${className}`}>
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold-400/10 text-gold-400 text-sm font-medium mb-6">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+          </svg>
+          Stay Updated
+        </div>
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-stone-100 mb-4">
+          Uncover Ancient Mysteries
+        </h2>
+        <p class="text-lg text-stone-400 mb-8 max-w-xl mx-auto">
+          Get weekly discoveries, new research findings, and exclusive content about the world's most enigmatic structures.
+        </p>
+
+        <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto" x-data="{ email: '', submitted: false }">
+          <input
+            type="email"
+            x-model="email"
+            placeholder="Enter your email"
+            required
+            class="flex-1 px-5 py-4 rounded-xl bg-obsidian-900 border border-obsidian-700 text-stone-100 placeholder-stone-600 focus:border-gold-400 focus:ring-2 focus:ring-gold-400/20 transition-all"
+          />
+          <button
+            type="submit"
+            @click.prevent="submitted = true"
+            class="btn-primary whitespace-nowrap"
+            :class="{ 'opacity-50 cursor-not-allowed': submitted }"
+            :disabled="submitted"
+          >
+            <span x-show="!submitted">Subscribe</span>
+            <span x-show="submitted" x-cloak>Subscribed!</span>
+            <svg x-show="!submitted" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+            </svg>
+            <svg x-show="submitted" x-cloak class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+          </button>
+        </form>
+
+        <p class="mt-4 text-xs text-stone-600">
+          No spam, ever. Unsubscribe anytime.
+        </p>
+      </div>
+    </div>
+  </section>
+) : variant === 'compact' ? (
+  <div class={`card p-6 ${className}`} x-data="{ email: '', submitted: false }">
+    <h3 class="font-bold text-stone-100 mb-2">Newsletter</h3>
+    <p class="text-sm text-stone-500 mb-4">Weekly ancient mysteries in your inbox.</p>
+    <form class="space-y-3">
+      <input
+        type="email"
+        x-model="email"
+        placeholder="Your email"
+        required
+        class="w-full px-4 py-3 rounded-lg bg-obsidian-800 border border-obsidian-700 text-stone-100 text-sm placeholder-stone-600 focus:border-gold-400 focus:ring-1 focus:ring-gold-400/20 transition-all"
+      />
+      <button
+        type="submit"
+        @click.prevent="submitted = true"
+        class="w-full btn-primary text-sm justify-center"
+        :class="{ 'opacity-50': submitted }"
+        :disabled="submitted"
+      >
+        <span x-text="submitted ? 'Subscribed!' : 'Subscribe'"></span>
+      </button>
+    </form>
+  </div>
+) : (
+  <div class={`card p-8 bg-gradient-to-br from-obsidian-900 to-obsidian-950 ${className}`} x-data="{ email: '', submitted: false }">
+    <div class="flex items-start gap-4 mb-6">
+      <div class="w-12 h-12 rounded-xl bg-gold-400/10 flex items-center justify-center flex-shrink-0">
+        <svg class="w-6 h-6 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+        </svg>
+      </div>
+      <div>
+        <h3 class="text-lg font-bold text-stone-100 mb-1">Join the Exploration</h3>
+        <p class="text-sm text-stone-500">Get weekly discoveries and research updates.</p>
+      </div>
+    </div>
+    <form class="flex gap-3">
+      <input
+        type="email"
+        x-model="email"
+        placeholder="your@email.com"
+        required
+        class="flex-1 px-4 py-3 rounded-lg bg-obsidian-800 border border-obsidian-700 text-stone-100 text-sm placeholder-stone-600 focus:border-gold-400 focus:ring-1 focus:ring-gold-400/20 transition-all"
+      />
+      <button
+        type="submit"
+        @click.prevent="submitted = true"
+        class="btn-primary px-6"
+        :class="{ 'opacity-50': submitted }"
+        :disabled="submitted"
+      >
+        <svg x-show="!submitted" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+        </svg>
+        <svg x-show="submitted" x-cloak class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+        </svg>
+      </button>
+    </form>
+  </div>
+)}

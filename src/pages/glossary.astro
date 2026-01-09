@@ -1,0 +1,282 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/global/Header.astro';
+import Footer from '../components/global/Footer.astro';
+import MobileNav from '../components/global/MobileNav.astro';
+
+const glossaryTerms = [
+  {
+    term: "Andesite",
+    definition: "A volcanic rock used in ancient South American construction, notably at Puma Punku. Extremely hard (6-7 on Mohs scale), making precision cutting remarkable for pre-industrial civilizations.",
+    related: ["Diorite", "Granite", "Puma Punku"]
+  },
+  {
+    term: "Archaeoastronomy",
+    definition: "The study of how ancient peoples understood and used celestial phenomena. Many megalithic sites show precise alignments with solstices, equinoxes, and star positions.",
+    related: ["Solstice alignment", "Stellar alignment", "Newgrange"]
+  },
+  {
+    term: "Ashlar",
+    definition: "Finely dressed (cut, worked) stone with even faces and square edges, used for wall facing. Found in Egyptian, Incan, and other ancient constructions.",
+    related: ["Polygonal masonry", "Cyclopean masonry"]
+  },
+  {
+    term: "Carbon-14 Dating",
+    definition: "Radiometric dating method measuring the decay of carbon-14 in organic materials. Cannot date stone directly—relies on associated organic materials like charcoal or bone.",
+    related: ["Stratigraphy", "Thermoluminescence"]
+  },
+  {
+    term: "Corbelling",
+    definition: "Construction technique where each successive course of stone projects beyond the one below, eventually meeting to form an arch or dome without true keystone arches.",
+    related: ["Newgrange", "Treasury of Atreus"]
+  },
+  {
+    term: "Cyclopean Masonry",
+    definition: "Construction using massive, irregular stone blocks fitted together without mortar. Named after the mythical Cyclopes, the only beings ancient Greeks thought could move such stones.",
+    related: ["Mycenae", "Sacsayhuamán", "Polygonal masonry"]
+  },
+  {
+    term: "Diorite",
+    definition: "An extremely hard igneous rock (harder than granite) used at sites like Puma Punku. Its hardness makes precision cutting with primitive tools especially mysterious.",
+    related: ["Andesite", "Granite"]
+  },
+  {
+    term: "Dolmen",
+    definition: "A megalithic tomb typically consisting of large upright stones supporting a horizontal capstone. Found worldwide, with Korea having the highest concentration (35,000+).",
+    related: ["Megalith", "Korean Dolmens", "Passage tomb"]
+  },
+  {
+    term: "Equinox",
+    definition: "Twice-yearly event when day and night are approximately equal length. Many ancient structures align with equinox sunrise/sunset, demonstrating astronomical knowledge.",
+    related: ["Solstice", "Archaeoastronomy"]
+  },
+  {
+    term: "Geopolymer",
+    definition: "A theory that some ancient 'stones' were actually cast from limestone aggregate and chemical binders—ancient concrete. Debated for Egyptian pyramids and other sites.",
+    related: ["Great Pyramid", "Limestone"]
+  },
+  {
+    term: "Granite",
+    definition: "Hard igneous rock used in many ancient constructions. The King's Chamber of the Great Pyramid uses granite blocks weighing up to 80 tons, transported 800km from Aswan.",
+    related: ["Aswan quarries", "Great Pyramid"]
+  },
+  {
+    term: "H-blocks",
+    definition: "Distinctive H-shaped interlocking stone blocks found at Puma Punku, Bolivia. Their uniform dimensions and complex shapes suggest standardized production techniques.",
+    related: ["Puma Punku", "Tiwanaku"]
+  },
+  {
+    term: "In situ",
+    definition: "Latin for 'in place.' Refers to artifacts or structures found in their original location, undisturbed. Critical for accurate archaeological dating and context.",
+    related: ["Stratigraphy", "Context"]
+  },
+  {
+    term: "Lintel",
+    definition: "Horizontal beam spanning an opening (doorway, window). At Stonehenge, lintels weighing 6-7 tons were raised to top the sarsen uprights using mortise and tenon joints.",
+    related: ["Stonehenge", "Trilithon"]
+  },
+  {
+    term: "Megalith",
+    definition: "Large stone used in prehistoric construction, typically weighing several tons or more. From Greek 'megas' (great) + 'lithos' (stone).",
+    related: ["Dolmen", "Menhir", "Stonehenge"]
+  },
+  {
+    term: "Menhir",
+    definition: "A single upright standing stone, often part of larger arrangements. The Carnac Stones in France include over 3,000 menhirs in parallel rows.",
+    related: ["Carnac Stones", "Megalith"]
+  },
+  {
+    term: "Moai",
+    definition: "Monolithic human figures carved by the Rapa Nui people of Easter Island between 1250-1500 CE. Nearly 900 moai exist, averaging 14 tons but reaching up to 82 tons.",
+    related: ["Easter Island", "Rapa Nui"]
+  },
+  {
+    term: "Monolithic",
+    definition: "Carved from a single piece of stone. The Kailasa Temple at Ellora is the world's largest monolithic structure, carved top-down from living rock.",
+    related: ["Kailasa Temple", "Rock-cut architecture"]
+  },
+  {
+    term: "Mortise and Tenon",
+    definition: "Woodworking joint adapted for stone at Stonehenge. Projecting 'tenons' on uprights fit into carved 'mortise' holes in lintels—unique in megalithic architecture.",
+    related: ["Stonehenge", "Lintel"]
+  },
+  {
+    term: "Neolithic",
+    definition: "The 'New Stone Age' (~10,000-4,500 BCE), characterized by polished stone tools, agriculture, and increasingly complex structures like Göbekli Tepe.",
+    related: ["Göbekli Tepe", "Pre-Pottery Neolithic"]
+  },
+  {
+    term: "Obelisk",
+    definition: "Tall, tapering, four-sided monument with a pyramidal top. Ancient Egyptian obelisks were carved from single granite blocks, some weighing over 450 tons.",
+    related: ["Aswan quarries", "Egypt"]
+  },
+  {
+    term: "Passage Tomb",
+    definition: "Megalithic tomb with a narrow passage leading to burial chamber(s), often covered by a mound. Newgrange is a famous example with its solstice-aligned passage.",
+    related: ["Newgrange", "Dolmen", "Corbelling"]
+  },
+  {
+    term: "Polygonal Masonry",
+    definition: "Stone blocks cut into irregular multi-sided shapes that interlock perfectly without mortar. Found at Sacsayhuamán, Delphi, and other ancient sites. Highly earthquake-resistant.",
+    related: ["Sacsayhuamán", "Cyclopean masonry", "Peru"]
+  },
+  {
+    term: "Quarrying",
+    definition: "Extracting stone from the earth. Ancient techniques included wooden wedges (expanded with water), fire-setting, and copper/bronze tools. How some massive blocks were quarried remains debated.",
+    related: ["Aswan", "Baalbek", "Stone of the Pregnant Woman"]
+  },
+  {
+    term: "Rock-cut Architecture",
+    definition: "Structures carved directly from natural rock formations rather than built from separate blocks. Examples include Petra, Lalibela, and the Ellora caves.",
+    related: ["Petra", "Lalibela", "Kailasa Temple"]
+  },
+  {
+    term: "Sarsen",
+    definition: "Type of sandstone used for Stonehenge's main uprights and lintels. The largest sarsens weigh about 25 tons and were transported 25km to the site.",
+    related: ["Stonehenge", "Bluestone"]
+  },
+  {
+    term: "Solstice",
+    definition: "The two annual events when the sun reaches its highest or lowest point relative to the equator. Many ancient structures align precisely with solstice sunrise or sunset.",
+    related: ["Newgrange", "Stonehenge", "Archaeoastronomy"]
+  },
+  {
+    term: "Stratigraphy",
+    definition: "Study of rock/soil layers (strata) to determine relative age. Deeper layers are typically older. Essential for dating archaeological sites and establishing timelines.",
+    related: ["Carbon-14 dating", "In situ"]
+  },
+  {
+    term: "T-pillars",
+    definition: "Distinctive T-shaped megalithic pillars found at Göbekli Tepe and nearby sites. Up to 5.5m tall and 20 tons, carved with animal reliefs and possibly representing stylized humans.",
+    related: ["Göbekli Tepe", "Karahan Tepe"]
+  },
+  {
+    term: "Thermoluminescence",
+    definition: "Dating technique measuring light released from heated materials (ceramics, burnt stone). Useful when carbon-14 dating isn't possible.",
+    related: ["Carbon-14 dating", "Dating methods"]
+  },
+  {
+    term: "Trilithon",
+    definition: "Structure of two vertical stones supporting a horizontal lintel. Stonehenge's central horseshoe contains five trilithons, the largest stones at the site.",
+    related: ["Stonehenge", "Baalbek Trilithon"]
+  },
+  {
+    term: "UNESCO World Heritage",
+    definition: "International designation protecting sites of 'outstanding universal value.' Many ancient structures hold this status, providing legal protection and funding for preservation.",
+    related: ["Conservation", "Cultural heritage"]
+  }
+];
+
+// Sort alphabetically
+const sortedTerms = glossaryTerms.sort((a, b) => a.term.localeCompare(b.term));
+
+// Group by first letter
+const groupedTerms = sortedTerms.reduce((acc, term) => {
+  const letter = term.term[0].toUpperCase();
+  if (!acc[letter]) acc[letter] = [];
+  acc[letter].push(term);
+  return acc;
+}, {} as Record<string, typeof glossaryTerms>);
+
+const letters = Object.keys(groupedTerms).sort();
+---
+
+<BaseLayout
+  title="Ancient Architecture Glossary | Archaeological Terms Explained"
+  description="Comprehensive glossary of archaeological and ancient engineering terms. Learn about megalithic construction, dating methods, and architectural terminology."
+>
+  <Header slot="header" />
+
+  <!-- Hero -->
+  <section class="relative py-24 md:py-32 overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute top-1/2 left-1/4 w-[400px] h-[400px] bg-gradient-radial from-gold-400/10 to-transparent rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="container-custom relative z-10">
+      <div class="max-w-3xl">
+        <span class="inline-block px-4 py-2 rounded-full bg-gold-400/10 text-gold-400 text-sm font-medium mb-6">
+          Reference
+        </span>
+        <h1 class="text-display-lg font-display font-bold tracking-tight text-stone-100 mb-4">
+          Glossary of Terms
+        </h1>
+        <p class="text-xl text-stone-400 leading-relaxed">
+          From andesite to UNESCO—understand the terminology of ancient architecture and archaeology.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Letter Navigation -->
+  <div class="sticky top-16 md:top-20 z-40 bg-obsidian-950/95 backdrop-blur-xl border-y border-obsidian-800/50">
+    <div class="container-custom py-3 overflow-x-auto">
+      <div class="flex gap-1 min-w-max">
+        {letters.map(letter => (
+          <a
+            href={`#letter-${letter}`}
+            class="w-10 h-10 rounded-lg flex items-center justify-center text-sm font-bold text-stone-400 hover:text-gold-400 hover:bg-gold-400/10 transition-colors"
+          >
+            {letter}
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <!-- Glossary -->
+  <section class="py-12 md:py-16">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto space-y-12">
+        {letters.map(letter => (
+          <div id={`letter-${letter}`} class="scroll-mt-32">
+            <div class="flex items-center gap-4 mb-6">
+              <span class="w-12 h-12 rounded-xl bg-gradient-to-br from-gold-400/20 to-gold-400/5 flex items-center justify-center text-2xl font-display font-bold text-gold-400">
+                {letter}
+              </span>
+              <div class="flex-1 h-px bg-obsidian-800/50"></div>
+            </div>
+
+            <div class="space-y-4">
+              {groupedTerms[letter].map(item => (
+                <div class="card p-6 group" id={item.term.toLowerCase().replace(/\s+/g, '-')}>
+                  <h3 class="text-xl font-bold text-stone-100 group-hover:text-gold-400 transition-colors mb-3">
+                    {item.term}
+                  </h3>
+                  <p class="text-stone-400 leading-relaxed mb-4">
+                    {item.definition}
+                  </p>
+                  {item.related.length > 0 && (
+                    <div class="flex flex-wrap gap-2">
+                      <span class="text-xs text-stone-600 uppercase tracking-wider">Related:</span>
+                      {item.related.map(rel => (
+                        <span class="px-3 py-1 rounded-full bg-obsidian-800/50 border border-obsidian-700/50 text-stone-500 text-xs">
+                          {rel}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="py-12 md:py-16 bg-obsidian-900/30">
+    <div class="container-custom text-center">
+      <p class="text-stone-500 mb-4">This glossary contains</p>
+      <p class="text-5xl font-display font-bold text-gold-400 mb-4">{glossaryTerms.length}</p>
+      <p class="text-stone-500 mb-8">terms related to ancient structures and archaeology</p>
+      <a href="/faq" class="btn-secondary">
+        Read the FAQ
+      </a>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+  <MobileNav />
+</BaseLayout>
