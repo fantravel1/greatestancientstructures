@@ -1,13 +1,15 @@
 ---
 import ThemeToggle from './ThemeToggle.astro';
 
+const base = import.meta.env.BASE_URL;
+
 const navLinks = [
-  { href: "/structures", label: "Explore" },
-  { href: "/map", label: "Map" },
-  { href: "/timeline", label: "Timeline" },
-  { href: "/theories", label: "Theories" },
-  { href: "/compare", label: "Compare" },
-  { href: "/quiz", label: "Quiz" },
+  { href: `${base}structures`, label: "Explore" },
+  { href: `${base}map`, label: "Map" },
+  { href: `${base}timeline`, label: "Timeline" },
+  { href: `${base}theories`, label: "Theories" },
+  { href: `${base}compare`, label: "Compare" },
+  { href: `${base}quiz`, label: "Quiz" },
 ];
 ---
 
@@ -20,7 +22,7 @@ const navLinks = [
   <div class="container-custom">
     <nav class="flex items-center justify-between h-16 md:h-20">
       <!-- Logo -->
-      <a href="/" class="flex items-center gap-3 group">
+      <a href={base} class="flex items-center gap-3 group">
         <div class="relative w-10 h-10 flex items-center justify-center">
           <div class="absolute inset-0 bg-gradient-to-br from-gold-400 to-gold-600 rounded-lg opacity-20 group-hover:opacity-30 transition-opacity"></div>
           <svg class="w-6 h-6 text-gold-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -51,13 +53,13 @@ const navLinks = [
       <!-- Desktop CTA -->
       <div class="hidden md:flex items-center gap-4">
         <ThemeToggle />
-        <a href="/search" class="btn-ghost text-sm">
+        <a href={`${base}search`} class="btn-ghost text-sm">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
           </svg>
           <span class="sr-only">Search</span>
         </a>
-        <a href="/structures" class="btn-primary text-sm py-2">
+        <a href={`${base}structures`} class="btn-primary text-sm py-2">
           Start Exploring
         </a>
       </div>
@@ -101,7 +103,7 @@ const navLinks = [
         ))}
         <div class="mt-4 px-4 flex items-center justify-between gap-4">
           <ThemeToggle />
-          <a href="/structures" class="btn-primary flex-1 text-center">
+          <a href={`${base}structures`} class="btn-primary flex-1 text-center">
             Start Exploring
           </a>
         </div>
