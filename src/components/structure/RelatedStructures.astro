@@ -9,6 +9,7 @@ interface Props {
 }
 
 const { currentSlug, category, region, limit = 4 } = Astro.props;
+const base = import.meta.env.BASE_URL;
 
 // Find related structures by category first, then by region, excluding current
 const getRelatedStructures = () => {
@@ -62,7 +63,7 @@ const relatedStructures = getRelatedStructures();
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
       {relatedStructures.map((structure) => (
         <a
-          href={`/structures/${structure.slug}`}
+          href={`${base}structures/${structure.slug}`}
           class="group block bg-obsidian-light rounded-xl overflow-hidden border border-stone-dark/30 hover:border-gold/50 transition-all duration-300 hover:transform hover:-translate-y-1"
         >
           <div class="aspect-[4/3] relative overflow-hidden">
@@ -98,7 +99,7 @@ const relatedStructures = getRelatedStructures();
 
     <div class="mt-8 text-center">
       <a
-        href="/structures"
+        href={`${base}structures`}
         class="inline-flex items-center gap-2 px-6 py-3 bg-obsidian border border-gold/30 text-gold font-semibold rounded-full hover:bg-gold hover:text-obsidian transition-all"
       >
         View All Structures

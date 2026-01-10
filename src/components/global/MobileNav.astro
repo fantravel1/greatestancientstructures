@@ -1,9 +1,11 @@
 ---
+const base = import.meta.env.BASE_URL;
+
 const navItems = [
-  { href: "/", label: "Home", icon: "home" },
-  { href: "/structures", label: "Explore", icon: "compass" },
-  { href: "/map", label: "Map", icon: "map" },
-  { href: "/timeline", label: "Timeline", icon: "clock" },
+  { href: base, label: "Home", icon: "home" },
+  { href: `${base}structures`, label: "Explore", icon: "compass" },
+  { href: `${base}map`, label: "Map", icon: "map" },
+  { href: `${base}timeline`, label: "Timeline", icon: "clock" },
 ];
 
 const icons = {

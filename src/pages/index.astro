@@ -6,6 +6,7 @@ import MobileNav from '../components/global/MobileNav.astro';
 import StructureCard from '../components/structure/StructureCard.astro';
 import structures from '../data/structures.json';
 
+const base = import.meta.env.BASE_URL;
 const featuredStructures = structures.filter(s => s.featured);
 const trendingStructures = structures.filter(s => s.trending);
 const categories = [
@@ -53,13 +54,13 @@ const categories = [
 
         <!-- CTAs -->
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up" style="animation-delay: 200ms">
-          <a href="/structures" class="btn-primary text-lg px-8 py-4">
+          <a href={`${base}structures`} class="btn-primary text-lg px-8 py-4">
             Start Exploring
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
             </svg>
           </a>
-          <a href="/map" class="btn-secondary text-lg px-8 py-4">
+          <a href={`${base}map`} class="btn-secondary text-lg px-8 py-4">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
             </svg>
@@ -110,7 +111,7 @@ const categories = [
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
         {categories.map((category, i) => (
           <a
-            href={`/category/${category.id}`}
+            href={`${base}category/${category.id}`}
             class="group card card-hover p-6 md:p-8 text-center"
             style={`animation-delay: ${i * 100}ms`}
           >
@@ -139,7 +140,7 @@ const categories = [
             The most awe-inspiring ancient constructions on Earth
           </p>
         </div>
-        <a href="/structures" class="btn-ghost group">
+        <a href={`${base}structures`} class="btn-ghost group">
           View all
           <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -206,13 +207,13 @@ const categories = [
               Dive deeper with our interactive world map, timeline slider, and comparison tools. Visualize 12,000 years of human achievement.
             </p>
             <div class="flex flex-wrap gap-4">
-              <a href="/map" class="btn-primary">
+              <a href={`${base}map`} class="btn-primary">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
                 </svg>
                 World Map
               </a>
-              <a href="/timeline" class="btn-secondary">
+              <a href={`${base}timeline`} class="btn-secondary">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>

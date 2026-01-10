@@ -18,6 +18,7 @@ interface Props {
 }
 
 const { structure, variant = 'default', index = 0 } = Astro.props;
+const base = import.meta.env.BASE_URL;
 
 const categoryColors: Record<string, string> = {
   megalithic: 'badge-gold',
@@ -122,7 +123,7 @@ const categoryColors: Record<string, string> = {
 
   <!-- Full Card Link -->
   <a
-    href={`/structures/${structure.slug}`}
+    href={`${base}structures/${structure.slug}`}
     class="absolute inset-0"
     aria-label={`Explore ${structure.name}`}
   >
