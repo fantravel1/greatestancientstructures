@@ -1,0 +1,102 @@
+---
+import structures from '../../data/structures.json';
+
+const base = import.meta.env.BASE_URL;
+
+// Get a deterministic "random" structure based on the day
+const today = new Date();
+const dayOfYear = Math.floor((today.getTime() - new Date(today.getFullYear(), 0, 0).getTime()) / (1000 * 60 * 60 * 24));
+const structureIndex = dayOfYear % structures.length;
+const todayStructure = structures[structureIndex];
+
+// Format today's date
+const dateFormatter = new Intl.DateTimeFormat('en-US', {
+  weekday: 'long',
+  month: 'long',
+  day: 'numeric'
+});
+const formattedDate = dateFormatter.format(today);
+---
+
+<section class="relative overflow-hidden rounded-3xl bg-obsidian-900/50 border border-obsidian-800/50">
+  <div class="grid md:grid-cols-2">
+    <!-- Image -->
+    <div class="relative aspect-[4/3] md:aspect-auto">
+      <img
+        src={todayStructure.heroImage}
+        alt={todayStructure.name}
+        class="w-full h-full object-cover"
+        loading="lazy"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-obsidian-900/90 hidden md:block"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-obsidian-900 to-transparent md:hidden"></div>
+
+      <!-- Badge -->
+      <div class="absolute top-4 left-4 md:top-6 md:left-6">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold-400/20 backdrop-blur-sm border border-gold-400/30">
+          <svg class="w-4 h-4 text-gold-400" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          <span class="text-sm font-bold text-gold-400">Structure of the Day</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="relative p-6 md:p-8 lg:p-10 flex flex-col justify-center">
+      <!-- Date -->
+      <p class="text-sm text-stone-500 mb-3">{formattedDate}</p>
+
+      <!-- Title -->
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-stone-100 mb-3">
+        {todayStructure.name}
+      </h2>
+
+      <!-- Tagline -->
+      <p class="text-lg text-gold-400 mb-4">
+        {todayStructure.tagline}
+      </p>
+
+      <!-- Summary -->
+      <p class="text-stone-400 mb-6 line-clamp-3">
+        {todayStructure.summary}
+      </p>
+
+      <!-- Stats -->
+      <div class="flex flex-wrap gap-4 mb-6">
+        <div class="flex items-center gap-2 text-sm text-stone-400">
+          <svg class="w-4 h-4 text-gold-400/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+          </svg>
+          <span>{todayStructure.country}</span>
+        </div>
+        <div class="flex items-center gap-2 text-sm text-stone-400">
+          <svg class="w-4 h-4 text-gold-400/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <span>{todayStructure.dates.age}</span>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <a
+        href={`${base}structures/${todayStructure.slug}`}
+        class="inline-flex items-center gap-2 px-6 py-3 bg-gold-400 text-obsidian-950 font-bold rounded-full hover:bg-gold-300 transition-colors w-fit"
+      >
+        Explore Today's Pick
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>
