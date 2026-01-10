@@ -10,6 +10,8 @@ interface Props {
 }
 
 const { items, class: className = '' } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const siteUrl = import.meta.env.SITE || 'https://fantravel1.github.io';
 
 // Schema.org BreadcrumbList
 const breadcrumbSchema = {
@@ -19,7 +21,7 @@ const breadcrumbSchema = {
     "@type": "ListItem",
     "position": index + 1,
     "name": item.label,
-    ...(item.href && { "item": `https://greatestancientstructures.com${item.href}` })
+    ...(item.href && { "item": `${siteUrl}${base}${item.href.replace(/^\//, '')}` })
   }))
 };
 ---
@@ -36,7 +38,7 @@ const breadcrumbSchema = {
       )}
       {item.href ? (
         <a
-          href={item.href}
+          href={`${base}${item.href.replace(/^\//, '')}`}
           class="text-stone-400 hover:text-gold-400 transition-colors truncate"
         >
           {item.label}

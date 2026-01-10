@@ -1,36 +1,37 @@
 ---
 const currentYear = new Date().getFullYear();
+const base = import.meta.env.BASE_URL;
 
 const footerLinks = {
   explore: [
-    { href: "/structures", label: "All Structures" },
-    { href: "/category/megalithic", label: "Megalithic Sites" },
-    { href: "/category/rock-cut", label: "Rock-Cut Architecture" },
-    { href: "/category/impossible", label: '"Impossible" Construction' },
-    { href: "/category/disputed", label: "Disputed Origins" },
+    { href: `${base}structures`, label: "All Structures" },
+    { href: `${base}category/megalithic`, label: "Megalithic Sites" },
+    { href: `${base}category/rock-cut`, label: "Rock-Cut Architecture" },
+    { href: `${base}category/impossible`, label: '"Impossible" Construction' },
+    { href: `${base}category/disputed`, label: "Disputed Origins" },
   ],
   regions: [
-    { href: "/region/middle-east", label: "Middle East" },
-    { href: "/region/south-america", label: "South America" },
-    { href: "/region/europe", label: "Europe" },
-    { href: "/region/asia", label: "Asia" },
-    { href: "/region/africa", label: "Africa" },
-    { href: "/region/oceania", label: "Oceania" },
+    { href: `${base}region/middle-east`, label: "Middle East" },
+    { href: `${base}region/south-america`, label: "South America" },
+    { href: `${base}region/europe`, label: "Europe" },
+    { href: `${base}region/asia`, label: "Asia" },
+    { href: `${base}region/africa`, label: "Africa" },
+    { href: `${base}region/oceania`, label: "Oceania" },
   ],
   tools: [
-    { href: "/map", label: "Interactive Map" },
-    { href: "/timeline", label: "Timeline" },
-    { href: "/compare", label: "Compare Sites" },
-    { href: "/quiz", label: "Knowledge Quiz" },
-    { href: "/top-10", label: "Top 10 Mysteries" },
-    { href: "/travel-guide", label: "Travel Guide" },
+    { href: `${base}map`, label: "Interactive Map" },
+    { href: `${base}timeline`, label: "Timeline" },
+    { href: `${base}compare`, label: "Compare Sites" },
+    { href: `${base}quiz`, label: "Knowledge Quiz" },
+    { href: `${base}top-10`, label: "Top 10 Mysteries" },
+    { href: `${base}travel-guide`, label: "Travel Guide" },
   ],
   resources: [
-    { href: "/about", label: "About Us" },
-    { href: "/faq", label: "FAQ" },
-    { href: "/glossary", label: "Glossary" },
-    { href: "/discover", label: "Random Discovery" },
-    { href: "/rss.xml", label: "RSS Feed" },
+    { href: `${base}about`, label: "About Us" },
+    { href: `${base}faq`, label: "FAQ" },
+    { href: `${base}glossary`, label: "Glossary" },
+    { href: `${base}discover`, label: "Random Discovery" },
+    { href: `${base}rss.xml`, label: "RSS Feed" },
   ],
 };
 ---
@@ -41,7 +42,7 @@ const footerLinks = {
     <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 lg:gap-12">
       <!-- Brand -->
       <div class="col-span-2 md:col-span-4 lg:col-span-1 mb-8 lg:mb-0">
-        <a href="/" class="flex items-center gap-3 mb-4">
+        <a href={base} class="flex items-center gap-3 mb-4">
           <div class="w-10 h-10 flex items-center justify-center bg-gradient-to-br from-gold-400/20 to-gold-600/20 rounded-lg">
             <svg class="w-6 h-6 text-gold-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M12 2L2 7l10 5 10-5-10-5z"/>
