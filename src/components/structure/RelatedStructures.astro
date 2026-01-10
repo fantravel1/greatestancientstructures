@@ -1,0 +1,120 @@
+---
+import structures from '../../data/structures.json';
+
+interface Props {
+  currentSlug: string;
+  category?: string;
+  region?: string;
+  limit?: number;
+}
+
+const { currentSlug, category, region, limit = 4 } = Astro.props;
+
+// Find related structures by category first, then by region, excluding current
+const getRelatedStructures = () => {
+  const related = [];
+
+  // First, get structures from the same category
+  if (category) {
+    const sameCategory = structures.filter(
+      s => s.slug !== currentSlug && s.category === category
+    );
+    related.push(...sameCategory);
+  }
+
+  // Then add structures from the same region (if not already included)
+  if (region) {
+    const sameRegion = structures.filter(
+      s => s.slug !== currentSlug &&
+           s.region === region &&
+           !related.find(r => r.slug === s.slug)
+    );
+    related.push(...sameRegion);
+  }
+
+  // Fill remaining slots with random structures if needed
+  if (related.length < limit) {
+    const others = structures.filter(
+      s => s.slug !== currentSlug && !related.find(r => r.slug === s.slug)
+    );
+    // Shuffle and take what we need
+    const shuffled = others.sort(() => Math.random() - 0.5);
+    related.push(...shuffled.slice(0, limit - related.length));
+  }
+
+  return related.slice(0, limit);
+};
+
+const relatedStructures = getRelatedStructures();
+---
+
+{relatedStructures.length > 0 && (
+  <section class="py-12 border-t border-stone-dark/30">
+    <div class="mb-8">
+      <h2 class="text-2xl sm:text-3xl font-bold text-stone-light mb-2">
+        Continue Your Journey
+      </h2>
+      <p class="text-stone-medium">
+        Discover more ancient mysteries that challenge our understanding of history.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {relatedStructures.map((structure) => (
+        <a
+          href={`/structures/${structure.slug}`}
+          class="group block bg-obsidian-light rounded-xl overflow-hidden border border-stone-dark/30 hover:border-gold/50 transition-all duration-300 hover:transform hover:-translate-y-1"
+        >
+          <div class="aspect-[4/3] relative overflow-hidden">
+            <img
+              src={structure.heroImage || `/images/${structure.slug}-hero.jpg`}
+              alt={structure.name}
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+              onerror="this.src='https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=400&h=300&fit=crop'"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian/80 to-transparent"></div>
+            <div class="absolute bottom-3 left-3 right-3">
+              <span class="inline-block px-2 py-1 bg-gold/20 text-gold rounded text-xs font-medium mb-2">
+                {structure.period}
+              </span>
+              <h3 class="text-lg font-bold text-stone-light group-hover:text-gold transition-colors line-clamp-2">
+                {structure.name}
+              </h3>
+            </div>
+          </div>
+          <div class="p-4">
+            <div class="flex items-center gap-2 text-sm text-stone-medium">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              <span>{structure.location}</span>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <div class="mt-8 text-center">
+      <a
+        href="/structures"
+        class="inline-flex items-center gap-2 px-6 py-3 bg-obsidian border border-gold/30 text-gold font-semibold rounded-full hover:bg-gold hover:text-obsidian transition-all"
+      >
+        View All Structures
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+)}
+
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>

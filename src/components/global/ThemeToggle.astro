@@ -1,0 +1,135 @@
+---
+// Theme toggle component - switches between dark (default) and light modes
+---
+
+<div
+  x-data="{
+    theme: localStorage.getItem('theme') || 'dark',
+    init() {
+      this.applyTheme();
+      this.$watch('theme', () => this.applyTheme());
+    },
+    applyTheme() {
+      localStorage.setItem('theme', this.theme);
+      if (this.theme === 'light') {
+        document.documentElement.classList.add('light-mode');
+      } else {
+        document.documentElement.classList.remove('light-mode');
+      }
+    },
+    toggle() {
+      this.theme = this.theme === 'dark' ? 'light' : 'dark';
+    }
+  }"
+  class="theme-toggle"
+>
+  <button
+    @click="toggle()"
+    class="relative w-14 h-8 rounded-full bg-obsidian-light border border-stone-dark transition-colors hover:border-gold focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-obsidian"
+    :class="{ 'bg-gold/20 border-gold': theme === 'light' }"
+    aria-label="Toggle theme"
+    :aria-pressed="theme === 'light'"
+  >
+    <!-- Track icons -->
+    <span class="absolute left-1.5 top-1/2 -translate-y-1/2 text-sm" aria-hidden="true">
+      🌙
+    </span>
+    <span class="absolute right-1.5 top-1/2 -translate-y-1/2 text-sm" aria-hidden="true">
+      ☀️
+    </span>
+
+    <!-- Sliding indicator -->
+    <span
+      class="absolute top-1 left-1 w-6 h-6 rounded-full bg-stone-light shadow-md transition-transform duration-200"
+      :class="{ 'translate-x-6': theme === 'light' }"
+    ></span>
+  </button>
+</div>
+
+<style is:global>
+  /* Light mode color overrides */
+  :root.light-mode {
+    --color-obsidian: #f5f5f0;
+    --color-obsidian-light: #ffffff;
+    --color-stone-light: #1a1a1a;
+    --color-stone-medium: #404040;
+    --color-stone-dark: #d4d4d4;
+  }
+
+  .light-mode {
+    background-color: #f5f5f0;
+  }
+
+  .light-mode .bg-obsidian {
+    background-color: #f5f5f0;
+  }
+
+  .light-mode .bg-obsidian-light {
+    background-color: #ffffff;
+  }
+
+  .light-mode .text-stone-light {
+    color: #1a1a1a;
+  }
+
+  .light-mode .text-stone-medium {
+    color: #404040;
+  }
+
+  .light-mode .border-stone-dark {
+    border-color: #d4d4d4;
+  }
+
+  .light-mode .border-stone-dark\/30 {
+    border-color: rgba(212, 212, 212, 0.3);
+  }
+
+  .light-mode .from-obsidian {
+    --tw-gradient-from: #f5f5f0;
+  }
+
+  .light-mode .to-obsidian {
+    --tw-gradient-to: #f5f5f0;
+  }
+
+  .light-mode .from-obsidian-light {
+    --tw-gradient-from: #ffffff;
+  }
+
+  .light-mode .to-obsidian-light {
+    --tw-gradient-to: #ffffff;
+  }
+
+  /* Keep gold accents */
+  .light-mode .text-gold {
+    color: #b8860b;
+  }
+
+  .light-mode .bg-gold {
+    background-color: #daa520;
+  }
+
+  /* Card shadows in light mode */
+  .light-mode .shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Invert gradients for hero sections */
+  .light-mode .bg-gradient-to-b.from-obsidian-light.to-obsidian {
+    background: linear-gradient(to bottom, #ffffff, #f5f5f0);
+  }
+
+  .light-mode .bg-gradient-to-r.from-obsidian-light.to-obsidian {
+    background: linear-gradient(to right, #ffffff, #f5f5f0);
+  }
+</style>
+
+<script>
+  // Apply theme immediately on page load to prevent flash
+  (function() {
+    const theme = localStorage.getItem('theme') || 'dark';
+    if (theme === 'light') {
+      document.documentElement.classList.add('light-mode');
+    }
+  })();
+</script>

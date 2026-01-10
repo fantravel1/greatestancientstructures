@@ -6,7 +6,7 @@ import MobileNav from '../../components/global/MobileNav.astro';
 import StructureCard from '../../components/structure/StructureCard.astro';
 import structures from '../../data/structures.json';
 
-const regions = [
+const regionsData = [
   {
     slug: 'middle-east',
     name: 'Middle East',
@@ -52,6 +52,14 @@ const regions = [
 ];
 
 export function getStaticPaths() {
+  const regions = [
+    { slug: 'middle-east', name: 'Middle East', description: 'The cradle of civilization—home to the oldest known megalithic sites and structures that predate written history.', mapCoords: { lat: 37, lng: 40 }, highlights: ['Oldest known temples', 'T-shaped pillars', 'Pre-pottery Neolithic'] },
+    { slug: 'south-america', name: 'South America', description: 'Impossible precision stonework and mysterious civilizations that built at extreme altitudes with technologies we still don\'t fully understand.', mapCoords: { lat: -15, lng: -70 }, highlights: ['Precision polygonal masonry', 'High-altitude construction', 'Anti-seismic engineering'] },
+    { slug: 'europe', name: 'Europe', description: 'Ancient astronomical observatories and megalithic monuments aligned with celestial events spanning millennia.', mapCoords: { lat: 48, lng: 5 }, highlights: ['Astronomical alignments', 'Megalithic tombs', 'Solstice markers'] },
+    { slug: 'africa', name: 'Africa', description: 'Monumental achievements from ancient Egypt to Ethiopia—precision engineering and rock-cut architecture at its finest.', mapCoords: { lat: 25, lng: 30 }, highlights: ['Pyramid construction', 'Monolithic churches', 'Temple complexes'] },
+    { slug: 'asia', name: 'Asia', description: 'From massive temple complexes to mysterious pyramidal mounds—Asia holds some of the most underexplored ancient sites.', mapCoords: { lat: 20, lng: 100 }, highlights: ['Rock-cut temples', 'Megalithic dolmens', 'Subterranean structures'] },
+    { slug: 'oceania', name: 'Oceania', description: 'Remote island civilizations that transported massive stones across oceans and built monuments that defy isolation.', mapCoords: { lat: -10, lng: 160 }, highlights: ['Basalt architecture', 'Stone transportation', 'Moai statues'] }
+  ];
   return regions.map(region => ({
     params: { region: region.slug },
     props: { region }
@@ -59,6 +67,7 @@ export function getStaticPaths() {
 }
 
 const { region } = Astro.props;
+const regions = regionsData;
 
 const regionStructures = structures.filter(s =>
   s.region.toLowerCase().replace(/\s+/g, '-') === region.slug

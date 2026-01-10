@@ -6,7 +6,7 @@ import MobileNav from '../../components/global/MobileNav.astro';
 import StructureCard from '../../components/structure/StructureCard.astro';
 import structures from '../../data/structures.json';
 
-const categories = [
+const categoriesData = [
   {
     slug: 'megalithic',
     name: 'Megalithic Sites',
@@ -38,6 +38,12 @@ const categories = [
 ];
 
 export function getStaticPaths() {
+  const categories = [
+    { slug: 'megalithic', name: 'Megalithic Sites', description: 'Massive stone monuments built with blocks weighing hundreds of tons, challenging our understanding of ancient engineering.', icon: '🗿', color: 'gold' },
+    { slug: 'rock-cut', name: 'Rock-Cut Architecture', description: 'Temples, tombs, and cities carved directly from living rock—subtractive engineering at its finest.', icon: '⛏️', color: 'mystic' },
+    { slug: 'impossible', name: 'Impossible Precision', description: 'Structures featuring precision cuts and alignments that defy explanation with primitive tools.', icon: '📐', color: 'blue' },
+    { slug: 'disputed', name: 'Disputed Origins', description: 'Sites where official dating or construction methods remain hotly debated among researchers.', icon: '❓', color: 'stone' }
+  ];
   return categories.map(cat => ({
     params: { category: cat.slug },
     props: { category: cat }
@@ -45,6 +51,7 @@ export function getStaticPaths() {
 }
 
 const { category } = Astro.props;
+const categories = categoriesData;
 
 const categoryStructures = structures.filter(s => s.category === category.slug);
 

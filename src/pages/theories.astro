@@ -1,0 +1,360 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/global/Header.astro';
+import Footer from '../components/global/Footer.astro';
+import MobileNav from '../components/global/MobileNav.astro';
+import Breadcrumbs from '../components/global/Breadcrumbs.astro';
+import References from '../components/global/References.astro';
+import referencesData from '../data/references.json';
+
+// Get references for construction theories
+const engineeringRefs = referencesData.general['ancient-engineering'] || [];
+const megalithicRefs = referencesData.general['megalithic-culture'] || [];
+const pageReferences = [...engineeringRefs, ...megalithicRefs];
+
+const theories = [
+  {
+    id: 'ramp-systems',
+    name: 'Internal Ramp Theory',
+    icon: '📐',
+    structures: ['Great Pyramid of Giza'],
+    mainstream: true,
+    description: 'French architect Jean-Pierre Houdin proposed that the pyramids were built using an internal spiraling ramp system, allowing workers to haul blocks upward within the structure itself.',
+    evidence: [
+      'Micro-gravimetric surveys suggest internal spiral structure',
+      'Corner notches align with proposed ramp turns',
+      'Explains how upper blocks were placed without external evidence'
+    ],
+    challenges: [
+      'No direct archaeological proof of internal ramps',
+      'Would require incredible planning precision',
+      'Doesn\'t explain the precision of outer casing stones'
+    ]
+  },
+  {
+    id: 'water-lubrication',
+    name: 'Water Lubrication Method',
+    icon: '💧',
+    structures: ['Great Pyramid of Giza', 'Abu Simbel'],
+    mainstream: true,
+    description: 'Ancient Egyptians poured water on sand in front of sledges to reduce friction by up to 50%, making it possible to drag massive stones with fewer workers.',
+    evidence: [
+      'Depicted in the tomb of Djehutihotep (1900 BCE)',
+      'Laboratory experiments confirm 50% friction reduction',
+      'Explains how 2.5-ton blocks were moved efficiently'
+    ],
+    challenges: [
+      'Water supply logistics in desert environment',
+      'Doesn\'t work for the largest megalithic blocks (100+ tons)',
+      'Assumes flat, prepared pathways existed'
+    ]
+  },
+  {
+    id: 'acoustic-levitation',
+    name: 'Acoustic Levitation Theory',
+    icon: '🔊',
+    structures: ['Coral Castle', 'Various megalithic sites'],
+    mainstream: false,
+    description: 'Some researchers propose that ancient builders used sound frequencies to reduce the effective weight of stones or even levitate them, based on reports from various traditions.',
+    evidence: [
+      'Tibetan accounts of monks using drums and horns',
+      'Modern acoustic levitation exists (for small objects)',
+      'Many ancient sites have unusual acoustic properties'
+    ],
+    challenges: [
+      'No scientific mechanism for large-scale stone levitation',
+      'Modern acoustic levitation limited to millimeter-scale objects',
+      'No archaeological evidence of acoustic devices'
+    ]
+  },
+  {
+    id: 'geopolymer',
+    name: 'Geopolymer Concrete Theory',
+    icon: '🧪',
+    structures: ['Great Pyramid of Giza', 'Puma Punku'],
+    mainstream: false,
+    description: 'Professor Joseph Davidovits proposed that some ancient blocks weren\'t carved but cast in place using a limestone-ite concrete mixture, explaining the precision fits.',
+    evidence: [
+      'Some pyramid blocks show air bubbles and varying density',
+      'Organic fibers found in some stones',
+      'Would explain impossible precision of joints'
+    ],
+    challenges: [
+      'Most geologists dispute the chemical analysis',
+      'Quarry marks exist on many blocks',
+      'Doesn\'t explain blocks with fossil shells in natural positions'
+    ]
+  },
+  {
+    id: 'lost-technology',
+    name: 'Lost Advanced Technology',
+    icon: '⚡',
+    structures: ['Puma Punku', 'Baalbek', 'Sacsayhuaman'],
+    mainstream: false,
+    description: 'The precision of certain ancient stonework—with tolerances of 0.5mm over meters—suggests technologies beyond copper and stone tools, possibly from a lost civilization.',
+    evidence: [
+      'Precision cuts that modern tools struggle to replicate',
+      'Identical modular components at Puma Punku',
+      'Drill holes showing consistent rotation marks'
+    ],
+    challenges: [
+      'No physical evidence of advanced tools found',
+      'Underestimates capability of patient craftsmanship',
+      'Selection bias—we see the best examples, not failures'
+    ]
+  },
+  {
+    id: 'megalithic-yard',
+    name: 'Universal Measurement System',
+    icon: '📏',
+    structures: ['Stonehenge', 'Carnac Stones', 'Newgrange'],
+    mainstream: false,
+    description: 'Alexander Thom proposed that megalithic builders across Europe used a standard unit of measurement (2.72 feet), suggesting widespread communication or shared ancestry.',
+    evidence: [
+      'Statistical analysis of hundreds of stone circles',
+      'Consistent ratios appear across distant sites',
+      'Implies sophisticated mathematical knowledge'
+    ],
+    challenges: [
+      'Statistical methods questioned by archaeologists',
+      'May be confirmation bias in site selection',
+      'Alternative explanations using body-based measurements'
+    ]
+  },
+  {
+    id: 'earthquake-engineering',
+    name: 'Anti-Seismic Design',
+    icon: '🏔️',
+    structures: ['Sacsayhuaman', 'Machu Picchu', 'Puma Punku'],
+    mainstream: true,
+    description: 'Inca builders intentionally used polygonal masonry with inward-leaning walls and no mortar, creating structures that flex during earthquakes rather than collapse.',
+    evidence: [
+      'Structures survived earthquakes that destroyed Spanish buildings',
+      'Stones "dance" during tremors and resettle perfectly',
+      'Consistent 13-degree inward lean in walls'
+    ],
+    challenges: [
+      'Time-consuming construction method',
+      'Requires incredible precision for each unique block',
+      'Knowledge of technique was lost after conquest'
+    ]
+  },
+  {
+    id: 'astronomical-alignment',
+    name: 'Precision Astronomical Alignment',
+    icon: '⭐',
+    structures: ['Great Pyramid of Giza', 'Newgrange', 'Angkor Wat'],
+    mainstream: true,
+    description: 'Many ancient structures align precisely with astronomical events—solstices, equinoxes, star positions—suggesting sophisticated observational knowledge.',
+    evidence: [
+      'Newgrange illuminates inner chamber only on winter solstice',
+      'Great Pyramid shafts point to specific stars',
+      'Angkor Wat temples mirror the Draco constellation'
+    ],
+    challenges: [
+      'Some alignments may be coincidental',
+      'Stars have moved since construction (precession)',
+      'Multiple possible alignments at any site'
+    ]
+  }
+];
+
+const breadcrumbItems = [
+  { label: 'Theories', current: true }
+];
+
+const pageTitle = "Ancient Construction Theories - How Were They Built?";
+const pageDescription = "Explore mainstream and alternative theories about how ancient megalithic structures were built—from internal ramps to acoustic levitation.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <Header slot="header" />
+  <MobileNav slot="mobile-nav" />
+
+  <main class="min-h-screen bg-obsidian">
+    <Breadcrumbs items={breadcrumbItems} />
+
+    <!-- Hero Section -->
+    <section class="relative py-16 sm:py-24 bg-gradient-to-b from-obsidian-light to-obsidian">
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-20 left-10 w-64 h-64 bg-gold rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-mystic rounded-full blur-3xl"></div>
+      </div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+          <span class="inline-block px-4 py-2 bg-gold/20 text-gold rounded-full text-sm font-medium mb-6">
+            Engineering Mysteries
+          </span>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-stone-light mb-6">
+            How Did They <span class="text-gold">Build It?</span>
+          </h1>
+          <p class="text-xl text-stone-medium max-w-2xl mx-auto">
+            From mainstream archaeology to fringe theories—explore the competing explanations
+            for ancient humanity's most impressive engineering achievements.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Theory Grid -->
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap gap-4 justify-center mb-12">
+          <button class="theory-filter active px-6 py-3 rounded-full bg-gold text-obsidian font-semibold transition-all" data-filter="all">
+            All Theories
+          </button>
+          <button class="theory-filter px-6 py-3 rounded-full bg-obsidian-light text-stone-medium font-semibold hover:bg-gold hover:text-obsidian transition-all" data-filter="mainstream">
+            Mainstream
+          </button>
+          <button class="theory-filter px-6 py-3 rounded-full bg-obsidian-light text-stone-medium font-semibold hover:bg-gold hover:text-obsidian transition-all" data-filter="alternative">
+            Alternative
+          </button>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto" id="theories-grid">
+          {theories.map((theory, index) => (
+            <article
+              class="theory-card group bg-obsidian-light rounded-2xl overflow-hidden border border-stone-dark/30 hover:border-gold/50 transition-all duration-300"
+              data-mainstream={theory.mainstream.toString()}
+            >
+              <div class="p-6 sm:p-8">
+                <div class="flex items-start justify-between mb-4">
+                  <span class="text-4xl">{theory.icon}</span>
+                  <span class={`px-3 py-1 rounded-full text-xs font-bold ${theory.mainstream ? 'bg-green-500/20 text-green-400' : 'bg-mystic/20 text-mystic'}`}>
+                    {theory.mainstream ? 'Mainstream' : 'Alternative'}
+                  </span>
+                </div>
+
+                <h2 class="text-2xl font-bold text-stone-light mb-3 group-hover:text-gold transition-colors">
+                  {theory.name}
+                </h2>
+
+                <p class="text-stone-medium mb-6">
+                  {theory.description}
+                </p>
+
+                <div class="flex flex-wrap gap-2 mb-6">
+                  {theory.structures.map(structure => (
+                    <span class="px-3 py-1 bg-obsidian rounded-full text-xs text-gold">
+                      {structure}
+                    </span>
+                  ))}
+                </div>
+
+                <div class="space-y-4">
+                  <details class="group/details">
+                    <summary class="flex items-center justify-between cursor-pointer text-green-400 font-semibold">
+                      <span>Supporting Evidence</span>
+                      <svg class="w-5 h-5 transform group-open/details:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                      </svg>
+                    </summary>
+                    <ul class="mt-3 space-y-2 text-sm text-stone-medium">
+                      {theory.evidence.map(point => (
+                        <li class="flex items-start gap-2">
+                          <span class="text-green-400 mt-1">+</span>
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </details>
+
+                  <details class="group/details">
+                    <summary class="flex items-center justify-between cursor-pointer text-red-400 font-semibold">
+                      <span>Challenges & Criticisms</span>
+                      <svg class="w-5 h-5 transform group-open/details:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                      </svg>
+                    </summary>
+                    <ul class="mt-3 space-y-2 text-sm text-stone-medium">
+                      {theory.challenges.map(point => (
+                        <li class="flex items-start gap-2">
+                          <span class="text-red-400 mt-1">-</span>
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </details>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- The Big Question -->
+    <section class="py-16 bg-gradient-to-r from-obsidian-light to-obsidian">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl sm:text-4xl font-bold text-stone-light mb-6">
+            The Real Question
+          </h2>
+          <p class="text-xl text-stone-medium mb-8">
+            Perhaps we're asking the wrong question. Instead of "How did they build it?"
+            maybe we should ask: <span class="text-gold font-semibold">"What did ancient people know that we've forgotten?"</span>
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="/mysteries" class="px-8 py-4 bg-gold text-obsidian font-bold rounded-full hover:bg-gold-light transition-all">
+              Explore Mysteries
+            </a>
+            <a href="/structures" class="px-8 py-4 bg-obsidian-light text-stone-light font-bold rounded-full border border-stone-dark hover:border-gold transition-all">
+              View Structures
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- References -->
+    {pageReferences.length > 0 && (
+      <References
+        references={pageReferences}
+        title="Academic Sources on Ancient Construction"
+      />
+    )}
+  </main>
+
+  <Footer slot="footer" />
+</BaseLayout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const filters = document.querySelectorAll('.theory-filter');
+    const cards = document.querySelectorAll('.theory-card');
+
+    filters.forEach(filter => {
+      filter.addEventListener('click', () => {
+        const filterValue = filter.getAttribute('data-filter');
+
+        filters.forEach(f => {
+          f.classList.remove('active', 'bg-gold', 'text-obsidian');
+          f.classList.add('bg-obsidian-light', 'text-stone-medium');
+        });
+        filter.classList.add('active', 'bg-gold', 'text-obsidian');
+        filter.classList.remove('bg-obsidian-light', 'text-stone-medium');
+
+        cards.forEach(card => {
+          const isMainstream = card.getAttribute('data-mainstream') === 'true';
+
+          if (filterValue === 'all') {
+            card.style.display = 'block';
+          } else if (filterValue === 'mainstream' && isMainstream) {
+            card.style.display = 'block';
+          } else if (filterValue === 'alternative' && !isMainstream) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  });
+</script>
+
+<style>
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+</style>
