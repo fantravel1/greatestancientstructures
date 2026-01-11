@@ -16,11 +16,36 @@
   html {
     @apply scroll-smooth antialiased;
     -webkit-tap-highlight-color: transparent;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   body {
-    @apply bg-obsidian-950 text-stone-100 font-body;
+    @apply bg-obsidian-950 text-stone-200 font-body leading-relaxed;
     @apply selection:bg-gold-400/30 selection:text-gold-200;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tight text-stone-100;
+    text-wrap: balance;
+  }
+
+  h1 { @apply text-4xl md:text-5xl lg:text-6xl; }
+  h2 { @apply text-3xl md:text-4xl; }
+  h3 { @apply text-xl md:text-2xl; }
+  h4 { @apply text-lg md:text-xl; }
+
+  /* Links */
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  /* Images */
+  img {
+    @apply max-w-full h-auto;
   }
 
   /* Custom scrollbar */
@@ -28,134 +53,300 @@
     @apply w-2;
   }
   ::-webkit-scrollbar-track {
-    @apply bg-obsidian-900;
+    @apply bg-obsidian-950;
   }
   ::-webkit-scrollbar-thumb {
-    @apply bg-obsidian-600 rounded-full hover:bg-obsidian-500;
+    @apply bg-obsidian-700 rounded-full;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-obsidian-600;
   }
 
   /* Focus states */
   *:focus-visible {
-    @apply outline-2 outline-offset-2 outline-gold-400;
+    @apply outline-2 outline-offset-2 outline-gold-400 outline-none ring-2 ring-gold-400/50;
+  }
+
+  /* Smooth transitions for interactive elements */
+  button, a, input, textarea, select {
+    @apply transition-all duration-200;
   }
 }
 
 @layer components {
-  /* Buttons */
+  /* ========================================
+     BUTTONS - Premium, tactile design
+     ======================================== */
   .btn {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl font-semibold text-sm;
+    @apply transition-all duration-300 ease-out;
     @apply focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-2 focus-visible:ring-offset-obsidian-950;
-    @apply disabled:opacity-50 disabled:cursor-not-allowed;
-  }
-
-  .btn-primary {
-    @apply btn bg-gradient-to-r from-gold-500 to-gold-400 text-obsidian-950;
-    @apply hover:from-gold-400 hover:to-gold-300 hover:shadow-glow-gold;
+    @apply disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none;
     @apply active:scale-[0.98];
   }
 
+  .btn-primary {
+    @apply btn;
+    @apply bg-gradient-to-br from-gold-400 via-gold-500 to-gold-600 text-obsidian-950;
+    @apply shadow-lg shadow-gold-500/25;
+    @apply hover:from-gold-300 hover:via-gold-400 hover:to-gold-500;
+    @apply hover:shadow-xl hover:shadow-gold-500/30 hover:-translate-y-0.5;
+  }
+
   .btn-secondary {
-    @apply btn bg-obsidian-800 text-stone-100 border border-obsidian-600;
-    @apply hover:bg-obsidian-700 hover:border-gold-400/50;
+    @apply btn;
+    @apply bg-obsidian-800/80 text-stone-100 border border-obsidian-600/80;
+    @apply backdrop-blur-sm;
+    @apply hover:bg-obsidian-700 hover:border-gold-500/50 hover:text-gold-400;
+    @apply hover:shadow-lg hover:shadow-obsidian-950/50 hover:-translate-y-0.5;
   }
 
   .btn-ghost {
-    @apply btn text-stone-300 hover:text-gold-400 hover:bg-obsidian-800/50;
+    @apply btn bg-transparent text-stone-300;
+    @apply hover:text-gold-400 hover:bg-gold-400/10;
   }
 
-  /* Cards */
+  .btn-outline {
+    @apply btn bg-transparent text-gold-400 border-2 border-gold-400/50;
+    @apply hover:bg-gold-400 hover:text-obsidian-950 hover:border-gold-400;
+  }
+
+  /* ========================================
+     CARDS - Elegant, sophisticated
+     ======================================== */
   .card {
-    @apply relative overflow-hidden rounded-2xl bg-obsidian-900/80 backdrop-blur-sm;
+    @apply relative overflow-hidden rounded-2xl;
+    @apply bg-gradient-to-br from-obsidian-900/90 to-obsidian-900/70;
+    @apply backdrop-blur-md;
     @apply border border-obsidian-700/50;
-    @apply transition-all duration-500;
+    @apply transition-all duration-500 ease-out;
   }
 
   .card-hover {
-    @apply hover:border-gold-400/30 hover:shadow-lg hover:shadow-gold-400/5;
+    @apply hover:border-gold-400/40;
+    @apply hover:shadow-2xl hover:shadow-gold-400/5;
     @apply hover:-translate-y-1;
   }
 
   .card-glow {
-    @apply before:absolute before:inset-0 before:rounded-2xl;
-    @apply before:bg-gradient-to-br before:from-gold-400/10 before:to-transparent before:opacity-0;
-    @apply before:transition-opacity before:duration-500;
+    @apply before:absolute before:inset-0 before:rounded-2xl before:pointer-events-none;
+    @apply before:bg-gradient-to-br before:from-gold-400/[0.08] before:via-transparent before:to-mystic-500/[0.05];
+    @apply before:opacity-0 before:transition-opacity before:duration-500;
     @apply hover:before:opacity-100;
   }
 
-  /* Text gradients */
+  .card-featured {
+    @apply card card-hover;
+    @apply border-gold-400/20;
+    @apply shadow-lg shadow-gold-400/5;
+  }
+
+  /* ========================================
+     TEXT STYLES - Beautiful typography
+     ======================================== */
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500;
+    @apply bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500;
   }
 
   .text-gradient-mystic {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-mystic-400 to-gold-400;
+    @apply bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-mystic-400 via-gold-400 to-mystic-400;
   }
 
-  /* Section headings */
+  .text-gradient-premium {
+    @apply bg-clip-text text-transparent;
+    @apply bg-gradient-to-br from-gold-200 via-gold-400 to-gold-600;
+  }
+
+  /* ========================================
+     SECTION HEADINGS
+     ======================================== */
   .section-title {
-    @apply text-display-md font-display font-bold tracking-tight text-stone-100;
+    @apply text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight text-stone-100;
+    text-wrap: balance;
   }
 
   .section-subtitle {
-    @apply text-lg text-stone-400 max-w-2xl;
+    @apply text-lg md:text-xl text-stone-400 max-w-2xl leading-relaxed;
   }
 
-  /* Badge */
+  .section-label {
+    @apply text-xs font-bold uppercase tracking-[0.2em] text-gold-400;
+  }
+
+  /* ========================================
+     BADGES - Refined micro-components
+     ======================================== */
   .badge {
-    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider;
+    @apply inline-flex items-center px-3 py-1.5 rounded-full;
+    @apply text-xs font-bold uppercase tracking-wider;
+    @apply transition-all duration-200;
   }
 
   .badge-gold {
-    @apply badge bg-gold-400/10 text-gold-400 border border-gold-400/20;
+    @apply badge;
+    @apply bg-gold-400/15 text-gold-400 border border-gold-400/25;
+    @apply hover:bg-gold-400/25;
   }
 
   .badge-mystic {
-    @apply badge bg-mystic-500/10 text-mystic-400 border border-mystic-400/20;
+    @apply badge;
+    @apply bg-mystic-500/15 text-mystic-400 border border-mystic-400/25;
+    @apply hover:bg-mystic-500/25;
   }
 
   .badge-stone {
-    @apply badge bg-stone-700/50 text-stone-300 border border-stone-600/50;
+    @apply badge;
+    @apply bg-stone-700/50 text-stone-300 border border-stone-600/50;
+    @apply hover:bg-stone-700/70;
   }
 
-  /* Stat display */
+  /* ========================================
+     STATS DISPLAY
+     ======================================== */
   .stat-number {
-    @apply text-4xl md:text-5xl font-bold text-gradient tabular-nums;
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-gradient tabular-nums tracking-tight;
   }
 
   .stat-label {
-    @apply text-sm uppercase tracking-widest text-stone-500;
+    @apply text-xs md:text-sm uppercase tracking-[0.15em] text-stone-500 font-medium;
   }
 
-  /* Glass effect */
+  /* ========================================
+     GLASS EFFECTS - Premium frosted glass
+     ======================================== */
   .glass {
-    @apply bg-obsidian-900/60 backdrop-blur-xl border border-obsidian-700/30;
+    @apply bg-obsidian-900/60 backdrop-blur-xl;
+    @apply border border-obsidian-700/40;
+    @apply shadow-xl shadow-obsidian-950/50;
   }
 
-  /* Animated underline */
+  .glass-dark {
+    @apply bg-obsidian-950/80 backdrop-blur-xl;
+    @apply border border-obsidian-800/50;
+  }
+
+  /* ========================================
+     ANIMATED UNDERLINE
+     ======================================== */
   .link-underline {
     @apply relative;
   }
   .link-underline::after {
-    @apply content-[''] absolute bottom-0 left-0 w-0 h-0.5 bg-gold-400;
-    @apply transition-all duration-300;
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5;
+    @apply bg-gradient-to-r from-gold-400 to-gold-500;
+    @apply transition-all duration-300 ease-out;
   }
   .link-underline:hover::after {
     @apply w-full;
   }
 
-  /* Container */
+  /* ========================================
+     CONTAINER
+     ======================================== */
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
-  /* Divider */
-  .divider {
-    @apply h-px bg-gradient-to-r from-transparent via-obsidian-600 to-transparent;
+  .container-narrow {
+    @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
-  /* Skeleton loading */
+  /* ========================================
+     DIVIDERS
+     ======================================== */
+  .divider {
+    @apply h-px bg-gradient-to-r from-transparent via-obsidian-700 to-transparent;
+  }
+
+  .divider-gold {
+    @apply h-px bg-gradient-to-r from-transparent via-gold-400/30 to-transparent;
+  }
+
+  /* ========================================
+     LOADING STATES
+     ======================================== */
   .skeleton {
-    @apply animate-pulse bg-obsidian-800 rounded;
+    @apply animate-pulse bg-gradient-to-r from-obsidian-800 via-obsidian-700 to-obsidian-800;
+    @apply rounded-lg;
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  /* ========================================
+     IMAGE CONTAINERS
+     ======================================== */
+  .img-container {
+    @apply relative overflow-hidden bg-obsidian-800;
+  }
+
+  .img-container img {
+    @apply w-full h-full object-cover;
+    @apply transition-transform duration-700 ease-out;
+  }
+
+  .img-container:hover img {
+    @apply scale-105;
+  }
+
+  .img-overlay {
+    @apply absolute inset-0;
+    @apply bg-gradient-to-t from-obsidian-950 via-obsidian-950/60 to-transparent;
+  }
+
+  /* ========================================
+     INPUTS - Refined form elements
+     ======================================== */
+  .input {
+    @apply w-full px-5 py-4 rounded-xl;
+    @apply bg-obsidian-800/80 backdrop-blur-sm;
+    @apply border border-obsidian-700/80;
+    @apply text-stone-100 placeholder:text-stone-500;
+    @apply focus:border-gold-400 focus:ring-2 focus:ring-gold-400/20;
+    @apply transition-all duration-200;
+  }
+
+  .input:hover {
+    @apply border-obsidian-600;
+  }
+
+  /* ========================================
+     HERO SECTION COMPONENTS
+     ======================================== */
+  .hero-gradient {
+    @apply absolute inset-0;
+    background:
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(250, 204, 21, 0.08), transparent),
+      radial-gradient(ellipse 60% 40% at 100% 50%, rgba(139, 92, 246, 0.05), transparent),
+      linear-gradient(180deg, theme('colors.obsidian.950') 0%, theme('colors.obsidian.900') 50%, theme('colors.obsidian.950') 100%);
+  }
+
+  .hero-pattern {
+    @apply absolute inset-0 opacity-40;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23facc15' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  /* ========================================
+     NAV STYLES
+     ======================================== */
+  .nav-link {
+    @apply px-4 py-2.5 text-sm font-medium text-stone-300;
+    @apply rounded-lg;
+    @apply hover:text-gold-400 hover:bg-gold-400/10;
+    @apply transition-all duration-200;
+  }
+
+  .nav-link-active {
+    @apply nav-link text-gold-400 bg-gold-400/10;
   }
 }
 
@@ -189,6 +380,9 @@
   .aspect-hero {
     aspect-ratio: 16/9;
   }
+  .aspect-portrait {
+    aspect-ratio: 3/4;
+  }
 
   /* Backdrop gradient */
   .bg-gradient-dark {
@@ -199,7 +393,7 @@
     );
   }
 
-  /* Noise texture overlay */
+  /* Premium noise texture overlay */
   .noise {
     position: relative;
   }
@@ -207,9 +401,10 @@
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.025;
     pointer-events: none;
+    z-index: 1;
   }
 
   /* Animated gradient border */
@@ -218,6 +413,37 @@
     background: linear-gradient(var(--color-bg-primary), var(--color-bg-primary)) padding-box,
                 linear-gradient(135deg, theme('colors.gold.400'), theme('colors.mystic.500'), theme('colors.gold.400')) border-box;
     border: 2px solid transparent;
+  }
+
+  /* Glow effects */
+  .glow-gold {
+    box-shadow: 0 0 40px rgba(250, 204, 21, 0.15), 0 0 80px rgba(250, 204, 21, 0.05);
+  }
+
+  .glow-mystic {
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.15), 0 0 80px rgba(139, 92, 246, 0.05);
+  }
+
+  /* Line clamp utilities */
+  .line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
   }
 }
 
@@ -239,5 +465,60 @@
 }
 
 .page-enter {
-  animation: pageEnter 0.4s ease-out forwards;
+  animation: pageEnter 0.5s ease-out forwards;
+}
+
+/* Smooth reveal animation */
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  animation: reveal 0.6s ease-out forwards;
+}
+
+/* Stagger children animations */
+.stagger-children > * {
+  opacity: 0;
+  animation: reveal 0.5s ease-out forwards;
+}
+
+.stagger-children > *:nth-child(1) { animation-delay: 0ms; }
+.stagger-children > *:nth-child(2) { animation-delay: 100ms; }
+.stagger-children > *:nth-child(3) { animation-delay: 200ms; }
+.stagger-children > *:nth-child(4) { animation-delay: 300ms; }
+.stagger-children > *:nth-child(5) { animation-delay: 400ms; }
+.stagger-children > *:nth-child(6) { animation-delay: 500ms; }
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Pulse glow */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(250, 204, 21, 0.2);
+    opacity: 1;
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(250, 204, 21, 0.4);
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
 }
