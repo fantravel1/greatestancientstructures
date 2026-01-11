@@ -1,0 +1,128 @@
+---
+const facts = [
+  {
+    fact: "The Great Pyramid was the tallest man-made structure for over 3,800 years",
+    structure: "Great Pyramid of Giza",
+    icon: "📐"
+  },
+  {
+    fact: "Göbekli Tepe is 6,000 years older than Stonehenge and 7,000 years older than the pyramids",
+    structure: "Göbekli Tepe",
+    icon: "⏰"
+  },
+  {
+    fact: "The stones at Puma Punku are cut so precisely that no mortar was needed—they interlock like LEGO",
+    structure: "Puma Punku",
+    icon: "🧩"
+  },
+  {
+    fact: "Some blocks at Baalbek weigh over 1,000 tons—heavier than any stone moved in modern times",
+    structure: "Baalbek",
+    icon: "⚖️"
+  },
+  {
+    fact: "The Kailasa Temple was carved TOP-DOWN from a single rock, removing 200,000 tons of stone",
+    structure: "Ellora Caves",
+    icon: "⛏️"
+  },
+  {
+    fact: "Easter Island's Moai were 'walked' to their locations using a rocking motion—proven in experiments",
+    structure: "Easter Island",
+    icon: "🗿"
+  },
+  {
+    fact: "Newgrange's inner chamber is perfectly aligned to illuminate only on the winter solstice sunrise",
+    structure: "Newgrange",
+    icon: "☀️"
+  },
+  {
+    fact: "Sacsayhuamán's walls have survived major earthquakes while Spanish colonial buildings collapsed",
+    structure: "Sacsayhuamán",
+    icon: "🏔️"
+  },
+  {
+    fact: "Petra's Treasury was carved into a cliff face with such precision the facade is nearly symmetrical",
+    structure: "Petra",
+    icon: "🏛️"
+  },
+  {
+    fact: "Nan Madol was built on 92 artificial islands using 750,000 tons of basalt columns",
+    structure: "Nan Madol",
+    icon: "🏝️"
+  }
+];
+
+// Get a random fact for display
+const randomFact = facts[Math.floor(Math.random() * facts.length)];
+---
+
+<div
+  class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gold-400/10 to-mystic-500/10 border border-gold-400/20 p-6 md:p-8"
+  x-data={`{
+    facts: ${JSON.stringify(facts)},
+    currentIndex: ${facts.indexOf(randomFact)},
+    get currentFact() { return this.facts[this.currentIndex]; },
+    next() { this.currentIndex = (this.currentIndex + 1) % this.facts.length; },
+    prev() { this.currentIndex = (this.currentIndex - 1 + this.facts.length) % this.facts.length; }
+  }`}
+>
+  <!-- Background decoration -->
+  <div class="absolute top-0 right-0 w-32 h-32 bg-gold-400/5 rounded-full blur-2xl"></div>
+
+  <div class="relative">
+    <!-- Header -->
+    <div class="flex items-center gap-2 mb-4">
+      <span class="text-2xl" x-text="currentFact.icon">{randomFact.icon}</span>
+      <h3 class="text-sm font-bold text-gold-400 uppercase tracking-wider">Did You Know?</h3>
+    </div>
+
+    <!-- Fact content -->
+    <p
+      class="text-lg md:text-xl text-stone-200 font-medium leading-relaxed mb-4"
+      x-text="currentFact.fact"
+    >
+      {randomFact.fact}
+    </p>
+
+    <!-- Source structure -->
+    <p class="text-sm text-stone-500">
+      — <span x-text="currentFact.structure" class="text-gold-400/80">{randomFact.structure}</span>
+    </p>
+
+    <!-- Navigation -->
+    <div class="flex items-center justify-between mt-6 pt-4 border-t border-obsidian-700/50">
+      <div class="flex gap-2">
+        <button
+          @click="prev()"
+          class="w-10 h-10 rounded-full bg-obsidian-800/50 hover:bg-obsidian-700 flex items-center justify-center text-stone-400 hover:text-gold-400 transition-all"
+          aria-label="Previous fact"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+          </svg>
+        </button>
+        <button
+          @click="next()"
+          class="w-10 h-10 rounded-full bg-obsidian-800/50 hover:bg-obsidian-700 flex items-center justify-center text-stone-400 hover:text-gold-400 transition-all"
+          aria-label="Next fact"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Dots indicator -->
+      <div class="flex gap-1.5">
+        <template x-for="(fact, index) in facts" :key="index">
+          <button
+            @click="currentIndex = index"
+            :class="index === currentIndex ? 'bg-gold-400' : 'bg-stone-700 hover:bg-stone-600'"
+            class="w-2 h-2 rounded-full transition-colors"
+            :aria-label="`Go to fact ${index + 1}`"
+          ></button>
+        </template>
+      </div>
+    </div>
+  </div>
+</div>
