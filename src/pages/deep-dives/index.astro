@@ -1,0 +1,222 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/global/Header.astro';
+import Footer from '../../components/global/Footer.astro';
+import MobileNav from '../../components/global/MobileNav.astro';
+
+const base = import.meta.env.BASE_URL;
+
+const deepDives = [
+  {
+    slug: 'gobekli-tepe-rewriting-history',
+    title: 'How Göbekli Tepe Rewrote Human History',
+    excerpt: 'Before Göbekli Tepe, we believed agriculture came first, then religion. This 12,000-year-old temple proves we had it backwards.',
+    category: 'Archaeological Revolution',
+    readTime: '12 min',
+    image: 'https://images.unsplash.com/photo-1599423300746-b62533397364?w=800&q=80',
+    featured: true
+  },
+  {
+    slug: 'pyramid-precision',
+    title: 'The Impossible Precision of the Great Pyramid',
+    excerpt: 'A 6-million-ton structure aligned to true north within 3/60th of a degree. How did Bronze Age engineers achieve this?',
+    category: 'Engineering Mystery',
+    readTime: '15 min',
+    image: 'https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?w=800&q=80',
+    featured: true
+  },
+  {
+    slug: 'megaliths-connection',
+    title: 'Are Ancient Megaliths Connected?',
+    excerpt: 'From Carnac to Korea, megalithic cultures emerged independently. Or did they? Examining the global megalithic phenomenon.',
+    category: 'Global Mystery',
+    readTime: '18 min',
+    image: 'https://images.unsplash.com/photo-1599833975787-5c143f373c30?w=800&q=80',
+    featured: false
+  },
+  {
+    slug: 'baalbek-impossible-stones',
+    title: 'Baalbek: Why Move 1,000-Ton Stones?',
+    excerpt: 'The Romans were master engineers. But the 1,650-ton Stone of the Pregnant Woman challenges everything we know.',
+    category: 'Engineering Mystery',
+    readTime: '10 min',
+    image: 'https://images.unsplash.com/photo-1590077428593-a55bb07c4665?w=800&q=80',
+    featured: true
+  },
+  {
+    slug: 'underwater-mysteries',
+    title: 'Underwater Structures: Flooded Civilizations?',
+    excerpt: 'From Yonaguni to Dwarka, submerged structures hint at civilizations lost to rising seas at the end of the Ice Age.',
+    category: 'Lost Civilizations',
+    readTime: '14 min',
+    image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80',
+    featured: false
+  },
+  {
+    slug: 'rock-cut-engineering',
+    title: 'Carving Mountains: The Rock-Cut Revolution',
+    excerpt: 'Petra, Lalibela, Ellora—civilizations that carved entire temples from solid rock. How did they plan top-down excavation?',
+    category: 'Engineering Mystery',
+    readTime: '11 min',
+    image: 'https://images.unsplash.com/photo-1579606032821-4e6161c81571?w=800&q=80',
+    featured: false
+  },
+  {
+    slug: 'acoustic-architecture',
+    title: 'Ancient Acoustic Engineering',
+    excerpt: 'Chichén Itzá chirps like a quetzal. Stonehenge amplifies sound. Were ancient builders acoustic engineers?',
+    category: 'Hidden Technology',
+    readTime: '9 min',
+    image: 'https://images.unsplash.com/photo-1518638150340-f706e86654de?w=800&q=80',
+    featured: false
+  },
+  {
+    slug: 'astronomical-alignments',
+    title: 'Stars and Stones: Astronomical Alignments',
+    excerpt: 'Newgrange captures winter solstice sunrise. Angkor mirrors Draco. The ancient obsession with celestial precision.',
+    category: 'Archaeoastronomy',
+    readTime: '13 min',
+    image: 'https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=800&q=80',
+    featured: true
+  }
+];
+
+const featuredDives = deepDives.filter(d => d.featured);
+const otherDives = deepDives.filter(d => !d.featured);
+---
+
+<BaseLayout
+  title="Deep Dives - Archaeological Mysteries Explored"
+  description="In-depth explorations of the world's most puzzling ancient structures. From engineering mysteries to lost civilizations."
+>
+  <Header slot="header" />
+
+  <!-- Hero -->
+  <section class="relative pt-32 pb-20 overflow-hidden">
+    <div class="absolute inset-0 hero-gradient"></div>
+    <div class="absolute inset-0 hero-pattern opacity-30"></div>
+
+    <div class="container-custom relative z-10">
+      <div class="max-w-4xl">
+        <span class="section-label mb-4 block">Research</span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-stone-100 mb-6">
+          Deep Dives
+        </h1>
+        <p class="text-xl text-stone-400 leading-relaxed">
+          In-depth explorations of archaeology's greatest mysteries. Evidence-based analysis
+          of the structures that challenge our understanding of ancient capabilities.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Deep Dives -->
+  <section class="py-16 md:py-24">
+    <div class="container-custom">
+      <div class="mb-12">
+        <span class="section-label mb-3 block">Featured</span>
+        <h2 class="section-title">Must-Read Investigations</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        {featuredDives.map((dive, i) => (
+          <a
+            href={`${base}deep-dives/${dive.slug}`}
+            class="group card card-hover overflow-hidden"
+          >
+            <div class="aspect-[16/9] relative overflow-hidden">
+              <img
+                src={dive.image}
+                alt={dive.title}
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/50 to-transparent"></div>
+              <div class="absolute top-4 left-4">
+                <span class="badge-gold">{dive.category}</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-stone-100 group-hover:text-gold-400 transition-colors mb-3">
+                {dive.title}
+              </h3>
+              <p class="text-stone-400 text-sm mb-4 line-clamp-2">
+                {dive.excerpt}
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-xs text-stone-500">{dive.readTime} read</span>
+                <span class="text-gold-400 text-sm font-medium group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                  Read more
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- All Deep Dives -->
+  <section class="py-16 md:py-24 bg-obsidian-900/30">
+    <div class="container-custom">
+      <div class="mb-12">
+        <span class="section-label mb-3 block">All Articles</span>
+        <h2 class="section-title">More Investigations</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {otherDives.map((dive) => (
+          <a
+            href={`${base}deep-dives/${dive.slug}`}
+            class="group card card-hover p-6"
+          >
+            <div class="flex items-start gap-4">
+              <div class="w-20 h-20 rounded-xl overflow-hidden shrink-0">
+                <img
+                  src={dive.image}
+                  alt={dive.title}
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="text-xs text-gold-400 font-medium">{dive.category}</span>
+                <h3 class="text-base font-bold text-stone-100 group-hover:text-gold-400 transition-colors mt-1 line-clamp-2">
+                  {dive.title}
+                </h3>
+                <span class="text-xs text-stone-500 mt-2 block">{dive.readTime} read</span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 md:py-24">
+    <div class="container-custom">
+      <div class="card p-8 md:p-12 text-center max-w-3xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold text-stone-100 mb-4">
+          Want to Go Deeper?
+        </h2>
+        <p class="text-stone-400 mb-8">
+          Explore our interactive tools to visualize ancient timelines,
+          compare structures side-by-side, and test your knowledge.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href={`${base}timeline`} class="btn-primary">
+            Explore Timeline
+          </a>
+          <a href={`${base}compare`} class="btn-secondary">
+            Compare Structures
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+  <MobileNav />
+</BaseLayout>

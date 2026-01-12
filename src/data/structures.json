@@ -858,5 +858,435 @@
     },
     "featured": false,
     "trending": false
+  },
+  {
+    "id": "derinkuyu",
+    "name": "Derinkuyu Underground City",
+    "slug": "derinkuyu",
+    "tagline": "18 Levels Beneath the Earth",
+    "summary": "The deepest underground city in Cappadocia, capable of sheltering 20,000 people with livestock—including wine cellars and a church.",
+    "category": "impossible",
+    "region": "middle-east",
+    "country": "Turkey",
+    "countryCode": "TR",
+    "coordinates": [38.3739, 34.7347],
+    "dates": {
+      "constructed": "7th-8th century BCE (expanded later)",
+      "age": "2,800+ years",
+      "discovered": 1963,
+      "period": "Phrygian-Byzantine"
+    },
+    "stats": {
+      "levels": "18",
+      "depth": "85m",
+      "capacity": "20,000 people",
+      "connectedTo": "Kaymakli (8km tunnel)"
+    },
+    "unesco": {
+      "status": "inscribed",
+      "year": 1985
+    },
+    "mysteries": [
+      "Original builders unknown",
+      "How ventilation shafts carved",
+      "Purpose of deepest levels",
+      "200+ underground cities in region"
+    ],
+    "heroImage": "https://images.unsplash.com/photo-1641128324972-af3212f0f6bd?w=1600&q=80",
+    "gallery": [],
+    "travel": {
+      "nearestCity": "Nevşehir (30km)",
+      "entryFee": "$12",
+      "bestSeason": ["April", "May", "September", "October"]
+    },
+    "featured": true,
+    "trending": true
+  },
+  {
+    "id": "sigiriya",
+    "name": "Sigiriya",
+    "slug": "sigiriya",
+    "tagline": "The Lion Rock Fortress",
+    "summary": "A 200m rock column topped by a palace, accessed through a gateway carved as a colossal lion—built by a king who killed his father.",
+    "category": "impossible",
+    "region": "asia",
+    "country": "Sri Lanka",
+    "countryCode": "LK",
+    "coordinates": [7.9570, 80.7603],
+    "dates": {
+      "constructed": "477-495 CE",
+      "age": "1,550+ years",
+      "discovered": "Always known",
+      "period": "Anuradhapura"
+    },
+    "stats": {
+      "height": "200m",
+      "palaceArea": "1.6 hectares",
+      "frescoes": "500+ original (22 survive)",
+      "mirrorWall": "40m long"
+    },
+    "unesco": {
+      "status": "inscribed",
+      "year": 1982
+    },
+    "mysteries": [
+      "Hydraulic systems on summit",
+      "Original frescoes numbering 500+",
+      "Why abandoned after 18 years",
+      "Mirror Wall graffiti (1,000+ years old)"
+    ],
+    "heroImage": "https://images.unsplash.com/photo-1586613835342-8c3f28bc9912?w=1600&q=80",
+    "gallery": [],
+    "travel": {
+      "nearestCity": "Dambulla (20km)",
+      "entryFee": "$30",
+      "bestSeason": ["January", "February", "March", "April"]
+    },
+    "featured": true,
+    "trending": false
+  },
+  {
+    "id": "angkor-wat",
+    "name": "Angkor Wat",
+    "slug": "angkor-wat",
+    "tagline": "The Largest Religious Monument",
+    "summary": "A 162-hectare temple complex with 5 lotus-bud towers—the spiritual heart of the Khmer Empire and symbol of Cambodia.",
+    "category": "impossible",
+    "region": "asia",
+    "country": "Cambodia",
+    "countryCode": "KH",
+    "coordinates": [13.4125, 103.8670],
+    "dates": {
+      "constructed": "1113-1150 CE",
+      "age": "900+ years",
+      "discovered": "Always known locally",
+      "period": "Khmer Empire"
+    },
+    "stats": {
+      "siteArea": "162 hectares",
+      "moat": "190m wide, 5.5km long",
+      "sandstoneBlocks": "5-10 million",
+      "basReliefs": "1,200m of carvings"
+    },
+    "unesco": {
+      "status": "inscribed",
+      "year": 1992
+    },
+    "mysteries": [
+      "Perfect east-west alignment",
+      "Equinox phenomena",
+      "Hidden paintings under bas-reliefs",
+      "Quarry transport (40km)"
+    ],
+    "heroImage": "https://images.unsplash.com/photo-1569060708529-5c3e84e3b6b3?w=1600&q=80",
+    "gallery": [],
+    "travel": {
+      "nearestCity": "Siem Reap (6km)",
+      "entryFee": "$37-72",
+      "bestSeason": ["November", "December", "January", "February"]
+    },
+    "featured": true,
+    "trending": false
+  },
+  {
+    "id": "teotihuacan",
+    "name": "Teotihuacan",
+    "slug": "teotihuacan",
+    "tagline": "City of the Gods",
+    "summary": "The Pyramid of the Sun is the third-largest pyramid on Earth. At its peak, Teotihuacan was one of the largest cities in the ancient world.",
+    "category": "impossible",
+    "region": "north-america",
+    "country": "Mexico",
+    "countryCode": "MX",
+    "coordinates": [19.6925, -98.8438],
+    "dates": {
+      "constructed": "100 BCE - 250 CE",
+      "age": "2,000+ years",
+      "discovered": "Always known (Aztecs named it)",
+      "period": "Pre-Columbian"
+    },
+    "stats": {
+      "sunPyramidHeight": "65m",
+      "sunPyramidBase": "225m",
+      "avenueOfDead": "2.4km",
+      "peakPopulation": "125,000-200,000"
+    },
+    "unesco": {
+      "status": "inscribed",
+      "year": 1987
+    },
+    "mysteries": [
+      "Builders' identity unknown",
+      "Mercury found under pyramid",
+      "Mica sheets imported from Brazil",
+      "Why city collapsed ~550 CE"
+    ],
+    "heroImage": "https://images.unsplash.com/photo-1518638150340-f706e86654de?w=1600&q=80",
+    "gallery": [],
+    "travel": {
+      "nearestCity": "Mexico City (50km)",
+      "entryFee": "$5",
+      "bestSeason": ["March", "April", "October", "November"]
+    },
+    "featured": true,
+    "trending": true
+  },
+  {
+    "id": "chichen-itza",
+    "name": "Chichén Itzá",
+    "slug": "chichen-itza",
+    "tagline": "The Feathered Serpent's Shadow",
+    "summary": "El Castillo's 365 steps create a serpent shadow at equinox. Voted one of the New Seven Wonders of the World.",
+    "category": "impossible",
+    "region": "north-america",
+    "country": "Mexico",
+    "countryCode": "MX",
+    "coordinates": [20.6843, -88.5678],
+    "dates": {
+      "constructed": "600-1200 CE",
+      "age": "1,400+ years",
+      "discovered": "Always known",
+      "period": "Maya-Toltec"
+    },
+    "stats": {
+      "elCastilloHeight": "30m",
+      "steps": "365 (days in year)",
+      "sacredCenote": "60m diameter",
+      "visitors": "2.6M/year"
+    },
+    "unesco": {
+      "status": "inscribed",
+      "year": 1988
+    },
+    "mysteries": [
+      "Acoustic chirp mimics quetzal bird",
+      "Cenote offerings still being recovered",
+      "Pyramid built over older structure",
+      "Equinox serpent precision"
+    ],
+    "heroImage": "https://images.unsplash.com/photo-1518638150340-f706e86654de?w=1600&q=80",
+    "gallery": [],
+    "travel": {
+      "nearestCity": "Cancún (200km)",
+      "entryFee": "$30",
+      "bestSeason": ["March 20-21", "September 22-23", "November-April"]
+    },
+    "featured": true,
+    "trending": false
+  },
+  {
+    "id": "ajanta-caves",
+    "name": "Ajanta Caves",
+    "slug": "ajanta-caves",
+    "tagline": "Paintings That Survived 2,000 Years",
+    "summary": "30 rock-cut Buddhist caves with the finest surviving ancient Indian paintings—abandoned and forgotten for 1,000 years.",
+    "category": "rock-cut",
+    "region": "asia",
+    "country": "India",
+    "countryCode": "IN",
+    "coordinates": [20.5519, 75.7033],
+    "dates": {
+      "constructed": "2nd century BCE - 6th century CE",
+      "age": "2,200+ years",
+      "discovered": 1819,
+      "period": "Satavahana-Vakataka"
+    },
+    "stats": {
+      "caves": "30",
+      "horseshoeLength": "760m",
+      "paintedArea": "1,000+ sq meters",
+      "sculptures": "Thousands"
+    },
+    "unesco": {
+      "status": "inscribed",
+      "year": 1983
+    },
+    "mysteries": [
+      "Paint recipes still unknown",
+      "How painted in darkness",
+      "Why abandoned ~650 CE",
+      "Original lighting system"
+    ],
+    "heroImage": "https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=1600&q=80",
+    "gallery": [],
+    "travel": {
+      "nearestCity": "Aurangabad (100km)",
+      "entryFee": "$15",
+      "bestSeason": ["October", "November", "February", "March"]
+    },
+    "featured": false,
+    "trending": false
+  },
+  {
+    "id": "tiwanaku",
+    "name": "Tiwanaku",
+    "slug": "tiwanaku",
+    "tagline": "The Gateway of the Sun",
+    "summary": "A pre-Inca civilization at 3,850m elevation, featuring the iconic Gateway of the Sun carved from a single 10-ton andesite block.",
+    "category": "megalithic",
+    "region": "south-america",
+    "country": "Bolivia",
+    "countryCode": "BO",
+    "coordinates": [-16.5546, -68.6731],
+    "dates": {
+      "constructed": "300-1150 CE",
+      "age": "1,700+ years",
+      "discovered": "16th century (Spanish)",
+      "period": "Tiwanaku Empire"
+    },
+    "stats": {
+      "elevation": "3,850m",
+      "gatewayWeight": "10 tons",
+      "akaPana": "17m tall",
+      "peakPopulation": "10,000-20,000"
+    },
+    "unesco": {
+      "status": "inscribed",
+      "year": 2000
+    },
+    "mysteries": [
+      "Gateway calendar interpretation",
+      "H-block precision cutting",
+      "Bronze/arsenic bronze clamps",
+      "Why civilization collapsed"
+    ],
+    "heroImage": "https://images.unsplash.com/photo-1591489378430-ef2f4c626b0e?w=1600&q=80",
+    "gallery": [],
+    "travel": {
+      "nearestCity": "La Paz (72km)",
+      "entryFee": "$14",
+      "bestSeason": ["May", "June", "July", "August", "September"]
+    },
+    "featured": false,
+    "trending": false
+  },
+  {
+    "id": "persepolis",
+    "name": "Persepolis",
+    "slug": "persepolis",
+    "tagline": "Throne of the Achaemenids",
+    "summary": "The ceremonial capital of the Persian Empire, destroyed by Alexander the Great—yet its ruins still command awe 2,500 years later.",
+    "category": "megalithic",
+    "region": "middle-east",
+    "country": "Iran",
+    "countryCode": "IR",
+    "coordinates": [29.9352, 52.8914],
+    "dates": {
+      "constructed": "518-330 BCE",
+      "age": "2,500+ years",
+      "discovered": "Never lost",
+      "period": "Achaemenid Empire"
+    },
+    "stats": {
+      "platform": "125,000 sq meters",
+      "apadanaColumns": "72 original",
+      "columnHeight": "20m",
+      "nations": "23 depicted in reliefs"
+    },
+    "unesco": {
+      "status": "inscribed",
+      "year": 1979
+    },
+    "mysteries": [
+      "Fire of 330 BCE deliberate?",
+      "Treasury contents (looted)",
+      "Unfinished Gate of All Nations",
+      "Original roofing system"
+    ],
+    "heroImage": "https://images.unsplash.com/photo-1565606469893-6a9da7edb56f?w=1600&q=80",
+    "gallery": [],
+    "travel": {
+      "nearestCity": "Shiraz (60km)",
+      "entryFee": "$8",
+      "bestSeason": ["March", "April", "May", "September", "October"]
+    },
+    "featured": true,
+    "trending": false
+  },
+  {
+    "id": "great-zimbabwe",
+    "name": "Great Zimbabwe",
+    "slug": "great-zimbabwe",
+    "tagline": "Africa's Stone Kingdom",
+    "summary": "The largest ancient structure in sub-Saharan Africa, with walls 11m high built without mortar—center of a gold-trading empire.",
+    "category": "megalithic",
+    "region": "africa",
+    "country": "Zimbabwe",
+    "countryCode": "ZW",
+    "coordinates": [-20.2674, 30.9337],
+    "dates": {
+      "constructed": "1100-1450 CE",
+      "age": "900+ years",
+      "discovered": 1871,
+      "period": "Kingdom of Zimbabwe"
+    },
+    "stats": {
+      "wallHeight": "11m",
+      "wallThickness": "5m",
+      "stones": "1 million+",
+      "siteArea": "722 hectares"
+    },
+    "unesco": {
+      "status": "inscribed",
+      "year": 1986
+    },
+    "mysteries": [
+      "No mortar construction technique",
+      "Soapstone bird symbolism",
+      "Chinese artifacts found",
+      "Why abandoned"
+    ],
+    "heroImage": "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=1600&q=80",
+    "gallery": [],
+    "travel": {
+      "nearestCity": "Masvingo (30km)",
+      "entryFee": "$15",
+      "bestSeason": ["May", "June", "July", "August", "September"]
+    },
+    "featured": false,
+    "trending": false
+  },
+  {
+    "id": "goreme",
+    "name": "Göreme Cave Churches",
+    "slug": "goreme",
+    "tagline": "Churches in Fairy Chimneys",
+    "summary": "Byzantine churches carved into volcanic rock formations, with frescoes hidden from iconoclasts for over 1,000 years.",
+    "category": "rock-cut",
+    "region": "middle-east",
+    "country": "Turkey",
+    "countryCode": "TR",
+    "coordinates": [38.6431, 34.8289],
+    "dates": {
+      "constructed": "4th-13th century CE",
+      "age": "1,700+ years",
+      "discovered": "Never lost (local use)",
+      "period": "Byzantine"
+    },
+    "stats": {
+      "churches": "400+",
+      "museums": "30+ in open-air museum",
+      "darkChurch": "Best-preserved frescoes",
+      "undergroundCities": "36"
+    },
+    "unesco": {
+      "status": "inscribed",
+      "year": 1985
+    },
+    "mysteries": [
+      "Volcanic tuft carving techniques",
+      "Fresco preservation in rock",
+      "Hidden church networks",
+      "Iconoclast-era art survival"
+    ],
+    "heroImage": "https://images.unsplash.com/photo-1570939274717-7eda259b50ed?w=1600&q=80",
+    "gallery": [],
+    "travel": {
+      "nearestCity": "Kayseri (70km)",
+      "entryFee": "$15",
+      "bestSeason": ["April", "May", "September", "October"]
+    },
+    "featured": false,
+    "trending": false
   }
 ]

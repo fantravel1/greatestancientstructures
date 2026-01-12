@@ -1,0 +1,234 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/global/Header.astro';
+import Footer from '../components/global/Footer.astro';
+import MobileNav from '../components/global/MobileNav.astro';
+
+const base = import.meta.env.BASE_URL;
+
+const techniques = [
+  {
+    name: 'Megalithic Transport',
+    description: 'Moving stones weighing 50-1,000+ tons without wheels or engines',
+    methods: [
+      { name: 'Sledges & Rollers', sites: 'Egypt, Stonehenge', proven: true },
+      { name: 'Rope Pulling (Walking)', sites: 'Easter Island', proven: true },
+      { name: 'Water Lubrication', sites: 'Egypt', proven: true },
+      { name: 'Wooden A-Frames', sites: 'Stonehenge recreation', proven: true },
+      { name: 'Canal/Barge Transport', sites: 'Egypt, Nan Madol', proven: true },
+    ],
+    mystery: 'How Baalbek\'s 1,650-ton Stone of the Pregnant Woman was intended to be moved remains unexplained.'
+  },
+  {
+    name: 'Precision Stone Cutting',
+    description: 'Achieving millimeter tolerances with Bronze Age tools',
+    methods: [
+      { name: 'Copper Saws + Sand Abrasive', sites: 'Egypt', proven: true },
+      { name: 'Pounding Stones (Dolerite)', sites: 'Egypt', proven: true },
+      { name: 'Tube Drilling', sites: 'Egypt', proven: true },
+      { name: 'Thermal Fracturing (Fire + Water)', sites: 'Multiple', proven: true },
+      { name: 'Bronze/Obsidian Tools', sites: 'Peru, Mesoamerica', proven: true },
+    ],
+    mystery: 'Puma Punku\'s H-blocks show precision that challenges replication even with modern tools.'
+  },
+  {
+    name: 'Rock-Cut Architecture',
+    description: 'Carving entire temples from solid mountain rock',
+    methods: [
+      { name: 'Top-Down Excavation', sites: 'Petra, Lalibela, Ellora', proven: true },
+      { name: 'Scaffolding Systems', sites: 'Abu Simbel', proven: true },
+      { name: 'Water Channeling', sites: 'Petra', proven: true },
+      { name: 'Volcanic Tuff Carving', sites: 'Cappadocia', proven: true },
+    ],
+    mystery: 'Ellora\'s Kailasa Temple removed 400,000 tons of rock. Where did all the debris go?'
+  },
+  {
+    name: 'Astronomical Alignment',
+    description: 'Orienting massive structures to celestial events with arc-minute precision',
+    methods: [
+      { name: 'Shadow/Gnomon Tracking', sites: 'Multiple', proven: true },
+      { name: 'Star Sighting (Merkhet)', sites: 'Egypt', proven: true },
+      { name: 'Plumb Lines & Levels', sites: 'Egypt, Peru', proven: true },
+      { name: 'Water Leveling', sites: 'Multiple', proven: true },
+    ],
+    mystery: 'Great Pyramid\'s alignment to true north within 3/60° of a degree—better than Greenwich Observatory\'s original alignment.'
+  },
+  {
+    name: 'Polygonal Masonry',
+    description: 'Interlocking irregular stones that fit like 3D puzzles',
+    methods: [
+      { name: 'Scribing/Template Transfer', sites: 'Peru, Greece', proven: true },
+      { name: 'Trial-and-Error Fitting', sites: 'Sacsayhuamán', proven: false },
+      { name: 'Softening Agents (Speculative)', sites: 'Peru', proven: false },
+    ],
+    mystery: 'Some joints at Sacsayhuamán are so tight that not even a piece of paper can slip between stones weighing 100+ tons.'
+  },
+  {
+    name: 'Concrete & Geopolymers',
+    description: 'Ancient binding agents and possible synthetic stone',
+    methods: [
+      { name: 'Roman Concrete (Pozzolanic)', sites: 'Rome, Pantheon', proven: true },
+      { name: 'Limestone Geopolymer (Debated)', sites: 'Egypt pyramids', proven: false },
+      { name: 'Mud Brick + Lime', sites: 'Multiple', proven: true },
+    ],
+    mystery: 'Some researchers claim pyramid blocks were cast in place as geopolymer concrete, not quarried. Evidence remains debated.'
+  },
+];
+---
+
+<BaseLayout
+  title="Ancient Construction Techniques"
+  description="How did ancient builders move 1,000-ton stones and achieve millimeter precision? Explore proven methods and enduring mysteries."
+>
+  <Header slot="header" />
+
+  <!-- Hero -->
+  <section class="relative pt-32 pb-20 overflow-hidden">
+    <div class="absolute inset-0 hero-gradient"></div>
+    <div class="absolute inset-0 hero-pattern opacity-30"></div>
+
+    <div class="container-custom relative z-10">
+      <div class="max-w-4xl">
+        <span class="section-label mb-4 block">Engineering</span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-stone-100 mb-6">
+          Ancient Construction <span class="text-gradient">Techniques</span>
+        </h1>
+        <p class="text-xl text-stone-400 leading-relaxed">
+          Separating proven methods from enduring mysteries. How did our ancestors
+          build monuments that still inspire awe—and debate—today?
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="py-16">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto text-center">
+        <p class="text-lg text-stone-300 leading-relaxed">
+          Modern archaeology has demonstrated many ancient construction techniques through
+          experimental recreation. Yet some achievements—like Baalbek's 1,000-ton stones
+          or Puma Punku's impossible precision—remain partially unexplained.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Techniques -->
+  <section class="py-16">
+    <div class="container-custom">
+      <div class="space-y-16">
+        {techniques.map((technique, i) => (
+          <div class="card p-8 md:p-10">
+            <div class="flex items-start gap-6 mb-8">
+              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-gold-400/20 to-gold-600/10 flex items-center justify-center shrink-0">
+                <span class="text-2xl font-bold text-gold-400">{i + 1}</span>
+              </div>
+              <div>
+                <h2 class="text-2xl md:text-3xl font-bold text-stone-100 mb-2">
+                  {technique.name}
+                </h2>
+                <p class="text-stone-400">{technique.description}</p>
+              </div>
+            </div>
+
+            <!-- Methods Table -->
+            <div class="overflow-x-auto mb-8">
+              <table class="w-full text-left">
+                <thead>
+                  <tr class="border-b border-obsidian-700">
+                    <th class="py-3 px-4 text-sm font-semibold text-stone-300">Method</th>
+                    <th class="py-3 px-4 text-sm font-semibold text-stone-300">Sites</th>
+                    <th class="py-3 px-4 text-sm font-semibold text-stone-300">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {technique.methods.map((method) => (
+                    <tr class="border-b border-obsidian-800/50">
+                      <td class="py-3 px-4 text-stone-200">{method.name}</td>
+                      <td class="py-3 px-4 text-stone-400 text-sm">{method.sites}</td>
+                      <td class="py-3 px-4">
+                        {method.proven ? (
+                          <span class="inline-flex items-center gap-1 text-sm text-emerald-400">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            Demonstrated
+                          </span>
+                        ) : (
+                          <span class="inline-flex items-center gap-1 text-sm text-amber-400">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                            </svg>
+                            Debated
+                          </span>
+                        )}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Mystery callout -->
+            <div class="bg-obsidian-800/50 rounded-xl p-5 border-l-4 border-gold-400">
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold-400 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                </svg>
+                <div>
+                  <span class="text-xs font-bold uppercase tracking-wider text-gold-400">Enduring Mystery</span>
+                  <p class="text-stone-300 mt-1">{technique.mystery}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Insight -->
+  <section class="py-16 md:py-24 bg-obsidian-900/30">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto text-center">
+        <span class="section-label mb-4 block">Key Insight</span>
+        <h2 class="text-2xl md:text-3xl font-bold text-stone-100 mb-6">
+          Ancient ≠ Primitive
+        </h2>
+        <p class="text-lg text-stone-400 leading-relaxed mb-8">
+          Our ancestors had millennia to develop specialized techniques. A master stonemason
+          in ancient Egypt might spend their entire life perfecting one skill. When we struggle
+          to replicate their work, it often reflects our loss of <em>patience</em> rather
+          than any lost technology.
+        </p>
+        <p class="text-lg text-stone-400 leading-relaxed">
+          That said, some achievements—like the precision of Puma Punku or the scale of
+          Baalbek—genuinely push the boundaries of what we can explain with current evidence.
+          The honest answer is: <span class="text-stone-200 font-medium">we don't know everything yet</span>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 md:py-24">
+    <div class="container-custom">
+      <div class="card p-8 md:p-12 text-center max-w-3xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold text-stone-100 mb-4">
+          Explore the Structures
+        </h2>
+        <p class="text-stone-400 mb-8">
+          See these techniques in action. Browse our database of 30+ ancient structures
+          with detailed analysis of construction methods.
+        </p>
+        <a href={`${base}structures`} class="btn-primary">
+          Browse All Structures
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+  <MobileNav />
+</BaseLayout>

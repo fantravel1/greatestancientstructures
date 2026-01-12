@@ -1,0 +1,302 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/global/Header.astro';
+import Footer from '../../components/global/Footer.astro';
+import MobileNav from '../../components/global/MobileNav.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="How Göbekli Tepe Rewrote Human History"
+  description="Before Göbekli Tepe, we believed agriculture came first, then religion. This 12,000-year-old temple proves we had it backwards."
+>
+  <Header slot="header" />
+
+  <article class="pt-32 pb-20">
+    <!-- Hero -->
+    <header class="container-custom mb-16">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex items-center gap-4 mb-6">
+          <a href={`${base}deep-dives`} class="text-stone-500 hover:text-gold-400 transition-colors">
+            ← Back to Deep Dives
+          </a>
+          <span class="badge-gold">Archaeological Revolution</span>
+        </div>
+
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-stone-100 mb-6 leading-tight">
+          How Göbekli Tepe Rewrote Human History
+        </h1>
+
+        <p class="text-xl text-stone-400 leading-relaxed mb-8">
+          For decades, archaeology told us a simple story: humans invented agriculture,
+          settled down, built villages, and <em>then</em> developed religion. Göbekli Tepe
+          shattered that narrative completely.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-6 text-sm text-stone-500">
+          <span>12 min read</span>
+          <span>•</span>
+          <span>Last updated: January 2026</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Image -->
+    <div class="container-custom mb-16">
+      <div class="max-w-5xl mx-auto">
+        <div class="aspect-[21/9] rounded-2xl overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1599423300746-b62533397364?w=1600&q=80"
+            alt="Göbekli Tepe T-shaped pillars"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <p class="text-sm text-stone-500 mt-4 text-center">
+          T-shaped pillars at Göbekli Tepe, some weighing up to 50 tons
+        </p>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto prose prose-invert prose-gold">
+
+        <h2 class="text-2xl md:text-3xl font-bold text-stone-100 mt-12 mb-6">
+          The Discovery That Changed Everything
+        </h2>
+
+        <p class="text-stone-300 leading-relaxed mb-6">
+          In 1994, German archaeologist Klaus Schmidt arrived at a hill in southeastern Turkey
+          that locals called "Potbelly Hill" (Göbekli Tepe). What he found would overturn a
+          century of archaeological assumptions.
+        </p>
+
+        <p class="text-stone-300 leading-relaxed mb-6">
+          Beneath the surface lay massive T-shaped limestone pillars arranged in circles,
+          decorated with intricate carvings of animals—foxes, lions, scorpions, vultures,
+          and snakes. Carbon dating revealed the unthinkable: <strong class="text-gold-400">these
+          structures were 12,000 years old</strong>, built around 9500 BCE.
+        </p>
+
+        <div class="card p-6 my-8 border-l-4 border-gold-400">
+          <p class="text-lg text-stone-200 italic mb-2">
+            "First came the temple, then the city."
+          </p>
+          <p class="text-sm text-stone-500">— Klaus Schmidt, lead archaeologist</p>
+        </div>
+
+        <p class="text-stone-300 leading-relaxed mb-6">
+          This predates Stonehenge by 6,000 years. It predates the pyramids by 7,000 years.
+          Most shocking: it predates agriculture itself. The people who built Göbekli Tepe
+          were hunter-gatherers who hadn't yet learned to farm.
+        </p>
+
+        <h2 class="text-2xl md:text-3xl font-bold text-stone-100 mt-12 mb-6">
+          The Numbers Don't Make Sense
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-6 my-8">
+          <div class="card p-6 text-center">
+            <div class="stat-number text-3xl mb-2">200+</div>
+            <p class="text-stone-400">T-shaped pillars discovered</p>
+          </div>
+          <div class="card p-6 text-center">
+            <div class="stat-number text-3xl mb-2">50 tons</div>
+            <p class="text-stone-400">Weight of largest pillars</p>
+          </div>
+          <div class="card p-6 text-center">
+            <div class="stat-number text-3xl mb-2">10%</div>
+            <p class="text-stone-400">Excavated so far</p>
+          </div>
+          <div class="card p-6 text-center">
+            <div class="stat-number text-3xl mb-2">0</div>
+            <p class="text-stone-400">Permanent residents found</p>
+          </div>
+        </div>
+
+        <p class="text-stone-300 leading-relaxed mb-6">
+          Here's what makes Göbekli Tepe truly baffling: there's no evidence anyone
+          lived there. No houses. No trash middens. No cooking areas. This wasn't a
+          settlement—it was a destination.
+        </p>
+
+        <p class="text-stone-300 leading-relaxed mb-6">
+          Hunter-gatherer bands from across the region traveled here to construct and
+          worship at these temples. They quarried limestone pillars weighing up to 50 tons,
+          transported them hundreds of meters, carved them with sophisticated reliefs,
+          and erected them in precise circles—all without metal tools, wheels, or beasts of burden.
+        </p>
+
+        <h2 class="text-2xl md:text-3xl font-bold text-stone-100 mt-12 mb-6">
+          Why Religion Came First
+        </h2>
+
+        <p class="text-stone-300 leading-relaxed mb-6">
+          The old model said agriculture freed humans from constant food-seeking, giving them
+          time to develop complex societies and beliefs. Göbekli Tepe suggests the opposite:
+          <strong class="text-gold-400">religion may have driven the invention of agriculture</strong>.
+        </p>
+
+        <p class="text-stone-300 leading-relaxed mb-6">
+          Think about it: building and maintaining Göbekli Tepe required organizing hundreds of
+          people over generations. It required surplus food to feed workers who weren't hunting.
+          It required social structures to coordinate labor.
+        </p>
+
+        <p class="text-stone-300 leading-relaxed mb-6">
+          The pressure to support this religious project may have pushed humans to domesticate
+          plants and animals. Wild wheat and barley were first cultivated within 30 kilometers
+          of Göbekli Tepe. This might not be coincidence—it might be causation.
+        </p>
+
+        <h2 class="text-2xl md:text-3xl font-bold text-stone-100 mt-12 mb-6">
+          The Deliberate Burial Mystery
+        </h2>
+
+        <p class="text-stone-300 leading-relaxed mb-6">
+          Around 8000 BCE, something extraordinary happened: the builders of Göbekli Tepe
+          deliberately buried the entire site under tons of soil and debris. They didn't
+          abandon it—they <em>entombed</em> it.
+        </p>
+
+        <p class="text-stone-300 leading-relaxed mb-6">
+          Why? We don't know. But this burial preserved the site in remarkable condition,
+          protecting the carvings from millennia of erosion. Without it, we might never
+          have known these temples existed.
+        </p>
+
+        <div class="card p-6 my-8 bg-obsidian-800/50">
+          <h3 class="text-lg font-bold text-stone-100 mb-4">Theories for the Burial</h3>
+          <ul class="space-y-3 text-stone-300">
+            <li class="flex items-start gap-3">
+              <span class="text-gold-400">•</span>
+              <span>Ritual "death" of the sacred site as beliefs evolved</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-gold-400">•</span>
+              <span>Protection from invading groups or cultures</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-gold-400">•</span>
+              <span>Scheduled obsolescence—the site served its purpose</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-gold-400">•</span>
+              <span>Climate change forcing population migration</span>
+            </li>
+          </ul>
+        </div>
+
+        <h2 class="text-2xl md:text-3xl font-bold text-stone-100 mt-12 mb-6">
+          The Taş Tepeler Revolution
+        </h2>
+
+        <p class="text-stone-300 leading-relaxed mb-6">
+          Göbekli Tepe is no longer unique. Since its discovery, archaeologists have found
+          a network of at least 12 similar sites in the region, collectively called
+          <strong class="text-gold-400">Taş Tepeler</strong> ("Stone Hills").
+        </p>
+
+        <p class="text-stone-300 leading-relaxed mb-6">
+          Karahan Tepe, opened to the public in 2023, may be even older. Its pillars are
+          carved directly from the bedrock, and its imagery shifts from animals to humans—
+          including haunting human heads carved into the walls.
+        </p>
+
+        <p class="text-stone-300 leading-relaxed mb-6">
+          These sites suggest a sophisticated, interconnected Neolithic society that we
+          never imagined existed. The "primitive hunter-gatherers" of 12,000 years ago
+          were capable of monumental architecture, advanced planning, and organized labor
+          on a scale we're only beginning to understand.
+        </p>
+
+        <h2 class="text-2xl md:text-3xl font-bold text-stone-100 mt-12 mb-6">
+          What We Still Don't Know
+        </h2>
+
+        <p class="text-stone-300 leading-relaxed mb-6">
+          With only 10% of Göbekli Tepe excavated, the site holds countless secrets:
+        </p>
+
+        <ul class="space-y-4 text-stone-300 mb-8">
+          <li class="flex items-start gap-3">
+            <span class="text-gold-400 font-bold">1.</span>
+            <span><strong>Who were they?</strong> We have no burials, no human remains. We don't know who built this or where they came from.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-gold-400 font-bold">2.</span>
+            <span><strong>What did the pillars represent?</strong> The T-shape suggests human figures with arms at their sides, but their meaning remains speculative.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-gold-400 font-bold">3.</span>
+            <span><strong>How did they organize?</strong> Without written language, how did they coordinate multi-generational construction projects?</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-gold-400 font-bold">4.</span>
+            <span><strong>What happened to them?</strong> Where did this culture go, and why did they stop building?</span>
+          </li>
+        </ul>
+
+        <h2 class="text-2xl md:text-3xl font-bold text-stone-100 mt-12 mb-6">
+          The Bigger Picture
+        </h2>
+
+        <p class="text-stone-300 leading-relaxed mb-6">
+          Göbekli Tepe reminds us that human history is deeper and more complex than textbooks
+          suggest. For every discovery like this, there may be dozens more buried under
+          millennia of sediment, waiting to rewrite history again.
+        </p>
+
+        <p class="text-stone-300 leading-relaxed mb-6">
+          The site stands as a monument not just to ancient beliefs, but to human capability.
+          Twelve thousand years ago, without any of our technology, our ancestors achieved
+          something that still inspires awe. What else might we have forgotten?
+        </p>
+
+        <!-- Sources -->
+        <div class="card p-6 mt-12 bg-obsidian-800/30">
+          <h3 class="text-lg font-bold text-stone-100 mb-4">Sources & Further Reading</h3>
+          <ul class="space-y-2 text-sm text-stone-400">
+            <li>Schmidt, Klaus. "Göbekli Tepe: A Stone Age Sanctuary in South-Eastern Anatolia" (2012)</li>
+            <li>Dietrich, Oliver, et al. "The role of cult and feasting in the emergence of Neolithic communities" (2012)</li>
+            <li>National Geographic: "The Birth of Religion" (2011)</li>
+            <li>Smithsonian Magazine: "Gobekli Tepe: The World's First Temple?" (2008)</li>
+            <li>Taş Tepeler Project Official Research Publications (2023-2024)</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Related -->
+    <div class="container-custom mt-20">
+      <div class="max-w-4xl mx-auto">
+        <h3 class="text-xl font-bold text-stone-100 mb-6">Continue Exploring</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <a href={`${base}structures/gobekli-tepe`} class="card card-hover p-6 flex items-center gap-4">
+            <div class="w-16 h-16 rounded-xl overflow-hidden shrink-0">
+              <img src="https://images.unsplash.com/photo-1599423300746-b62533397364?w=200&q=80" alt="" class="w-full h-full object-cover" />
+            </div>
+            <div>
+              <span class="text-xs text-gold-400">Structure Profile</span>
+              <h4 class="font-bold text-stone-100">Göbekli Tepe</h4>
+            </div>
+          </a>
+          <a href={`${base}structures/karahan-tepe`} class="card card-hover p-6 flex items-center gap-4">
+            <div class="w-16 h-16 rounded-xl overflow-hidden shrink-0">
+              <img src="https://images.unsplash.com/photo-1682687982501-1e58ab814714?w=200&q=80" alt="" class="w-full h-full object-cover" />
+            </div>
+            <div>
+              <span class="text-xs text-gold-400">Structure Profile</span>
+              <h4 class="font-bold text-stone-100">Karahan Tepe</h4>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <Footer slot="footer" />
+  <MobileNav />
+</BaseLayout>
