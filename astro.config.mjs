@@ -2,8 +2,8 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
-  site: 'https://fantravel1.github.io',
-  base: '/greatestancientstructures/',
+  site: 'https://greatestancientstructures.com',
+  base: '/',
   integrations: [tailwind()],
   output: 'static',
   build: {
