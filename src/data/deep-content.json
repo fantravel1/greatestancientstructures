@@ -841,5 +841,480 @@
       { "year": "800-1000 CE", "event": "Detailed carving and finishing work" },
       { "year": "1983", "event": "UNESCO World Heritage inscription (with Ellora complex)" }
     ]
+  },
+  "karahan-tepe": {
+    "deepDive": {
+      "introduction": "Just 35km from Göbekli Tepe lies Karahan Tepe—a site that may be even older and more enigmatic. Opened to visitors in 2023, this 'sister site' features haunting human heads emerging from rock, phallic pillars, and evidence of a sophisticated Pre-Pottery Neolithic civilization we barely understand.",
+      "sections": [
+        {
+          "title": "The Shift to Human Imagery",
+          "content": "While Göbekli Tepe features animal carvings, Karahan Tepe is dominated by human forms. Eleven human heads emerge from a bench carved directly from bedrock, their hollow eyes staring across millennia. This shift from animal to human iconography may represent an evolution in religious thought—or an entirely different tradition."
+        },
+        {
+          "title": "Carved from Living Rock",
+          "content": "Unlike Göbekli Tepe's freestanding T-pillars, Karahan Tepe's pillars were carved directly from the bedrock floor—the builders literally summoned figures from the living rock. One chamber features a 2.3-meter human figure rising from the floor, its face weathered but unmistakably intentional."
+        },
+        {
+          "title": "The Taş Tepeler Network",
+          "content": "Karahan Tepe is one of at least 12 similar sites now identified in southeastern Turkey—the Taş Tepeler ('Stone Hills') network. Together they suggest not isolated temples but a coordinated civilization of monument builders existing 2,000 years before agriculture was supposed to have enabled such complexity."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Karahan Tepe: Sister Site to Göbekli Tepe | Ancient Architects",
+        "youtubeId": "Z9hT6tBLNWw",
+        "duration": "24:15",
+        "source": "Ancient Architects"
+      },
+      {
+        "title": "New Discoveries at Karahan Tepe | History Hit",
+        "youtubeId": "5K5qkUm1F0w",
+        "duration": "12:34",
+        "source": "History Hit"
+      }
+    ],
+    "sources": [
+      {
+        "type": "journal",
+        "authors": ["Necmi Karul"],
+        "title": "Buried Buildings at Pre-Pottery Neolithic Karahantepe",
+        "journal": "TÜBA-AR",
+        "volume": "28",
+        "year": 2021,
+        "pages": "21-31"
+      },
+      {
+        "type": "article",
+        "author": "Andrew Curry",
+        "title": "Turkey's Stone Age Surprise",
+        "publication": "National Geographic",
+        "year": 2021,
+        "url": "https://www.nationalgeographic.com/magazine/article/turkey-stone-age-surprise"
+      }
+    ],
+    "timeline": [
+      { "year": "10000-9500 BCE", "event": "Estimated construction period" },
+      { "year": "1997", "event": "Site first identified" },
+      { "year": "2019", "event": "Major excavations begin" },
+      { "year": "2021", "event": "Human head chamber revealed" },
+      { "year": "2023", "event": "Site opened to public" }
+    ]
+  },
+  "lalibela": {
+    "deepDive": {
+      "introduction": "In the Ethiopian highlands stand 11 medieval churches carved entirely from living rock—each excavated top-down from volcanic tuff, complete with columns, arches, and drainage systems. King Lalibela intended to create a 'New Jerusalem' in Africa, and the result defies architectural convention.",
+      "sections": [
+        {
+          "title": "Top-Down Architecture",
+          "content": "Like Ellora's Kailasa Temple, Lalibela's churches were carved from above—removing material rather than adding it. Workers started at roof level and carved down 10-15 meters, creating windows, doors, and decorative details as they descended. The engineering precision required to do this without modern surveying equipment remains remarkable."
+        },
+        {
+          "title": "The Hidden Tunnels",
+          "content": "The 11 churches are connected by an elaborate system of tunnels, trenches, and ceremonial passageways carved through solid rock. Some tunnels are so narrow visitors must squeeze sideways; others open into hidden chambers. The network allows priests to move between churches during ceremonies without entering the harsh highland weather."
+        },
+        {
+          "title": "Living Churches",
+          "content": "Unlike ancient ruins, Lalibela's churches remain in continuous use—Ethiopian Orthodox services have been held here for 800 years. Priests maintain the traditions, pilgrims come for major festivals, and the churches are living religious sites, not museums. This continuity makes Lalibela unique among rock-cut architecture."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Lalibela: Ethiopia's Rock Churches | DW Documentary",
+        "youtubeId": "V3_kS3mJLwM",
+        "duration": "42:26",
+        "source": "DW Documentary"
+      },
+      {
+        "title": "Building the Churches of Lalibela | Smithsonian Channel",
+        "youtubeId": "X_5ZlKzVvyo",
+        "duration": "4:23",
+        "source": "Smithsonian Channel"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "David W. Phillipson",
+        "title": "Ancient Churches of Ethiopia",
+        "publisher": "Yale University Press",
+        "year": 2009,
+        "isbn": "978-0-300-14119-6"
+      },
+      {
+        "type": "journal",
+        "authors": ["Emmanuel Fritsch", "Michael Gervers"],
+        "title": "Rock-Hewn Churches of Ethiopia: An Overview",
+        "journal": "Journal of Ethiopian Studies",
+        "volume": "40",
+        "year": 2007,
+        "pages": "1-48"
+      }
+    ],
+    "timeline": [
+      { "year": "1181-1221 CE", "event": "Construction during King Lalibela's reign" },
+      { "year": "1200 CE", "event": "Bet Giyorgis (St. George) completed" },
+      { "year": "1520", "event": "Portuguese priest Francisco Álvares describes churches" },
+      { "year": "1978", "event": "UNESCO World Heritage inscription" },
+      { "year": "2021", "event": "Churches caught in Tigray conflict" }
+    ]
+  },
+  "abu-simbel": {
+    "deepDive": {
+      "introduction": "Carved into a mountainside in Nubia, Abu Simbel features four colossal statues of Ramesses II, each 20 meters tall. But the temple's most remarkable feature isn't its size—it's its astronomical alignment, which twice a year illuminates the inner sanctuary with surgical precision.",
+      "sections": [
+        {
+          "title": "The Solar Alignment",
+          "content": "Twice yearly—on February 22 and October 22—the rising sun penetrates 60 meters into the temple, illuminating three of four statues in the inner sanctuary. The fourth statue, representing Ptah (god of the underworld), remains in shadow. These dates may correspond to Ramesses' birthday and coronation. The precision required to achieve this 3,300 years ago is extraordinary."
+        },
+        {
+          "title": "The UNESCO Rescue",
+          "content": "In the 1960s, Abu Simbel faced destruction from the rising waters of Lake Nasser behind the Aswan High Dam. In the largest archaeological rescue ever attempted, engineers cut the entire temple into 1,036 blocks (up to 30 tons each) and reassembled it 65 meters higher. The operation took four years and cost $40 million."
+        },
+        {
+          "title": "Propaganda in Stone",
+          "content": "Abu Simbel was Ramesses II's message to Nubia: Egypt is powerful, and I am divine. The facade's colossal scale was designed to intimidate anyone approaching from the south. Inside, carvings depict Ramesses' (probably exaggerated) victory at the Battle of Kadesh. This is ancient propaganda at its most spectacular."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Abu Simbel: Saving Egypt's Temples | BBC Documentary",
+        "youtubeId": "HqwxFIwbYjk",
+        "duration": "48:33",
+        "source": "BBC"
+      },
+      {
+        "title": "The Sun Festival at Abu Simbel | National Geographic",
+        "youtubeId": "vTrZl1FvkPU",
+        "duration": "3:12",
+        "source": "National Geographic"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "Christiane Desroches-Noblecourt",
+        "title": "The World Saves Abu Simbel",
+        "publisher": "Alfred A. Knopf",
+        "year": 1968
+      },
+      {
+        "type": "journal",
+        "authors": ["Zahi Hawass"],
+        "title": "The Solar Alignment at Abu Simbel",
+        "journal": "KMT: A Modern Journal of Ancient Egypt",
+        "volume": "17",
+        "issue": "3",
+        "year": 2006,
+        "pages": "52-58"
+      }
+    ],
+    "timeline": [
+      { "year": "1264 BCE", "event": "Construction begins under Ramesses II" },
+      { "year": "1244 BCE", "event": "Temple completed" },
+      { "year": "1813", "event": "Johann Ludwig Burckhardt discovers site" },
+      { "year": "1817", "event": "Giovanni Belzoni enters temple" },
+      { "year": "1964-1968", "event": "UNESCO relocation project" },
+      { "year": "1979", "event": "UNESCO World Heritage inscription" }
+    ]
+  },
+  "newgrange": {
+    "deepDive": {
+      "introduction": "Newgrange in Ireland predates the Egyptian pyramids by 500 years and Stonehenge by 1,000 years. This Neolithic passage tomb was built with such precision that once a year, on winter solstice, sunlight travels down its 19-meter passage to illuminate the inner chamber.",
+      "sections": [
+        {
+          "title": "The Winter Solstice Phenomenon",
+          "content": "For about 17 minutes on the winter solstice, sunlight enters through a specially constructed 'roof box' above the entrance and travels 19 meters down the passage to illuminate the chamber floor. The builders 5,000 years ago calculated not only the solstice angle but also accounted for the site's 13.5-meter elevation change. A lottery system now controls access to witness this."
+        },
+        {
+          "title": "The White Quartz Facade",
+          "content": "Newgrange's distinctive white quartz facade was reconstructed in the 1970s based on collapsed stones found around the mound. This quartz came from the Wicklow Mountains, 80km away. Whether the reconstruction is accurate remains debated, but the original builders clearly intended something visually striking."
+        },
+        {
+          "title": "Not a Tomb?",
+          "content": "Though called a 'passage tomb,' very few human remains were found inside Newgrange. Some archaeologists now believe it was primarily an astronomical temple or ceremonial site, with burial being secondary. The elaborate solar alignment suggests its primary purpose was marking cosmic time, not housing the dead."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Newgrange: Ireland's Ancient Temple | Smithsonian Channel",
+        "youtubeId": "R1hQk_qSZqA",
+        "duration": "4:12",
+        "source": "Smithsonian Channel"
+      },
+      {
+        "title": "Winter Solstice at Newgrange | RTÉ",
+        "youtubeId": "hKqpXaPxhMY",
+        "duration": "5:45",
+        "source": "RTÉ Ireland"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "Michael J. O'Kelly",
+        "title": "Newgrange: Archaeology, Art and Legend",
+        "publisher": "Thames & Hudson",
+        "year": 1982,
+        "isbn": "978-0-500-39015-2"
+      },
+      {
+        "type": "journal",
+        "authors": ["Frank Prendergast"],
+        "title": "Shadow casting phenomena at Newgrange",
+        "journal": "Survey Ireland",
+        "volume": "9",
+        "year": 1991,
+        "pages": "9-18"
+      }
+    ],
+    "timeline": [
+      { "year": "3200 BCE", "event": "Construction completed" },
+      { "year": "2500 BCE", "event": "Site falls out of use" },
+      { "year": "1699", "event": "Rediscovered by quarry workers" },
+      { "year": "1967", "event": "Roof box discovered by M.J. O'Kelly" },
+      { "year": "1969", "event": "First modern observation of winter solstice alignment" },
+      { "year": "1993", "event": "UNESCO World Heritage inscription (with Brú na Bóinne)" }
+    ]
+  },
+  "teotihuacan": {
+    "deepDive": {
+      "introduction": "At its peak around 450 CE, Teotihuacan was one of the largest cities in the world—home to 125,000 people in the Americas centuries before European contact. Its builders remain anonymous; even the Aztecs, arriving 700 years after its fall, called it 'the place where gods were born' and believed giants built it.",
+      "sections": [
+        {
+          "title": "The Mysterious Builders",
+          "content": "We don't know who built Teotihuacan or what they called themselves. No writing system has been definitively identified. No royal tombs have been found. This was a sophisticated urban civilization that left almost no historical record—only their massive monuments and enigmatic imagery. The mystery deepens every year."
+        },
+        {
+          "title": "Liquid Mercury Rivers",
+          "content": "In 2015, archaeologists exploring tunnels beneath the Feathered Serpent Pyramid discovered pools of liquid mercury. Mercury doesn't occur naturally in the region and had to be processed from cinnabar ore. The Mesoamericans may have used it to symbolize an underworld river or lake. Similar mercury finds have since appeared at Maya sites."
+        },
+        {
+          "title": "The Deliberate Destruction",
+          "content": "Around 550 CE, Teotihuacan's ceremonial center was systematically burned and destroyed—but seemingly by its own people. Only temples and elite buildings were targeted; residential areas were spared. Was this revolution? Ritual termination? Planned abandonment? The city continued for another 150 years afterward, suggesting this wasn't simple collapse."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Teotihuacan: City of Gods | History Channel",
+        "youtubeId": "7s1gRV0XHPU",
+        "duration": "44:12",
+        "source": "History Channel"
+      },
+      {
+        "title": "Secrets of the Dead: Teotihuacan | PBS",
+        "youtubeId": "nVk7k9dI3qA",
+        "duration": "53:27",
+        "source": "PBS"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "George L. Cowgill",
+        "title": "Ancient Teotihuacan: Early Urbanism in Central Mexico",
+        "publisher": "Cambridge University Press",
+        "year": 2015,
+        "isbn": "978-0-521-69087-9"
+      },
+      {
+        "type": "journal",
+        "authors": ["Sergio Gómez Chávez"],
+        "title": "The Exploration of the Tunnel Under the Feathered Serpent",
+        "journal": "Arqueología Mexicana",
+        "volume": "22",
+        "year": 2015,
+        "pages": "32-37"
+      }
+    ],
+    "timeline": [
+      { "year": "100 BCE", "event": "Settlement begins" },
+      { "year": "100 CE", "event": "Pyramid of the Sun constructed" },
+      { "year": "200 CE", "event": "Pyramid of the Moon completed" },
+      { "year": "450 CE", "event": "Peak population ~125,000" },
+      { "year": "550 CE", "event": "Ceremonial center burned" },
+      { "year": "750 CE", "event": "City largely abandoned" },
+      { "year": "1987", "event": "UNESCO World Heritage inscription" },
+      { "year": "2015", "event": "Mercury deposits discovered" }
+    ]
+  },
+  "derinkuyu": {
+    "deepDive": {
+      "introduction": "Beneath the Cappadocian plains lies Derinkuyu—the deepest underground city ever discovered. Extending 85 meters below ground across 18 levels, this labyrinth could shelter 20,000 people along with their livestock and supplies. Who built it, and why, remains debated.",
+      "sections": [
+        {
+          "title": "The Depth of Engineering",
+          "content": "Derinkuyu descends 18 levels into soft volcanic tuff, connected by narrow tunnels that could be sealed with rolling stone doors weighing up to 500kg. Each level had ventilation shafts, wells (some reaching 55 meters deep), storage rooms, and living quarters. The engineering to prevent collapse while maintaining airflow through 85 meters of tunnels is remarkable."
+        },
+        {
+          "title": "Defense in Depth",
+          "content": "Every defensive feature suggests the city was built to withstand prolonged sieges. Tunnels were designed so only one person could pass at a time. Heavy stone doors could be rolled closed from inside only. The deepest levels contained churches and meeting halls—suggesting extended underground living, not just brief hiding."
+        },
+        {
+          "title": "The Dating Controversy",
+          "content": "Mainstream archaeology dates Derinkuyu to the Byzantine era (6th-10th century CE), built by Christians fleeing persecution. But some researchers argue the deepest levels are much older—possibly Hittite (1600 BCE) or even earlier. The volcanic tuff cannot be carbon-dated, and tool marks are inconclusive. The true age remains uncertain."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Derinkuyu: Turkey's Underground City | National Geographic",
+        "youtubeId": "1G5uw1xKvuI",
+        "duration": "4:23",
+        "source": "National Geographic"
+      },
+      {
+        "title": "Exploring Derinkuyu | Ancient Architects",
+        "youtubeId": "u_qT0p3NRIU",
+        "duration": "18:45",
+        "source": "Ancient Architects"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "Ömür Harmanşah",
+        "title": "Cities and the Shaping of Memory in the Ancient Near East",
+        "publisher": "Cambridge University Press",
+        "year": 2013,
+        "isbn": "978-1-107-01839-4"
+      },
+      {
+        "type": "article",
+        "author": "Suzy Hansen",
+        "title": "Deep Below Turkey's Surface, A Giant Discovery",
+        "publication": "Smithsonian Magazine",
+        "year": 2015,
+        "url": "https://www.smithsonianmag.com/travel/deep-below-turkeys-surface-giant-discovery-180955106/"
+      }
+    ],
+    "timeline": [
+      { "year": "1600 BCE?", "event": "Possible Hittite origin (debated)" },
+      { "year": "700s CE", "event": "Major expansion during Arab-Byzantine wars" },
+      { "year": "1923", "event": "Population exchange empties Cappadocian Greeks" },
+      { "year": "1963", "event": "Accidentally rediscovered during home renovation" },
+      { "year": "1985", "event": "UNESCO World Heritage inscription (with Göreme)" }
+    ]
+  },
+  "tiwanaku": {
+    "deepDive": {
+      "introduction": "At 3,850 meters altitude on the Bolivian Altiplano, Tiwanaku was the capital of a pre-Inca empire that flourished for 500 years. Its precise stonework, sophisticated agriculture, and enigmatic iconography influenced Andean civilizations for centuries—including the Inca, who claimed Tiwanaku as their origin point.",
+      "sections": [
+        {
+          "title": "High-Altitude Engineering",
+          "content": "Building a major civilization at nearly 4,000 meters altitude—where oxygen is 40% lower and temperatures drop below freezing nightly—required extraordinary adaptation. Tiwanaku's engineers developed raised-field agriculture, creating artificial islands in flooded fields that maintained crops through frost. This system supported a city of 20,000 in one of Earth's harshest environments."
+        },
+        {
+          "title": "The Gateway of the Sun",
+          "content": "The iconic Gateway of the Sun was carved from a single block of andesite weighing 10 tons. Its central figure—probably the creator god Viracocha—is surrounded by 48 figures that may represent a calendar or cosmological map. Despite decades of study, the iconography remains only partially decoded."
+        },
+        {
+          "title": "Precision Without Metal Tools",
+          "content": "Tiwanaku's masons achieved remarkable precision with only stone and bronze tools. Blocks were joined with I-shaped copper cramps—a technique usually associated with Mediterranean architecture. Some stones show evidence of being machined flat, yet we have no evidence of machinery. Puma Punku, part of the Tiwanaku complex, pushes this precision to extremes."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Tiwanaku: Bolivia's Lost Civilization | DW Documentary",
+        "youtubeId": "r8jQr4rL-5w",
+        "duration": "42:15",
+        "source": "DW Documentary"
+      },
+      {
+        "title": "The Mysteries of Tiwanaku | History Channel",
+        "youtubeId": "rH4KNy5V8Ug",
+        "duration": "12:34",
+        "source": "History Channel"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "Alan Kolata",
+        "title": "The Tiwanaku: Portrait of an Andean Civilization",
+        "publisher": "Wiley-Blackwell",
+        "year": 1993,
+        "isbn": "978-1-557-86183-2"
+      },
+      {
+        "type": "journal",
+        "authors": ["John Wayne Janusek"],
+        "title": "Identity and Power in the Ancient Andes: Tiwanaku Cities through Time",
+        "journal": "Routledge",
+        "year": 2004,
+        "isbn": "978-0-415-94634-0"
+      }
+    ],
+    "timeline": [
+      { "year": "400 CE", "event": "Tiwanaku emerges as major power" },
+      { "year": "600 CE", "event": "Empire expands across Altiplano" },
+      { "year": "800 CE", "event": "Peak construction period" },
+      { "year": "1000 CE", "event": "Drought and collapse begin" },
+      { "year": "1100 CE", "event": "Site abandoned" },
+      { "year": "1549", "event": "Spanish chroniclers first describe ruins" },
+      { "year": "2000", "event": "UNESCO World Heritage inscription" }
+    ]
+  },
+  "ggantija-temples": {
+    "deepDive": {
+      "introduction": "On the tiny island of Gozo, Malta's Ġgantija temples predate the Egyptian pyramids by 1,000 years. Built between 3600-3200 BCE, these are among Earth's oldest freestanding structures—constructed by a civilization that left no written records and vanished mysteriously around 2500 BCE.",
+      "sections": [
+        {
+          "title": "Before the Pyramids",
+          "content": "Ġgantija (meaning 'Giant's Tower') was built when the Sahara was still green and mammoths roamed Siberia. Using only obsidian tools and limestone, the temple builders created structures with stones weighing up to 50 tons. These Maltese temples represent humanity's first large-scale monumental architecture."
+        },
+        {
+          "title": "The Temple People",
+          "content": "Malta's temple-building culture lasted 1,100 years, constructing at least 30 major temples across the islands. Then, around 2500 BCE, they vanished—replaced by a completely different Bronze Age culture. No warfare evidence exists. Climate change, disease, or social collapse? The disappearance remains one of Mediterranean prehistory's great mysteries."
+        },
+        {
+          "title": "Fat Lady Figurines",
+          "content": "The temple culture left hundreds of distinctive 'fat lady' figurines—stylized figures with massive lower bodies and tiny heads. These may represent a mother goddess, fertility symbols, or something else entirely. Similar imagery appears across all Maltese temples, suggesting a unified religious tradition."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Malta's Megalithic Temples | History Hit",
+        "youtubeId": "9FDUEIw-2ts",
+        "duration": "48:23",
+        "source": "History Hit"
+      },
+      {
+        "title": "Ġgantija: The Giants' Tower | DW Documentary",
+        "youtubeId": "pQR3_xWvFOs",
+        "duration": "12:15",
+        "source": "DW Documentary"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "Caroline Malone",
+        "title": "The Prehistoric Temples of Malta",
+        "publisher": "Domes of Fire",
+        "year": 2007
+      },
+      {
+        "type": "journal",
+        "authors": ["Reuben Grima"],
+        "title": "The Temple Period",
+        "journal": "The Archaeology of Malta",
+        "year": 2004,
+        "pages": "43-86"
+      }
+    ],
+    "timeline": [
+      { "year": "3600 BCE", "event": "Construction begins" },
+      { "year": "3200 BCE", "event": "Main temple phase completed" },
+      { "year": "2500 BCE", "event": "Temple culture mysteriously ends" },
+      { "year": "1827", "event": "Site cleared by Colonel John Otto Bayer" },
+      { "year": "1980", "event": "UNESCO World Heritage inscription" }
+    ]
   }
 }
