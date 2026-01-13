@@ -1316,5 +1316,583 @@
       { "year": "1827", "event": "Site cleared by Colonel John Otto Bayer" },
       { "year": "1980", "event": "UNESCO World Heritage inscription" }
     ]
+  },
+  "chichen-itza": {
+    "deepDive": {
+      "introduction": "Chichén Itzá was a major Maya city that dominated the Yucatán Peninsula for centuries. Its iconic pyramid, El Castillo, is an astronomical calculator in stone—but recent discoveries beneath the pyramid suggest the site's mysteries run far deeper than anyone imagined.",
+      "sections": [
+        {
+          "title": "The Equinox Serpent",
+          "content": "Twice yearly, at the spring and autumn equinoxes, the setting sun casts shadows down El Castillo's staircase that create the illusion of a serpent descending the pyramid. The 'snake' connects to a carved serpent head at the base. This effect requires precise architectural alignment and demonstrates sophisticated astronomical knowledge."
+        },
+        {
+          "title": "Pyramid Within Pyramid Within Pyramid",
+          "content": "Beneath El Castillo lies an older pyramid. And in 2016, researchers discovered a third, even older pyramid inside that one—plus a cenote (natural sinkhole) beneath the whole structure. The Maya built their temple complex directly over sacred water. The innermost pyramid may date to 550 CE, 700 years before the visible structure."
+        },
+        {
+          "title": "The Acoustic Mystery",
+          "content": "Clap your hands at the base of El Castillo and the echo returns as a chirping sound—remarkably similar to the call of the sacred quetzal bird. Whether this acoustic effect was intentionally designed or coincidental remains debated, but it suggests the Maya may have engineered sacred soundscapes into their architecture."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Chichén Itzá: Maya Secrets | National Geographic",
+        "youtubeId": "fR8l3cKNLs4",
+        "duration": "45:23",
+        "source": "National Geographic"
+      },
+      {
+        "title": "The Pyramid's Hidden Secrets | Smithsonian Channel",
+        "youtubeId": "yp-gXXNJYXw",
+        "duration": "4:12",
+        "source": "Smithsonian Channel"
+      }
+    ],
+    "sources": [
+      {
+        "type": "journal",
+        "authors": ["René Chávez Segura", "et al."],
+        "title": "Subsoil imaging of the Kukulkan Pyramid using ERT",
+        "journal": "Geophysical Research Letters",
+        "volume": "43",
+        "year": 2016,
+        "doi": "10.1002/2016GL069302"
+      },
+      {
+        "type": "book",
+        "author": "Peter Schmidt",
+        "title": "Chichén Itzá",
+        "publisher": "INAH",
+        "year": 2007
+      }
+    ],
+    "timeline": [
+      { "year": "600 CE", "event": "Early settlement established" },
+      { "year": "900 CE", "event": "Rise as major regional power" },
+      { "year": "1000 CE", "event": "El Castillo construction" },
+      { "year": "1221 CE", "event": "Political collapse and decline" },
+      { "year": "1988", "event": "UNESCO World Heritage inscription" },
+      { "year": "2007", "event": "Named one of New Seven Wonders" },
+      { "year": "2016", "event": "Third inner pyramid discovered" }
+    ]
+  },
+  "sigiriya": {
+    "deepDive": {
+      "introduction": "Rising 200 meters from the Sri Lankan jungle, Sigiriya is a palace-fortress built atop a massive rock column. King Kashyapa I transformed this geological oddity into one of the ancient world's most ambitious construction projects—complete with gardens, frescoes, and a lion-shaped entrance.",
+      "sections": [
+        {
+          "title": "The Sky Palace",
+          "content": "Kashyapa built his palace on an 'unclimbable' rock after seizing the throne by killing his father. The summit once held a complete palace complex with water features—fed by cisterns that collected rainwater and pumped it to fountains 200 meters below. How water pressure was maintained at this height remains debated."
+        },
+        {
+          "title": "The Mirror Wall and Frescoes",
+          "content": "A polished wall section once reflected the painted frescoes of heavenly maidens (apsaras) above. The 21 surviving frescoes—out of an original 500—show women of remarkable beauty using techniques that wouldn't appear in European art for another thousand years. Graffiti on the mirror wall dates back to the 8th century."
+        },
+        {
+          "title": "The Water Gardens",
+          "content": "Sigiriya's gardens include the oldest surviving landscaped gardens in Asia. They feature symmetrical water features, fountains that still work during monsoon season using ancient hydraulics, and precisely calculated sight lines. The gardens were designed to create a processional experience leading to the rock."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Sigiriya: The Lion Rock of Sri Lanka | DW Documentary",
+        "youtubeId": "9d-E7P3LjB0",
+        "duration": "42:26",
+        "source": "DW Documentary"
+      },
+      {
+        "title": "Ancient Engineering of Sigiriya | Smithsonian",
+        "youtubeId": "JqxXlH5tL2s",
+        "duration": "5:12",
+        "source": "Smithsonian Channel"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "Senake Bandaranayake",
+        "title": "Sigiriya: City, Palace, and Royal Gardens",
+        "publisher": "Central Cultural Fund",
+        "year": 2005
+      },
+      {
+        "type": "journal",
+        "authors": ["Roland Silva"],
+        "title": "The Sigiriya Project",
+        "journal": "Ancient Ceylon",
+        "volume": "5",
+        "year": 1984
+      }
+    ],
+    "timeline": [
+      { "year": "477 CE", "event": "Kashyapa seizes throne, kills father" },
+      { "year": "477-485 CE", "event": "Palace complex constructed" },
+      { "year": "495 CE", "event": "Kashyapa defeated; site becomes monastery" },
+      { "year": "1831", "event": "British discover ruins" },
+      { "year": "1982", "event": "UNESCO World Heritage inscription" }
+    ]
+  },
+  "ajanta-caves": {
+    "deepDive": {
+      "introduction": "Carved into a horseshoe-shaped cliff over 800 years, the Ajanta Caves contain some of humanity's greatest artistic achievements—Buddhist paintings that survived 1,500 years in darkness, only to fade rapidly once exposed to light and air.",
+      "sections": [
+        {
+          "title": "800 Years of Carving",
+          "content": "The 30 caves were carved in two phases: the first around 200 BCE-200 CE, the second between 460-480 CE. Buddhist monks carved monasteries (viharas) and worship halls (chaityas) directly from basalt, working by oil lamp in dark tunnels. The scale of labor is staggering—each cave took decades to complete."
+        },
+        {
+          "title": "The Miraculous Paintings",
+          "content": "Ajanta's murals depict Jataka tales (Buddha's previous lives) with a sophistication that wouldn't reappear until the Renaissance. Artists used organic pigments and a unique lime plaster technique that preserved colors for 1,500 years—until rediscovery in 1819 began their gradual deterioration."
+        },
+        {
+          "title": "Lost and Found",
+          "content": "The caves were abandoned around 650 CE and slowly consumed by jungle. In 1819, British officer John Smith was tiger hunting when he spotted the caves. His name, carved into a painting, remains visible today—early vandalism that ironically helped document the discovery date."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Ajanta: Buddhist Caves of India | BBC",
+        "youtubeId": "oYdhJ7qvlpo",
+        "duration": "28:45",
+        "source": "BBC"
+      },
+      {
+        "title": "The Art of Ajanta | Asian Art Museum",
+        "youtubeId": "pj8LlF12mLE",
+        "duration": "12:34",
+        "source": "Asian Art Museum"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "Benoy K. Behl",
+        "title": "The Ajanta Caves: Ancient Paintings of Buddhist India",
+        "publisher": "Thames & Hudson",
+        "year": 1998,
+        "isbn": "978-0-500-28041-6"
+      },
+      {
+        "type": "journal",
+        "authors": ["Walter Spink"],
+        "title": "Ajanta: History and Development",
+        "journal": "Brill Academic Publishers",
+        "year": 2005
+      }
+    ],
+    "timeline": [
+      { "year": "200 BCE", "event": "First phase caves begun" },
+      { "year": "460 CE", "event": "Second phase under Vakataka dynasty" },
+      { "year": "480 CE", "event": "Construction abruptly halts" },
+      { "year": "650 CE", "event": "Site abandoned" },
+      { "year": "1819", "event": "Rediscovered by John Smith" },
+      { "year": "1983", "event": "UNESCO World Heritage inscription" }
+    ]
+  },
+  "persepolis": {
+    "deepDive": {
+      "introduction": "Persepolis was the ceremonial capital of the Achaemenid Empire—the largest empire the world had ever seen. Built by Darius I and his successors, this 'City of Persians' showcased the wealth of 23 conquered nations until Alexander the Great burned it to the ground.",
+      "sections": [
+        {
+          "title": "The Apadana Reliefs",
+          "content": "The Apadana audience hall featured relief carvings showing 23 delegations bringing tribute to the Persian king. Each delegation wears distinct national dress and brings specific gifts—Ethiopians with ivory, Indians with gold, Babylonians with textiles. It's effectively an ancient census of the known world."
+        },
+        {
+          "title": "Earthquake-Proof Design",
+          "content": "The columns of Persepolis were designed to flex during earthquakes—the same principle used in modern skyscrapers. Lead sheets between stones absorbed seismic shock. Many columns still stand after 2,500 years and multiple major earthquakes. The Persians had solved earthquake engineering millennia before we understood it."
+        },
+        {
+          "title": "The Burning Question",
+          "content": "In 330 BCE, Alexander's army burned Persepolis after a drunken banquet. Was it vengeance for Xerxes' burning of Athens? A political statement? Or an accident? The destruction was so complete that Persepolis vanished from memory—locals called the ruins 'Takht-e Jamshid' (Throne of Jamshid), attributing them to mythical kings."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Persepolis: The Ancient Persian Capital | DW Documentary",
+        "youtubeId": "Q8kcPxXnLQo",
+        "duration": "42:15",
+        "source": "DW Documentary"
+      },
+      {
+        "title": "Engineering Persepolis | National Geographic",
+        "youtubeId": "xZqNHZ2snW8",
+        "duration": "4:23",
+        "source": "National Geographic"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "Donald Wilber",
+        "title": "Persepolis: The Archaeology of Parsa",
+        "publisher": "Darwin Press",
+        "year": 1989,
+        "isbn": "978-0-87850-062-8"
+      },
+      {
+        "type": "journal",
+        "authors": ["Ali Mousavi"],
+        "title": "Persepolis: Discovery and Afterlife of a World Wonder",
+        "journal": "De Gruyter",
+        "year": 2012
+      }
+    ],
+    "timeline": [
+      { "year": "518 BCE", "event": "Darius I begins construction" },
+      { "year": "486 BCE", "event": "Xerxes continues building" },
+      { "year": "330 BCE", "event": "Alexander burns the city" },
+      { "year": "1620", "event": "European travelers identify ruins" },
+      { "year": "1931", "event": "Systematic excavation begins" },
+      { "year": "1979", "event": "UNESCO World Heritage inscription" }
+    ]
+  },
+  "great-zimbabwe": {
+    "deepDive": {
+      "introduction": "Great Zimbabwe was the heart of a trading empire that connected Africa's interior with Indian Ocean commerce. Its massive stone walls—built without mortar—once enclosed a city of 18,000 people and challenged colonial narratives that denied African architectural achievement.",
+      "sections": [
+        {
+          "title": "Walls Without Mortar",
+          "content": "Great Zimbabwe's walls rise up to 11 meters high and 5 meters thick, built entirely of granite blocks fitted without mortar. The technique—precisely laying stones that lock through weight and friction—required sophisticated engineering knowledge. Some wall sections contain over 1 million stones, each placed by hand."
+        },
+        {
+          "title": "The Colonial Denial",
+          "content": "When Europeans encountered Great Zimbabwe, they refused to believe Africans built it. Colonial archaeologists attributed it to Phoenicians, Arabs, even King Solomon's miners. This racist denial persisted until the 1930s when scientific evidence proved African origin. The country of Zimbabwe took its name from these ruins at independence."
+        },
+        {
+          "title": "Trading Empire",
+          "content": "Artifacts from Great Zimbabwe include Chinese ceramics, Persian Gulf glass, and Indian beads—evidence of extensive international trade. The city controlled gold and ivory trade between Africa's interior and coastal Swahili ports. Its decline around 1450 CE may relate to environmental degradation from deforestation and overgrazing."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Great Zimbabwe: Africa's Lost City | BBC Documentary",
+        "youtubeId": "sGCqw2dLqQo",
+        "duration": "48:32",
+        "source": "BBC"
+      },
+      {
+        "title": "The Mystery of Great Zimbabwe | History Channel",
+        "youtubeId": "a3kQT5YLLVU",
+        "duration": "12:45",
+        "source": "History Channel"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "Innocent Pikirayi",
+        "title": "The Zimbabwe Culture: Origins and Decline in Southern Zambezian States",
+        "publisher": "AltaMira Press",
+        "year": 2001,
+        "isbn": "978-0-7591-0091-6"
+      },
+      {
+        "type": "journal",
+        "authors": ["Thomas Huffman"],
+        "title": "Great Zimbabwe",
+        "journal": "Azania: Archaeological Research in Africa",
+        "volume": "45",
+        "issue": "2",
+        "year": 2010,
+        "pages": "165-182"
+      }
+    ],
+    "timeline": [
+      { "year": "1100 CE", "event": "Settlement begins" },
+      { "year": "1200-1300 CE", "event": "Great Enclosure constructed" },
+      { "year": "1350 CE", "event": "Peak population ~18,000" },
+      { "year": "1450 CE", "event": "City abandoned" },
+      { "year": "1871", "event": "Karl Mauch becomes first European visitor" },
+      { "year": "1986", "event": "UNESCO World Heritage inscription" }
+    ]
+  },
+  "gunung-padang": {
+    "deepDive": {
+      "introduction": "Gunung Padang in Indonesia may be the oldest pyramid on Earth—or a natural hill with ancient terraces. Ground-penetrating radar suggests construction began up to 25,000 years ago, but this claim remains highly controversial among archaeologists.",
+      "sections": [
+        {
+          "title": "The Age Controversy",
+          "content": "In 2023, researchers published findings suggesting Gunung Padang was built in stages starting around 25,000 BCE—during the Ice Age, before any known civilization. If true, this would rewrite human history. However, many archaeologists dispute the dating methodology, arguing the site dates to the Neolithic (around 5000 BCE) at earliest."
+        },
+        {
+          "title": "Layers of Construction",
+          "content": "Ground-penetrating radar reveals multiple construction phases buried beneath the visible stone terraces. The deepest layers appear to be carefully arranged chambers and passages, not natural rock. Whether these are human-made structures or geological formations remains hotly debated."
+        },
+        {
+          "title": "The Indonesian Atlantis",
+          "content": "Some researchers connect Gunung Padang to Sundaland—the vast landmass that connected Indonesia to Asia during the Ice Age before rising seas submerged it. If Gunung Padang dates to this era, it could represent a lost civilization. Most archaeologists consider this speculation unsupported by evidence."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Gunung Padang: World's Oldest Pyramid? | Ancient Architects",
+        "youtubeId": "7z8QFLjNTYQ",
+        "duration": "18:23",
+        "source": "Ancient Architects"
+      },
+      {
+        "title": "The Controversy of Gunung Padang | History Channel",
+        "youtubeId": "5v6qmXuJhS0",
+        "duration": "12:15",
+        "source": "History Channel"
+      }
+    ],
+    "sources": [
+      {
+        "type": "journal",
+        "authors": ["Natawidjaja, Danny Hilman", "et al."],
+        "title": "Geo-archaeological prospecting of Gunung Padang",
+        "journal": "Archaeological Prospection",
+        "year": 2023,
+        "doi": "10.1002/arp.1901"
+      },
+      {
+        "type": "article",
+        "author": "Flint Dibble",
+        "title": "No, Indonesia's Gunung Padang is not the oldest pyramid",
+        "publication": "The Conversation",
+        "year": 2023,
+        "url": "https://theconversation.com/gunung-padang-controversy"
+      }
+    ],
+    "timeline": [
+      { "year": "25000 BCE?", "event": "Earliest claimed construction (disputed)" },
+      { "year": "5000 BCE?", "event": "Alternative earliest dating" },
+      { "year": "1914", "event": "First Dutch documentation" },
+      { "year": "2011", "event": "Modern research begins" },
+      { "year": "2023", "event": "Controversial 25,000-year dating published" }
+    ]
+  },
+  "korean-dolmens": {
+    "deepDive": {
+      "introduction": "Korea contains over 40% of the world's dolmens—more than 35,000 megalithic tombs clustered on a single peninsula. This extraordinary concentration represents the largest collection of prehistoric monuments anywhere on Earth, yet remains largely unknown outside Asia.",
+      "sections": [
+        {
+          "title": "The Gochang-Hwasun Concentration",
+          "content": "The Gochang, Hwasun, and Ganghwa sites alone contain over 1,000 dolmens in various styles. Some capstones weigh over 300 tons—larger than most European megaliths. The sheer density of monuments in Korea suggests a society obsessed with honoring ancestors through stone."
+        },
+        {
+          "title": "Northern vs Southern Styles",
+          "content": "Korean dolmens come in two distinct types: northern 'table' style with tall supporting stones, and southern 'go-board' style with capstones resting on bedrock or small stones. This variation suggests different cultural traditions, possibly different ethnic groups, building these monuments simultaneously."
+        },
+        {
+          "title": "The Megalithic Society",
+          "content": "Building 35,000 dolmens required immense social organization. Each monument honored elite individuals, suggesting a highly stratified Bronze Age society. The labor involved in moving hundreds of tons of stone for each burial indicates powerful chieftains who could command substantial workforces."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Korea's Forgotten Megaliths | Arirang Documentary",
+        "youtubeId": "eFQ2oKLmFzM",
+        "duration": "25:45",
+        "source": "Arirang TV"
+      },
+      {
+        "title": "The Dolmens of Gochang | UNESCO",
+        "youtubeId": "yGCwQJNf_Rs",
+        "duration": "4:12",
+        "source": "UNESCO"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "Seong-Rae Park",
+        "title": "Dolmens in Korea",
+        "publisher": "Hanlim Cultural Foundation",
+        "year": 2002
+      },
+      {
+        "type": "journal",
+        "authors": ["Jangsuk Kim"],
+        "title": "The Development of Megalithic Culture in Korea",
+        "journal": "Korean Archaeology",
+        "volume": "32",
+        "year": 2010
+      }
+    ],
+    "timeline": [
+      { "year": "1500 BCE", "event": "Dolmen construction begins" },
+      { "year": "700 BCE", "event": "Peak construction period" },
+      { "year": "300 BCE", "event": "Dolmen building declines" },
+      { "year": "2000", "event": "UNESCO World Heritage inscription (Gochang, Hwasun, Ganghwa)" }
+    ]
+  },
+  "carnac-stones": {
+    "deepDive": {
+      "introduction": "The Carnac stones in Brittany, France, form the largest megalithic site in the world—over 3,000 standing stones arranged in precise rows stretching for kilometers. Their purpose remains unknown, but they predate Stonehenge by a thousand years.",
+      "sections": [
+        {
+          "title": "Rows Without End",
+          "content": "The main alignments at Carnac stretch over 4 kilometers, with stones arranged in parallel rows that gradually increase in height from east to west. Originally there may have been 10,000 stones; many were removed for road building and construction over centuries. The precision of the alignments suggests careful planning."
+        },
+        {
+          "title": "Astronomical or Practical?",
+          "content": "Some researchers claim the rows align with solar or lunar events, but no consensus exists. Others suggest they marked processional routes for ceremonies, territorial boundaries, or even earthquake fault lines (the stones cluster along a geological fracture). The true purpose may have varied over the site's 2,000-year construction period."
+        },
+        {
+          "title": "The Local Legend",
+          "content": "Breton legend claims the stones are Roman soldiers petrified by Merlin the wizard—or Saint Cornelius fleeing pagan armies. While fanciful, such legends show the enduring power these monuments have over human imagination. The site has been a pilgrimage destination for millennia."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Carnac: France's Mysterious Megaliths | DW Documentary",
+        "youtubeId": "xrLJq7N9KPk",
+        "duration": "42:15",
+        "source": "DW Documentary"
+      },
+      {
+        "title": "The Carnac Stones Explained | History Hit",
+        "youtubeId": "PvT4T5DJhKE",
+        "duration": "15:23",
+        "source": "History Hit"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "Aubrey Burl",
+        "title": "The Stone Circles of Britain, Ireland, and Brittany",
+        "publisher": "Yale University Press",
+        "year": 2000,
+        "isbn": "978-0-300-08347-6"
+      },
+      {
+        "type": "journal",
+        "authors": ["Cassen, Serge", "et al."],
+        "title": "The Carnac alignments and the geometric principles of megalithism",
+        "journal": "Cambridge Archaeological Journal",
+        "year": 2017
+      }
+    ],
+    "timeline": [
+      { "year": "4500 BCE", "event": "Earliest construction begins" },
+      { "year": "3300 BCE", "event": "Major building phase" },
+      { "year": "2500 BCE", "event": "Construction continues/ends" },
+      { "year": "1750", "event": "First scholarly studies" },
+      { "year": "1889", "event": "Site protected as historic monument" }
+    ]
+  },
+  "yonaguni-monument": {
+    "deepDive": {
+      "introduction": "Off the coast of Japan's Yonaguni Island lies a massive underwater rock formation featuring apparent steps, terraces, and right angles. Discovered in 1986, the 'Yonaguni Monument' has sparked fierce debate: is it a 10,000-year-old sunken city or simply natural geology?",
+      "sections": [
+        {
+          "title": "The Human vs Natural Debate",
+          "content": "The structure features flat platforms, sharp edges, and what appear to be steps—features suggestive of human construction. However, the local sandstone naturally fractures along perpendicular planes, potentially creating geometric shapes without human intervention. Neither side has definitively proven their case."
+        },
+        {
+          "title": "The Age Question",
+          "content": "If human-made, the monument would date to when sea levels were lower—around 10,000 BCE. This predates any known Japanese civilization by millennia. Supporters argue it proves an unknown Ice Age civilization; skeptics note no artifacts, tools, or construction debris have been found."
+        },
+        {
+          "title": "The Turtle Carving",
+          "content": "One feature appears to show a turtle carved into the rock—a sacred symbol in Japanese culture. Some see this as proof of human work; others argue it's pareidolia (seeing patterns in random shapes). The 'face' and 'stadium' features attract similar interpretation debates."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Yonaguni: Japan's Underwater Mystery | History Channel",
+        "youtubeId": "JTdTqwQPvAI",
+        "duration": "44:12",
+        "source": "History Channel"
+      },
+      {
+        "title": "Diving the Yonaguni Monument | National Geographic",
+        "youtubeId": "5vYbLXJsRks",
+        "duration": "4:45",
+        "source": "National Geographic"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "Masaaki Kimura",
+        "title": "Diving Survey of Yonaguni Submarine Ruins",
+        "publisher": "University of the Ryukyus",
+        "year": 2007
+      },
+      {
+        "type": "journal",
+        "authors": ["Robert Schoch"],
+        "title": "Geological Study of the Yonaguni Formation",
+        "journal": "Circular Times",
+        "year": 1999
+      }
+    ],
+    "timeline": [
+      { "year": "10000 BCE?", "event": "Possible construction (if human-made)" },
+      { "year": "8000 BCE", "event": "Sea level rise submerges site" },
+      { "year": "1986", "event": "Discovered by diver Kihachiro Aratake" },
+      { "year": "1997", "event": "First scholarly investigations" },
+      { "year": "2007", "event": "Kimura publishes comprehensive survey" }
+    ]
+  },
+  "goreme": {
+    "deepDive": {
+      "introduction": "Cappadocia's Göreme valley contains an entire civilization carved into volcanic rock—churches, monasteries, and homes hollowed from 'fairy chimneys' formed by ancient eruptions. For over a thousand years, Christians created hidden sanctuaries in this otherworldly landscape.",
+      "sections": [
+        {
+          "title": "The Fairy Chimneys",
+          "content": "Millions of years ago, volcanic eruptions buried the region in tuff (consolidated ash). Erosion carved this soft rock into bizarre spires—'fairy chimneys' capped by harder basalt. Early inhabitants discovered the tuff was soft enough to carve with simple tools yet hardened when exposed to air, creating perfect natural building material."
+        },
+        {
+          "title": "The Hidden Churches",
+          "content": "Göreme contains over 400 churches carved into rock, many with elaborate Byzantine frescoes dating from the 6th to 13th centuries. During periods of persecution, Christians could hide entire communities in these cave complexes. Some churches remained unknown until the 20th century."
+        },
+        {
+          "title": "Still Living Underground",
+          "content": "While Göreme is now a museum, people in Cappadocia still live in cave homes. The rock provides natural insulation—cool in summer, warm in winter. Some hotels now offer the 'cave dwelling' experience, connecting modern tourists with a lifestyle thousands of years old."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Cappadocia: Turkey's Underground Cities | DW Documentary",
+        "youtubeId": "3FjWMqQs5r4",
+        "duration": "42:15",
+        "source": "DW Documentary"
+      },
+      {
+        "title": "The Cave Churches of Göreme | Smithsonian Channel",
+        "youtubeId": "zL7MdKNj9bE",
+        "duration": "4:23",
+        "source": "Smithsonian Channel"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "Lyn Rodley",
+        "title": "Cave Monasteries of Byzantine Cappadocia",
+        "publisher": "Cambridge University Press",
+        "year": 1985,
+        "isbn": "978-0-521-26798-2"
+      },
+      {
+        "type": "journal",
+        "authors": ["Robert Ousterhout"],
+        "title": "Architecture as Relic and the Construction of Sanctity in the Byzantine World",
+        "journal": "Journal of the Society of Architectural Historians",
+        "year": 2009
+      }
+    ],
+    "timeline": [
+      { "year": "4th century CE", "event": "Christian hermits begin carving cells" },
+      { "year": "6th-7th century CE", "event": "Major church construction period" },
+      { "year": "9th-11th century CE", "event": "Peak of Byzantine rock art" },
+      { "year": "1453", "event": "Ottoman conquest; gradual abandonment" },
+      { "year": "1985", "event": "UNESCO World Heritage inscription" }
+    ]
   }
 }
