@@ -1,0 +1,1898 @@
+{
+  "gobekli-tepe": {
+    "deepDive": {
+      "introduction": "Göbekli Tepe fundamentally changed our understanding of human prehistory. Discovered in 1994 by German archaeologist Klaus Schmidt, this 12,000-year-old temple complex predates agriculture, pottery, and even the wheel. Its existence proves that organized religion and monumental architecture emerged before—not because of—settled farming life.",
+      "sections": [
+        {
+          "title": "The Timeline Problem",
+          "content": "At 9500 BCE, Göbekli Tepe predates the earliest known pottery by 1,500 years, the wheel by 5,000 years, and Stonehenge by 6,000 years. The site was built by hunter-gatherers who had no permanent settlements, no domesticated animals, and no metal tools. Yet they carved, transported, and erected limestone pillars weighing up to 50 tons."
+        },
+        {
+          "title": "Construction Without Settlement",
+          "content": "Perhaps most baffling: there's no evidence anyone lived at Göbekli Tepe. No houses, no cooking areas, no water sources. This was a pilgrimage site where nomadic bands gathered periodically for construction and ritual. The logistics of feeding hundreds of workers without agriculture remains one of archaeology's greatest puzzles."
+        },
+        {
+          "title": "The Deliberate Burial",
+          "content": "Around 8000 BCE, the builders deliberately buried the entire complex under thousands of tons of soil and debris. This wasn't abandonment—it was entombment. Why they did this remains unknown, but the burial preserved the site in remarkable condition for 10,000 years."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Göbekli Tepe: The World's First Temple? | National Geographic",
+        "youtubeId": "GVWxFPOHLIk",
+        "duration": "4:32",
+        "source": "National Geographic"
+      },
+      {
+        "title": "Göbekli Tepe Documentary | DW Documentary",
+        "youtubeId": "6EIZYWwSZAs",
+        "duration": "42:26",
+        "source": "DW Documentary"
+      },
+      {
+        "title": "The Mystery of Göbekli Tepe | Smithsonian Channel",
+        "youtubeId": "wdp4J-EfWkg",
+        "duration": "3:47",
+        "source": "Smithsonian Channel"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "Klaus Schmidt",
+        "title": "Göbekli Tepe: A Stone Age Sanctuary in South-Eastern Anatolia",
+        "publisher": "ex oriente",
+        "year": 2012,
+        "isbn": "978-3-944178-00-7"
+      },
+      {
+        "type": "journal",
+        "authors": ["Oliver Dietrich", "Manfred Heun", "Jens Notroff", "Klaus Schmidt", "Martin Zarnkow"],
+        "title": "The role of cult and feasting in the emergence of Neolithic communities",
+        "journal": "Antiquity",
+        "volume": "86",
+        "issue": "333",
+        "year": 2012,
+        "pages": "674-695",
+        "doi": "10.1017/S0003598X00047840"
+      },
+      {
+        "type": "journal",
+        "authors": ["Lee Clare", "Oliver Dietrich", "Jens Notroff"],
+        "title": "Göbekli Tepe, Turkey: A Brief Summary of Research at a New World Heritage Site (2015–2019)",
+        "journal": "e-Forschungsberichte",
+        "year": 2020,
+        "doi": "10.34780/s6bv-v495"
+      },
+      {
+        "type": "article",
+        "author": "Andrew Curry",
+        "title": "Göbekli Tepe: The World's First Temple?",
+        "publication": "Smithsonian Magazine",
+        "year": 2008,
+        "url": "https://www.smithsonianmag.com/history/gobekli-tepe-the-worlds-first-temple-83613665/"
+      }
+    ],
+    "timeline": [
+      { "year": "9500 BCE", "event": "Construction begins during Pre-Pottery Neolithic A" },
+      { "year": "9000 BCE", "event": "Major building phase, largest enclosures constructed" },
+      { "year": "8000 BCE", "event": "Site deliberately buried and abandoned" },
+      { "year": "1963", "event": "First survey by University of Chicago/Istanbul" },
+      { "year": "1994", "event": "Klaus Schmidt begins systematic excavation" },
+      { "year": "2018", "event": "UNESCO World Heritage inscription" },
+      { "year": "2021", "event": "Only 10% excavated; magnetic surveys reveal 20+ enclosures" }
+    ]
+  },
+  "great-pyramid-giza": {
+    "deepDive": {
+      "introduction": "The Great Pyramid of Giza is the last surviving Ancient Wonder and arguably the most studied structure on Earth. Built around 2560 BCE for Pharaoh Khufu, its 2.3 million stone blocks (averaging 2.5 tons each) were assembled with a precision that still challenges modern engineers.",
+      "sections": [
+        {
+          "title": "Impossible Precision",
+          "content": "The base is level to within 2.1 centimeters across 230 meters—a precision of 0.0009%. The structure is aligned to true north within 3 arc minutes, more precise than the Royal Observatory at Greenwich was upon its construction in 1675. These tolerances seem impossible for Bronze Age technology."
+        },
+        {
+          "title": "The Ramp Debate",
+          "content": "How were 80-ton granite blocks raised 146 meters? Straight ramps would need to be 2km long. Spiral ramps leave no archaeological evidence. Internal ramps are theoretically possible but unproven. French architect Jean-Pierre Houdin's internal ramp theory gained attention in 2007, but the mystery remains unsolved."
+        },
+        {
+          "title": "The Big Void",
+          "content": "In 2017, the ScanPyramids project used muon tomography to detect a massive void above the Grand Gallery—at least 30 meters long. Its purpose is unknown. It could be a construction feature, a relieving chamber, or something else entirely. Non-invasive exploration continues."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Inside the Great Pyramid | National Geographic",
+        "youtubeId": "o0WvyLKvFNI",
+        "duration": "4:12",
+        "source": "National Geographic"
+      },
+      {
+        "title": "The Big Void Discovery | ScanPyramids",
+        "youtubeId": "FPQoCrJrANw",
+        "duration": "6:33",
+        "source": "Nature Video"
+      },
+      {
+        "title": "Building the Great Pyramid | NOVA PBS",
+        "youtubeId": "IG1jnWfLiGU",
+        "duration": "53:01",
+        "source": "NOVA PBS"
+      }
+    ],
+    "sources": [
+      {
+        "type": "journal",
+        "authors": ["Kunihiro Morishima", "et al."],
+        "title": "Discovery of a big void in Khufu's Pyramid by observation of cosmic-ray muons",
+        "journal": "Nature",
+        "volume": "552",
+        "year": 2017,
+        "pages": "386-390",
+        "doi": "10.1038/nature24647"
+      },
+      {
+        "type": "book",
+        "author": "Mark Lehner",
+        "title": "The Complete Pyramids: Solving the Ancient Mysteries",
+        "publisher": "Thames & Hudson",
+        "year": 2008,
+        "isbn": "978-0-500-28547-3"
+      },
+      {
+        "type": "book",
+        "author": "Zahi Hawass",
+        "title": "The Pyramids of Ancient Egypt",
+        "publisher": "Carnegie Museum of Natural History",
+        "year": 1990
+      },
+      {
+        "type": "journal",
+        "authors": ["Glen Dash"],
+        "title": "New Angles on the Great Pyramid",
+        "journal": "AERAGRAM",
+        "volume": "16",
+        "issue": "2",
+        "year": 2015,
+        "pages": "8-13"
+      }
+    ],
+    "timeline": [
+      { "year": "2580 BCE", "event": "Construction begins under Pharaoh Khufu" },
+      { "year": "2560 BCE", "event": "Pyramid completed after ~20 years" },
+      { "year": "1881", "event": "Petrie's precision survey reveals extraordinary accuracy" },
+      { "year": "1954", "event": "Solar boat discovered in pit" },
+      { "year": "1993", "event": "Upuaut robot explores 'air shafts'" },
+      { "year": "2017", "event": "ScanPyramids discovers 'Big Void'" },
+      { "year": "2023", "event": "New corridor discovered via muon scanning" }
+    ]
+  },
+  "baalbek": {
+    "deepDive": {
+      "introduction": "Baalbek in Lebanon contains the largest worked stones in human history. The 'Trilithon'—three stones weighing 800 tons each—were somehow lifted 7 meters and fitted with millimeter precision. Even more astounding: a 1,650-ton megalith still sits in a nearby quarry, seemingly abandoned.",
+      "sections": [
+        {
+          "title": "The Weight Problem",
+          "content": "The Stone of the Pregnant Woman weighs approximately 1,000 tons. A second stone discovered in 2014 weighs 1,650 tons—the largest ancient worked stone known. For comparison, the largest modern land crane can lift 1,200 tons. How did ancient engineers plan to move these?"
+        },
+        {
+          "title": "Roman or Pre-Roman?",
+          "content": "The visible temple complex is Roman, built 1st century BCE to 3rd century CE. But the massive foundation stones—the Trilithon—may predate Roman occupation. Some researchers argue the platform is far older, though mainstream archaeology disputes this. The debate continues."
+        },
+        {
+          "title": "The Quarry Evidence",
+          "content": "The quarry where these megaliths were cut is 900 meters from the temple. The stones show clear extraction marks and were somehow moved uphill. Transport methods proposed include roller systems, levers, and earthen ramps, but no definitive evidence exists."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Baalbek: The Largest Stones Ever Carved | Ancient Architects",
+        "youtubeId": "G52aHZHQXvQ",
+        "duration": "18:23",
+        "source": "Ancient Architects"
+      },
+      {
+        "title": "Secrets of Baalbek | Smithsonian Channel",
+        "youtubeId": "Pr_1ynWcBYQ",
+        "duration": "4:12",
+        "source": "Smithsonian Channel"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "Friedrich Ragette",
+        "title": "Baalbek",
+        "publisher": "Chatto & Windus",
+        "year": 1980,
+        "isbn": "978-0-7011-2488-4"
+      },
+      {
+        "type": "journal",
+        "authors": ["Janine Abdul Massih", "Jean-Claude Bessac"],
+        "title": "Observations on the techniques used for the monoliths of the Temple of Jupiter at Baalbek",
+        "journal": "Bulletin d'Archéologie et d'Architecture Libanaises",
+        "volume": "16",
+        "year": 2016,
+        "pages": "165-188"
+      },
+      {
+        "type": "article",
+        "author": "Owen Jarus",
+        "title": "Largest Ancient Stone Block Discovered in Lebanon",
+        "publication": "Live Science",
+        "year": 2014,
+        "url": "https://www.livescience.com/48846-largest-ancient-stone-block.html"
+      }
+    ],
+    "timeline": [
+      { "year": "Pre-Roman", "event": "Possible earlier platform construction (debated)" },
+      { "year": "64 BCE", "event": "Roman conquest of region" },
+      { "year": "16 BCE", "event": "Temple of Jupiter construction begins" },
+      { "year": "60 CE", "event": "Temple of Bacchus construction" },
+      { "year": "1984", "event": "UNESCO World Heritage inscription" },
+      { "year": "2014", "event": "1,650-ton megalith discovered in quarry" }
+    ]
+  },
+  "puma-punku": {
+    "deepDive": {
+      "introduction": "Puma Punku in Bolivia represents one of ancient engineering's greatest enigmas. Its H-shaped blocks, carved from andesite (one of the hardest stones on Earth), feature precision cuts and identical angles that seem impossible to achieve with stone tools.",
+      "sections": [
+        {
+          "title": "Impossible Precision",
+          "content": "The H-blocks feature internal angles of exactly 90 degrees, flat surfaces with deviation less than 1mm, and perfectly drilled circular holes. Andesite ranks 7 on the Mohs hardness scale—harder than steel. Modern engineers struggle to explain how this precision was achieved."
+        },
+        {
+          "title": "The Standardization Mystery",
+          "content": "Multiple H-blocks are nearly identical, suggesting they were mass-produced using some form of template or manufacturing system. This level of standardization is usually associated with industrial processes, not hand-crafting. Were the Tiwanaku using prefabrication 1,500 years ago?"
+        },
+        {
+          "title": "The Earthquake Theory",
+          "content": "The site's scattered blocks long puzzled researchers. Current evidence suggests a catastrophic earthquake around 1000 CE destroyed the original structure. The blocks we see today may have been flung from their original positions, explaining the apparent chaos."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Puma Punku: Ancient Aliens or Ancient Engineering? | PBS",
+        "youtubeId": "VlJOq8dwEmI",
+        "duration": "10:12",
+        "source": "PBS Eons"
+      },
+      {
+        "title": "The Mystery of Puma Punku | Ancient Architects",
+        "youtubeId": "9f5W-0W6pJg",
+        "duration": "22:15",
+        "source": "Ancient Architects"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "Jean-Pierre Protzen",
+        "title": "Inca Architecture and Construction at Ollantaytambo",
+        "publisher": "Oxford University Press",
+        "year": 1993,
+        "isbn": "978-0-19-507069-8"
+      },
+      {
+        "type": "journal",
+        "authors": ["Alexei Vranich"],
+        "title": "The Construction and Reconstruction of Ritual Space at Tiwanaku, Bolivia",
+        "journal": "Journal of Field Archaeology",
+        "volume": "31",
+        "issue": "2",
+        "year": 2006,
+        "pages": "121-136"
+      },
+      {
+        "type": "book",
+        "author": "Alan Kolata",
+        "title": "The Tiwanaku: Portrait of an Andean Civilization",
+        "publisher": "Wiley-Blackwell",
+        "year": 1993,
+        "isbn": "978-1-557-86183-2"
+      }
+    ],
+    "timeline": [
+      { "year": "536 CE", "event": "Construction begins during Tiwanaku IV period" },
+      { "year": "700 CE", "event": "Major construction phase" },
+      { "year": "1000 CE", "event": "Possible earthquake damage" },
+      { "year": "1100 CE", "event": "Tiwanaku civilization collapses" },
+      { "year": "2000", "event": "UNESCO World Heritage inscription (with Tiwanaku)" }
+    ]
+  },
+  "stonehenge": {
+    "deepDive": {
+      "introduction": "Stonehenge is perhaps the world's most famous prehistoric monument—and one of the most studied. Yet fundamental questions remain. Why transport bluestones 240km from Wales? What was it for? And how did the 2022 discovery of the Altar Stone's Scottish origin change everything?",
+      "sections": [
+        {
+          "title": "The Bluestone Journey",
+          "content": "The smaller bluestones (up to 4 tons each) were transported 240km from the Preseli Hills in Wales. Experiments have shown this is possible with rafts and sledges, but why? What made these specific Welsh stones sacred enough to justify such an enormous undertaking?"
+        },
+        {
+          "title": "The Scottish Bombshell",
+          "content": "In 2024, geochemical analysis revealed the 6-ton Altar Stone came from Scotland—not Wales as assumed. This means Neolithic people transported a 6-ton stone 700km, the longest known megalith transport in prehistory. It implies sophisticated long-distance networks we didn't know existed."
+        },
+        {
+          "title": "Acoustic Properties",
+          "content": "Recent research shows Stonehenge has remarkable acoustic properties. Sound reverberates within the circle in ways that amplify voices and create unusual effects. Was Stonehenge designed as an acoustic space for ritual purposes?"
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Stonehenge: New Discoveries | BBC Documentary",
+        "youtubeId": "jm4jZ2ynI3s",
+        "duration": "58:45",
+        "source": "BBC"
+      },
+      {
+        "title": "How Was Stonehenge Built? | National Geographic",
+        "youtubeId": "7qWGDyPrWas",
+        "duration": "3:34",
+        "source": "National Geographic"
+      }
+    ],
+    "sources": [
+      {
+        "type": "journal",
+        "authors": ["Anthony Clarke", "et al."],
+        "title": "A Scottish origin for the Altar Stone of Stonehenge",
+        "journal": "Nature",
+        "year": 2024,
+        "doi": "10.1038/s41586-024-07652-1"
+      },
+      {
+        "type": "book",
+        "author": "Mike Parker Pearson",
+        "title": "Stonehenge: Exploring the Greatest Stone Age Mystery",
+        "publisher": "Simon & Schuster",
+        "year": 2012,
+        "isbn": "978-1-4391-0731-8"
+      },
+      {
+        "type": "journal",
+        "authors": ["Mike Parker Pearson", "et al."],
+        "title": "The original Stonehenge? A dismantled stone circle in the Preseli Hills of west Wales",
+        "journal": "Antiquity",
+        "volume": "95",
+        "issue": "379",
+        "year": 2021,
+        "pages": "85-103"
+      }
+    ],
+    "timeline": [
+      { "year": "3100 BCE", "event": "First ditch and bank constructed" },
+      { "year": "2900 BCE", "event": "Bluestones first erected" },
+      { "year": "2500 BCE", "event": "Sarsen stones erected" },
+      { "year": "1600 BCE", "event": "Final modifications" },
+      { "year": "1986", "event": "UNESCO World Heritage inscription" },
+      { "year": "2024", "event": "Altar Stone's Scottish origin discovered" }
+    ]
+  },
+  "machu-picchu": {
+    "deepDive": {
+      "introduction": "Machu Picchu stands as the crown jewel of Inca engineering—a city built on a ridge 2,430 meters above sea level, constructed so precisely that it has withstood 500 years of earthquakes and tropical storms. But the site's true mysteries lie beneath the surface.",
+      "sections": [
+        {
+          "title": "The 60% You Don't See",
+          "content": "What visitors see is only 40% of Machu Picchu. The remaining 60% is underground—an intricate system of foundations and drainage. The Inca built deep stone foundations to stabilize the ridge, then created a drainage layer of gravel and stone chips. This engineering genius is why Machu Picchu still stands while Spanish colonial buildings in Cusco have collapsed multiple times."
+        },
+        {
+          "title": "Earthquake-Proof Construction",
+          "content": "The Inca built without mortar, using a technique called 'ashlar.' Stones were cut so precisely they fit together like 3D puzzles, with slight inward tilts. During earthquakes, the stones 'dance'—moving slightly then settling back into place. This anti-seismic design was so effective that Machu Picchu survived the devastating 1650 earthquake that destroyed much of Cusco."
+        },
+        {
+          "title": "The Lost Purpose",
+          "content": "Despite decades of research, Machu Picchu's purpose remains debated. Was it a royal retreat for Emperor Pachacuti? A ceremonial center for solstice observation? A training ground for elite women (the 'Virgins of the Sun')? Skeletal analysis shows both sexes and all ages lived here, suggesting a functioning town rather than a single-purpose site."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Machu Picchu 101 | National Geographic",
+        "youtubeId": "cnMa-Sm9H4k",
+        "duration": "3:18",
+        "source": "National Geographic"
+      },
+      {
+        "title": "Engineering an Empire: The Inca | History Channel",
+        "youtubeId": "xUGPwqwSjYU",
+        "duration": "44:32",
+        "source": "History Channel"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "Hiram Bingham III",
+        "title": "Lost City of the Incas",
+        "publisher": "Duell, Sloan and Pearce",
+        "year": 1948
+      },
+      {
+        "type": "journal",
+        "authors": ["Richard L. Burger", "Lucy C. Salazar"],
+        "title": "Machu Picchu: Unveiling the Mystery of the Incas",
+        "journal": "Yale University Press",
+        "year": 2004,
+        "isbn": "978-0-300-09763-3"
+      },
+      {
+        "type": "journal",
+        "authors": ["Kenneth R. Wright", "Alfredo Valencia Zegarra"],
+        "title": "Machu Picchu: A Civil Engineering Marvel",
+        "journal": "ASCE Press",
+        "year": 2000
+      }
+    ],
+    "timeline": [
+      { "year": "1450 CE", "event": "Construction begins under Emperor Pachacuti" },
+      { "year": "1472 CE", "event": "Main construction completed" },
+      { "year": "1532 CE", "event": "Spanish conquest begins; site abandoned" },
+      { "year": "1911", "event": "Hiram Bingham 'rediscovers' site" },
+      { "year": "1983", "event": "UNESCO World Heritage inscription" },
+      { "year": "2007", "event": "Named one of New Seven Wonders of the World" }
+    ]
+  },
+  "petra": {
+    "deepDive": {
+      "introduction": "Carved directly from rose-red sandstone cliffs, Petra was the capital of the Nabataean Kingdom—a civilization of former nomads who became masters of desert engineering. Their city hidden in the mountains controlled the incense trade routes and accumulated immense wealth.",
+      "sections": [
+        {
+          "title": "The Water Engineers",
+          "content": "Petra exists in a desert that receives only 150mm of rain annually, yet the Nabataeans supported a population of 30,000. They built an ingenious system of dams, cisterns, and ceramic pipes that captured every drop of flash flood water. Some cisterns held 1 million liters. This hydraulic engineering was centuries ahead of Roman technology."
+        },
+        {
+          "title": "The Treasury's Secrets",
+          "content": "Al-Khazneh (The Treasury) is Petra's most famous facade, but it wasn't a treasury at all—it was a royal tomb. The name comes from local Bedouin legend that pirates hid treasure in the urn at the top. Bullet holes in the urn show where treasure hunters shot at it hoping to release gold coins. Inside are austere burial chambers, not treasure vaults."
+        },
+        {
+          "title": "Top-Down Carving",
+          "content": "Petra's facades were carved from top to bottom—the opposite of normal construction. Workers started at the cliff top, carving downward while standing on scaffolding embedded in the rock face. No architectural plans survive, yet the proportions are mathematically perfect. How did they plan such precise designs without a full-scale view?"
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Petra: Lost City of Stone | NOVA PBS",
+        "youtubeId": "ezDJSWJsoWo",
+        "duration": "53:17",
+        "source": "NOVA PBS"
+      },
+      {
+        "title": "Walking Through Petra | Smithsonian Channel",
+        "youtubeId": "rZfPVOu_h3I",
+        "duration": "4:45",
+        "source": "Smithsonian Channel"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "Jane Taylor",
+        "title": "Petra and the Lost Kingdom of the Nabataeans",
+        "publisher": "I.B. Tauris",
+        "year": 2012,
+        "isbn": "978-1-78076-070-8"
+      },
+      {
+        "type": "journal",
+        "authors": ["John Peter Oleson"],
+        "title": "The Origins and Design of Nabataean Water-Supply Systems",
+        "journal": "ASOR Publications",
+        "year": 2007
+      },
+      {
+        "type": "article",
+        "author": "Tom Mueller",
+        "title": "Petra: Ancient City of Stone",
+        "publication": "Smithsonian Magazine",
+        "year": 2007,
+        "url": "https://www.smithsonianmag.com/history/petra-ancient-city-stone-36105236/"
+      }
+    ],
+    "timeline": [
+      { "year": "400 BCE", "event": "Nabataeans settle in Petra region" },
+      { "year": "300 BCE", "event": "Petra becomes Nabataean capital" },
+      { "year": "100 BCE", "event": "Construction of major monuments begins" },
+      { "year": "106 CE", "event": "Roman annexation of Nabataean Kingdom" },
+      { "year": "363 CE", "event": "Major earthquake damages city" },
+      { "year": "1812", "event": "Johann Ludwig Burckhardt 'rediscovers' site" },
+      { "year": "1985", "event": "UNESCO World Heritage inscription" }
+    ]
+  },
+  "angkor-wat": {
+    "deepDive": {
+      "introduction": "Angkor Wat is the largest religious monument ever built—a temple-mountain of 5 million tons of sandstone that encoded astronomical knowledge, Hindu cosmology, and engineering solutions that only became visible through satellite imagery.",
+      "sections": [
+        {
+          "title": "The Astronomical Code",
+          "content": "Angkor Wat is precisely aligned to spring equinox sunrise—the sun rises directly over the central tower on March 21st. The temple's measurements encode astronomical constants: the causeway is 1,500 cubits long (representing lunar cycles), and distances between towers correspond to cosmic time periods in Hindu mythology. This wasn't accidental—it was cosmic architecture."
+        },
+        {
+          "title": "The Hidden City",
+          "content": "Angkor Wat was the center of a city larger than modern Paris. LiDAR scans in 2012 revealed an urban grid extending 35km, complete with boulevards, canals, and neighborhoods housing up to 1 million people. It was the world's largest pre-industrial city. Climate change and deforestation may have contributed to its collapse in the 15th century."
+        },
+        {
+          "title": "Floating on Water",
+          "content": "Angkor Wat essentially 'floats' on water. The massive temple was built on sandy soil, stabilized by an elaborate moat and underground water management system. The moat isn't decorative—it maintains consistent water pressure against the foundations. Disruption to this system causes subsidence. Recent climate change is threatening this delicate balance."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Angkor Wat: City of the God Kings | BBC",
+        "youtubeId": "rWdkpHVPjZg",
+        "duration": "49:12",
+        "source": "BBC"
+      },
+      {
+        "title": "The Lost World of Angkor Wat | National Geographic",
+        "youtubeId": "g5FnMXETpP0",
+        "duration": "47:30",
+        "source": "National Geographic"
+      }
+    ],
+    "sources": [
+      {
+        "type": "journal",
+        "authors": ["Damian Evans", "et al."],
+        "title": "Uncovering archaeological landscapes at Angkor using lidar",
+        "journal": "PNAS",
+        "volume": "110",
+        "issue": "31",
+        "year": 2013,
+        "pages": "12595-12600",
+        "doi": "10.1073/pnas.1306539110"
+      },
+      {
+        "type": "book",
+        "author": "Michael D. Coe",
+        "title": "Angkor and the Khmer Civilization",
+        "publisher": "Thames & Hudson",
+        "year": 2005,
+        "isbn": "978-0-500-28442-1"
+      },
+      {
+        "type": "journal",
+        "authors": ["Roland Fletcher", "Christophe Pottier", "Damian Evans"],
+        "title": "The development of the water management system of Angkor",
+        "journal": "Antiquity",
+        "volume": "82",
+        "year": 2008,
+        "pages": "658-670"
+      }
+    ],
+    "timeline": [
+      { "year": "802 CE", "event": "Khmer Empire founded by Jayavarman II" },
+      { "year": "1113 CE", "event": "Suryavarman II begins Angkor Wat construction" },
+      { "year": "1150 CE", "event": "Main temple completed" },
+      { "year": "1177 CE", "event": "Cham invasion sacks Angkor" },
+      { "year": "1431 CE", "event": "Khmer capital moves to Phnom Penh" },
+      { "year": "1860", "event": "Henri Mouhot 'rediscovers' site" },
+      { "year": "1992", "event": "UNESCO World Heritage inscription" },
+      { "year": "2012", "event": "LiDAR reveals massive urban grid" }
+    ]
+  },
+  "sacsayhuaman": {
+    "deepDive": {
+      "introduction": "Rising above Cusco, Sacsayhuamán features some of the most precisely fitted megalithic stones in the world. Blocks weighing up to 200 tons interlock with joints so tight that a sheet of paper cannot slip between them. How the Inca achieved this remains genuinely unexplained.",
+      "sections": [
+        {
+          "title": "The Impossible Joints",
+          "content": "Each stone at Sacsayhuamán has a unique shape with multiple angles, yet each fits perfectly against its neighbors. Some stones have 12 or more angles, each one cut to match adjacent blocks. This isn't standard masonry—it's three-dimensional puzzle construction. Modern engineers have attempted replication and failed to match the precision."
+        },
+        {
+          "title": "The Vitrified Surface Mystery",
+          "content": "Some blocks show a glassy, vitrified surface layer—as if exposed to extreme heat. Similar vitrification appears at other ancient sites globally. Mainstream archaeology attributes this to friction during fitting, but the effect is difficult to replicate experimentally. Alternative researchers propose unknown heat-based technologies."
+        },
+        {
+          "title": "What We've Lost",
+          "content": "The Spanish dismantled 95% of Sacsayhuamán to build colonial Cusco. What remains is only the bottom few courses—the stones too massive to move. Contemporary Spanish accounts describe towers, buildings, and a golden sun disc visible from miles away. We're seeing less than 10% of the original complex."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Sacsayhuamán: Impossible Ancient Engineering | Ancient Architects",
+        "youtubeId": "8TqmLIaFEDk",
+        "duration": "19:23",
+        "source": "Ancient Architects"
+      },
+      {
+        "title": "Peru's Ancient Stone Mystery | Smithsonian Channel",
+        "youtubeId": "wYBKIH7oLog",
+        "duration": "4:51",
+        "source": "Smithsonian Channel"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "Jean-Pierre Protzen",
+        "title": "Inca Architecture and Construction at Ollantaytambo",
+        "publisher": "Oxford University Press",
+        "year": 1993,
+        "isbn": "978-0-19-507069-8"
+      },
+      {
+        "type": "journal",
+        "authors": ["Stella Nair"],
+        "title": "Of Remembrance and Forgetting: The Architecture of Chinchero, Peru",
+        "journal": "University of Texas Press",
+        "year": 2015
+      },
+      {
+        "type": "book",
+        "author": "Brian S. Bauer",
+        "title": "Ancient Cuzco: Heartland of the Inca",
+        "publisher": "University of Texas Press",
+        "year": 2004,
+        "isbn": "978-0-292-70279-2"
+      }
+    ],
+    "timeline": [
+      { "year": "1438 CE", "event": "Construction begins under Pachacuti" },
+      { "year": "1471 CE", "event": "Major construction phase under Túpac Inca" },
+      { "year": "1536 CE", "event": "Battle of Sacsayhuamán during Inca rebellion" },
+      { "year": "1559 CE", "event": "Spanish begin dismantling for building materials" },
+      { "year": "1983", "event": "UNESCO World Heritage inscription (with Cusco)" }
+    ]
+  },
+  "easter-island-moai": {
+    "deepDive": {
+      "introduction": "Nearly 1,000 moai statues stand across Easter Island—the easternmost inhabited island in the Pacific, 3,700km from the nearest continental shore. How did Polynesian seafarers carve, transport, and erect these colossal figures weighing up to 82 tons?",
+      "sections": [
+        {
+          "title": "Walking Giants",
+          "content": "In 2011, researchers proved the moai 'walked.' Using ropes attached to the statue's head, teams could rock the moai side-to-side, pivoting it forward on its rounded base. This explains why so many moai are found face-down along ancient roads—they fell while 'walking.' The technique requires only 18 people for a 5-ton statue."
+        },
+        {
+          "title": "The Pukao Problem",
+          "content": "Some moai wear red stone 'hats' (pukao) weighing up to 12 tons. These were quarried from a different location than the moai and somehow lifted onto statues up to 10 meters tall. Recent research suggests they were rolled up ramps using a parbuckling technique, but this remains debated."
+        },
+        {
+          "title": "The Collapse Narrative",
+          "content": "The traditional story claims islanders deforested the island to move moai, triggering ecological collapse. But recent evidence challenges this: rat predation on palm seeds, European diseases, and slave raids may have been larger factors. The Rapanui may have been more sustainable than previously thought."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "The Truth About Easter Island | TED-Ed",
+        "youtubeId": "7j08gxUcBgc",
+        "duration": "5:43",
+        "source": "TED-Ed"
+      },
+      {
+        "title": "Moving the Moai | NOVA PBS",
+        "youtubeId": "yvvES47OdmY",
+        "duration": "3:12",
+        "source": "NOVA PBS"
+      }
+    ],
+    "sources": [
+      {
+        "type": "journal",
+        "authors": ["Carl Lipo", "Terry Hunt"],
+        "title": "The Walking Moai of Easter Island",
+        "journal": "Journal of Archaeological Science",
+        "volume": "68",
+        "year": 2016,
+        "pages": "1-8"
+      },
+      {
+        "type": "book",
+        "author": "Jo Anne Van Tilburg",
+        "title": "Easter Island: Archaeology, Ecology and Culture",
+        "publisher": "Smithsonian Books",
+        "year": 1994,
+        "isbn": "978-1-56098-510-3"
+      },
+      {
+        "type": "book",
+        "author": "Terry Hunt and Carl Lipo",
+        "title": "The Statues That Walked: Unraveling the Mystery of Easter Island",
+        "publisher": "Free Press",
+        "year": 2011,
+        "isbn": "978-1-4391-5031-4"
+      }
+    ],
+    "timeline": [
+      { "year": "300-900 CE", "event": "Polynesian settlers arrive (date debated)" },
+      { "year": "1000 CE", "event": "Moai carving begins" },
+      { "year": "1400 CE", "event": "Peak moai construction period" },
+      { "year": "1600 CE", "event": "Moai construction declines" },
+      { "year": "1722", "event": "First European contact (Jacob Roggeveen)" },
+      { "year": "1995", "event": "UNESCO World Heritage inscription" },
+      { "year": "2011", "event": "'Walking' transport theory demonstrated" }
+    ]
+  },
+  "nan-madol": {
+    "deepDive": {
+      "introduction": "Rising from a lagoon in Micronesia, Nan Madol is a city of 92 artificial islands connected by canals—often called the 'Venice of the Pacific.' Built entirely of megalithic basalt logs weighing up to 50 tons each, its construction in open water defies conventional explanation.",
+      "sections": [
+        {
+          "title": "Islands from Nothing",
+          "content": "Nan Madol has no foundation. Each artificial island was created by stacking prismatic basalt columns on coral reef, starting 20 meters below water level. An estimated 750,000 tons of columnar basalt were transported from quarries across the island. No other Micronesian culture built anything comparable."
+        },
+        {
+          "title": "The Columnar Basalt Question",
+          "content": "The basalt columns of Nan Madol are naturally occurring—formed by cooling lava. But the quarries are on the opposite side of Pohnpei, requiring transport across dense jungle, around coastal cliffs, and over open water. No timber remains for rafts or rollers. How did they move these massive stone logs?"
+        },
+        {
+          "title": "The Oral History",
+          "content": "Local legend claims Nan Madol was built by twin sorcerers who used magic to fly the stones into place. Interestingly, this 'flying stones' legend appears in multiple megalithic cultures worldwide. Archaeologists dismiss this as myth, but no mechanical explanation has been demonstrated either."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Nan Madol: The City Built on Coral | Smithsonian Channel",
+        "youtubeId": "tChqJh_Ja10",
+        "duration": "3:41",
+        "source": "Smithsonian Channel"
+      },
+      {
+        "title": "The Mystery of Nan Madol | Ancient Architects",
+        "youtubeId": "4rJw-V6XWGM",
+        "duration": "21:45",
+        "source": "Ancient Architects"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "William Ayres",
+        "title": "Nan Madol: The City Built on Coral",
+        "publisher": "Pacific Studies Press",
+        "year": 2017
+      },
+      {
+        "type": "journal",
+        "authors": ["J. Stephen Athens"],
+        "title": "The Rise of the Saudeleur: Dating the Nan Madol Chiefdom",
+        "journal": "Archaeology in Oceania",
+        "volume": "51",
+        "year": 2016,
+        "pages": "106-122"
+      },
+      {
+        "type": "article",
+        "author": "Roff Smith",
+        "title": "Nan Madol: The City Built on Coral Reefs",
+        "publication": "National Geographic",
+        "year": 2016,
+        "url": "https://www.nationalgeographic.com/history/history-magazine/article/nan-madol-mysterious-micronesia"
+      }
+    ],
+    "timeline": [
+      { "year": "1180 CE", "event": "First dated construction activity" },
+      { "year": "1200-1600 CE", "event": "Saudeleur dynasty rules from Nan Madol" },
+      { "year": "1628 CE", "event": "Isokelekel conquers site, ending Saudeleur rule" },
+      { "year": "1826", "event": "First detailed Western description" },
+      { "year": "2016", "event": "UNESCO World Heritage inscription" }
+    ]
+  },
+  "ellora-kailasa": {
+    "deepDive": {
+      "introduction": "The Kailasa Temple at Ellora wasn't built—it was carved. Workers started at the top of a basalt cliff and carved downward, removing an estimated 400,000 tons of rock to reveal a complete temple. It's the largest monolithic excavation in the world.",
+      "sections": [
+        {
+          "title": "Top-Down Engineering",
+          "content": "Unlike normal construction, Kailasa was created by removing material. Workers began at roof level, carving 30 meters down to the floor. Any mistake was permanent—there's no adding material back. The temple includes intricate sculptures, galleries, and a complete circumambulation path, all carved as a single piece."
+        },
+        {
+          "title": "The Missing Debris",
+          "content": "Removing 400,000 tons of rock generates massive debris. Yet no significant debris field surrounds Kailasa. Where did it go? Some was likely used for other structures, but the logistics of moving that much material while continuing excavation remain unexplained. Some researchers estimate the carving took 7,000 laborers working continuously for 150 years."
+        },
+        {
+          "title": "The Master Plan Mystery",
+          "content": "The finished temple is architecturally perfect—proportions, alignments, and details all harmonize. But this was carved without being able to see the final result from outside. How did 8th-century architects maintain such precision through 150 years of subtractive work? No planning documents survive."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "India's Lost Temple | BBC Documentary",
+        "youtubeId": "KPvzKTfJkTo",
+        "duration": "28:42",
+        "source": "BBC"
+      },
+      {
+        "title": "Kailasa Temple: The Most Mysterious Temple in India | Ancient Architects",
+        "youtubeId": "hFQx0YMHPKs",
+        "duration": "15:32",
+        "source": "Ancient Architects"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "Lisa Owen",
+        "title": "Carving Devotion in the Jain Caves at Ellora",
+        "publisher": "Brill",
+        "year": 2012,
+        "isbn": "978-90-04-20629-8"
+      },
+      {
+        "type": "journal",
+        "authors": ["Walter Spink"],
+        "title": "Ajanta to Ellora",
+        "journal": "Marg Publications",
+        "year": 1967
+      },
+      {
+        "type": "book",
+        "author": "Carmel Berkson",
+        "title": "Ellora: Concept and Style",
+        "publisher": "Abhinav Publications",
+        "year": 1992
+      }
+    ],
+    "timeline": [
+      { "year": "757 CE", "event": "Construction begins under Krishna I" },
+      { "year": "773 CE", "event": "Main excavation completed" },
+      { "year": "800-1000 CE", "event": "Detailed carving and finishing work" },
+      { "year": "1983", "event": "UNESCO World Heritage inscription (with Ellora complex)" }
+    ]
+  },
+  "karahan-tepe": {
+    "deepDive": {
+      "introduction": "Just 35km from Göbekli Tepe lies Karahan Tepe—a site that may be even older and more enigmatic. Opened to visitors in 2023, this 'sister site' features haunting human heads emerging from rock, phallic pillars, and evidence of a sophisticated Pre-Pottery Neolithic civilization we barely understand.",
+      "sections": [
+        {
+          "title": "The Shift to Human Imagery",
+          "content": "While Göbekli Tepe features animal carvings, Karahan Tepe is dominated by human forms. Eleven human heads emerge from a bench carved directly from bedrock, their hollow eyes staring across millennia. This shift from animal to human iconography may represent an evolution in religious thought—or an entirely different tradition."
+        },
+        {
+          "title": "Carved from Living Rock",
+          "content": "Unlike Göbekli Tepe's freestanding T-pillars, Karahan Tepe's pillars were carved directly from the bedrock floor—the builders literally summoned figures from the living rock. One chamber features a 2.3-meter human figure rising from the floor, its face weathered but unmistakably intentional."
+        },
+        {
+          "title": "The Taş Tepeler Network",
+          "content": "Karahan Tepe is one of at least 12 similar sites now identified in southeastern Turkey—the Taş Tepeler ('Stone Hills') network. Together they suggest not isolated temples but a coordinated civilization of monument builders existing 2,000 years before agriculture was supposed to have enabled such complexity."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Karahan Tepe: Sister Site to Göbekli Tepe | Ancient Architects",
+        "youtubeId": "Z9hT6tBLNWw",
+        "duration": "24:15",
+        "source": "Ancient Architects"
+      },
+      {
+        "title": "New Discoveries at Karahan Tepe | History Hit",
+        "youtubeId": "5K5qkUm1F0w",
+        "duration": "12:34",
+        "source": "History Hit"
+      }
+    ],
+    "sources": [
+      {
+        "type": "journal",
+        "authors": ["Necmi Karul"],
+        "title": "Buried Buildings at Pre-Pottery Neolithic Karahantepe",
+        "journal": "TÜBA-AR",
+        "volume": "28",
+        "year": 2021,
+        "pages": "21-31"
+      },
+      {
+        "type": "article",
+        "author": "Andrew Curry",
+        "title": "Turkey's Stone Age Surprise",
+        "publication": "National Geographic",
+        "year": 2021,
+        "url": "https://www.nationalgeographic.com/magazine/article/turkey-stone-age-surprise"
+      }
+    ],
+    "timeline": [
+      { "year": "10000-9500 BCE", "event": "Estimated construction period" },
+      { "year": "1997", "event": "Site first identified" },
+      { "year": "2019", "event": "Major excavations begin" },
+      { "year": "2021", "event": "Human head chamber revealed" },
+      { "year": "2023", "event": "Site opened to public" }
+    ]
+  },
+  "lalibela": {
+    "deepDive": {
+      "introduction": "In the Ethiopian highlands stand 11 medieval churches carved entirely from living rock—each excavated top-down from volcanic tuff, complete with columns, arches, and drainage systems. King Lalibela intended to create a 'New Jerusalem' in Africa, and the result defies architectural convention.",
+      "sections": [
+        {
+          "title": "Top-Down Architecture",
+          "content": "Like Ellora's Kailasa Temple, Lalibela's churches were carved from above—removing material rather than adding it. Workers started at roof level and carved down 10-15 meters, creating windows, doors, and decorative details as they descended. The engineering precision required to do this without modern surveying equipment remains remarkable."
+        },
+        {
+          "title": "The Hidden Tunnels",
+          "content": "The 11 churches are connected by an elaborate system of tunnels, trenches, and ceremonial passageways carved through solid rock. Some tunnels are so narrow visitors must squeeze sideways; others open into hidden chambers. The network allows priests to move between churches during ceremonies without entering the harsh highland weather."
+        },
+        {
+          "title": "Living Churches",
+          "content": "Unlike ancient ruins, Lalibela's churches remain in continuous use—Ethiopian Orthodox services have been held here for 800 years. Priests maintain the traditions, pilgrims come for major festivals, and the churches are living religious sites, not museums. This continuity makes Lalibela unique among rock-cut architecture."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Lalibela: Ethiopia's Rock Churches | DW Documentary",
+        "youtubeId": "V3_kS3mJLwM",
+        "duration": "42:26",
+        "source": "DW Documentary"
+      },
+      {
+        "title": "Building the Churches of Lalibela | Smithsonian Channel",
+        "youtubeId": "X_5ZlKzVvyo",
+        "duration": "4:23",
+        "source": "Smithsonian Channel"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "David W. Phillipson",
+        "title": "Ancient Churches of Ethiopia",
+        "publisher": "Yale University Press",
+        "year": 2009,
+        "isbn": "978-0-300-14119-6"
+      },
+      {
+        "type": "journal",
+        "authors": ["Emmanuel Fritsch", "Michael Gervers"],
+        "title": "Rock-Hewn Churches of Ethiopia: An Overview",
+        "journal": "Journal of Ethiopian Studies",
+        "volume": "40",
+        "year": 2007,
+        "pages": "1-48"
+      }
+    ],
+    "timeline": [
+      { "year": "1181-1221 CE", "event": "Construction during King Lalibela's reign" },
+      { "year": "1200 CE", "event": "Bet Giyorgis (St. George) completed" },
+      { "year": "1520", "event": "Portuguese priest Francisco Álvares describes churches" },
+      { "year": "1978", "event": "UNESCO World Heritage inscription" },
+      { "year": "2021", "event": "Churches caught in Tigray conflict" }
+    ]
+  },
+  "abu-simbel": {
+    "deepDive": {
+      "introduction": "Carved into a mountainside in Nubia, Abu Simbel features four colossal statues of Ramesses II, each 20 meters tall. But the temple's most remarkable feature isn't its size—it's its astronomical alignment, which twice a year illuminates the inner sanctuary with surgical precision.",
+      "sections": [
+        {
+          "title": "The Solar Alignment",
+          "content": "Twice yearly—on February 22 and October 22—the rising sun penetrates 60 meters into the temple, illuminating three of four statues in the inner sanctuary. The fourth statue, representing Ptah (god of the underworld), remains in shadow. These dates may correspond to Ramesses' birthday and coronation. The precision required to achieve this 3,300 years ago is extraordinary."
+        },
+        {
+          "title": "The UNESCO Rescue",
+          "content": "In the 1960s, Abu Simbel faced destruction from the rising waters of Lake Nasser behind the Aswan High Dam. In the largest archaeological rescue ever attempted, engineers cut the entire temple into 1,036 blocks (up to 30 tons each) and reassembled it 65 meters higher. The operation took four years and cost $40 million."
+        },
+        {
+          "title": "Propaganda in Stone",
+          "content": "Abu Simbel was Ramesses II's message to Nubia: Egypt is powerful, and I am divine. The facade's colossal scale was designed to intimidate anyone approaching from the south. Inside, carvings depict Ramesses' (probably exaggerated) victory at the Battle of Kadesh. This is ancient propaganda at its most spectacular."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Abu Simbel: Saving Egypt's Temples | BBC Documentary",
+        "youtubeId": "HqwxFIwbYjk",
+        "duration": "48:33",
+        "source": "BBC"
+      },
+      {
+        "title": "The Sun Festival at Abu Simbel | National Geographic",
+        "youtubeId": "vTrZl1FvkPU",
+        "duration": "3:12",
+        "source": "National Geographic"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "Christiane Desroches-Noblecourt",
+        "title": "The World Saves Abu Simbel",
+        "publisher": "Alfred A. Knopf",
+        "year": 1968
+      },
+      {
+        "type": "journal",
+        "authors": ["Zahi Hawass"],
+        "title": "The Solar Alignment at Abu Simbel",
+        "journal": "KMT: A Modern Journal of Ancient Egypt",
+        "volume": "17",
+        "issue": "3",
+        "year": 2006,
+        "pages": "52-58"
+      }
+    ],
+    "timeline": [
+      { "year": "1264 BCE", "event": "Construction begins under Ramesses II" },
+      { "year": "1244 BCE", "event": "Temple completed" },
+      { "year": "1813", "event": "Johann Ludwig Burckhardt discovers site" },
+      { "year": "1817", "event": "Giovanni Belzoni enters temple" },
+      { "year": "1964-1968", "event": "UNESCO relocation project" },
+      { "year": "1979", "event": "UNESCO World Heritage inscription" }
+    ]
+  },
+  "newgrange": {
+    "deepDive": {
+      "introduction": "Newgrange in Ireland predates the Egyptian pyramids by 500 years and Stonehenge by 1,000 years. This Neolithic passage tomb was built with such precision that once a year, on winter solstice, sunlight travels down its 19-meter passage to illuminate the inner chamber.",
+      "sections": [
+        {
+          "title": "The Winter Solstice Phenomenon",
+          "content": "For about 17 minutes on the winter solstice, sunlight enters through a specially constructed 'roof box' above the entrance and travels 19 meters down the passage to illuminate the chamber floor. The builders 5,000 years ago calculated not only the solstice angle but also accounted for the site's 13.5-meter elevation change. A lottery system now controls access to witness this."
+        },
+        {
+          "title": "The White Quartz Facade",
+          "content": "Newgrange's distinctive white quartz facade was reconstructed in the 1970s based on collapsed stones found around the mound. This quartz came from the Wicklow Mountains, 80km away. Whether the reconstruction is accurate remains debated, but the original builders clearly intended something visually striking."
+        },
+        {
+          "title": "Not a Tomb?",
+          "content": "Though called a 'passage tomb,' very few human remains were found inside Newgrange. Some archaeologists now believe it was primarily an astronomical temple or ceremonial site, with burial being secondary. The elaborate solar alignment suggests its primary purpose was marking cosmic time, not housing the dead."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Newgrange: Ireland's Ancient Temple | Smithsonian Channel",
+        "youtubeId": "R1hQk_qSZqA",
+        "duration": "4:12",
+        "source": "Smithsonian Channel"
+      },
+      {
+        "title": "Winter Solstice at Newgrange | RTÉ",
+        "youtubeId": "hKqpXaPxhMY",
+        "duration": "5:45",
+        "source": "RTÉ Ireland"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "Michael J. O'Kelly",
+        "title": "Newgrange: Archaeology, Art and Legend",
+        "publisher": "Thames & Hudson",
+        "year": 1982,
+        "isbn": "978-0-500-39015-2"
+      },
+      {
+        "type": "journal",
+        "authors": ["Frank Prendergast"],
+        "title": "Shadow casting phenomena at Newgrange",
+        "journal": "Survey Ireland",
+        "volume": "9",
+        "year": 1991,
+        "pages": "9-18"
+      }
+    ],
+    "timeline": [
+      { "year": "3200 BCE", "event": "Construction completed" },
+      { "year": "2500 BCE", "event": "Site falls out of use" },
+      { "year": "1699", "event": "Rediscovered by quarry workers" },
+      { "year": "1967", "event": "Roof box discovered by M.J. O'Kelly" },
+      { "year": "1969", "event": "First modern observation of winter solstice alignment" },
+      { "year": "1993", "event": "UNESCO World Heritage inscription (with Brú na Bóinne)" }
+    ]
+  },
+  "teotihuacan": {
+    "deepDive": {
+      "introduction": "At its peak around 450 CE, Teotihuacan was one of the largest cities in the world—home to 125,000 people in the Americas centuries before European contact. Its builders remain anonymous; even the Aztecs, arriving 700 years after its fall, called it 'the place where gods were born' and believed giants built it.",
+      "sections": [
+        {
+          "title": "The Mysterious Builders",
+          "content": "We don't know who built Teotihuacan or what they called themselves. No writing system has been definitively identified. No royal tombs have been found. This was a sophisticated urban civilization that left almost no historical record—only their massive monuments and enigmatic imagery. The mystery deepens every year."
+        },
+        {
+          "title": "Liquid Mercury Rivers",
+          "content": "In 2015, archaeologists exploring tunnels beneath the Feathered Serpent Pyramid discovered pools of liquid mercury. Mercury doesn't occur naturally in the region and had to be processed from cinnabar ore. The Mesoamericans may have used it to symbolize an underworld river or lake. Similar mercury finds have since appeared at Maya sites."
+        },
+        {
+          "title": "The Deliberate Destruction",
+          "content": "Around 550 CE, Teotihuacan's ceremonial center was systematically burned and destroyed—but seemingly by its own people. Only temples and elite buildings were targeted; residential areas were spared. Was this revolution? Ritual termination? Planned abandonment? The city continued for another 150 years afterward, suggesting this wasn't simple collapse."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Teotihuacan: City of Gods | History Channel",
+        "youtubeId": "7s1gRV0XHPU",
+        "duration": "44:12",
+        "source": "History Channel"
+      },
+      {
+        "title": "Secrets of the Dead: Teotihuacan | PBS",
+        "youtubeId": "nVk7k9dI3qA",
+        "duration": "53:27",
+        "source": "PBS"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "George L. Cowgill",
+        "title": "Ancient Teotihuacan: Early Urbanism in Central Mexico",
+        "publisher": "Cambridge University Press",
+        "year": 2015,
+        "isbn": "978-0-521-69087-9"
+      },
+      {
+        "type": "journal",
+        "authors": ["Sergio Gómez Chávez"],
+        "title": "The Exploration of the Tunnel Under the Feathered Serpent",
+        "journal": "Arqueología Mexicana",
+        "volume": "22",
+        "year": 2015,
+        "pages": "32-37"
+      }
+    ],
+    "timeline": [
+      { "year": "100 BCE", "event": "Settlement begins" },
+      { "year": "100 CE", "event": "Pyramid of the Sun constructed" },
+      { "year": "200 CE", "event": "Pyramid of the Moon completed" },
+      { "year": "450 CE", "event": "Peak population ~125,000" },
+      { "year": "550 CE", "event": "Ceremonial center burned" },
+      { "year": "750 CE", "event": "City largely abandoned" },
+      { "year": "1987", "event": "UNESCO World Heritage inscription" },
+      { "year": "2015", "event": "Mercury deposits discovered" }
+    ]
+  },
+  "derinkuyu": {
+    "deepDive": {
+      "introduction": "Beneath the Cappadocian plains lies Derinkuyu—the deepest underground city ever discovered. Extending 85 meters below ground across 18 levels, this labyrinth could shelter 20,000 people along with their livestock and supplies. Who built it, and why, remains debated.",
+      "sections": [
+        {
+          "title": "The Depth of Engineering",
+          "content": "Derinkuyu descends 18 levels into soft volcanic tuff, connected by narrow tunnels that could be sealed with rolling stone doors weighing up to 500kg. Each level had ventilation shafts, wells (some reaching 55 meters deep), storage rooms, and living quarters. The engineering to prevent collapse while maintaining airflow through 85 meters of tunnels is remarkable."
+        },
+        {
+          "title": "Defense in Depth",
+          "content": "Every defensive feature suggests the city was built to withstand prolonged sieges. Tunnels were designed so only one person could pass at a time. Heavy stone doors could be rolled closed from inside only. The deepest levels contained churches and meeting halls—suggesting extended underground living, not just brief hiding."
+        },
+        {
+          "title": "The Dating Controversy",
+          "content": "Mainstream archaeology dates Derinkuyu to the Byzantine era (6th-10th century CE), built by Christians fleeing persecution. But some researchers argue the deepest levels are much older—possibly Hittite (1600 BCE) or even earlier. The volcanic tuff cannot be carbon-dated, and tool marks are inconclusive. The true age remains uncertain."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Derinkuyu: Turkey's Underground City | National Geographic",
+        "youtubeId": "1G5uw1xKvuI",
+        "duration": "4:23",
+        "source": "National Geographic"
+      },
+      {
+        "title": "Exploring Derinkuyu | Ancient Architects",
+        "youtubeId": "u_qT0p3NRIU",
+        "duration": "18:45",
+        "source": "Ancient Architects"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "Ömür Harmanşah",
+        "title": "Cities and the Shaping of Memory in the Ancient Near East",
+        "publisher": "Cambridge University Press",
+        "year": 2013,
+        "isbn": "978-1-107-01839-4"
+      },
+      {
+        "type": "article",
+        "author": "Suzy Hansen",
+        "title": "Deep Below Turkey's Surface, A Giant Discovery",
+        "publication": "Smithsonian Magazine",
+        "year": 2015,
+        "url": "https://www.smithsonianmag.com/travel/deep-below-turkeys-surface-giant-discovery-180955106/"
+      }
+    ],
+    "timeline": [
+      { "year": "1600 BCE?", "event": "Possible Hittite origin (debated)" },
+      { "year": "700s CE", "event": "Major expansion during Arab-Byzantine wars" },
+      { "year": "1923", "event": "Population exchange empties Cappadocian Greeks" },
+      { "year": "1963", "event": "Accidentally rediscovered during home renovation" },
+      { "year": "1985", "event": "UNESCO World Heritage inscription (with Göreme)" }
+    ]
+  },
+  "tiwanaku": {
+    "deepDive": {
+      "introduction": "At 3,850 meters altitude on the Bolivian Altiplano, Tiwanaku was the capital of a pre-Inca empire that flourished for 500 years. Its precise stonework, sophisticated agriculture, and enigmatic iconography influenced Andean civilizations for centuries—including the Inca, who claimed Tiwanaku as their origin point.",
+      "sections": [
+        {
+          "title": "High-Altitude Engineering",
+          "content": "Building a major civilization at nearly 4,000 meters altitude—where oxygen is 40% lower and temperatures drop below freezing nightly—required extraordinary adaptation. Tiwanaku's engineers developed raised-field agriculture, creating artificial islands in flooded fields that maintained crops through frost. This system supported a city of 20,000 in one of Earth's harshest environments."
+        },
+        {
+          "title": "The Gateway of the Sun",
+          "content": "The iconic Gateway of the Sun was carved from a single block of andesite weighing 10 tons. Its central figure—probably the creator god Viracocha—is surrounded by 48 figures that may represent a calendar or cosmological map. Despite decades of study, the iconography remains only partially decoded."
+        },
+        {
+          "title": "Precision Without Metal Tools",
+          "content": "Tiwanaku's masons achieved remarkable precision with only stone and bronze tools. Blocks were joined with I-shaped copper cramps—a technique usually associated with Mediterranean architecture. Some stones show evidence of being machined flat, yet we have no evidence of machinery. Puma Punku, part of the Tiwanaku complex, pushes this precision to extremes."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Tiwanaku: Bolivia's Lost Civilization | DW Documentary",
+        "youtubeId": "r8jQr4rL-5w",
+        "duration": "42:15",
+        "source": "DW Documentary"
+      },
+      {
+        "title": "The Mysteries of Tiwanaku | History Channel",
+        "youtubeId": "rH4KNy5V8Ug",
+        "duration": "12:34",
+        "source": "History Channel"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "Alan Kolata",
+        "title": "The Tiwanaku: Portrait of an Andean Civilization",
+        "publisher": "Wiley-Blackwell",
+        "year": 1993,
+        "isbn": "978-1-557-86183-2"
+      },
+      {
+        "type": "journal",
+        "authors": ["John Wayne Janusek"],
+        "title": "Identity and Power in the Ancient Andes: Tiwanaku Cities through Time",
+        "journal": "Routledge",
+        "year": 2004,
+        "isbn": "978-0-415-94634-0"
+      }
+    ],
+    "timeline": [
+      { "year": "400 CE", "event": "Tiwanaku emerges as major power" },
+      { "year": "600 CE", "event": "Empire expands across Altiplano" },
+      { "year": "800 CE", "event": "Peak construction period" },
+      { "year": "1000 CE", "event": "Drought and collapse begin" },
+      { "year": "1100 CE", "event": "Site abandoned" },
+      { "year": "1549", "event": "Spanish chroniclers first describe ruins" },
+      { "year": "2000", "event": "UNESCO World Heritage inscription" }
+    ]
+  },
+  "ggantija-temples": {
+    "deepDive": {
+      "introduction": "On the tiny island of Gozo, Malta's Ġgantija temples predate the Egyptian pyramids by 1,000 years. Built between 3600-3200 BCE, these are among Earth's oldest freestanding structures—constructed by a civilization that left no written records and vanished mysteriously around 2500 BCE.",
+      "sections": [
+        {
+          "title": "Before the Pyramids",
+          "content": "Ġgantija (meaning 'Giant's Tower') was built when the Sahara was still green and mammoths roamed Siberia. Using only obsidian tools and limestone, the temple builders created structures with stones weighing up to 50 tons. These Maltese temples represent humanity's first large-scale monumental architecture."
+        },
+        {
+          "title": "The Temple People",
+          "content": "Malta's temple-building culture lasted 1,100 years, constructing at least 30 major temples across the islands. Then, around 2500 BCE, they vanished—replaced by a completely different Bronze Age culture. No warfare evidence exists. Climate change, disease, or social collapse? The disappearance remains one of Mediterranean prehistory's great mysteries."
+        },
+        {
+          "title": "Fat Lady Figurines",
+          "content": "The temple culture left hundreds of distinctive 'fat lady' figurines—stylized figures with massive lower bodies and tiny heads. These may represent a mother goddess, fertility symbols, or something else entirely. Similar imagery appears across all Maltese temples, suggesting a unified religious tradition."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Malta's Megalithic Temples | History Hit",
+        "youtubeId": "9FDUEIw-2ts",
+        "duration": "48:23",
+        "source": "History Hit"
+      },
+      {
+        "title": "Ġgantija: The Giants' Tower | DW Documentary",
+        "youtubeId": "pQR3_xWvFOs",
+        "duration": "12:15",
+        "source": "DW Documentary"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "Caroline Malone",
+        "title": "The Prehistoric Temples of Malta",
+        "publisher": "Domes of Fire",
+        "year": 2007
+      },
+      {
+        "type": "journal",
+        "authors": ["Reuben Grima"],
+        "title": "The Temple Period",
+        "journal": "The Archaeology of Malta",
+        "year": 2004,
+        "pages": "43-86"
+      }
+    ],
+    "timeline": [
+      { "year": "3600 BCE", "event": "Construction begins" },
+      { "year": "3200 BCE", "event": "Main temple phase completed" },
+      { "year": "2500 BCE", "event": "Temple culture mysteriously ends" },
+      { "year": "1827", "event": "Site cleared by Colonel John Otto Bayer" },
+      { "year": "1980", "event": "UNESCO World Heritage inscription" }
+    ]
+  },
+  "chichen-itza": {
+    "deepDive": {
+      "introduction": "Chichén Itzá was a major Maya city that dominated the Yucatán Peninsula for centuries. Its iconic pyramid, El Castillo, is an astronomical calculator in stone—but recent discoveries beneath the pyramid suggest the site's mysteries run far deeper than anyone imagined.",
+      "sections": [
+        {
+          "title": "The Equinox Serpent",
+          "content": "Twice yearly, at the spring and autumn equinoxes, the setting sun casts shadows down El Castillo's staircase that create the illusion of a serpent descending the pyramid. The 'snake' connects to a carved serpent head at the base. This effect requires precise architectural alignment and demonstrates sophisticated astronomical knowledge."
+        },
+        {
+          "title": "Pyramid Within Pyramid Within Pyramid",
+          "content": "Beneath El Castillo lies an older pyramid. And in 2016, researchers discovered a third, even older pyramid inside that one—plus a cenote (natural sinkhole) beneath the whole structure. The Maya built their temple complex directly over sacred water. The innermost pyramid may date to 550 CE, 700 years before the visible structure."
+        },
+        {
+          "title": "The Acoustic Mystery",
+          "content": "Clap your hands at the base of El Castillo and the echo returns as a chirping sound—remarkably similar to the call of the sacred quetzal bird. Whether this acoustic effect was intentionally designed or coincidental remains debated, but it suggests the Maya may have engineered sacred soundscapes into their architecture."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Chichén Itzá: Maya Secrets | National Geographic",
+        "youtubeId": "fR8l3cKNLs4",
+        "duration": "45:23",
+        "source": "National Geographic"
+      },
+      {
+        "title": "The Pyramid's Hidden Secrets | Smithsonian Channel",
+        "youtubeId": "yp-gXXNJYXw",
+        "duration": "4:12",
+        "source": "Smithsonian Channel"
+      }
+    ],
+    "sources": [
+      {
+        "type": "journal",
+        "authors": ["René Chávez Segura", "et al."],
+        "title": "Subsoil imaging of the Kukulkan Pyramid using ERT",
+        "journal": "Geophysical Research Letters",
+        "volume": "43",
+        "year": 2016,
+        "doi": "10.1002/2016GL069302"
+      },
+      {
+        "type": "book",
+        "author": "Peter Schmidt",
+        "title": "Chichén Itzá",
+        "publisher": "INAH",
+        "year": 2007
+      }
+    ],
+    "timeline": [
+      { "year": "600 CE", "event": "Early settlement established" },
+      { "year": "900 CE", "event": "Rise as major regional power" },
+      { "year": "1000 CE", "event": "El Castillo construction" },
+      { "year": "1221 CE", "event": "Political collapse and decline" },
+      { "year": "1988", "event": "UNESCO World Heritage inscription" },
+      { "year": "2007", "event": "Named one of New Seven Wonders" },
+      { "year": "2016", "event": "Third inner pyramid discovered" }
+    ]
+  },
+  "sigiriya": {
+    "deepDive": {
+      "introduction": "Rising 200 meters from the Sri Lankan jungle, Sigiriya is a palace-fortress built atop a massive rock column. King Kashyapa I transformed this geological oddity into one of the ancient world's most ambitious construction projects—complete with gardens, frescoes, and a lion-shaped entrance.",
+      "sections": [
+        {
+          "title": "The Sky Palace",
+          "content": "Kashyapa built his palace on an 'unclimbable' rock after seizing the throne by killing his father. The summit once held a complete palace complex with water features—fed by cisterns that collected rainwater and pumped it to fountains 200 meters below. How water pressure was maintained at this height remains debated."
+        },
+        {
+          "title": "The Mirror Wall and Frescoes",
+          "content": "A polished wall section once reflected the painted frescoes of heavenly maidens (apsaras) above. The 21 surviving frescoes—out of an original 500—show women of remarkable beauty using techniques that wouldn't appear in European art for another thousand years. Graffiti on the mirror wall dates back to the 8th century."
+        },
+        {
+          "title": "The Water Gardens",
+          "content": "Sigiriya's gardens include the oldest surviving landscaped gardens in Asia. They feature symmetrical water features, fountains that still work during monsoon season using ancient hydraulics, and precisely calculated sight lines. The gardens were designed to create a processional experience leading to the rock."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Sigiriya: The Lion Rock of Sri Lanka | DW Documentary",
+        "youtubeId": "9d-E7P3LjB0",
+        "duration": "42:26",
+        "source": "DW Documentary"
+      },
+      {
+        "title": "Ancient Engineering of Sigiriya | Smithsonian",
+        "youtubeId": "JqxXlH5tL2s",
+        "duration": "5:12",
+        "source": "Smithsonian Channel"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "Senake Bandaranayake",
+        "title": "Sigiriya: City, Palace, and Royal Gardens",
+        "publisher": "Central Cultural Fund",
+        "year": 2005
+      },
+      {
+        "type": "journal",
+        "authors": ["Roland Silva"],
+        "title": "The Sigiriya Project",
+        "journal": "Ancient Ceylon",
+        "volume": "5",
+        "year": 1984
+      }
+    ],
+    "timeline": [
+      { "year": "477 CE", "event": "Kashyapa seizes throne, kills father" },
+      { "year": "477-485 CE", "event": "Palace complex constructed" },
+      { "year": "495 CE", "event": "Kashyapa defeated; site becomes monastery" },
+      { "year": "1831", "event": "British discover ruins" },
+      { "year": "1982", "event": "UNESCO World Heritage inscription" }
+    ]
+  },
+  "ajanta-caves": {
+    "deepDive": {
+      "introduction": "Carved into a horseshoe-shaped cliff over 800 years, the Ajanta Caves contain some of humanity's greatest artistic achievements—Buddhist paintings that survived 1,500 years in darkness, only to fade rapidly once exposed to light and air.",
+      "sections": [
+        {
+          "title": "800 Years of Carving",
+          "content": "The 30 caves were carved in two phases: the first around 200 BCE-200 CE, the second between 460-480 CE. Buddhist monks carved monasteries (viharas) and worship halls (chaityas) directly from basalt, working by oil lamp in dark tunnels. The scale of labor is staggering—each cave took decades to complete."
+        },
+        {
+          "title": "The Miraculous Paintings",
+          "content": "Ajanta's murals depict Jataka tales (Buddha's previous lives) with a sophistication that wouldn't reappear until the Renaissance. Artists used organic pigments and a unique lime plaster technique that preserved colors for 1,500 years—until rediscovery in 1819 began their gradual deterioration."
+        },
+        {
+          "title": "Lost and Found",
+          "content": "The caves were abandoned around 650 CE and slowly consumed by jungle. In 1819, British officer John Smith was tiger hunting when he spotted the caves. His name, carved into a painting, remains visible today—early vandalism that ironically helped document the discovery date."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Ajanta: Buddhist Caves of India | BBC",
+        "youtubeId": "oYdhJ7qvlpo",
+        "duration": "28:45",
+        "source": "BBC"
+      },
+      {
+        "title": "The Art of Ajanta | Asian Art Museum",
+        "youtubeId": "pj8LlF12mLE",
+        "duration": "12:34",
+        "source": "Asian Art Museum"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "Benoy K. Behl",
+        "title": "The Ajanta Caves: Ancient Paintings of Buddhist India",
+        "publisher": "Thames & Hudson",
+        "year": 1998,
+        "isbn": "978-0-500-28041-6"
+      },
+      {
+        "type": "journal",
+        "authors": ["Walter Spink"],
+        "title": "Ajanta: History and Development",
+        "journal": "Brill Academic Publishers",
+        "year": 2005
+      }
+    ],
+    "timeline": [
+      { "year": "200 BCE", "event": "First phase caves begun" },
+      { "year": "460 CE", "event": "Second phase under Vakataka dynasty" },
+      { "year": "480 CE", "event": "Construction abruptly halts" },
+      { "year": "650 CE", "event": "Site abandoned" },
+      { "year": "1819", "event": "Rediscovered by John Smith" },
+      { "year": "1983", "event": "UNESCO World Heritage inscription" }
+    ]
+  },
+  "persepolis": {
+    "deepDive": {
+      "introduction": "Persepolis was the ceremonial capital of the Achaemenid Empire—the largest empire the world had ever seen. Built by Darius I and his successors, this 'City of Persians' showcased the wealth of 23 conquered nations until Alexander the Great burned it to the ground.",
+      "sections": [
+        {
+          "title": "The Apadana Reliefs",
+          "content": "The Apadana audience hall featured relief carvings showing 23 delegations bringing tribute to the Persian king. Each delegation wears distinct national dress and brings specific gifts—Ethiopians with ivory, Indians with gold, Babylonians with textiles. It's effectively an ancient census of the known world."
+        },
+        {
+          "title": "Earthquake-Proof Design",
+          "content": "The columns of Persepolis were designed to flex during earthquakes—the same principle used in modern skyscrapers. Lead sheets between stones absorbed seismic shock. Many columns still stand after 2,500 years and multiple major earthquakes. The Persians had solved earthquake engineering millennia before we understood it."
+        },
+        {
+          "title": "The Burning Question",
+          "content": "In 330 BCE, Alexander's army burned Persepolis after a drunken banquet. Was it vengeance for Xerxes' burning of Athens? A political statement? Or an accident? The destruction was so complete that Persepolis vanished from memory—locals called the ruins 'Takht-e Jamshid' (Throne of Jamshid), attributing them to mythical kings."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Persepolis: The Ancient Persian Capital | DW Documentary",
+        "youtubeId": "Q8kcPxXnLQo",
+        "duration": "42:15",
+        "source": "DW Documentary"
+      },
+      {
+        "title": "Engineering Persepolis | National Geographic",
+        "youtubeId": "xZqNHZ2snW8",
+        "duration": "4:23",
+        "source": "National Geographic"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "Donald Wilber",
+        "title": "Persepolis: The Archaeology of Parsa",
+        "publisher": "Darwin Press",
+        "year": 1989,
+        "isbn": "978-0-87850-062-8"
+      },
+      {
+        "type": "journal",
+        "authors": ["Ali Mousavi"],
+        "title": "Persepolis: Discovery and Afterlife of a World Wonder",
+        "journal": "De Gruyter",
+        "year": 2012
+      }
+    ],
+    "timeline": [
+      { "year": "518 BCE", "event": "Darius I begins construction" },
+      { "year": "486 BCE", "event": "Xerxes continues building" },
+      { "year": "330 BCE", "event": "Alexander burns the city" },
+      { "year": "1620", "event": "European travelers identify ruins" },
+      { "year": "1931", "event": "Systematic excavation begins" },
+      { "year": "1979", "event": "UNESCO World Heritage inscription" }
+    ]
+  },
+  "great-zimbabwe": {
+    "deepDive": {
+      "introduction": "Great Zimbabwe was the heart of a trading empire that connected Africa's interior with Indian Ocean commerce. Its massive stone walls—built without mortar—once enclosed a city of 18,000 people and challenged colonial narratives that denied African architectural achievement.",
+      "sections": [
+        {
+          "title": "Walls Without Mortar",
+          "content": "Great Zimbabwe's walls rise up to 11 meters high and 5 meters thick, built entirely of granite blocks fitted without mortar. The technique—precisely laying stones that lock through weight and friction—required sophisticated engineering knowledge. Some wall sections contain over 1 million stones, each placed by hand."
+        },
+        {
+          "title": "The Colonial Denial",
+          "content": "When Europeans encountered Great Zimbabwe, they refused to believe Africans built it. Colonial archaeologists attributed it to Phoenicians, Arabs, even King Solomon's miners. This racist denial persisted until the 1930s when scientific evidence proved African origin. The country of Zimbabwe took its name from these ruins at independence."
+        },
+        {
+          "title": "Trading Empire",
+          "content": "Artifacts from Great Zimbabwe include Chinese ceramics, Persian Gulf glass, and Indian beads—evidence of extensive international trade. The city controlled gold and ivory trade between Africa's interior and coastal Swahili ports. Its decline around 1450 CE may relate to environmental degradation from deforestation and overgrazing."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Great Zimbabwe: Africa's Lost City | BBC Documentary",
+        "youtubeId": "sGCqw2dLqQo",
+        "duration": "48:32",
+        "source": "BBC"
+      },
+      {
+        "title": "The Mystery of Great Zimbabwe | History Channel",
+        "youtubeId": "a3kQT5YLLVU",
+        "duration": "12:45",
+        "source": "History Channel"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "Innocent Pikirayi",
+        "title": "The Zimbabwe Culture: Origins and Decline in Southern Zambezian States",
+        "publisher": "AltaMira Press",
+        "year": 2001,
+        "isbn": "978-0-7591-0091-6"
+      },
+      {
+        "type": "journal",
+        "authors": ["Thomas Huffman"],
+        "title": "Great Zimbabwe",
+        "journal": "Azania: Archaeological Research in Africa",
+        "volume": "45",
+        "issue": "2",
+        "year": 2010,
+        "pages": "165-182"
+      }
+    ],
+    "timeline": [
+      { "year": "1100 CE", "event": "Settlement begins" },
+      { "year": "1200-1300 CE", "event": "Great Enclosure constructed" },
+      { "year": "1350 CE", "event": "Peak population ~18,000" },
+      { "year": "1450 CE", "event": "City abandoned" },
+      { "year": "1871", "event": "Karl Mauch becomes first European visitor" },
+      { "year": "1986", "event": "UNESCO World Heritage inscription" }
+    ]
+  },
+  "gunung-padang": {
+    "deepDive": {
+      "introduction": "Gunung Padang in Indonesia may be the oldest pyramid on Earth—or a natural hill with ancient terraces. Ground-penetrating radar suggests construction began up to 25,000 years ago, but this claim remains highly controversial among archaeologists.",
+      "sections": [
+        {
+          "title": "The Age Controversy",
+          "content": "In 2023, researchers published findings suggesting Gunung Padang was built in stages starting around 25,000 BCE—during the Ice Age, before any known civilization. If true, this would rewrite human history. However, many archaeologists dispute the dating methodology, arguing the site dates to the Neolithic (around 5000 BCE) at earliest."
+        },
+        {
+          "title": "Layers of Construction",
+          "content": "Ground-penetrating radar reveals multiple construction phases buried beneath the visible stone terraces. The deepest layers appear to be carefully arranged chambers and passages, not natural rock. Whether these are human-made structures or geological formations remains hotly debated."
+        },
+        {
+          "title": "The Indonesian Atlantis",
+          "content": "Some researchers connect Gunung Padang to Sundaland—the vast landmass that connected Indonesia to Asia during the Ice Age before rising seas submerged it. If Gunung Padang dates to this era, it could represent a lost civilization. Most archaeologists consider this speculation unsupported by evidence."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Gunung Padang: World's Oldest Pyramid? | Ancient Architects",
+        "youtubeId": "7z8QFLjNTYQ",
+        "duration": "18:23",
+        "source": "Ancient Architects"
+      },
+      {
+        "title": "The Controversy of Gunung Padang | History Channel",
+        "youtubeId": "5v6qmXuJhS0",
+        "duration": "12:15",
+        "source": "History Channel"
+      }
+    ],
+    "sources": [
+      {
+        "type": "journal",
+        "authors": ["Natawidjaja, Danny Hilman", "et al."],
+        "title": "Geo-archaeological prospecting of Gunung Padang",
+        "journal": "Archaeological Prospection",
+        "year": 2023,
+        "doi": "10.1002/arp.1901"
+      },
+      {
+        "type": "article",
+        "author": "Flint Dibble",
+        "title": "No, Indonesia's Gunung Padang is not the oldest pyramid",
+        "publication": "The Conversation",
+        "year": 2023,
+        "url": "https://theconversation.com/gunung-padang-controversy"
+      }
+    ],
+    "timeline": [
+      { "year": "25000 BCE?", "event": "Earliest claimed construction (disputed)" },
+      { "year": "5000 BCE?", "event": "Alternative earliest dating" },
+      { "year": "1914", "event": "First Dutch documentation" },
+      { "year": "2011", "event": "Modern research begins" },
+      { "year": "2023", "event": "Controversial 25,000-year dating published" }
+    ]
+  },
+  "korean-dolmens": {
+    "deepDive": {
+      "introduction": "Korea contains over 40% of the world's dolmens—more than 35,000 megalithic tombs clustered on a single peninsula. This extraordinary concentration represents the largest collection of prehistoric monuments anywhere on Earth, yet remains largely unknown outside Asia.",
+      "sections": [
+        {
+          "title": "The Gochang-Hwasun Concentration",
+          "content": "The Gochang, Hwasun, and Ganghwa sites alone contain over 1,000 dolmens in various styles. Some capstones weigh over 300 tons—larger than most European megaliths. The sheer density of monuments in Korea suggests a society obsessed with honoring ancestors through stone."
+        },
+        {
+          "title": "Northern vs Southern Styles",
+          "content": "Korean dolmens come in two distinct types: northern 'table' style with tall supporting stones, and southern 'go-board' style with capstones resting on bedrock or small stones. This variation suggests different cultural traditions, possibly different ethnic groups, building these monuments simultaneously."
+        },
+        {
+          "title": "The Megalithic Society",
+          "content": "Building 35,000 dolmens required immense social organization. Each monument honored elite individuals, suggesting a highly stratified Bronze Age society. The labor involved in moving hundreds of tons of stone for each burial indicates powerful chieftains who could command substantial workforces."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Korea's Forgotten Megaliths | Arirang Documentary",
+        "youtubeId": "eFQ2oKLmFzM",
+        "duration": "25:45",
+        "source": "Arirang TV"
+      },
+      {
+        "title": "The Dolmens of Gochang | UNESCO",
+        "youtubeId": "yGCwQJNf_Rs",
+        "duration": "4:12",
+        "source": "UNESCO"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "Seong-Rae Park",
+        "title": "Dolmens in Korea",
+        "publisher": "Hanlim Cultural Foundation",
+        "year": 2002
+      },
+      {
+        "type": "journal",
+        "authors": ["Jangsuk Kim"],
+        "title": "The Development of Megalithic Culture in Korea",
+        "journal": "Korean Archaeology",
+        "volume": "32",
+        "year": 2010
+      }
+    ],
+    "timeline": [
+      { "year": "1500 BCE", "event": "Dolmen construction begins" },
+      { "year": "700 BCE", "event": "Peak construction period" },
+      { "year": "300 BCE", "event": "Dolmen building declines" },
+      { "year": "2000", "event": "UNESCO World Heritage inscription (Gochang, Hwasun, Ganghwa)" }
+    ]
+  },
+  "carnac-stones": {
+    "deepDive": {
+      "introduction": "The Carnac stones in Brittany, France, form the largest megalithic site in the world—over 3,000 standing stones arranged in precise rows stretching for kilometers. Their purpose remains unknown, but they predate Stonehenge by a thousand years.",
+      "sections": [
+        {
+          "title": "Rows Without End",
+          "content": "The main alignments at Carnac stretch over 4 kilometers, with stones arranged in parallel rows that gradually increase in height from east to west. Originally there may have been 10,000 stones; many were removed for road building and construction over centuries. The precision of the alignments suggests careful planning."
+        },
+        {
+          "title": "Astronomical or Practical?",
+          "content": "Some researchers claim the rows align with solar or lunar events, but no consensus exists. Others suggest they marked processional routes for ceremonies, territorial boundaries, or even earthquake fault lines (the stones cluster along a geological fracture). The true purpose may have varied over the site's 2,000-year construction period."
+        },
+        {
+          "title": "The Local Legend",
+          "content": "Breton legend claims the stones are Roman soldiers petrified by Merlin the wizard—or Saint Cornelius fleeing pagan armies. While fanciful, such legends show the enduring power these monuments have over human imagination. The site has been a pilgrimage destination for millennia."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Carnac: France's Mysterious Megaliths | DW Documentary",
+        "youtubeId": "xrLJq7N9KPk",
+        "duration": "42:15",
+        "source": "DW Documentary"
+      },
+      {
+        "title": "The Carnac Stones Explained | History Hit",
+        "youtubeId": "PvT4T5DJhKE",
+        "duration": "15:23",
+        "source": "History Hit"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "Aubrey Burl",
+        "title": "The Stone Circles of Britain, Ireland, and Brittany",
+        "publisher": "Yale University Press",
+        "year": 2000,
+        "isbn": "978-0-300-08347-6"
+      },
+      {
+        "type": "journal",
+        "authors": ["Cassen, Serge", "et al."],
+        "title": "The Carnac alignments and the geometric principles of megalithism",
+        "journal": "Cambridge Archaeological Journal",
+        "year": 2017
+      }
+    ],
+    "timeline": [
+      { "year": "4500 BCE", "event": "Earliest construction begins" },
+      { "year": "3300 BCE", "event": "Major building phase" },
+      { "year": "2500 BCE", "event": "Construction continues/ends" },
+      { "year": "1750", "event": "First scholarly studies" },
+      { "year": "1889", "event": "Site protected as historic monument" }
+    ]
+  },
+  "yonaguni-monument": {
+    "deepDive": {
+      "introduction": "Off the coast of Japan's Yonaguni Island lies a massive underwater rock formation featuring apparent steps, terraces, and right angles. Discovered in 1986, the 'Yonaguni Monument' has sparked fierce debate: is it a 10,000-year-old sunken city or simply natural geology?",
+      "sections": [
+        {
+          "title": "The Human vs Natural Debate",
+          "content": "The structure features flat platforms, sharp edges, and what appear to be steps—features suggestive of human construction. However, the local sandstone naturally fractures along perpendicular planes, potentially creating geometric shapes without human intervention. Neither side has definitively proven their case."
+        },
+        {
+          "title": "The Age Question",
+          "content": "If human-made, the monument would date to when sea levels were lower—around 10,000 BCE. This predates any known Japanese civilization by millennia. Supporters argue it proves an unknown Ice Age civilization; skeptics note no artifacts, tools, or construction debris have been found."
+        },
+        {
+          "title": "The Turtle Carving",
+          "content": "One feature appears to show a turtle carved into the rock—a sacred symbol in Japanese culture. Some see this as proof of human work; others argue it's pareidolia (seeing patterns in random shapes). The 'face' and 'stadium' features attract similar interpretation debates."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Yonaguni: Japan's Underwater Mystery | History Channel",
+        "youtubeId": "JTdTqwQPvAI",
+        "duration": "44:12",
+        "source": "History Channel"
+      },
+      {
+        "title": "Diving the Yonaguni Monument | National Geographic",
+        "youtubeId": "5vYbLXJsRks",
+        "duration": "4:45",
+        "source": "National Geographic"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "Masaaki Kimura",
+        "title": "Diving Survey of Yonaguni Submarine Ruins",
+        "publisher": "University of the Ryukyus",
+        "year": 2007
+      },
+      {
+        "type": "journal",
+        "authors": ["Robert Schoch"],
+        "title": "Geological Study of the Yonaguni Formation",
+        "journal": "Circular Times",
+        "year": 1999
+      }
+    ],
+    "timeline": [
+      { "year": "10000 BCE?", "event": "Possible construction (if human-made)" },
+      { "year": "8000 BCE", "event": "Sea level rise submerges site" },
+      { "year": "1986", "event": "Discovered by diver Kihachiro Aratake" },
+      { "year": "1997", "event": "First scholarly investigations" },
+      { "year": "2007", "event": "Kimura publishes comprehensive survey" }
+    ]
+  },
+  "goreme": {
+    "deepDive": {
+      "introduction": "Cappadocia's Göreme valley contains an entire civilization carved into volcanic rock—churches, monasteries, and homes hollowed from 'fairy chimneys' formed by ancient eruptions. For over a thousand years, Christians created hidden sanctuaries in this otherworldly landscape.",
+      "sections": [
+        {
+          "title": "The Fairy Chimneys",
+          "content": "Millions of years ago, volcanic eruptions buried the region in tuff (consolidated ash). Erosion carved this soft rock into bizarre spires—'fairy chimneys' capped by harder basalt. Early inhabitants discovered the tuff was soft enough to carve with simple tools yet hardened when exposed to air, creating perfect natural building material."
+        },
+        {
+          "title": "The Hidden Churches",
+          "content": "Göreme contains over 400 churches carved into rock, many with elaborate Byzantine frescoes dating from the 6th to 13th centuries. During periods of persecution, Christians could hide entire communities in these cave complexes. Some churches remained unknown until the 20th century."
+        },
+        {
+          "title": "Still Living Underground",
+          "content": "While Göreme is now a museum, people in Cappadocia still live in cave homes. The rock provides natural insulation—cool in summer, warm in winter. Some hotels now offer the 'cave dwelling' experience, connecting modern tourists with a lifestyle thousands of years old."
+        }
+      ]
+    },
+    "videos": [
+      {
+        "title": "Cappadocia: Turkey's Underground Cities | DW Documentary",
+        "youtubeId": "3FjWMqQs5r4",
+        "duration": "42:15",
+        "source": "DW Documentary"
+      },
+      {
+        "title": "The Cave Churches of Göreme | Smithsonian Channel",
+        "youtubeId": "zL7MdKNj9bE",
+        "duration": "4:23",
+        "source": "Smithsonian Channel"
+      }
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "author": "Lyn Rodley",
+        "title": "Cave Monasteries of Byzantine Cappadocia",
+        "publisher": "Cambridge University Press",
+        "year": 1985,
+        "isbn": "978-0-521-26798-2"
+      },
+      {
+        "type": "journal",
+        "authors": ["Robert Ousterhout"],
+        "title": "Architecture as Relic and the Construction of Sanctity in the Byzantine World",
+        "journal": "Journal of the Society of Architectural Historians",
+        "year": 2009
+      }
+    ],
+    "timeline": [
+      { "year": "4th century CE", "event": "Christian hermits begin carving cells" },
+      { "year": "6th-7th century CE", "event": "Major church construction period" },
+      { "year": "9th-11th century CE", "event": "Peak of Byzantine rock art" },
+      { "year": "1453", "event": "Ottoman conquest; gradual abandonment" },
+      { "year": "1985", "event": "UNESCO World Heritage inscription" }
+    ]
+  }
+}
