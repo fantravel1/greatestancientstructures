@@ -1,0 +1,201 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/global/Header.astro';
+import Footer from '../../components/global/Footer.astro';
+import MobileNav from '../../components/global/MobileNav.astro';
+import SchemaOrg from '../../components/seo/SchemaOrg.astro';
+
+const article = {
+  title: "Underwater Structures: Flooded Civilizations?",
+  subtitle: "From Yonaguni to Dwarka, submerged structures hint at civilizations lost to rising seas. What lies beneath the waves?",
+  category: "Lost Civilizations",
+  readTime: "14 min",
+  publishDate: "2024-02-01",
+  image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1600&q=80"
+};
+
+const site = 'https://greatestancientstructures.com';
+---
+
+<BaseLayout
+  title={article.title}
+  description={article.subtitle}
+  image={article.image}
+  type="article"
+>
+  <SchemaOrg
+    type="article"
+    title={article.title}
+    description={article.subtitle}
+    url={`${site}/deep-dives/underwater-mysteries`}
+    image={article.image}
+    datePublished={article.publishDate}
+  />
+  <Header slot="header" />
+
+  <article class="pt-32 pb-20">
+    <div class="container-custom">
+      <!-- Header -->
+      <header class="max-w-4xl mx-auto mb-12">
+        <div class="flex items-center gap-4 mb-6">
+          <span class="badge-gold">{article.category}</span>
+          <span class="text-stone-500 text-sm">{article.readTime} read</span>
+        </div>
+        <h1 class="text-display-sm md:text-display-md font-display font-bold text-stone-100 mb-6">
+          {article.title}
+        </h1>
+        <p class="text-xl text-stone-400 leading-relaxed">
+          {article.subtitle}
+        </p>
+      </header>
+
+      <!-- Featured Image -->
+      <div class="max-w-5xl mx-auto mb-16">
+        <img
+          src={article.image}
+          alt="Underwater archaeological site"
+          class="w-full aspect-video object-cover rounded-2xl"
+        />
+      </div>
+
+      <!-- Content -->
+      <div class="max-w-3xl mx-auto prose prose-invert prose-gold">
+        <p class="lead">
+          At the end of the last Ice Age, sea levels rose over 120 meters. Coastlines retreated by hundreds of kilometers. Any civilization that built near the shore—as most civilizations do—would have been submerged. We've only explored 5% of the ocean floor. What's in the other 95%?
+        </p>
+
+        <h2>The Yonaguni Monument</h2>
+        <p>
+          In 1986, diver Kihachiro Aratake discovered a massive underwater formation off Yonaguni Island, Japan. The structure features flat terraces, sharp edges, and what appear to be steps—all at depths that would have been dry land during the Ice Age.
+        </p>
+        <p>
+          The debate has raged for decades:
+        </p>
+        <ul>
+          <li><strong>Natural formation camp:</strong> The local sandstone naturally fractures along perpendicular planes, creating geometric shapes</li>
+          <li><strong>Human construction camp:</strong> The precision of the "steps" and presence of apparent carvings (including a "turtle") suggest human work</li>
+        </ul>
+        <p>
+          If human-made, the monument would date to before 8000 BCE—millennia before any known Japanese civilization. The implications would be revolutionary.
+        </p>
+
+        <h2>Dwarka: Krishna's Lost City</h2>
+        <p>
+          Hindu tradition holds that the god Krishna ruled from Dwarka, a magnificent city later submerged by the sea. For centuries this was considered pure mythology—until marine archaeologists began finding structures in the Gulf of Cambay.
+        </p>
+        <p>
+          Since the 1980s, divers have documented:
+        </p>
+        <ul>
+          <li>Stone walls and what appear to be building foundations</li>
+          <li>Pottery shards and stone tools</li>
+          <li>What may be a planned urban grid</li>
+        </ul>
+        <p>
+          Mainstream archaeology dates these to around 1500 BCE—consistent with the Bronze Age but not with the mythological timeline. Alternative researchers claim the deeper structures are far older.
+        </p>
+
+        <blockquote>
+          <p>"We've documented over 500 artifacts from the Dwarka site. Whether this is the mythological Dwarka is a question of faith. That there was a significant settlement here, now underwater, is a matter of evidence."</p>
+          <cite>— Dr. S.R. Rao, Marine Archaeologist</cite>
+        </blockquote>
+
+        <h2>The Sundaland Hypothesis</h2>
+        <p>
+          During the Ice Age, lower sea levels exposed a vast landmass connecting Southeast Asia: Sundaland. This region—now submerged as the South China Sea—was larger than India, with fertile plains and river systems.
+        </p>
+        <p>
+          Some researchers propose Sundaland hosted advanced civilizations that were destroyed by post-glacial flooding. This would explain:
+        </p>
+        <ul>
+          <li>The sudden appearance of agriculture and civilization in multiple locations after 10,000 BCE</li>
+          <li>Global flood myths found in nearly every ancient culture</li>
+          <li>Enigmatic sites like Gunung Padang, which may have much older foundations than surface evidence suggests</li>
+        </ul>
+
+        <h2>The Mediterranean Underwater Cities</h2>
+        <p>
+          Not all underwater ruins are controversial. The Mediterranean hosts numerous confirmed submerged cities:
+        </p>
+        <ul>
+          <li><strong>Pavlopetri, Greece:</strong> A 5,000-year-old city with streets, buildings, and tombs clearly visible underwater</li>
+          <li><strong>Heracleion, Egypt:</strong> The legendary port city rediscovered in 2000, complete with temples and statues</li>
+          <li><strong>Baiae, Italy:</strong> A Roman resort town now underwater due to volcanic activity</li>
+        </ul>
+        <p>
+          These sites prove that sophisticated cities can be lost to the sea—and remain remarkably preserved for millennia.
+        </p>
+
+        <h2>The 5% Problem</h2>
+        <p>
+          Here's the uncomfortable truth: we've mapped more of Mars than we have of Earth's ocean floor. Only about 5% has been explored in any detail. The continental shelves—precisely where coastal civilizations would have built—are largely unsurveyed.
+        </p>
+        <p>
+          What might we find if we looked more carefully?
+        </p>
+        <ul>
+          <li>More confirmed cities like Pavlopetri and Heracleion?</li>
+          <li>Evidence of older, pre-Bronze Age settlements?</li>
+          <li>Connections between isolated ancient cultures?</li>
+        </ul>
+
+        <h2>A Note on Evidence</h2>
+        <p>
+          It's important to distinguish between what we know and what we speculate. We know:
+        </p>
+        <ul>
+          <li>Sea levels rose dramatically after the Ice Age</li>
+          <li>Ancient civilizations built on coastlines</li>
+          <li>Confirmed underwater cities exist in the Mediterranean</li>
+          <li>We've barely begun systematic underwater archaeology</li>
+        </ul>
+        <p>
+          What remains speculation:
+        </p>
+        <ul>
+          <li>Whether advanced pre-Ice Age civilizations existed</li>
+          <li>Whether Yonaguni and similar sites are human-made</li>
+          <li>What lies in the unexplored 95% of ocean</li>
+        </ul>
+        <p>
+          The honest answer is: we don't know. But the possibility that significant discoveries await beneath the waves is not fantasy—it's probability. The Mediterranean finds prove that underwater archaeology has barely scratched the surface.
+        </p>
+
+        <div class="not-prose mt-12 p-6 bg-obsidian-900/50 rounded-xl border border-obsidian-800">
+          <h3 class="text-lg font-bold text-gold-400 mb-4">Notable Underwater Sites</h3>
+          <ul class="space-y-2 text-stone-300">
+            <li>• <strong>Yonaguni Monument:</strong> Japan, 25m depth, debated origin</li>
+            <li>• <strong>Dwarka:</strong> India, Gulf of Cambay, possibly 3,500+ years old</li>
+            <li>• <strong>Pavlopetri:</strong> Greece, confirmed Bronze Age city</li>
+            <li>• <strong>Heracleion:</strong> Egypt, legendary port rediscovered 2000</li>
+            <li>• <strong>Bimini Road:</strong> Bahamas, debated limestone formation</li>
+            <li>• <strong>Cuba Underwater City:</strong> Sonar anomalies, largely unexplored</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Sources -->
+      <div class="max-w-3xl mx-auto mt-16 pt-8 border-t border-obsidian-800">
+        <h3 class="text-lg font-bold text-stone-100 mb-4">Sources & Further Reading</h3>
+        <ul class="space-y-2 text-sm text-stone-400">
+          <li>Kimura, Masaaki. <em>Diving Survey of Yonaguni Submarine Ruins</em>. University of the Ryukyus, 2007.</li>
+          <li>Rao, S.R. <em>The Lost City of Dwarka</em>. National Institute of Oceanography, 1999.</li>
+          <li>Oppenheimer, Stephen. <em>Eden in the East: The Drowned Continent of Southeast Asia</em>. Phoenix, 1999.</li>
+          <li>Henderson, Jon. "Pavlopetri: The World's Oldest Submerged City." <em>Antiquity</em> 85.328 (2011).</li>
+        </ul>
+      </div>
+
+      <!-- Related -->
+      <div class="max-w-3xl mx-auto mt-12">
+        <a href="/structures/yonaguni-monument" class="block p-6 bg-obsidian-900/50 rounded-xl border border-obsidian-800 hover:border-gold-400/50 transition-colors">
+          <span class="text-sm text-gold-400">Explore the Structure</span>
+          <h4 class="text-lg font-bold text-stone-100 mt-1">Yonaguni Monument</h4>
+          <p class="text-stone-400 mt-2">View full details, videos, and the ongoing debate.</p>
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <Footer slot="footer" />
+  <MobileNav />
+</BaseLayout>

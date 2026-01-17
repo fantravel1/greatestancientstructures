@@ -6,9 +6,12 @@ import MobileNav from '../../components/global/MobileNav.astro';
 import References from '../../components/global/References.astro';
 import SocialShare from '../../components/global/SocialShare.astro';
 import RelatedStructures from '../../components/structure/RelatedStructures.astro';
+import SchemaOrg from '../../components/seo/SchemaOrg.astro';
 import structures from '../../data/structures.json';
 import referencesData from '../../data/references.json';
 import deepContent from '../../data/deep-content.json';
+
+const site = 'https://greatestancientstructures.com';
 
 export function getStaticPaths() {
   return structures.map(structure => ({
@@ -60,6 +63,19 @@ function formatSource(source: any): string {
   image={structure.heroImage}
   type="article"
 >
+  <SchemaOrg
+    type="place"
+    title={structure.name}
+    description={structure.summary}
+    url={`${site}/structures/${structure.slug}`}
+    image={structure.heroImage}
+    structure={{
+      name: structure.name,
+      country: structure.country,
+      coordinates: structure.coordinates,
+      dates: structure.dates
+    }}
+  />
   <Header slot="header" />
 
   <!-- Hero -->

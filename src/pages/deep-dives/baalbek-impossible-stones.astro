@@ -1,0 +1,170 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/global/Header.astro';
+import Footer from '../../components/global/Footer.astro';
+import MobileNav from '../../components/global/MobileNav.astro';
+import SchemaOrg from '../../components/seo/SchemaOrg.astro';
+
+const article = {
+  title: "Baalbek: Why Move 1,000-Ton Stones?",
+  subtitle: "The largest worked stones in human history sit in a Lebanese quarry. How did ancient engineers plan to move megaliths that exceed modern crane capacity?",
+  category: "Engineering Mystery",
+  readTime: "10 min",
+  publishDate: "2024-01-25",
+  image: "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?w=1600&q=80"
+};
+
+const site = 'https://greatestancientstructures.com';
+---
+
+<BaseLayout
+  title={article.title}
+  description={article.subtitle}
+  image={article.image}
+  type="article"
+>
+  <SchemaOrg
+    type="article"
+    title={article.title}
+    description={article.subtitle}
+    url={`${site}/deep-dives/baalbek-impossible-stones`}
+    image={article.image}
+    datePublished={article.publishDate}
+  />
+  <Header slot="header" />
+
+  <article class="pt-32 pb-20">
+    <div class="container-custom">
+      <!-- Header -->
+      <header class="max-w-4xl mx-auto mb-12">
+        <div class="flex items-center gap-4 mb-6">
+          <span class="badge-gold">{article.category}</span>
+          <span class="text-stone-500 text-sm">{article.readTime} read</span>
+        </div>
+        <h1 class="text-display-sm md:text-display-md font-display font-bold text-stone-100 mb-6">
+          {article.title}
+        </h1>
+        <p class="text-xl text-stone-400 leading-relaxed">
+          {article.subtitle}
+        </p>
+      </header>
+
+      <!-- Featured Image -->
+      <div class="max-w-5xl mx-auto mb-16">
+        <img
+          src={article.image}
+          alt="Temple of Jupiter at Baalbek"
+          class="w-full aspect-video object-cover rounded-2xl"
+        />
+      </div>
+
+      <!-- Content -->
+      <div class="max-w-3xl mx-auto prose prose-invert prose-gold">
+        <p class="lead">
+          In a quarry 900 meters from the Temple of Jupiter in Baalbek, Lebanon, lies a stone so massive it has its own name: the "Stone of the Pregnant Woman." At approximately 1,000 tons, it is the largest worked stone in antiquity. And in 2014, archaeologists found an even larger one beneath it—1,650 tons of precisely cut limestone, seemingly abandoned mid-extraction.
+        </p>
+
+        <h2>The Weight Problem</h2>
+        <p>
+          To understand Baalbek's mystery, consider modern capabilities. The largest mobile crane in the world—the Liebherr LTM 11200-9.1—can lift 1,200 tons under ideal conditions. The Stone of the Pregnant Woman exceeds this capacity. The 2014 megalith exceeds it by nearly 40%.
+        </p>
+        <p>
+          Yet ancient engineers not only quarried these stones—they planned to move them. The quarry shows clear extraction marks, tool impressions, and the careful undercutting that precedes stone removal. These weren't artistic exercises; they were construction materials, waiting for transport.
+        </p>
+
+        <h2>The Trilithon</h2>
+        <p>
+          The truly baffling achievement isn't in the quarry—it's in the temple. Three stones known as the "Trilithon" form part of the Temple of Jupiter's foundation. Each weighs approximately 800 tons. Each was lifted 7 meters onto the platform. Each was fitted with precision joints that a razor blade cannot penetrate.
+        </p>
+        <p>
+          These stones didn't just need to be moved—they needed to be positioned with millimeter accuracy, at height, 900 meters from their quarry.
+        </p>
+
+        <blockquote>
+          <p>"The transportation of the Trilithon blocks remains one of the greatest unsolved problems in archaeology. We can describe what was done; we cannot explain how."</p>
+          <cite>— Dr. Margarete van Ess, German Archaeological Institute</cite>
+        </blockquote>
+
+        <h2>The Proposed Solutions</h2>
+        <p>
+          Various theories attempt to explain Baalbek's megaliths:
+        </p>
+        <ul>
+          <li><strong>Roller systems:</strong> Wooden rollers could distribute weight, but would need to be massive themselves and would crush under these loads</li>
+          <li><strong>Sledges and lubrication:</strong> Water or oil-lubricated tracks could reduce friction, but controlling 800+ tons on slopes seems impossible</li>
+          <li><strong>Lever and fulcrum:</strong> Could lift stones incrementally, but the Trilithon was placed at height in single pieces</li>
+          <li><strong>Earthen ramps:</strong> Would require ramps larger than the temple complex itself</li>
+        </ul>
+        <p>
+          Each theory explains part of the achievement. None explains all of it.
+        </p>
+
+        <h2>Roman or Pre-Roman?</h2>
+        <p>
+          The visible Temple of Jupiter is Roman, dating to the 1st century BCE. But many researchers question whether the foundation—including the Trilithon—is older.
+        </p>
+        <p>
+          The Romans were master engineers who documented their techniques extensively. Yet no Roman source mentions how the Trilithon was moved. No construction records survive. The achievement seems to have been as mysterious to them as it is to us.
+        </p>
+        <p>
+          Some researchers propose a pre-Roman origin for the platform, suggesting the Romans built their temple on an existing megalithic foundation. This would push the construction date back centuries—or millennia—into periods with even less technological capacity.
+        </p>
+
+        <h2>The Quarry Evidence</h2>
+        <p>
+          The abandoned megaliths tell their own story. The Stone of the Pregnant Woman and its larger neighbor are both partially undercut—prepared for extraction but never removed. Why?
+        </p>
+        <p>
+          Possible explanations:
+        </p>
+        <ul>
+          <li>The stones cracked during extraction (no visible cracks suggest otherwise)</li>
+          <li>The project was abandoned due to political/economic disruption</li>
+          <li>The builders realized the stones were too heavy even for their techniques</li>
+          <li>The construction method required specific conditions (seasonal, astronomical?) that didn't recur</li>
+        </ul>
+
+        <h2>What We Can Conclude</h2>
+        <p>
+          Whatever technique moved the Trilithon, it worked. The stones are there, positioned with precision, fitted perfectly. This wasn't magic or myth—it was engineering. The question isn't whether ancient people could do it; the evidence proves they did. The question is how they did it with the tools available.
+        </p>
+        <p>
+          Baalbek forces us to confront a possibility: that ancient civilizations possessed construction knowledge that has been lost. Not alien technology or mystical powers—simply techniques so effective, so revolutionary, that we haven't yet reverse-engineered them from the evidence they left behind.
+        </p>
+
+        <div class="not-prose mt-12 p-6 bg-obsidian-900/50 rounded-xl border border-obsidian-800">
+          <h3 class="text-lg font-bold text-gold-400 mb-4">The Megaliths of Baalbek</h3>
+          <ul class="space-y-2 text-stone-300">
+            <li>• <strong>Stone of the Pregnant Woman:</strong> ~1,000 tons, 20m x 4m x 4m</li>
+            <li>• <strong>2014 Megalith:</strong> ~1,650 tons, 19.6m x 6m x 5.5m</li>
+            <li>• <strong>Trilithon blocks:</strong> 3 stones, ~800 tons each, lifted 7m</li>
+            <li>• <strong>Quarry distance:</strong> 900 meters uphill from temple</li>
+            <li>• <strong>Largest modern crane capacity:</strong> 1,200 tons (under ideal conditions)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Sources -->
+      <div class="max-w-3xl mx-auto mt-16 pt-8 border-t border-obsidian-800">
+        <h3 class="text-lg font-bold text-stone-100 mb-4">Sources & Further Reading</h3>
+        <ul class="space-y-2 text-sm text-stone-400">
+          <li>Ragette, Friedrich. <em>Baalbek</em>. Chatto & Windus, 1980.</li>
+          <li>Abdul Massih, Janine et al. "Observations on the techniques used for the monoliths." <em>BAAL</em> 16 (2016): 165-188.</li>
+          <li>Jarus, Owen. "Largest Ancient Stone Block Discovered." <em>Live Science</em>, 2014.</li>
+        </ul>
+      </div>
+
+      <!-- Related -->
+      <div class="max-w-3xl mx-auto mt-12">
+        <a href="/structures/baalbek" class="block p-6 bg-obsidian-900/50 rounded-xl border border-obsidian-800 hover:border-gold-400/50 transition-colors">
+          <span class="text-sm text-gold-400">Explore the Structure</span>
+          <h4 class="text-lg font-bold text-stone-100 mt-1">Baalbek</h4>
+          <p class="text-stone-400 mt-2">View full details, videos, timeline, and academic sources.</p>
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <Footer slot="footer" />
+  <MobileNav />
+</BaseLayout>
