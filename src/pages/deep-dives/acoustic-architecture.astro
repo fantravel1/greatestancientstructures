@@ -1,0 +1,193 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/global/Header.astro';
+import Footer from '../../components/global/Footer.astro';
+import MobileNav from '../../components/global/MobileNav.astro';
+import SchemaOrg from '../../components/seo/SchemaOrg.astro';
+
+const article = {
+  title: "Ancient Acoustic Engineering",
+  subtitle: "Chichén Itzá chirps like a quetzal. Stonehenge amplifies voices. Were ancient builders acoustic engineers?",
+  category: "Hidden Technology",
+  readTime: "9 min",
+  publishDate: "2024-02-15",
+  image: "https://images.unsplash.com/photo-1518638150340-f706e86654de?w=1600&q=80"
+};
+
+const site = 'https://greatestancientstructures.com';
+---
+
+<BaseLayout
+  title={article.title}
+  description={article.subtitle}
+  image={article.image}
+  type="article"
+>
+  <SchemaOrg
+    type="article"
+    title={article.title}
+    description={article.subtitle}
+    url={`${site}/deep-dives/acoustic-architecture`}
+    image={article.image}
+    datePublished={article.publishDate}
+  />
+  <Header slot="header" />
+
+  <article class="pt-32 pb-20">
+    <div class="container-custom">
+      <!-- Header -->
+      <header class="max-w-4xl mx-auto mb-12">
+        <div class="flex items-center gap-4 mb-6">
+          <span class="badge-gold">{article.category}</span>
+          <span class="text-stone-500 text-sm">{article.readTime} read</span>
+        </div>
+        <h1 class="text-display-sm md:text-display-md font-display font-bold text-stone-100 mb-6">
+          {article.title}
+        </h1>
+        <p class="text-xl text-stone-400 leading-relaxed">
+          {article.subtitle}
+        </p>
+      </header>
+
+      <!-- Featured Image -->
+      <div class="max-w-5xl mx-auto mb-16">
+        <img
+          src={article.image}
+          alt="El Castillo at Chichén Itzá"
+          class="w-full aspect-video object-cover rounded-2xl"
+        />
+      </div>
+
+      <!-- Content -->
+      <div class="max-w-3xl mx-auto prose prose-invert prose-gold">
+        <p class="lead">
+          Stand at the base of El Castillo at Chichén Itzá. Clap your hands. The echo that returns isn't a simple reflection—it's a chirping sound remarkably similar to the call of the sacred quetzal bird. Coincidence? Acoustic engineers say probably not.
+        </p>
+
+        <h2>The Quetzal Effect</h2>
+        <p>
+          Acoustician David Lubman first analyzed El Castillo's unusual echo in 1998. His findings were striking: the pyramid's stepped construction creates a "chirped echo"—a sound that drops in pitch as the reflected waves return from successive steps.
+        </p>
+        <p>
+          The resulting sound closely mimics the quetzal, a bird sacred to the Maya. The pyramid is dedicated to Kukulcan, the feathered serpent god. Was this acoustic effect intentional?
+        </p>
+        <p>
+          Evidence for intentionality:
+        </p>
+        <ul>
+          <li>The quetzal was deeply sacred to Maya culture</li>
+          <li>The pyramid's step heights are precisely calibrated to produce this effect</li>
+          <li>Similar acoustic phenomena appear at other Maya sites</li>
+        </ul>
+
+        <h2>Stonehenge's Sound Chamber</h2>
+        <p>
+          Recent acoustic studies of Stonehenge reveal it once functioned as an amphitheater. When the stone circle was complete, sounds made inside were amplified while external sounds were blocked. Voices carried clearly between the standing stones.
+        </p>
+        <p>
+          Researcher Bruno Fazenda used digital modeling to reconstruct Stonehenge's original acoustics. His findings suggest the monument would have been ideal for:
+        </p>
+        <ul>
+          <li>Ceremonial speech audible to large gatherings</li>
+          <li>Rhythmic music that resonated between the stones</li>
+          <li>Creating an enclosed "sacred space" distinct from the outside world</li>
+        </ul>
+
+        <blockquote>
+          <p>"Stonehenge would have had remarkable acoustic properties. Sounds inside the circle would seem to come from everywhere at once. It would have been an immersive, otherworldly experience."</p>
+          <cite>— Dr. Bruno Fazenda, University of Salford</cite>
+        </blockquote>
+
+        <h2>The Hypogeum of Malta</h2>
+        <p>
+          Beneath Malta lies the Hypogeum—an underground temple carved from limestone around 4000 BCE. One of its chambers, the "Oracle Room," has acoustic properties that seem impossible to achieve by accident.
+        </p>
+        <p>
+          When a male voice speaks in the Oracle Room, it resonates at a frequency around 110 Hz—a frequency that research suggests can alter brain function. The chamber amplifies low male voices while filtering higher frequencies. Words spoken here would have seemed to emanate from the stone itself.
+        </p>
+        <p>
+          This acoustic selectivity suggests the chamber was designed for ritual purposes—priests or oracles speaking in frequencies that induced altered states in listeners.
+        </p>
+
+        <h2>Newgrange's Standing Waves</h2>
+        <p>
+          Ireland's Newgrange passage tomb was built around 3200 BCE. The 19-meter passage creates standing waves—sound patterns that can make voices seem to come from multiple directions simultaneously.
+        </p>
+        <p>
+          Experiments with drums and chanting show the passage amplifies certain frequencies while dampening others. During the winter solstice light phenomenon, any ceremony conducted inside would have had other-worldly acoustic properties.
+        </p>
+
+        <h2>The Global Pattern</h2>
+        <p>
+          Acoustic anomalies appear at ancient sites worldwide:
+        </p>
+        <ul>
+          <li><strong>Chavín de Huántar (Peru):</strong> Conch shell trumpets create disorienting echoes in underground galleries</li>
+          <li><strong>Göbekli Tepe (Turkey):</strong> Enclosures may have amplified sound for ceremonial purposes</li>
+          <li><strong>Epidaurus (Greece):</strong> Ancient theater with acoustics that allow whispers to be heard 60 rows back</li>
+          <li><strong>Delphi (Greece):</strong> Oracle's chamber positioned at geological fault producing consciousness-altering gases and sounds</li>
+        </ul>
+
+        <h2>Coincidence or Design?</h2>
+        <p>
+          Skeptics argue many acoustic effects are coincidental—byproducts of shapes chosen for other reasons. Curved walls focus sound whether or not you intend them to.
+        </p>
+        <p>
+          But several factors suggest intentionality:
+        </p>
+        <ol>
+          <li><strong>Consistency:</strong> Similar effects appear at sacred sites across unconnected cultures</li>
+          <li><strong>Precision:</strong> Effects like El Castillo's quetzal chirp require specific dimensions that could easily have been different</li>
+          <li><strong>Context:</strong> Acoustic effects typically appear at ritual sites, not ordinary buildings</li>
+          <li><strong>Trial and error:</strong> Some sites show evidence of modification, as if builders experimented to achieve desired effects</li>
+        </ol>
+
+        <h2>What They Understood</h2>
+        <p>
+          Ancient builders may not have understood acoustics as physics. They didn't need to. Through observation and experimentation, they learned that certain shapes produced certain effects. Stone that "speaks." Chambers where gods seem present. Pyramids that echo with sacred sounds.
+        </p>
+        <p>
+          This was empirical knowledge—learned through trial and error over generations. We're only beginning to catalog these acoustic features. How many more ancient buildings were designed to sound as good as they look?
+        </p>
+
+        <div class="not-prose mt-12 p-6 bg-obsidian-900/50 rounded-xl border border-obsidian-800">
+          <h3 class="text-lg font-bold text-gold-400 mb-4">Documented Acoustic Sites</h3>
+          <ul class="space-y-2 text-stone-300">
+            <li>• <strong>El Castillo, Chichén Itzá:</strong> Quetzal-like chirped echo</li>
+            <li>• <strong>Stonehenge:</strong> Sound amplification and isolation</li>
+            <li>• <strong>Hypogeum, Malta:</strong> 110 Hz resonance chamber</li>
+            <li>• <strong>Newgrange:</strong> Standing waves and multi-directional sound</li>
+            <li>• <strong>Epidaurus Theater:</strong> Perfect voice projection to 14,000 seats</li>
+            <li>• <strong>Chavín de Huántar:</strong> Disorienting underground echoes</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Sources -->
+      <div class="max-w-3xl mx-auto mt-16 pt-8 border-t border-obsidian-800">
+        <h3 class="text-lg font-bold text-stone-100 mb-4">Sources & Further Reading</h3>
+        <ul class="space-y-2 text-sm text-stone-400">
+          <li>Lubman, David. "An archaeological study of chirped echo from the Mayan pyramid of Kukulkan." <em>JASA</em> 104.1849 (1998).</li>
+          <li>Fazenda, Bruno. "Cave acoustics in prehistory." <em>JASA</em> 142.3 (2017): 1332-1349.</li>
+          <li>Cook, Perry et al. "Analysis of Acoustics at Chavín de Huántar." <em>Stanford CCRMA</em>, 2010.</li>
+          <li>Jahn, Robert et al. "Acoustical Resonances of Assorted Ancient Structures." <em>JASA</em> 99.2 (1996): 649-658.</li>
+        </ul>
+      </div>
+
+      <!-- Related -->
+      <div class="max-w-3xl mx-auto mt-12 grid gap-4 sm:grid-cols-2">
+        <a href="/structures/chichen-itza" class="block p-6 bg-obsidian-900/50 rounded-xl border border-obsidian-800 hover:border-gold-400/50 transition-colors">
+          <span class="text-sm text-gold-400">Explore</span>
+          <h4 class="text-lg font-bold text-stone-100 mt-1">Chichén Itzá</h4>
+        </a>
+        <a href="/structures/stonehenge" class="block p-6 bg-obsidian-900/50 rounded-xl border border-obsidian-800 hover:border-gold-400/50 transition-colors">
+          <span class="text-sm text-gold-400">Explore</span>
+          <h4 class="text-lg font-bold text-stone-100 mt-1">Stonehenge</h4>
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <Footer slot="footer" />
+  <MobileNav />
+</BaseLayout>

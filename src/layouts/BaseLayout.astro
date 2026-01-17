@@ -11,8 +11,8 @@ interface Props {
 
 const {
   title,
-  description = "Explore humanity's most mysterious and awe-inspiring ancient constructions. From Göbekli Tepe to the Great Pyramid, discover 500+ structures that blur the line between human engineering and the impossible.",
-  image = "/images/og-default.jpg",
+  description = "Explore humanity's most mysterious and awe-inspiring ancient constructions. From Göbekli Tepe to the Great Pyramid, discover 30+ structures that blur the line between human engineering and the impossible.",
+  image = "/images/og-default.svg",
   canonicalURL = Astro.url.href,
   type = 'website'
 } = Astro.props;
@@ -52,7 +52,7 @@ const base = import.meta.env.BASE_URL;
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
-    <link rel="apple-touch-icon" sizes="180x180" href={`${base}apple-touch-icon.png`} />
+    <link rel="apple-touch-icon" sizes="180x180" href={`${base}apple-touch-icon.svg`} />
 
     <!-- Preconnect to external origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

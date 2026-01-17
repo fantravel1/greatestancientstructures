@@ -1,0 +1,225 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/global/Header.astro';
+import Footer from '../../components/global/Footer.astro';
+import MobileNav from '../../components/global/MobileNav.astro';
+import SchemaOrg from '../../components/seo/SchemaOrg.astro';
+
+const article = {
+  title: "Stars and Stones: Astronomical Alignments",
+  subtitle: "Newgrange captures winter solstice sunrise. Angkor mirrors Draco. The ancient obsession with celestial precision.",
+  category: "Archaeoastronomy",
+  readTime: "13 min",
+  publishDate: "2024-02-20",
+  image: "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=1600&q=80"
+};
+
+const site = 'https://greatestancientstructures.com';
+---
+
+<BaseLayout
+  title={article.title}
+  description={article.subtitle}
+  image={article.image}
+  type="article"
+>
+  <SchemaOrg
+    type="article"
+    title={article.title}
+    description={article.subtitle}
+    url={`${site}/deep-dives/astronomical-alignments`}
+    image={article.image}
+    datePublished={article.publishDate}
+  />
+  <Header slot="header" />
+
+  <article class="pt-32 pb-20">
+    <div class="container-custom">
+      <!-- Header -->
+      <header class="max-w-4xl mx-auto mb-12">
+        <div class="flex items-center gap-4 mb-6">
+          <span class="badge-gold">{article.category}</span>
+          <span class="text-stone-500 text-sm">{article.readTime} read</span>
+        </div>
+        <h1 class="text-display-sm md:text-display-md font-display font-bold text-stone-100 mb-6">
+          {article.title}
+        </h1>
+        <p class="text-xl text-stone-400 leading-relaxed">
+          {article.subtitle}
+        </p>
+      </header>
+
+      <!-- Featured Image -->
+      <div class="max-w-5xl mx-auto mb-16">
+        <img
+          src={article.image}
+          alt="Starry sky over ancient monument"
+          class="w-full aspect-video object-cover rounded-2xl"
+        />
+      </div>
+
+      <!-- Content -->
+      <div class="max-w-3xl mx-auto prose prose-invert prose-gold">
+        <p class="lead">
+          For 17 minutes each winter solstice, sunlight enters Newgrange's "roof box" and travels 19 meters down the passage to illuminate the inner chamber. This alignment has worked for 5,200 years. It wasn't an accident.
+        </p>
+
+        <h2>The Newgrange Phenomenon</h2>
+        <p>
+          Newgrange was built around 3200 BCE—500 years before the first pyramid. Its builders constructed a "roof box" above the entrance, a narrow opening that allows light to enter only during the days around winter solstice.
+        </p>
+        <p>
+          The precision required is extraordinary:
+        </p>
+        <ul>
+          <li>The passage rises 2 meters over 19 meters—calculated to match the winter sun's angle</li>
+          <li>The roof box opening is just 20cm high and 1 meter wide</li>
+          <li>The alignment accounts for the site's geographic latitude and local horizon</li>
+          <li>After 5,200 years, it still works (though slight Earth wobble has shifted it by about 4 minutes)</li>
+        </ul>
+
+        <h2>Stonehenge's Solar Theater</h2>
+        <p>
+          Stonehenge's alignment to the summer solstice sunrise is its most famous feature—but it's just the beginning. The monument also aligns to winter solstice sunset, creating a solar axis that bisects the stone circle.
+        </p>
+        <p>
+          More subtle alignments include:
+        </p>
+        <ul>
+          <li>The "Station Stones" mark lunar standstill positions</li>
+          <li>The Avenue approaches from the direction of midsummer sunrise</li>
+          <li>Architectural modifications over 1,500 years consistently maintained solar orientations</li>
+        </ul>
+
+        <blockquote>
+          <p>"Stonehenge isn't a simple solstice marker. It's a sophisticated calendar that tracks multiple celestial cycles. The builders understood orbital mechanics we didn't rediscover until the Renaissance."</p>
+          <cite>— Gerald Hawkins, astronomer and author of "Stonehenge Decoded"</cite>
+        </blockquote>
+
+        <h2>The Great Pyramid's Precision</h2>
+        <p>
+          The Great Pyramid is aligned to true north within 3 arc-minutes—more precisely than any other ancient structure and more precisely than the Royal Observatory at Greenwich when it was built.
+        </p>
+        <p>
+          Other astronomical features include:
+        </p>
+        <ul>
+          <li>The "air shafts" in the King's Chamber pointed at specific stars when built (Orion's Belt, Thuban in Draco)</li>
+          <li>The pyramid's geometry encodes the ratio of Earth's circumference to its radius</li>
+          <li>The sides are aligned to cardinal directions with extraordinary accuracy</li>
+        </ul>
+        <p>
+          Whether these represent intentional astronomical knowledge or coincidental geometry remains debated.
+        </p>
+
+        <h2>Angkor Wat: Temple of Time</h2>
+        <p>
+          Angkor Wat is precisely aligned so the spring equinox sun rises directly over its central tower. But the temple's astronomical encoding runs deeper.
+        </p>
+        <p>
+          Researcher Eleanor Mannikka documented that:
+        </p>
+        <ul>
+          <li>Distances between towers correspond to astronomical cycles</li>
+          <li>The total number of asuras and devas in the Churning of the Ocean relief (108 each) matches Hindu cosmological numbers</li>
+          <li>The temple's dimensions encode the length of the four yugas (cosmic ages)</li>
+          <li>Walking the outer gallery recreates the passage of cosmic time</li>
+        </ul>
+
+        <h2>Chichén Itzá's Serpent</h2>
+        <p>
+          El Castillo's equinox phenomenon is famous: shadows cast by the pyramid's stepped corners create the appearance of a serpent descending the staircase on spring and fall equinoxes.
+        </p>
+        <p>
+          Less known is that:
+        </p>
+        <ul>
+          <li>The pyramid has 365 steps (days of the year)</li>
+          <li>Each face has 52 panels (years in a Calendar Round)</li>
+          <li>The 9 terraces, divided by a staircase, create 18 segments (months in the Maya calendar)</li>
+        </ul>
+        <p>
+          The entire pyramid is a calendar in stone.
+        </p>
+
+        <h2>Abu Simbel's Solar Theater</h2>
+        <p>
+          Twice each year—on February 22 and October 22—the rising sun penetrates 60 meters into Abu Simbel's temple to illuminate three of four statues in the inner sanctuary. The fourth statue, representing Ptah (god of darkness), remains in shadow.
+        </p>
+        <p>
+          These dates may correspond to Ramesses II's birthday and coronation. The precision required to achieve this alignment 3,300 years ago, carved into a mountainside, demonstrates sophisticated astronomical and engineering knowledge.
+        </p>
+
+        <h2>The Constellation Correlations</h2>
+        <p>
+          More controversial are proposed correlations between monument layouts and star patterns:
+        </p>
+        <ul>
+          <li><strong>Giza-Orion Theory:</strong> Robert Bauval proposed the three pyramids mirror Orion's Belt</li>
+          <li><strong>Angkor-Draco:</strong> Graham Hancock suggests Angkor's temples map the Draco constellation</li>
+          <li><strong>Teotihuacan alignment:</strong> The Street of the Dead allegedly reflects the Pleiades</li>
+        </ul>
+        <p>
+          These theories remain controversial. Critics note that with enough monuments and stars, some correlations are statistically inevitable. Supporters argue the matches are too precise for coincidence.
+        </p>
+
+        <h2>What They Knew</h2>
+        <p>
+          What's certain is that ancient cultures worldwide:
+        </p>
+        <ul>
+          <li>Tracked solar and lunar cycles with precision</li>
+          <li>Incorporated celestial alignments into their most sacred buildings</li>
+          <li>Invested enormous resources in achieving astronomical accuracy</li>
+          <li>Maintained these observations across centuries and millennia</li>
+        </ul>
+        <p>
+          Why? The practical answer is agriculture—planting and harvesting require calendar knowledge. But the monumental investment suggests something more: a deep conviction that the heavens and earth were connected, and that aligning structures to celestial bodies aligned human activity with cosmic order.
+        </p>
+        <p>
+          They didn't just observe the stars. They built the stars into stone.
+        </p>
+
+        <div class="not-prose mt-12 p-6 bg-obsidian-900/50 rounded-xl border border-obsidian-800">
+          <h3 class="text-lg font-bold text-gold-400 mb-4">Key Astronomical Alignments</h3>
+          <ul class="space-y-2 text-stone-300">
+            <li>• <strong>Newgrange:</strong> Winter solstice sunrise (5,200 years accurate)</li>
+            <li>• <strong>Stonehenge:</strong> Summer solstice sunrise, winter sunset</li>
+            <li>• <strong>Great Pyramid:</strong> True north within 3 arc-minutes</li>
+            <li>• <strong>Angkor Wat:</strong> Spring equinox sunrise over central tower</li>
+            <li>• <strong>Chichén Itzá:</strong> Equinox serpent shadow phenomenon</li>
+            <li>• <strong>Abu Simbel:</strong> Biannual solar illumination of inner sanctuary</li>
+            <li>• <strong>Mnajdra, Malta:</strong> Equinox and solstice sun illuminates interior</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Sources -->
+      <div class="max-w-3xl mx-auto mt-16 pt-8 border-t border-obsidian-800">
+        <h3 class="text-lg font-bold text-stone-100 mb-4">Sources & Further Reading</h3>
+        <ul class="space-y-2 text-sm text-stone-400">
+          <li>Hawkins, Gerald. <em>Stonehenge Decoded</em>. Doubleday, 1965.</li>
+          <li>O'Kelly, Michael J. <em>Newgrange: Archaeology, Art and Legend</em>. Thames & Hudson, 1982.</li>
+          <li>Mannikka, Eleanor. <em>Angkor Wat: Time, Space, and Kingship</em>. University of Hawaii Press, 1996.</li>
+          <li>Bauval, Robert. <em>The Orion Mystery</em>. Crown, 1994.</li>
+          <li>Aveni, Anthony. <em>Skywatchers</em>. University of Texas Press, 2001.</li>
+        </ul>
+      </div>
+
+      <!-- Related -->
+      <div class="max-w-3xl mx-auto mt-12 grid gap-4 sm:grid-cols-2">
+        <a href="/structures/newgrange" class="block p-6 bg-obsidian-900/50 rounded-xl border border-obsidian-800 hover:border-gold-400/50 transition-colors">
+          <span class="text-sm text-gold-400">Explore</span>
+          <h4 class="text-lg font-bold text-stone-100 mt-1">Newgrange</h4>
+        </a>
+        <a href="/structures/angkor-wat" class="block p-6 bg-obsidian-900/50 rounded-xl border border-obsidian-800 hover:border-gold-400/50 transition-colors">
+          <span class="text-sm text-gold-400">Explore</span>
+          <h4 class="text-lg font-bold text-stone-100 mt-1">Angkor Wat</h4>
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <Footer slot="footer" />
+  <MobileNav />
+</BaseLayout>

@@ -1,0 +1,170 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/global/Header.astro';
+import Footer from '../../components/global/Footer.astro';
+import MobileNav from '../../components/global/MobileNav.astro';
+import SchemaOrg from '../../components/seo/SchemaOrg.astro';
+
+const article = {
+  title: "The Impossible Precision of the Great Pyramid",
+  subtitle: "A 6-million-ton structure aligned to true north within 3/60th of a degree. How did Bronze Age engineers achieve what modern builders struggle to replicate?",
+  category: "Engineering Mystery",
+  readTime: "15 min",
+  publishDate: "2024-01-15",
+  image: "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?w=1600&q=80"
+};
+
+const site = 'https://greatestancientstructures.com';
+---
+
+<BaseLayout
+  title={article.title}
+  description={article.subtitle}
+  image={article.image}
+  type="article"
+>
+  <SchemaOrg
+    type="article"
+    title={article.title}
+    description={article.subtitle}
+    url={`${site}/deep-dives/pyramid-precision`}
+    image={article.image}
+    datePublished={article.publishDate}
+  />
+  <Header slot="header" />
+
+  <article class="pt-32 pb-20">
+    <div class="container-custom">
+      <!-- Header -->
+      <header class="max-w-4xl mx-auto mb-12">
+        <div class="flex items-center gap-4 mb-6">
+          <span class="badge-gold">{article.category}</span>
+          <span class="text-stone-500 text-sm">{article.readTime} read</span>
+        </div>
+        <h1 class="text-display-sm md:text-display-md font-display font-bold text-stone-100 mb-6">
+          {article.title}
+        </h1>
+        <p class="text-xl text-stone-400 leading-relaxed">
+          {article.subtitle}
+        </p>
+      </header>
+
+      <!-- Featured Image -->
+      <div class="max-w-5xl mx-auto mb-16">
+        <img
+          src={article.image}
+          alt="The Great Pyramid of Giza"
+          class="w-full aspect-video object-cover rounded-2xl"
+        />
+      </div>
+
+      <!-- Content -->
+      <div class="max-w-3xl mx-auto prose prose-invert prose-gold">
+        <p class="lead">
+          The Great Pyramid of Giza is not just an impressive pile of stones. It is a mathematical statement, an astronomical instrument, and an engineering achievement that continues to defy explanation. The numbers speak for themselves—and they're staggering.
+        </p>
+
+        <h2>The Numbers That Don't Add Up</h2>
+        <p>
+          Consider the base of the Great Pyramid. It measures 230.4 meters on each side, covering 53,000 square meters—the area of 10 football fields. Yet this massive foundation is level to within just 2.1 centimeters across its entire length. That's a precision of 0.0009%.
+        </p>
+        <p>
+          Modern construction projects routinely accept variations of several centimeters over much shorter distances. The ancient Egyptians, working with copper tools and no lasers, achieved tolerances that would challenge a modern construction crew with theodolites and GPS.
+        </p>
+
+        <h2>The Alignment Problem</h2>
+        <p>
+          The Great Pyramid is aligned to true north within 3 arc-minutes—that's 0.05 degrees. This is more precise than the Royal Observatory at Greenwich was when it was built in 1675, despite being constructed 4,000 years earlier.
+        </p>
+        <p>
+          To achieve this alignment, the builders would have needed to track stellar movements over extended periods, understand the difference between magnetic and true north, and translate that knowledge into a construction plan for a 6-million-ton structure. Without telescopes. Without computers. Without even iron tools.
+        </p>
+
+        <blockquote>
+          <p>"The precision of the Great Pyramid's alignment to true north is so exact that it could only have been achieved through sophisticated astronomical observation over many years."</p>
+          <cite>— Dr. Kate Spence, Cambridge University</cite>
+        </blockquote>
+
+        <h2>The Stone Placement Puzzle</h2>
+        <p>
+          The pyramid contains approximately 2.3 million stone blocks, with an average weight of 2.5 tons each. The heaviest blocks—the granite beams above the King's Chamber—weigh up to 80 tons and were somehow lifted 60 meters into the structure.
+        </p>
+        <p>
+          If the pyramid was built over 20 years (as historical records suggest), workers would have needed to place one block every 2-3 minutes, 10 hours a day, 365 days a year. This rate seems impossible, yet the pyramid exists.
+        </p>
+
+        <h2>The Internal Architecture</h2>
+        <p>
+          Inside the pyramid, the Grand Gallery rises at a precise 26-degree angle for 47 meters. The King's Chamber is constructed from massive granite blocks, with walls that are perfectly perpendicular and corners that form exact 90-degree angles.
+        </p>
+        <p>
+          Above the King's Chamber lie five "relieving chambers"—granite structures designed to distribute the weight of the 100+ meters of stone above. Each chamber is separated by precisely cut granite beams, some weighing 70 tons.
+        </p>
+
+        <h2>The Ramp Debate</h2>
+        <p>
+          The central question of pyramid construction is simple: how did they lift the stones? Various theories have been proposed:
+        </p>
+        <ul>
+          <li><strong>Straight ramp:</strong> Would need to be 2km long and contain more material than the pyramid itself</li>
+          <li><strong>Spiral external ramp:</strong> No archaeological evidence and would obstruct precision alignment during construction</li>
+          <li><strong>Internal ramp (Houdin theory):</strong> Elegant solution but unproven; would require the pyramid to contain a hidden spiral corridor</li>
+          <li><strong>Water shaft theory:</strong> Proposes internal water locks to float stones upward</li>
+        </ul>
+        <p>
+          None of these theories fully explains all the evidence. The true construction method remains one of archaeology's greatest mysteries.
+        </p>
+
+        <h2>The 2017 Discovery</h2>
+        <p>
+          Using muon tomography—a technique that detects cosmic ray particles passing through solid objects—the ScanPyramids project discovered a massive void above the Grand Gallery. This "Big Void" is at least 30 meters long, comparable in size to the Grand Gallery itself.
+        </p>
+        <p>
+          Whether this void is a construction feature, a relieving chamber, or something else entirely remains unknown. Non-invasive exploration continues, but the pyramid still guards its secrets.
+        </p>
+
+        <h2>What This Means</h2>
+        <p>
+          The Great Pyramid's precision forces us to reconsider what Bronze Age civilizations were capable of. Either the ancient Egyptians possessed construction knowledge that has been lost, or they developed unique techniques that we haven't yet understood.
+        </p>
+        <p>
+          What's certain is that the pyramid wasn't built by accident. Every measurement, every alignment, every placement was intentional. The question isn't whether the ancient Egyptians were skilled—the evidence proves they were. The question is: how did they become so skilled, and what else did they know that we've forgotten?
+        </p>
+
+        <div class="not-prose mt-12 p-6 bg-obsidian-900/50 rounded-xl border border-obsidian-800">
+          <h3 class="text-lg font-bold text-gold-400 mb-4">Key Precision Facts</h3>
+          <ul class="space-y-2 text-stone-300">
+            <li>• Base leveled to 2.1cm across 230 meters (0.0009% variance)</li>
+            <li>• Aligned to true north within 3 arc-minutes (0.05°)</li>
+            <li>• 2.3 million blocks placed in ~20 years (1 every 2-3 minutes)</li>
+            <li>• Corner angles accurate to 2 arc-seconds</li>
+            <li>• Internal chambers form perfect right angles</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Sources -->
+      <div class="max-w-3xl mx-auto mt-16 pt-8 border-t border-obsidian-800">
+        <h3 class="text-lg font-bold text-stone-100 mb-4">Sources & Further Reading</h3>
+        <ul class="space-y-2 text-sm text-stone-400">
+          <li>Lehner, Mark. <em>The Complete Pyramids</em>. Thames & Hudson, 2008.</li>
+          <li>Dash, Glen. "New Angles on the Great Pyramid." <em>AERAGRAM</em> 16.2 (2015): 8-13.</li>
+          <li>Morishima, K. et al. "Discovery of a big void in Khufu's Pyramid." <em>Nature</em> 552 (2017): 386-390.</li>
+          <li>Spence, Kate. "Ancient Egyptian chronology and the astronomical orientation of pyramids." <em>Nature</em> 408 (2000): 320-324.</li>
+        </ul>
+      </div>
+
+      <!-- Related -->
+      <div class="max-w-3xl mx-auto mt-12">
+        <a href="/structures/great-pyramid-giza" class="block p-6 bg-obsidian-900/50 rounded-xl border border-obsidian-800 hover:border-gold-400/50 transition-colors">
+          <span class="text-sm text-gold-400">Explore the Structure</span>
+          <h4 class="text-lg font-bold text-stone-100 mt-1">Great Pyramid of Giza</h4>
+          <p class="text-stone-400 mt-2">View full details, videos, timeline, and academic sources.</p>
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <Footer slot="footer" />
+  <MobileNav />
+</BaseLayout>

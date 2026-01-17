@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#09090b"/>
+      <stop offset="100%" style="stop-color:#18181b"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24"/>
+      <stop offset="100%" style="stop-color:#d97706"/>
+    </linearGradient>
+    <linearGradient id="pyramidGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#292524"/>
+      <stop offset="100%" style="stop-color:#44403c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+
+  <!-- Subtle grid pattern -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#27272a" stroke-width="0.5"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.3"/>
+
+  <!-- Decorative pyramids in background -->
+  <polygon points="100,500 250,320 400,500" fill="url(#pyramidGrad)" opacity="0.3"/>
+  <polygon points="300,520 500,280 700,520" fill="url(#pyramidGrad)" opacity="0.4"/>
+  <polygon points="800,530 950,350 1100,530" fill="url(#pyramidGrad)" opacity="0.3"/>
+
+  <!-- Main pyramid silhouette -->
+  <polygon points="600,180 350,480 850,480" fill="url(#pyramidGrad)" opacity="0.6"/>
+
+  <!-- Gold accent line -->
+  <line x1="200" y1="540" x2="1000" y2="540" stroke="url(#goldGrad)" stroke-width="2"/>
+
+  <!-- Logo icon -->
+  <g transform="translate(540, 80)">
+    <rect x="0" y="0" width="120" height="120" rx="20" fill="#18181b" stroke="url(#goldGrad)" stroke-width="2"/>
+    <g transform="translate(60, 60)">
+      <path d="M0,-35 L-40,15 L40,15 Z" fill="none" stroke="#fbbf24" stroke-width="3"/>
+      <path d="M-40,25 L40,25" stroke="#fbbf24" stroke-width="3"/>
+      <path d="M-40,35 L40,35" stroke="#fbbf24" stroke-width="3"/>
+    </g>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="64" font-weight="800" fill="#fafaf9" text-anchor="middle">Greatest Ancient</text>
+  <text x="600" y="360" font-family="system-ui, -apple-system, sans-serif" font-size="64" font-weight="800" fill="#fbbf24" text-anchor="middle">Structures</text>
+
+  <!-- Tagline -->
+  <text x="600" y="420" font-family="system-ui, -apple-system, sans-serif" font-size="24" fill="#a8a29e" text-anchor="middle">Explore humanity's most mysterious ancient constructions</text>
+
+  <!-- Stats -->
+  <text x="400" y="580" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#fbbf24" text-anchor="middle">30+ Structures</text>
+  <text x="600" y="580" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#fbbf24" text-anchor="middle">6 Continents</text>
+  <text x="800" y="580" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#fbbf24" text-anchor="middle">12,000+ Years</text>
+</svg>
